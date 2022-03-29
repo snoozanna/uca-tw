@@ -454,6 +454,10 @@ name {
   font-size: 4vw;
 }
 
+.beacon {
+ width:20vw
+}
+
 
 
 
@@ -1669,9 +1673,13 @@ $(document.head).find('#style-ui-bar').remove();
 
       &lt;button&gt;[[FISHY SPAGHETTI]]&lt;/button&gt; &lt;button&gt;[[COLD CUSTARD]]&lt;/button&gt;
       &lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="139" name="platform8baudio" tags="" position="2197.6666666666674,1066.6666666666665" size="100,100">&lt;audio id=&quot;player&quot; src=&quot;https://uca-coney-dev.netlify.app/assets/audio/now-another-test.mp3&quot; autoplay
-      &gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="140" name="beacon1" tags="green" position="537,506" size="100,100">&lt;messagebox&gt;&lt;div
-      class=&quot;animated
-      rotateIn&quot;&gt;[img[&quot;./assets/img/UCA-51&quot;]]&lt;/div&gt;&lt;/messagebox&gt;
+      &gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="140" name="beacon1" tags="green" position="537,506" size="100,100">&lt;messagebox&gt;
+  &lt;div id=&quot;beacon&quot;&gt;&lt;img class=&quot;beacon&quot;  src=&quot;https://uca-coney-dev.netlify.app/assets/img/UCA-51.png&quot;&gt;&lt;/div&gt;
+&lt;&lt;timed 0.5s&gt;&gt;&lt;&lt;replace &quot;#beacon&quot;&gt;&gt;&lt;img class=&quot;beacon&quot; src=&quot;https://uca-coney-dev.netlify.app/assets/img/UCA-56.png&quot;&gt;&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+      &lt;/messagebox&gt;
+
+       /* &lt;&lt;next 2s&gt;&gt;&lt;&lt;replace &quot;#message&quot;&gt;&gt;Uploading&lt;&lt;/replace&gt;&gt;\ */
       /* &lt;messagebox&gt;
       &lt;div class=&quot;animated
       fadeInLeftBig&quot;&gt;[img[http://remote.co.com/UCA/images/undercover.png]]&lt;/div&gt;&lt;div

@@ -370,6 +370,10 @@ name {
   font-size: 4vw;
 }
 
+.beacon {
+ width:20vw
+}
+
 
 
 
@@ -2149,9 +2153,13 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: beacon1 [green] {"position":"537,506","size":"100,100"}
-<messagebox><div
-      class="animated
-      rotateIn">[img["./assets/img/UCA-51"]]</div></messagebox>
+<messagebox>
+  <div id="beacon"><img class="beacon"  src="https://uca-coney-dev.netlify.app/assets/img/UCA-51.png"></div>
+<<timed 0.5s>><<replace "#beacon">><img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/UCA-56.png"><</replace>>
+<</timed>>
+      </messagebox>
+
+       /* <<next 2s>><<replace "#message">>Uploading<</replace>>\ */
       /* <messagebox>
       <div class="animated
       fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div
