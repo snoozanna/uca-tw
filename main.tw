@@ -371,7 +371,7 @@ name {
 }
 
 .beacon {
- width:20vw
+ width:30vw
 }
 
 
@@ -2154,9 +2154,11 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: beacon1 [green] {"position":"537,506","size":"100,100"}
 <messagebox>
-  <div id="beacon"><img class="beacon"  src="https://uca-coney-dev.netlify.app/assets/img/UCA-51.png"></div>
-<<timed 0.5s>><<replace "#beacon">><img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/UCA-56.png"><</replace>>
-<</timed>>
+  <div id="beacon" class="animated
+      zoomIn">
+      <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png">
+      <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/UCA-51.png">
+      </div>
       </messagebox>
 
        /* <<next 2s>><<replace "#message">>Uploading<</replace>>\ */
