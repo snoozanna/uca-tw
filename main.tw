@@ -2183,7 +2183,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: beacon2 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-  <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move-connect.gif"></div>
+  <div class=" fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move-connect.gif"></div>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" id="beacon">   
@@ -2192,7 +2192,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: beacon3 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-  <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect-discover.gif"></div>
+  <div class=" fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect-discover.gif"></div>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" >   
