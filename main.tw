@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 3
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "beacon2",
+	"start": "beacon3",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -2183,21 +2183,37 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: beacon2 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-
-  <div class="animated fadeInLeftBig level" id="levelctr">    <img class="level" id="level" src="https://uca-coney-dev.netlify.app/assets/img/move.png"></div>
+  <div class="animated fadeInLeftBig level" id="levelctr">    <img class="level" id="level" src="https://uca-coney-dev.netlify.app/assets/img/move-connect.gif"></div>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" id="beacon">   
 <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon1-2.gif"></div>
-
-
 </messagebox>
-<<timed 3s>><<replace "#levelctr">>
-<div class="animated fadeFast" ><img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div>
-<</replace>>
-<<replace "#beacon">>
-      <div class="animated fadeFast" >   
-       <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/UCA-57.png">
-      </div>
-<</replace>>
-<</timed>>
+
+:: beacon3 [purple] {"position":"537,506","size":"100,100"}
+<messagebox>
+  <div class="animated fadeInLeftBig level" id="levelctr">    <img class="level" id="level" src="https://uca-coney-dev.netlify.app/assets/img/connect-discover.gif"></div>
+      </messagebox>
+<messagebox>
+<div class="animated fadeInRightBig" id="beacon">   
+<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon2-3.gif"></div>
+</messagebox>
+
+
+:: beacon4 [purple] {"position":"537,506","size":"100,100"}
+<messagebox>
+  <div class="animated fadeInLeftBig level" id="levelctr">    <img class="level" id="level" src="https://uca-coney-dev.netlify.app/assets/img/discover-wonder.gif"></div>
+      </messagebox>
+<messagebox>
+<div class="animated fadeInRightBig" id="beacon">   
+<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon3-4.gif"></div>
+</messagebox>
+
+:: beacon5 [purple] {"position":"537,506","size":"100,100"}
+<messagebox>
+  <div class="animated fadeInLeftBig level" id="levelctr">    <img class="level" id="level" src="https://uca-coney-dev.netlify.app/assets/img/wonder-give.gif"></div>
+      </messagebox>
+<messagebox>
+<div class="animated fadeInRightBig" id="beacon">   
+<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon4-5.gif"></div>
+</messagebox>
