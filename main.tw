@@ -577,8 +577,8 @@ name {
 }
 
 .fadeFast {
-	-webkit-animation-duration: 3s;
-	animation-duration: 3s;
+	-webkit-animation-duration: 8s;
+	animation-duration: 8s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 	-webkit-animation-timing-function: ease-in;
@@ -2188,15 +2188,15 @@ $(document.head).find('#style-ui-bar').remove();
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" id="beacon">   
-<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/UCA-56.png"></div>
+<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon1-2.gif"></div>
 
 
 </messagebox>
 <<timed 3s>><<replace "#levelctr">>
-<div class="animated fadeInFast level" ><img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div>
+<div class="animated fadeFast" ><img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div>
 <</replace>>
 <<replace "#beacon">>
-      <div class="animated fadeInFast" >   
+      <div class="animated fadeFast" >   
        <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/UCA-57.png">
       </div>
 <</replace>>
