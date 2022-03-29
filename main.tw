@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 3
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "beacon3",
+	"start": "contents",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -65,6 +65,20 @@ color: #2d3261;
     bottom: 2vh; 
     left: 2vw; 
 }
+
+ beaconicon {
+   background: none;
+  background-image: none;
+  padding: 0;
+  position: fixed; 
+    bottom: 2vh; 
+    right: 2vw; 
+}
+
+beaconicon > img {
+width: 8vw
+}
+
   staticboxcolour {
 	 opacity: 0.5;
   background: none;
@@ -924,16 +938,19 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       </div>
-      \<<timed
+      \
+      <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-1.png]]</beaconicon>
+      <<timed
       30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video4b]]</nextbutton><</timed>>
 
 
 :: video4b [green -t8n-typewriter-4] {"position":"687,1966","size":"100,100"}
-<<include "back">><<include "typewriter">><<include
+<<include "back">><<include "typewriter">>  <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-1.png]]</beaconicon><<include
       "video4baudio">><messageboxlarge>
       Teacher, can you make sure everyone understands what the static is please?
       It is very important we know what we are facing together.
-      <button>[[Everyone understands]]</button></messageboxlarge>
+      <button>[[Everyone understands]]</button>
+       </messageboxlarge>
 
 
 :: video4baudio {"position":"2074.3333333333335,1580","size":"100,100"}
@@ -944,7 +961,9 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: Everyone understands [green -t8n-typewriter-4] {"position":"687,2117","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "Everyone understandsaudio">><messageboxlarge>
+      "typewriter">><<include "Everyone understandsaudio">>
+      <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-1.png]]</beaconicon>
+      <messageboxlarge>
       Now, time for a game to find out your Secret Club Name.
       This game will connect you all together.
       Having friends and family is key to countering the Static.
@@ -955,6 +974,7 @@ $(document.head).find('#style-ui-bar').remove();
       In it you’ll also find the second button you’ll need to light the Beacon.
       Let’s play the game.
       <<button [[NEXT|enterclubname]]>><</button>>
+        
       </messageboxlarge>
 
 
@@ -965,11 +985,14 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: enterclubname [green -t8n-typewriter-4] {"position":"161.9999999999999,2333.6666666666665","size":"100,100"}
 <<include
-      "back">><<include "typewriter">><messageboxlarge>
+      "back">><<include "typewriter">>
+       <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-1.png]]</beaconicon>
+       <messageboxlarge>
 
       Enter your secret club name here
       <<textbox "$clubname" "">>
       <<button [[Enter|clubname]]>><</button>>
+       
       </messageboxlarge>
 
 
@@ -987,7 +1010,7 @@ $(document.head).find('#style-ui-bar').remove();
       <<timed 11s>><div class="animated fadeInDownBig">
       <name><b>WELCOME $clubname</b></name>
       /* TODO INSERT STATIC */
-      <button>[[Next|video5]]</button></div><</timed>></messageboxreel>
+      <button>[[Next|beacon3]]</button></div><</timed>></messageboxreel>
       <<include "reeltoreel">>
       <messagescreen><span id="message">Thank you</span>
       <<timed 2s>><<replace "#message">>Sending Secret Club
@@ -1012,13 +1035,16 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       </div>
-      \<<timed
+      \
+      <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-3.png]]</beaconicon>
+      <<timed
       30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video5b]]</nextbutton><</timed>>
 
 
 :: video5b [green -t8n-typewriter-4] {"position":"758,2661","size":"100,100"}
 <<include "back">><<include "typewriter">><<include
-      "video5baudio">><messageboxlarge>
+      "video5baudio">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-3.png]]</beaconicon>
+      <messageboxlarge>
       /* <dance> */
       It seems Anne is worried about Anne too.
       In a moment I need you to text her – She might be facing the static alone.
@@ -1040,7 +1066,7 @@ $(document.head).find('#style-ui-bar').remove();
 :: video5c [green -t8n-typewriter-4] {"position":"919.6666666666667,2664.333333333333","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
-      "video5caudio">><messageboxlarge>
+      "video5caudio">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-3.png]]</beaconicon><messageboxlarge>
       You are learning a new skill.
       A new skill that helps counter the static.
       Learning new skills can help us be more confident, as well as being quite fun, and it can be a really helpful
@@ -1069,7 +1095,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       </div>
-      \<<timed
+      \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><<timed
       30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video6c]]</nextbutton><</timed>>
 
 
@@ -1092,7 +1118,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: video6b [green -t8n-typewriter-4] {"position":"918.6666666666666,2821","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><messageboxlarge>
+      "typewriter">> <<include "video6baudio">><messageboxlarge>
       If we can reflect on ourselves, notice and be curious, we can be more aware of what we have to offer the world.
       And see the superpowers we have to spark change.
       When you have finished filling the cards out enter the words
@@ -1111,7 +1137,7 @@ $(document.head).find('#style-ui-bar').remove();
 :: video6c [green -t8n-typewriter-4] {"position":"1085.3333333333333,2817.6666666666665","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
-      "video6caudio">><messageboxlarge>
+      "video6caudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       /* <name><b>WONDER</b></name> */
       You are doing extremely well, $clubname!
       We are on our way to lighting the Beacon and helping Anne.
@@ -1133,7 +1159,7 @@ $(document.head).find('#style-ui-bar').remove();
 :: video6d [green -t8n-typewriter-4] {"position":"1210.3333333333333,2814.3333333333335","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
-      "video6daudio">><messageboxlarge>
+      "video6daudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       Teacher, in a moment we recommend splitting the group into 4-6 groups and giving out 1 big piece of paper to these
       groups.
 
@@ -1152,7 +1178,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: mapdrawn [green -t8n-typewriter-4] {"position":"1102,3007.666666666667","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "mapdrawnaudio">><messageboxlarge>
+      "typewriter">><<include "mapdrawnaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       There are also Mapping Cards in Compartment 4 – hand out 1 pack per group.
       Answer the questions and draw them on your maps.
       Take as much time as you need – I think this is going to be very important to Anne for the final part of our
@@ -1169,7 +1195,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: mappingdone [green -t8n-typewriter-4] {"position":"1237,3004.333333333333","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "mappingdoneaudio">><messageboxlarge>
+      "typewriter">><<include "mappingdoneaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       GREAT work.
       If you have time, you can share back some of the information you have found out about your school to the rest of
       your Secret Club. It will help you work out your Gift.
@@ -1185,7 +1211,7 @@ $(document.head).find('#style-ui-bar').remove();
 :: mappingdoneb [green -t8n-typewriter-4] {"position":"1367.0000000000002,3002.666666666667","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
-      "mappingdoneaudio">><messageboxlarge>
+      "mappingdoneaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       Ok - great work. Mapping Complete.
 
       The next video is locked though – can you text Anne the word MAPPING COMPLETE and hopefully, she will call you
@@ -1214,7 +1240,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       </div>
-      \<<timed
+      \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><<timed
       30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticanimation]]</nextbutton><</timed>>
 
 
@@ -1224,8 +1250,7 @@ $(document.head).find('#style-ui-bar').remove();
       <messageboxplanning>
       <div class="animated rotateInDownLeft">
       This is it – the final compartment.
-      We’ve connected to each other, moved our bodies through the UKA TOK, wondered about ourselves and the space around
-      us, learnt new skills and now is the final way we can counter the Static… Giving.
+      We’ve connected to each other, moved our bodies through the UKA TOK, wondered about ourselves and the space around us, learnt new skills and now is the final way we can counter the Static… Giving.
 
       <button>[[NEXT|missionplanningb]]</button>
       </div>
@@ -1515,7 +1540,7 @@ $(document.head).find('#style-ui-bar').remove();
       <<if $password2 isnot "" and $password2 is "BAKED BEANS">>
       <<replace "#code2result">>
       <</replace>><<replace "#resultbutton">><</replace>>
-      <<goto [[video4]]>>
+      <<goto [[beacon2]]>>
       <</if>>
       \/% PASSWORD INCORRECT %/
       <<if $password2 isnot "" and $password2 is not "BAKED BEANS">>
@@ -1567,15 +1592,13 @@ $(document.head).find('#style-ui-bar').remove();
       \<</if>>
       \
       \/% PASSWORD CORRECT %/
-      <<if $password4 isnot "" and $password4 is "NIGEL" or $password4 is "GO
-      GO">>
+      <<if $password4 isnot "" and $password4 is "NIGEL">>
       <<replace "#code4result">>
       <</replace>><<replace "#resultbutton">><</replace>>
-      <<goto [[Video7]]>>
+      <<goto [[beacon5]]>>
       <</if>>
       \/% PASSWORD INCORRECT %/
-      <<if $password4 isnot "" and $password4 is not "NIGEL" or $password4 is not "GO
-      GO">>
+      <<if $password4 isnot "" and $password4 is not "NIGEL">>
       <<replace "#code4result">>Thats not right.<</replace>>
       <</if>><</button>>
 
@@ -1709,7 +1732,7 @@ $(document.head).find('#style-ui-bar').remove();
       <<if $password9 isnot "" and $password9 is "AGENTS READY">>
       <<replace "#code9result">>
       <</replace>><<replace "#resultbutton">><</replace>>
-      <<goto [[Video6]]>>
+      <<goto [[beacon4]]>>
       <</if>>
       \/% PASSWORD INCORRECT %/
       <<if $password9 isnot "" and $password9 is not "AGENTS READY">>
@@ -1988,11 +2011,11 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: clubnamediscover [green -t8n-typewriter-4] {"position":"175.33333333333326,2197","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><messageboxlarge>
+      "typewriter">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon><messageboxlarge>
 
       Enter your secret club name here
       <<textbox "$clubname" "">>
-      <<button [[Enter|enterclubname]]>><</button>>
+      <<button [[Enter|clubname]]>><</button>>
       </messageboxlarge>
 
 
@@ -2135,6 +2158,7 @@ $(document.head).find('#style-ui-bar').remove();
 <backbutton><<return[img[http://remote.co.com/UCA/images/back.png]]>></backbutton>
 
 
+
 :: platform7b [green -t8n-typewriter-4] {"position":"1032,1583.3333333333335","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "platform7baudio">>
@@ -2172,48 +2196,49 @@ $(document.head).find('#style-ui-bar').remove();
       ></audio>
 
 
-:: beacon1 [purple] {"position":"537,506","size":"100,100"}
-<messagebox>
-  <div class="animated fadeInLeftBig level"> <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move.png"></div>
-      </messagebox>
-<messagebox>
-<div class="animated fadeInRightBig">   
-<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/UCA-56.png"></div></messagebox>
 
 
 :: beacon2 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-  <div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move-connect.gif"></div>
+  <div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" id="beacon">   
 <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon1-2.gif"></div>
+<<timed 6s>>
+<<goto [[video4]]>><</timed>>
 </messagebox>
 
 :: beacon3 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-  <div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect-discover.gif"></div>
+  <div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/discover.png"></div>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" >   
 <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon2-3.gif"></div>
+<<timed 6s>>
+<<goto [[video5]]>><</timed>>
 </messagebox>
 
 
 :: beacon4 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-  <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/discover-wonder.gif"></div>
+  <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/wonder.png"></div>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" >   
 <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon3-4.gif"></div>
+<<timed 6s>>
+<<goto [[Video6]]>><</timed>>
 </messagebox>
 
 :: beacon5 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-  <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/wonder-give.gif"></div>
+  <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/give.png"></div>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" >   
 <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon4-5.gif"></div>
+<<timed 6s>>
+<<goto [[Video7]]>><</timed>>
 </messagebox>
