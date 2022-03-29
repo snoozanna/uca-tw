@@ -1,5 +1,5 @@
 :: StoryTitle
-Undercover CareTaker Agency WIP 1
+Undercover CareTaker Agency WIP 3
 
 
 :: StoryData
@@ -7,11 +7,11 @@ Undercover CareTaker Agency WIP 1
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "home",
+	"start": "beacon1",
 	"tag-colors": {
 		"green": "green"
 	},
-	"zoom": 1
+	"zoom": 0.6
 }
 
 
@@ -643,32 +643,34 @@ $(document.head).find('#style-ui-bar').remove();
 }();
 
 
-:: home [purple] {"position":"368,470","size":"100,100"}
+:: home [purple] {"position":"401.3333333333333,205","size":"100,100"}
 <messagebox2>[img[http://remote.co.com/UCA/images/intercom2.png][beenbefore]]</messagebox2>
 
 
-:: welcome1 [purple -t8n-typewriter-4] {"position":"536,350","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "welcome1audio">>
+:: welcome1 [purple -t8n-typewriter-4] {"position":"986,325","size":"100,100"}
+<<include "back">><<include "typewriter">><<include
+      "welcome1audio">>
       <messageboxlarge>
-Hello there, 
-To gain entry a codeword is needed. 
-The codeword is one word, it is somewhere on the box you will have received. 
-Type it in here to gain entry.
+      Hello there,
+      To gain entry a codeword is needed.
+      The codeword is one word, it is somewhere on the box you will have received.
+      Type it in here to gain entry.
 
       <<include "password1">>
       </messageboxlarge>
 
-:: welcome1audio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/hello-there-to-gain-entry.mp3" autoplay ></audio>
+
+:: welcome1audio {"position":"2062.666666666667,558.3333333333334","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/hello-there-to-gain-entry.mp3" autoplay
+      ></audio>
 
 
-
-
-:: Introvideo1 [green] {"position":"531,629","size":"100,100"}
+:: Introvideo1 [green] {"position":"864.3333333333334,510.66666666666663","size":"100,100"}
 <div
       id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png" class="center"></div>
+      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      class="center"></div>
       <div>
       <iframe width='800px' height='450px'
       src='https://player.vimeo.com/video/531960916?autoplay=1&byline=0&portrait=0'></iframe>
@@ -679,74 +681,97 @@ Type it in here to gain entry.
       60s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video1b]]</nextbutton><</timed>>
 
 
-:: video1b [green -t8n-typewriter-4] {"position":"537,765","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video1baudio">><messageboxlarge>Your choice is needed.
+:: video1b [green -t8n-typewriter-4] {"position":"585.3333333333334,666.6666666666667","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "video1baudio">><messageboxlarge>Your choice
+      is needed.
       Click YES, WE ARE IN to answer Anne’s call or choose CLOSE to go back to schoolwork?
 
       <button>[[CLOSE]]</button> or <button>[[YES, WE ARE IN]]</button></messageboxlarge>
 
-:: video1baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/your-choice-is-needed-click-yes.mp3" autoplay ></audio>
 
-:: CLOSE [green -t8n-typewriter-4] {"position":"463,916","size":"100,100"}
-<<include "back">><<include "CLOSEaudio">><messagebox>Oh really?
+:: video1baudio {"position":"2187.6666666666665,1928.3333333333335","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/your-choice-is-needed-click-yes.mp3" autoplay
+      ></audio>
+
+
+:: CLOSE [green -t8n-typewriter-4] {"position":"379.66666666666663,767.6666666666666","size":"100,100"}
+<<include "back">><<include
+      "CLOSEaudio">><messagebox>Oh really?
 
       <button>[[YES, WE ARE IN]]</button> or <button>[[NOT TODAY]]</button></messagebox>
 
-:: CLOSEaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/oh-really.mp3" autoplay ></audio>
+
+:: CLOSEaudio {"position":"1954.3333333333335,566.6666666666666","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/oh-really.mp3" autoplay ></audio>
 
 
-:: YES, WE ARE IN [green -t8n-typewriter-4] {"position":"612,916","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "YES, WE ARE INaudio">>
+:: YES, WE ARE IN [green -t8n-typewriter-4] {"position":"573.6666666666666,869.3333333333333","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include "YES, WE ARE
+      INaudio">>
       <messageboxlarge>
       FANTASTIC!
-   CareTakers are not just those you see in school. 
-CareTakers in the Undercover CareTaker Agency are those who care for others and the planet.
+      CareTakers are not just those you see in school.
+      CareTakers in the Undercover CareTaker Agency are those who care for others and the planet.
 
-<button>[[NEXT|pretokinfo1]]</button>
-</messageboxlarge>
+      <button>[[NEXT|pretokinfo1]]</button>
+      </messageboxlarge>
 
-:: YES, WE ARE INaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/fantastic-caretakers-are-not-just.mp3" autoplay ></audio>
 
-:: pretokinfo1 [green -t8n-typewriter-4] {"position":"612,916","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "pretokinfo1">>
+:: YES, WE ARE INaudio {"position":"1700.0000000000002,33.33333333333334","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/fantastic-caretakers-are-not-just.mp3"
+      autoplay ></audio>
+
+
+:: pretokinfo1 [green -t8n-typewriter-4] {"position":"732,839.3333333333334","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "pretokinfo1">>
       <messageboxlarge>
-I’m Nigel, Anne’s friend. I also work for UCA, but not as high up as Anne. She asked me to help set all of this up, but then we lost contact.  
-Anne noticed things were getting worse with the Static so she pre-recorded some videos and told me to send out the UCA Beacon. I’ll explain all. 
+      I’m Nigel, Anne’s friend. I also work for UCA, but not as high up as Anne. She asked me to help set all of this
+      up, but then we lost contact.
+      Anne noticed things were getting worse with the Static so she pre-recorded some videos and told me to send out the
+      UCA Beacon. I’ll explain all.
 
-But I need you to help us. The static is making things all foggy and we need you to light the Beacon. 
+      But I need you to help us. The static is making things all foggy and we need you to light the Beacon.
 
-<button>[[NEXT|pretokinfo2]]</button>
-</messageboxlarge>
+      <button>[[NEXT|pretokinfo2]]</button>
+      </messageboxlarge>
 
-:: pretokinfo1audio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/Im-Nigel-Annes-friend.mp3" autoplay ></audio>
 
-:: pretokinfo2 [green -t8n-typewriter-4] {"position":"612,916","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "pretokinfo2audio">>
+:: pretokinfo1audio {"position":"1577.6666666666667,919.9999999999999","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/Im-Nigel-Annes-friend.mp3" autoplay
+      ></audio>
+
+
+:: pretokinfo2 [green -t8n-typewriter-4] {"position":"890.3333333333333,834.3333333333334","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "pretokinfo2audio">>
       <messageboxlarge>
-But you need to show you can light the Beacon, before it can be lit.  
-You’ll find how to light the Beacon through completing challenges and getting buttons. 
-Lighting the Beacon will show you have stopped the Static. 
-And show that you have what it takes to be an UCA Agent yourself. 
+      But you need to show you can light the Beacon, before it can be lit.
+      You’ll find how to light the Beacon through completing challenges and getting buttons.
+      Lighting the Beacon will show you have stopped the Static.
+      And show that you have what it takes to be an UCA Agent yourself.
 
-We should get started! 
+      We should get started!
 
       When ready to learn the UCA TOK with Anne click <button>[[READY]]</button>
 
       </messageboxlarge>
 
-:: pretokinfo2audio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/but-you-need-to-show-you-can-light.mp3" autoplay ></audio>      
+
+:: pretokinfo2audio {"position":"1689.3333333333335,911.6666666666665","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/but-you-need-to-show-you-can-light.mp3"
+      autoplay ></audio>
 
 
-:: READY [green] {"position":"607,1041","size":"100,100"}
+:: READY [green] {"position":"768.6666666666666,646","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png" class="center"></div>
+      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      class="center"></div>
       <div>
       <iframe width='800px' height='450px'
       src='https://player.vimeo.com/video/531954959?autoplay=1&byline=0&portrait=0'></iframe>
@@ -757,40 +782,55 @@ We should get started!
       60s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][ucatokmoves]]</nextbutton><</timed>>
 
 
-:: NOT TODAY [green -t8n-typewriter-4] {"position":"463,1063","size":"100,100"}
-<<include "back">><<include "NOT TODAYaudio">><messagebox>[[OK – thank you anyway!|home]]</messagebox>
-
-:: NOT TODAYaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/ok-thank-you-anyway.mp3" autoplay ></audio>   
-
-:: ucatokmovesintro [-t8n-typewriter-4 green] {"position":"610,1179","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "ucatokmovesintroaudio">><messageboxlarge>
- It seems you need to learn the UCA TOK all together. 
-Getting moving might help counter the Static…and you get to learn our special moves! 
-There should be a copy of the moves in the Beacon – you can open Compartment 1 to find them. 
-And, also in that compartment, you’ll find the first button you need to light the Beacon. 
-<button>[[NEXT|ucatokmoves]]</button></messageboxlarge>
-
-:: ucatokmovesintroaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/it-seems-you-need-to-learn-the-UCA-TOK" autoplay ></audio> 
-
-:: ucatokmoves [-t8n-typewriter-4 green] {"position":"610,1179","size":"100,100"}
-<<include "back">><<include "ucatokmovesaudio">>
-/* <dance> */
- <name><b>UCA TOK MOVES</b></name>
-<div class="animated rotateInDownLeft">[img[http://remote.co.com/UCA/images/dancemoves5.jpg]]</div>
-<<timed 3s>>Want to watch Anne do the UCA TOK slowly? Click <button>[[HERE]]</button> 
-When you have learnt the UCA TOK and are ready to run it with Anne, click <button>[[READY|UCA TOK]]</button><</timed>>
-/* </dance> */
-
-:: ucatokmovesaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/want-to-watch-Anne-do-the-UCA-TOK.mp3" autoplay ></audio>   
+:: NOT TODAY [green -t8n-typewriter-4] {"position":"379.66666666666663,919.6666666666666","size":"100,100"}
+<<include
+      "back">><<include "NOT TODAYaudio">><messagebox>[[OK – thank you
+      anyway!|home]]</messagebox>
 
 
-:: HERE [green -t8n-typewriter-4] {"position":"481,1331","size":"100,100"}
+:: NOT TODAYaudio {"position":"1814.3333333333335,31.666666666666686","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/ok-thank-you-anyway.mp3" autoplay
+      ></audio>
+
+
+:: ucatokmovesintro [-t8n-typewriter-4 green] {"position":"718.3333333333334,1064","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "ucatokmovesintroaudio">><messageboxlarge>
+      It seems you need to learn the UCA TOK all together.
+      Getting moving might help counter the Static…and you get to learn our special moves!
+      There should be a copy of the moves in the Beacon – you can open Compartment 1 to find them.
+      And, also in that compartment, you’ll find the first button you need to light the Beacon.
+      <button>[[NEXT|ucatokmoves]]</button></messageboxlarge>
+
+
+:: ucatokmovesintroaudio {"position":"1594.3333333333335,1026.6666666666665","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/it-seems-you-need-to-learn-the-UCA-TOK"
+      autoplay ></audio>
+
+
+:: ucatokmoves [-t8n-typewriter-4 green] {"position":"571.6666666666666,1062.3333333333335","size":"100,100"}
+<<include
+      "back">><<include "ucatokmovesaudio">>
+      /* <dance> */
+      <name><b>UCA TOK MOVES</b></name>
+      <div class="animated
+      rotateInDownLeft">[img[http://remote.co.com/UCA/images/dancemoves5.jpg]]</div>
+      <<timed 3s>>Want to watch Anne do the UCA TOK slowly? Click <button>[[HERE]]</button>
+      When you have learnt the UCA TOK and are ready to run it with Anne, click <button>[[READY|UCA
+      TOK]]</button><</timed>>
+      /* </dance> */
+
+
+:: ucatokmovesaudio {"position":"1702.6666666666667,1031.6666666666667","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/want-to-watch-Anne-do-the-UCA-TOK.mp3"
+      autoplay ></audio>
+
+
+:: HERE [green -t8n-typewriter-4] {"position":"385.99999999999994,1062.6666666666667","size":"100,100"}
 <<include "back">><div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png" class="center"></div>
+      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      class="center"></div>
       <div>
       <iframe width='800px' height='450px'
       src='https://player.vimeo.com/video/532135608?autoplay=1&byline=0&portrait=0'></iframe>
@@ -801,11 +841,12 @@ When you have learnt the UCA TOK and are ready to run it with Anne, click <butto
       30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][ucatokmoves]]</nextbutton><</timed>>
 
 
-:: UCA TOK [green] {"position":"635,1353","size":"100,100"}
+:: UCA TOK [green] {"position":"566.6666666666666,1191.3333333333333","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png" class="center"></div>
+      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      class="center"></div>
       <div>
       <iframe width='800px' height='450px'
       src='https://player.vimeo.com/video/532153509?autoplay=1&byline=0&portrait=0'></iframe>
@@ -817,30 +858,35 @@ When you have learnt the UCA TOK and are ready to run it with Anne, click <butto
 
 
 :: video3b [green -t8n-typewriter-4] {"position":"676,1671","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video3baudio">><messageboxlarge>
-It seems she wants you to text her – the present-day Anne. 
-Obviously these are pre-recorded videos but she’s probably wondering in real life if anyone is watching
-She needs you to let her know you are doing these challenges.
-Not //pre-recorded// Anne, //live// Anne! 
-<<button [[NEXT|video3c]]>><</button>>
+<<include "back">><<include "typewriter">><<include
+      "video3baudio">><messageboxlarge>
+      It seems she wants you to text her – the present-day Anne.
+      Obviously these are pre-recorded videos but she’s probably wondering in real life if anyone is watching
+      She needs you to let her know you are doing these challenges.
+      Not //pre-recorded// Anne, //live// Anne!
+      <<button [[NEXT|video3c]]>><</button>>
       </messageboxlarge>
 
 
-:: video3baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/it-seems-she-wants-you-to-text-her.mp3" autoplay ></audio>   
+:: video3baudio {"position":"1952.6666666666667,1703.3333333333335","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/it-seems-she-wants-you-to-text-her.mp3"
+      autoplay ></audio>
 
-:: video3c [green -t8n-typewriter-4] {"position":"676,1671","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video3caudio">><messageboxlarge>
-You can text her. 
-Teacher, text the word ‘UCA TOK’ when you are ready.  
-She may call you back (do put your phone on loudspeaker if so)! 
-And she has locked the next page, so hopefully she’ll give you the codeword too 
+
+:: video3c [green -t8n-typewriter-4] {"position":"512.6666666666666,1671","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "video3caudio">><messageboxlarge>
+      You can text her.
+      Teacher, text the word ‘UCA TOK’ when you are ready.
+      She may call you back (do put your phone on loudspeaker if so)!
+      And she has locked the next page, so hopefully she’ll give you the codeword too
       <<include "password2">>
       </messageboxlarge>
 
 
-:: video3caudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/you-can-text-her.mp3" autoplay ></audio>   
+:: video3caudio {"position":"2074.3333333333335,1701.6666666666667","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/you-can-text-her.mp3" autoplay
+      ></audio>
 
 
 :: video4 [green] {"position":"687,1816","size":"100,100"}
@@ -848,7 +894,8 @@ And she has locked the next page, so hopefully she’ll give you the codeword to
       "back">>
       <div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png" class="center"></div>
+      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      class="center"></div>
       <div>
       <iframe width='800px' height='450px'
       src='https://player.vimeo.com/video/532148883?autoplay=1&byline=0&portrait=0'></iframe>
@@ -860,41 +907,51 @@ And she has locked the next page, so hopefully she’ll give you the codeword to
 
 
 :: video4b [green -t8n-typewriter-4] {"position":"687,1966","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video4baudio">><messageboxlarge>
-     Teacher, can you make sure everyone understands what the static is please?
-It is very important we know what we are facing together. 
+<<include "back">><<include "typewriter">><<include
+      "video4baudio">><messageboxlarge>
+      Teacher, can you make sure everyone understands what the static is please?
+      It is very important we know what we are facing together.
       <button>[[Everyone understands]]</button></messageboxlarge>
 
-:: video4baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/teacher-can-you-make-sure-everyone-understands.mp3" autoplay ></audio>         
+
+:: video4baudio {"position":"2074.3333333333335,1580","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-can-you-make-sure-everyone-understands.mp3" autoplay
+      ></audio>
 
 
 :: Everyone understands [green -t8n-typewriter-4] {"position":"687,2117","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "Everyone understandsaudio">><messageboxlarge>
-Now, time for a game to find out your Secret Club Name. 
-This game will connect you all together. 
-Having friends and family is key to countering the Static. 
-It’s why we need to help Anne. I can’t get through to her.  
-The Instructions are in the next compartment. 
+<<include "back">><<include
+      "typewriter">><<include "Everyone understandsaudio">><messageboxlarge>
+      Now, time for a game to find out your Secret Club Name.
+      This game will connect you all together.
+      Having friends and family is key to countering the Static.
+      It’s why we need to help Anne. I can’t get through to her.
+      The Instructions are in the next compartment.
 
-You can open Compartment 2 now. 
-In it you’ll also find the second button you’ll need to light the Beacon. 
-Let’s play the game.  
-     <<button [[NEXT|enterclubname]]>><</button>>
+      You can open Compartment 2 now.
+      In it you’ll also find the second button you’ll need to light the Beacon.
+      Let’s play the game.
+      <<button [[NEXT|enterclubname]]>><</button>>
       </messageboxlarge>
 
-:: Everyone understandsaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/now-time-for-a-game-to-find.mp3" autoplay ></audio>        
 
-:: enterclubname [green -t8n-typewriter-4] {"position":"687,2117","size":"100,100"}
-<<include "back">><<include "typewriter">><messageboxlarge>
+:: Everyone understandsaudio {"position":"1921,35","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/now-time-for-a-game-to-find.mp3" autoplay ></audio>
 
- Enter your secret club name here
+
+:: enterclubname [green -t8n-typewriter-4] {"position":"161.9999999999999,2333.6666666666665","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><messageboxlarge>
+
+      Enter your secret club name here
       <<textbox "$clubname" "">>
       <<button [[Enter|clubname]]>><</button>>
       </messageboxlarge>
 
-:: clubname [green] {"position":"688,2716","size":"100,100"}
+
+:: clubname [green] {"position":"688,2304.3333333333335","size":"100,100"}
 /<audio
       src="audio/radio.mp3" autoplay></audio>
       <<include "back">><messageboxreel>
@@ -911,7 +968,8 @@ Let’s play the game.
       <button>[[Next|video5]]</button></div><</timed>></messageboxreel>
       <<include "reeltoreel">>
       <messagescreen><span id="message">Thank you</span>
-      <<timed 2s>><<replace "#message">>Sending Secret Club Name<</replace>>\
+      <<timed 2s>><<replace "#message">>Sending Secret Club
+      Name<</replace>>\
       <<next 2s>><<replace "#message">>Uploading<</replace>>\
       <<next 2s>><<replace "#message">>Sending to UCA HQ<</replace>>\
       <<next 2s>><<replace "#message">>Receiving<</replace>>\
@@ -920,11 +978,12 @@ Let’s play the game.
       <</timed>></messagescreen>
 
 
-:: video5 [green] {"position":"687,2866","size":"100,100"}
+:: video5 [green] {"position":"583.6666666666666,2657.6666666666665","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png" class="center"></div>
+      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      class="center"></div>
       <div>
       <iframe width='800px' height='450px'
       src='https://player.vimeo.com/video/532136949?autoplay=1&byline=0&portrait=0'></iframe>
@@ -935,41 +994,53 @@ Let’s play the game.
       30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video5b]]</nextbutton><</timed>>
 
 
-:: video5b [green -t8n-typewriter-4] {"position":"688,3016","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video5baudio">><messageboxlarge>
-/* <dance> */
-It seems Anne is worried about Anne too. 
-In a moment I need you to text her – She might be facing the static alone. 
-You may need to do the UCA Breath with her to help keep her calm. I put some instructions on how to do it in the next compartment.  
-In there you’ll find another button too!
- <<button [[NEXT|video5c]]>><</button>>
+:: video5b [green -t8n-typewriter-4] {"position":"758,2661","size":"100,100"}
+<<include "back">><<include "typewriter">><<include
+      "video5baudio">><messageboxlarge>
+      /* <dance> */
+      It seems Anne is worried about Anne too.
+      In a moment I need you to text her – She might be facing the static alone.
+      You may need to do the UCA Breath with her to help keep her calm. I put some instructions on how to do it in the
+      next compartment.
+      In there you’ll find another button too!
+      <<button [[NEXT|video5c]]>><</button>>
 
       /* </dance> */
       </messageboxlarge>
 
-:: video5baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/seems-Anne-is-worried-about-Anne.mp3" autoplay ></audio>             
 
-:: video5c [green -t8n-typewriter-4] {"position":"688,3016","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video5caudio">><messageboxlarge>
-You are learning a new skill. 
-A new skill that helps counter the static. 
-Learning new skills can help us be more confident, as well as being quite fun, and it can be a really helpful distraction too. Let’s distract Anne and remind her of the UCA Breath. 
+:: video5baudio {"position":"1944.3333333333335,1460","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/seems-Anne-is-worried-about-Anne.mp3" autoplay
+      ></audio>
 
-Teacher, when you have learnt the UCA Breath, text Anne the word BREATH and hopefully she’ll call you back
+
+:: video5c [green -t8n-typewriter-4] {"position":"919.6666666666667,2664.333333333333","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "video5caudio">><messageboxlarge>
+      You are learning a new skill.
+      A new skill that helps counter the static.
+      Learning new skills can help us be more confident, as well as being quite fun, and it can be a really helpful
+      distraction too. Let’s distract Anne and remind her of the UCA Breath.
+
+      Teacher, when you have learnt the UCA Breath, text Anne the word BREATH and hopefully she’ll call you back
 
       <<include "password3">>
-      </messageboxlarge>      
-
-:: video5caudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/you-are-learning-a-new-skill.mp3" autoplay ></audio>     
+      </messageboxlarge>
 
 
-:: Video6 [green] {"position":"687,3316","size":"100,100"}
+:: video5caudio {"position":"2079.3333333333335,1460","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/you-are-learning-a-new-skill.mp3" autoplay ></audio>
+
+
+:: Video6 [green] {"position":"582,2821","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png" class="center"></div>
+      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      class="center"></div>
       <div>
       <iframe width='800px' height='450px'
       src='https://player.vimeo.com/video/532118800?autoplay=1&byline=0&portrait=0'></iframe>
@@ -979,104 +1050,142 @@ Teacher, when you have learnt the UCA Breath, text Anne the word BREATH and hope
       \<<timed
       30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video6c]]</nextbutton><</timed>>
 
-:: video6a [green -t8n-typewriter-4] {"position":"687,3466","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video6aaudio">><messageboxlarge>
-      Ok, it seems Anne wants you to open the next compartment and get the next button. 
-You can open Compartment 4 now . 
-Inside are Agent Cards for you to fill out. 
-These cards will help you notice things in yourself, as UCA Agents. 
-<button>[[NEXT|video6b]]</button>
+
+:: video6a [green -t8n-typewriter-4] {"position":"753.6666666666667,2816","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "video6aaudio">><messageboxlarge>
+      Ok, it seems Anne wants you to open the next compartment and get the next button.
+      You can open Compartment 4 now .
+      Inside are Agent Cards for you to fill out.
+      These cards will help you notice things in yourself, as UCA Agents.
+      <button>[[NEXT|video6b]]</button>
       </messageboxlarge>
 
-:: video6aaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/ok-it-seems-Anne-wants-you-to-open.mp3" autoplay ></audio>     
+
+:: video6aaudio {"position":"1749.3333333333335,1335","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/ok-it-seems-Anne-wants-you-to-open.mp3" autoplay
+      ></audio>
 
 
-:: video6b [green -t8n-typewriter-4] {"position":"687,3466","size":"100,100"}
-<<include "back">><<include "typewriter">><messageboxlarge>
-If we can reflect on ourselves, notice and be curious, we can be more aware of what we have to offer the world.  
-And see the superpowers we have to spark change. 
-When you have finished filling the cards out enter the words 
-AGENTS READY to move on
+:: video6b [green -t8n-typewriter-4] {"position":"918.6666666666666,2821","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><messageboxlarge>
+      If we can reflect on ourselves, notice and be curious, we can be more aware of what we have to offer the world.
+      And see the superpowers we have to spark change.
+      When you have finished filling the cards out enter the words
+      AGENTS READY to move on
 
       <<include "password9">>
 
       </messageboxlarge>
 
-:: video6baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/if-we-can-reflect-on-ourselves.mp3" autoplay ></audio>    
 
-:: video6c [green -t8n-typewriter-4] {"position":"687,3466","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video6caudio">><messageboxlarge>
+:: video6baudio {"position":"1866.0000000000002,1335","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/if-we-can-reflect-on-ourselves.mp3" autoplay ></audio>
+
+
+:: video6c [green -t8n-typewriter-4] {"position":"1085.3333333333333,2817.6666666666665","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "video6caudio">><messageboxlarge>
       /* <name><b>WONDER</b></name> */
-You are doing extremely well, $clubname! 
-We are on our way to lighting the Beacon and helping Anne. 
-This next exercise will need you to map your school. To wonder about it. 
-You started to notice yourself by writing the Agent Cards, now we need you to be aware of the world around you, the sounds, smells and textures. It helps us to reflect and appreciate what matters to us, and potentially to others.  
+      You are doing extremely well, $clubname!
+      We are on our way to lighting the Beacon and helping Anne.
+      This next exercise will need you to map your school. To wonder about it.
+      You started to notice yourself by writing the Agent Cards, now we need you to be aware of the world around you,
+      the sounds, smells and textures. It helps us to reflect and appreciate what matters to us, and potentially to
+      others.
 
- <button>[[NEXT|video6d]]</button>
-
-      </messageboxlarge>
-
-:: video6caudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/you-are-doing-extremely-well.mp3" autoplay ></audio>    
-
-:: video6d [green -t8n-typewriter-4] {"position":"687,3466","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video6daudio">><messageboxlarge>
-Teacher, in a moment we recommend splitting the group into 4-6 groups and giving out 1 big piece of paper to these groups. 
-
-You may want to start by drawing a map like Anne did – a birdseye view 
-
-When done, click <button>[[next|mapdrawn]]</button>
-
-      </messageboxlarge>      
-
-:: video6daudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/teacher-in-a-moment-we-recommend.mp3" autoplay ></audio>    
-
-
-:: mapdrawn [green -t8n-typewriter-4] {"position":"687,3616","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "mapdrawnaudio">><messageboxlarge>
-     There are also Mapping Cards in Compartment 4 – hand out 1 pack per group. 
-Answer the questions and draw them on your maps. 
-Take as much time as you need – I think this is going to be very important to Anne for the final part of our mission together. 
-When done, click <button>[[next|mappingdone]]</button>
+      <button>[[NEXT|video6d]]</button>
 
       </messageboxlarge>
 
-:: mapdrawnaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/there-are-also-mapping-cards.mp3" autoplay ></audio>  
 
-:: mappingdone [green -t8n-typewriter-4] {"position":"687,3766","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "mappingdoneaudio">><messageboxlarge>
-GREAT work. 
-If you have time, you can share back some of the information you have found out about your school to the rest of your Secret Club. It will help you work out your Gift. 
-When done, click<button>[[next|EMERGENCY]]</button>
+:: video6caudio {"position":"1974.3333333333335,1338.3333333333335","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/you-are-doing-extremely-well.mp3"
+      autoplay ></audio>
+
+
+:: video6d [green -t8n-typewriter-4] {"position":"1210.3333333333333,2814.3333333333335","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "video6daudio">><messageboxlarge>
+      Teacher, in a moment we recommend splitting the group into 4-6 groups and giving out 1 big piece of paper to these
+      groups.
+
+      You may want to start by drawing a map like Anne did – a birdseye view
+
+      When done, click <button>[[next|mapdrawn]]</button>
+
       </messageboxlarge>
 
-:: mappingdoneaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/great-work-if-you-have-time-you-can.mp3" autoplay ></audio>  
 
-:: mappingdoneb [green -t8n-typewriter-4] {"position":"687,3916","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "mappingdoneaudio">><messageboxlarge>
-Ok -  great work. Mapping Complete. 
+:: video6daudio {"position":"2091,1328.3333333333333","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-in-a-moment-we-recommend.mp3" autoplay
+      ></audio>
 
-The next video is locked though – can you text Anne the word MAPPING COMPLETE and hopefully, she will call you with the codeword to move on. 
 
-We are so close to lighting the beacon. 
+:: mapdrawn [green -t8n-typewriter-4] {"position":"1102,3007.666666666667","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "mapdrawnaudio">><messageboxlarge>
+      There are also Mapping Cards in Compartment 4 – hand out 1 pack per group.
+      Answer the questions and draw them on your maps.
+      Take as much time as you need – I think this is going to be very important to Anne for the final part of our
+      mission together.
+      When done, click <button>[[next|mappingdone]]</button>
+
+      </messageboxlarge>
+
+
+:: mapdrawnaudio {"position":"1759.3333333333335,306.66666666666663","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/there-are-also-mapping-cards.mp3"
+      autoplay ></audio>
+
+
+:: mappingdone [green -t8n-typewriter-4] {"position":"1237,3004.333333333333","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "mappingdoneaudio">><messageboxlarge>
+      GREAT work.
+      If you have time, you can share back some of the information you have found out about your school to the rest of
+      your Secret Club. It will help you work out your Gift.
+      When done, click<button>[[next|EMERGENCY]]</button>
+      </messageboxlarge>
+
+
+:: mappingdoneaudio {"position":"1912.6666666666667,308.33333333333326","size":"100,100"}
+<audio id="player"
+      src="https://uca-coney-dev.netlify.app/assets/audio/great-work-if-you-have-time-you-can.mp3" autoplay ></audio>
+
+
+:: mappingdoneb [green -t8n-typewriter-4] {"position":"1367.0000000000002,3002.666666666667","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "mappingdoneaudio">><messageboxlarge>
+      Ok - great work. Mapping Complete.
+
+      The next video is locked though – can you text Anne the word MAPPING COMPLETE and hopefully, she will call you
+      with the codeword to move on.
+
+      We are so close to lighting the beacon.
 
       <<include "password4">>
-</messageboxlarge>
-
-:: mappingdonebaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/ok-great-work-mapping-complete.mp3" autoplay ></audio>  
+      </messageboxlarge>
 
 
-:: Video7 [green] {"position":"687,4066","size":"100,100"}
+:: mappingdonebaudio {"position":"2044.3333333333335,308.33333333333326","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/ok-great-work-mapping-complete.mp3"
+      autoplay ></audio>
+
+
+:: Video7 [green] {"position":"577,3172.6666666666665","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png" class="center"></div>
+      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      class="center"></div>
       <div>
       <iframe width='800px' height='450px'
       src='https://player.vimeo.com/video/531963515?autoplay=1&byline=0&portrait=0'></iframe>
@@ -1087,107 +1196,125 @@ We are so close to lighting the beacon.
       30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticanimation]]</nextbutton><</timed>>
 
 
-:: missionplanning [planning] {"position":"687,4216","size":"100,100"}
+:: missionplanning [planning] {"position":"690.3333333333334,3426","size":"100,100"}
 <<include
       "back">><<include "missionplanningaudio">>
       <messageboxplanning>
       <div class="animated rotateInDownLeft">
-      This is it – the final compartment. 
-We’ve connected to each other, moved our bodies through the UKA TOK, wondered about ourselves and the space around us, learnt new skills and now is the final way we can counter the Static… Giving.
+      This is it – the final compartment.
+      We’ve connected to each other, moved our bodies through the UKA TOK, wondered about ourselves and the space around
+      us, learnt new skills and now is the final way we can counter the Static… Giving.
 
-<button>[[NEXT|missionplanningb]]</button>
+      <button>[[NEXT|missionplanningb]]</button>
       </div>
       </messageboxplanning>
 
-:: missionplanningaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/this-is-it-the-final compartment.mp3" autoplay ></audio>  
 
-:: missionplanningb [planning] {"position":"687,4216","size":"100,100"}
+:: missionplanningaudio {"position":"2171,310","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/this-is-it-the-final compartment.mp3" autoplay
+      ></audio>
+
+
+:: missionplanningb [planning] {"position":"903.6666666666667,3611","size":"100,100"}
 <<include
       "back">><<include "missionplanningbaudio">>
       <messageboxplanning>
       <div class="animated rotateInDownLeft">
 
-There are three stages to the Giving Mission
+      There are three stages to the Giving Mission
 
-Planning
-Making
-Delivery
+      Planning
+      Making
+      Delivery
 
-<button>[[NEXT|missionplanningc]]</button>
+      <button>[[NEXT|missionplanningc]]</button>
       </div>
       </messageboxplanning>
 
 
-:: missionplanningbaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/there-are-three-stages-to-this-giving.mp3" autoplay ></audio>  
+:: missionplanningbaudio {"position":"1677.6666666666667,195","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/there-are-three-stages-to-this-giving.mp3" autoplay
+      ></audio>
 
 
-:: missionplanningc [planning] {"position":"687,4216","size":"100,100"}
+:: missionplanningc [planning] {"position":"790.3333333333334,3272.6666666666665","size":"100,100"}
 <<include
       "back">><<include "missionplanningcaudio">>
       <messageboxplanning>
       <div class="animated rotateInDownLeft">
 
-In the Compartment is the fifth button, but it seems there is one missing. A 6th button. 
-Anne must have hidden it. 
-I hope that by completing this last part she tells us where it is. 
-We need it to light the beacon
+      In the Compartment is the fifth button, but it seems there is one missing. A 6th button.
+      Anne must have hidden it.
+      I hope that by completing this last part she tells us where it is.
+      We need it to light the beacon
 
-<button>[[NEXT|missionplanningd]]</button>
+      <button>[[NEXT|missionplanningd]]</button>
       </div>
       </messageboxplanning>
 
-:: missionplanningcaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/in-the-compartment-is-the-fifth.mp3" autoplay ></audio>  
+
+:: missionplanningcaudio {"position":"1781,183.33333333333326","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/in-the-compartment-is-the-fifth.mp3" autoplay
+      ></audio>
 
 
-:: missionplanningd [planning] {"position":"687,4216","size":"100,100"}
+:: missionplanningd [planning] {"position":"953.6666666666667,3414.333333333333","size":"100,100"}
 <<include
       "back">><<include "missionplanningdaudio">>
       <messageboxplanning>
       <div class="animated rotateInDownLeft">
 
-Lighting the Beacon will clear the fog and counter the Static. 
-And shine out Anne’s final codeword. 
-Open Compartment 5 and start with the Planning Card. 
+      Lighting the Beacon will clear the fog and counter the Static.
+      And shine out Anne’s final codeword.
+      Open Compartment 5 and start with the Planning Card.
 
       Good luck $clubname !
-          <<include "password6">>
+      <<include "password6">>
       </div>
-      </messageboxplanning>     
+      </messageboxplanning>
 
 
-:: missionplanningdaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/lighting-the-beacon-will-clear-the.mp3" autoplay ></audio>  
+:: missionplanningdaudio {"position":"1907.6666666666667,181.66666666666663","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/lighting-the-beacon-will-clear-the.mp3"
+      autoplay ></audio>
 
-:: premaking [green -t8n-typewriter-4] {"position":"612,5116","size":"100,100"}
-<<include "back">><<include"typewriter">><<include "premakingaudio">><messageboxlarge>
-Oh great, you've planned your gift.
-A gift that will have an impact on others.
-You can move onto the Making Card now.
 
-     <<include "password7">>
+:: premaking [green -t8n-typewriter-4] {"position":"713.6666666666667,3819.3333333333335","size":"100,100"}
+<<include
+      "back">><<include"typewriter">><<include
+      "premakingaudio">><messageboxlarge>
+      Oh great, you've planned your gift.
+      A gift that will have an impact on others.
+      You can move onto the Making Card now.
+
+      <<include "password7">>
       </messageboxlarge>
 
-:: premakingaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/oh-great-youve-planned-your.mp3" autoplay ></audio> 
 
-:: predelivery [green -t8n-typewriter-4] {"position":"612,5116","size":"100,100"}
-<<include "back">><<include
+:: premakingaudio {"position":"2159.3333333333335,169.99999999999994","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/oh-great-youve-planned-your.mp3"
+      autoplay ></audio>
+
+
+:: predelivery [green -t8n-typewriter-4] {"position":"928.6666666666667,3841.0000000000005","size":"100,100"}
+<<include
+      "back">><<include
       "typewriter">><<include "predeliveryaudio">><messageboxlarge>
-Great work, $clubname !
-Ok, final part - Delivery.
-Your gift is ready to be deilvered.
-Move onto the Delivery Card
+      Great work, $clubname !
+      Ok, final part - Delivery.
+      Your gift is ready to be deilvered.
+      Move onto the Delivery Card
 
       <<include "password8">></messageboxlarge>
 
-:: predeliveryaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/ok-final-part-delivery.mp3" autoplay ></audio> 
+
+:: predeliveryaudio {"position":"2032.666666666667,178.33333333333331","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/ok-final-part-delivery.mp3" autoplay
+      ></audio>
 
 
-:: static [static] {"position":"612,5566","size":"100,100"}
+:: static [static] {"position":"400.3333333333333,3487.666666666667","size":"100,100"}
 /<audio
       src="audio/finalstatic.mp3" autoplay></audio>
       <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox>
@@ -1198,10 +1325,11 @@ Move onto the Delivery Card
       <<timed 25s>><<goto "video8">><</timed>>
 
 
-:: video8 [green] {"position":"612,5716","size":"100,100"}
+:: video8 [green] {"position":"400.3333333333333,3637.666666666667","size":"100,100"}
 <div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png" class="center"></div>
+      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      class="center"></div>
       <div>
       <iframe width='800px' height='450px'
       src='https://player.vimeo.com/video/532167217?autoplay=1&byline=0&portrait=0'></iframe>
@@ -1212,77 +1340,100 @@ Move onto the Delivery Card
       30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video8b]]</nextbutton><</timed>>
 
 
-:: video8b [green -t8n-typewriter-4] {"position":"612,5866","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video8baudio">>
-<messageboxlarge>
-I can’t believe you did it. 
-The Mission has worked.
-You have changed the Static.
-And helped Anne
-And helped me too. 
+:: video8b [green -t8n-typewriter-4] {"position":"400.3333333333333,3787.666666666667","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "video8baudio">>
+      <messageboxlarge>
+      I can’t believe you did it.
+      The Mission has worked.
+      You have changed the Static.
+      And helped Anne
+      And helped me too.
 
-<button>[[NEXT|video8c]]</button></messageboxlarge>
-
-:: video8baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/i-cant-believe-you-did-it.mp3" autoplay ></audio> 
-
-:: video8c [green -t8n-typewriter-4] {"position":"612,5866","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video8caudio">>
-<messageboxlarge>
-This is the end of the mission for today. 
-But remember the skills you have learnt. 
-These are skills all UCA Agents must hold onto
-We use them, particularly if the static feels strong. 
-
-We CONNECT with people
-We MOVE our bodies
-We WONDER and are curious
-We DISCOVER new things
-We GIVE to others
-
-These five skills we must hold onto. 
-
-<button>[[NEXT|video8d]]</button></messageboxlarge>
-
-:: video8caudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/this-is-the-end-of-the-mission.mp3" autoplay ></audio> 
-
-:: video8d [green -t8n-typewriter-4] {"position":"612,5866","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video8daudio">>
-<messageboxlarge>
-Teacher, when you are ready, collect up the Agent Cards to send to UCA HQ, you can put the buttons from the Beacon back into their compartments too. 
-
-<button>[[NEXT|video8e]]</button></messageboxlarge>
+      <button>[[NEXT|video8c]]</button></messageboxlarge>
 
 
-:: video8daudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/teacher-when-you-are-ready-collect.mp3" autoplay ></audio> 
+:: video8baudio {"position":"1724.3333333333335,703.3333333333334","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/i-cant-believe-you-did-it.mp3" autoplay
+      ></audio>
 
 
-:: video8e [green -t8n-typewriter-4] {"position":"612,5866","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video8eaudio">>
-<messageboxlarge>
-Your work today has been exceptional and I think UCA HQ will be very impressed. 
-I think Anne is very impressed. 
-Maybe….just maybe…they will be in touch with you soon. 
+:: video8c [green -t8n-typewriter-4] {"position":"290.3333333333333,3787.666666666667","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "video8caudio">>
+      <messageboxlarge>
+      This is the end of the mission for today.
+      But remember the skills you have learnt.
+      These are skills all UCA Agents must hold onto
+      We use them, particularly if the static feels strong.
 
-I’m going to reach out to Anne right now as well. 
+      We CONNECT with people
+      We MOVE our bodies
+      We WONDER and are curious
+      We DISCOVER new things
+      We GIVE to others
 
-Thank you for your help from the Undercover CareTaker Agency. 
+      These five skills we must hold onto.
 
-<button>[[NEXT|endpart1]]</button></messageboxlarge>
-
-:: video8eaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/your-work-today-has-been.mp3" autoplay ></audio> 
+      <button>[[NEXT|video8d]]</button></messageboxlarge>
 
 
-:: endpart1 [green -t8n-typewriter-4] {"position":"612,6016","size":"100,100"}
+:: video8caudio {"position":"1839.3333333333333,695","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/this-is-the-end-of-the-mission.mp3" autoplay ></audio>
+
+
+:: video8d [green -t8n-typewriter-4] {"position":"526.3333333333333,3779.666666666667","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "video8daudio">>
+      <messageboxlarge>
+      Teacher, when you are ready, collect up the Agent Cards to send to UCA HQ, you can put the buttons from the Beacon
+      back into their compartments too.
+
+      <button>[[NEXT|video8e]]</button></messageboxlarge>
+
+
+:: video8daudio {"position":"1956,698.3333333333334","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-when-you-are-ready-collect.mp3" autoplay
+      ></audio>
+
+
+:: video8e [green -t8n-typewriter-4] {"position":"176.33333333333331,3803.666666666667","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "video8eaudio">>
+      <messageboxlarge>
+      Your work today has been exceptional and I think UCA HQ will be very impressed.
+      I think Anne is very impressed.
+      Maybe….just maybe…they will be in touch with you soon.
+
+      I’m going to reach out to Anne right now as well.
+
+      Thank you for your help from the Undercover CareTaker Agency.
+
+      <button>[[NEXT|endpart1]]</button></messageboxlarge>
+
+
+:: video8eaudio {"position":"2066,696.6666666666667","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/your-work-today-has-been.mp3" autoplay ></audio>
+
+
+:: endpart1 [green -t8n-typewriter-4] {"position":"400.3333333333333,3937.666666666667","size":"100,100"}
 <messagebox>
       TO BE CONTINUED...</messagebox>
-      <messagebox><div class="animated rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
+      <messagebox><div class="animated
+      rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
       <messagebox>
-      <div class="animated fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div class="animated
-      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div class="animated
+      <div class="animated
+      fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div
+      class="animated
+      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div
+      class="animated
       fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox>
       <button>[[NEXT|Part2]]</button>
 
@@ -1299,22 +1450,26 @@ Thank you for your help from the Undercover CareTaker Agency.
       \/% PASSWORD CODE %/
       \ <<set $password1 to $password1.toUpperCase()>>
       \ <<if $password1 is "">>
-      \<<replace "#code1result">>BEFORE YOU COME IN YOU MUST ENTER THE CODEWORD...<</replace>>
+      \<<replace "#code1result">>BEFORE YOU COME IN YOU MUST ENTER THE
+      CODEWORD...<</replace>>
       \<</if>>
       \
       \/% PASSWORD CORRECT %/
-      <<if $password1 isnot "" and $password1 is "HOPE" or $password1 is "hope">>
+      <<if $password1 isnot "" and $password1 is "HOPE" or $password1 is
+      "hope">>
       <<replace "#code1result">>
       <</replace>><<replace "#resultbutton">><</replace>>
       <<goto [[intro]]>>
       <</if>>
-      <<if $password1 isnot "" and $password1 is "ROOT" or $password1 is "hope">>
+      <<if $password1 isnot "" and $password1 is "ROOT" or $password1 is
+      "hope">>
       <<replace "#code1result">>
       <</replace>><<replace "#resultbutton">><</replace>>
       <<goto [[intro2]]>>
       <</if>>
       \/% PASSWORD INCORRECT %/
-      <<if $password1 isnot "" and $password1 is not "HOPE" or $password1 is not "hope">>
+      <<if $password1 isnot "" and $password1 is not "HOPE" or $password1 is not
+      "hope">>
       <<replace "#code1result">>Thats not right.<</replace>>
       <</if>><</button>>
 
@@ -1373,8 +1528,9 @@ Thank you for your help from the Undercover CareTaker Agency.
       <</if>><</button>>
 
 
-:: password4 {"position":"136,810","size":"100,100"}
-\/% PASSWORD FEEDBACK %/
+:: password4 {"position":"137.66666666666666,860","size":"100,100"}
+\/% PASSWORD
+      FEEDBACK %/
       \<span id="code4result">WHAT'S THE CODEWORD?</span>
       \<span id="resultbutton">
       \/% PASSWORD INPUT %/
@@ -1389,24 +1545,27 @@ Thank you for your help from the Undercover CareTaker Agency.
       \<</if>>
       \
       \/% PASSWORD CORRECT %/
-      <<if $password4 isnot "" and $password4 is "NIGEL" or $password4 is "GO GO">>
+      <<if $password4 isnot "" and $password4 is "NIGEL" or $password4 is "GO
+      GO">>
       <<replace "#code4result">>
       <</replace>><<replace "#resultbutton">><</replace>>
       <<goto [[Video7]]>>
       <</if>>
       \/% PASSWORD INCORRECT %/
-      <<if $password4 isnot "" and $password4 is not "NIGEL" or $password4 is not "GO GO">>
+      <<if $password4 isnot "" and $password4 is not "NIGEL" or $password4 is not "GO
+      GO">>
       <<replace "#code4result">>Thats not right.<</replace>>
       <</if>><</button>>
 
 
-:: password5 {"position":"144,945","size":"100,100"}
+:: password5 {"position":"144,995","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
       \<span id="code5result">WHAT'S THE CODEWORD?</span>
       \<span id="resultbutton">
       \/% PASSWORD INPUT %/
       \<div class="css-input">\
-      <<textbox "$password5" "">></div><<button "Enter">></span>
+      <<textbox "$password5" "">></div><<button
+      "Enter">></span>
       \
       \/% PASSWORD CODE %/
       \ <<set $password5 to $password5.toUpperCase()>>
@@ -1425,13 +1584,16 @@ Thank you for your help from the Undercover CareTaker Agency.
       <<replace "#code5result">>Thats not right.<</replace>>
       <</if>><</button>>
 
-:: password6 {"position":"144,945","size":"100,100"}
-\/% PASSWORD FEEDBACK %/
+
+:: password6 {"position":"144,1141.6666666666667","size":"100,100"}
+\/% PASSWORD
+      FEEDBACK %/
       \<span id="code6result">WHAT'S THE CODEWORD?</span>
       \<span id="resultbutton">
       \/% PASSWORD INPUT %/
       \<div class="css-input">\
-      <<textbox "$password6" "">></div><<button "Enter">></span>
+      <<textbox "$password6" "">></div><<button
+      "Enter">></span>
       \
       \/% PASSWORD CODE %/
       \ <<set $password6 to $password6.toUpperCase()>>
@@ -1451,13 +1613,15 @@ Thank you for your help from the Undercover CareTaker Agency.
       <</if>><</button>>
 
 
-:: password7 {"position":"144,945","size":"100,100"}
-\/% PASSWORD FEEDBACK %/
+:: password7 {"position":"144,1283.3333333333335","size":"100,100"}
+\/% PASSWORD
+      FEEDBACK %/
       \<span id="code7result">WHAT'S THE CODEWORD?</span>
       \<span id="resultbutton">
       \/% PASSWORD INPUT %/
       \<div class="css-input">\
-      <<textbox "$password7" "">></div><<button "Enter">></span>
+      <<textbox "$password7" "">></div><<button
+      "Enter">></span>
       \
       \/% PASSWORD CODE %/
       \ <<set $password7 to $password7.toUpperCase()>>
@@ -1477,13 +1641,14 @@ Thank you for your help from the Undercover CareTaker Agency.
       <</if>><</button>>
 
 
-:: password8 {"position":"144,945","size":"100,100"}
+:: password8 {"position":"147.33333333333334,1438.3333333333335","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
       \<span id="code8result">WHAT'S THE CODEWORD?</span>
       \<span id="resultbutton">
       \/% PASSWORD INPUT %/
       \<div class="css-input">\
-      <<textbox "$password8" "">></div><<button "Enter">></span>
+      <<textbox "$password8" "">></div><<button
+      "Enter">></span>
       \
       \/% PASSWORD CODE %/
       \ <<set $password8 to $password8.toUpperCase()>>
@@ -1503,7 +1668,7 @@ Thank you for your help from the Undercover CareTaker Agency.
       <</if>><</button>>
 
 
-:: password9 {"position":"136,570","size":"100,100"}
+:: password9 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
       \<span id="code9result"></span>
       \<span id="resultbutton">
@@ -1528,20 +1693,22 @@ Thank you for your help from the Undercover CareTaker Agency.
       <<if $password9 isnot "" and $password9 is not "AGENTS READY">>
       <<replace "#code9result">>Thats not right.<</replace>>
       <</if>><</button>>
-      
 
-:: title {"position":"325,260","size":"100,100"}
+
+:: title {"position":"340,40","size":"100,100"}
 <maintitle>[img[http://remote.co.com/UCA/images/logotitle.png]]</maintitle>
 
 
-:: typewriter {"position":"210,266","size":"100,100"}
+:: typewriter {"position":"225,46","size":"100,100"}
 <typewriter>[img[http://remote.co.com/UCA/images/typewriter1.png]]</typewriter>
 
 
-:: Part2 [green] {"position":"850,526","size":"100,100"}
-<div id="wrap_video">
+:: Part2 [green] {"position":"1180,757.6666666666669","size":"100,100"}
+<div
+      id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png" class="center"></div>
+      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      class="center"></div>
       <div>
       <iframe width='800px' height='450px'
       src='https://player.vimeo.com/video/532121247?autoplay=1&byline=0&portrait=0'></iframe>
@@ -1552,20 +1719,25 @@ Thank you for your help from the Undercover CareTaker Agency.
       60s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video9b]]</nextbutton><</timed>>
 
 
-:: video9b [green -t8n-typewriter-4] {"position":"753,652","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "video9baudio">>
+:: video9b [green -t8n-typewriter-4] {"position":"1019.6666666666667,647","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "video9baudio">>
       <messageboxlarge>Teacher, please hold onto the UCA Roots for the time being and hand out a piece of paper to
       everyone in the class.
 
       When they are ready to plant their UCA Roots
       <button>[[click here|platform2]]</button></messageboxlarge>
 
-:: video9baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/teacher-please-hold-onto-the-UCA-Roots.mp3" autoplay ></audio>       
+
+:: video9baudio {"position":"2069.3333333333335,946.6666666666667","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-please-hold-onto-the-UCA-Roots.mp3" autoplay
+      ></audio>
 
 
-:: platform2 [green -t8n-typewriter-4] {"position":"753,802","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "platform2baudio">>
+:: platform2 [green -t8n-typewriter-4] {"position":"1006.3333333333334,770.3333333333334","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "platform2baudio">>
       <messageboxlarge>[img[http://remote.co.com/UCA/images/hand.png]]
       The UCA Root is like a bookmark
 
@@ -1576,12 +1748,16 @@ Thank you for your help from the Undercover CareTaker Agency.
       It’s important for an Agent to remember these moments.
       <button>[[Next|platform3]]</button></messageboxlarge>
 
-:: platform2baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/the-UCA-Root-is-like-a-bookmark.mp3" autoplay ></audio>            
+
+:: platform2baudio {"position":"2189.333333333334,1816.6666666666667","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/the-UCA-Root-is-like-a-bookmark.mp3"
+      autoplay ></audio>
 
 
-:: platform3 [green -t8n-typewriter-4] {"position":"753,952","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "platform3baudio">>
+:: platform3 [green -t8n-typewriter-4] {"position":"1006.3333333333334,920.3333333333334","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "platform3baudio">>
       <messageboxlarge>On your piece of paper
       You’ll have around 5 minutes to draw an image of that memory – with a pencil
 
@@ -1591,101 +1767,136 @@ Thank you for your help from the Undercover CareTaker Agency.
       on</messageboxlarge>
 
 
-:: platform3baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/on-your-piece-of-paper.mp3" autoplay ></audio>          
+:: platform3baudio {"position":"2189.3333333333335,1700","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/on-your-piece-of-paper.mp3" autoplay ></audio>
 
 
-:: platform4 [green -t8n-typewriter-4] {"position":"753,1102","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "platform4baudio">>
+:: platform4 [green -t8n-typewriter-4] {"position":"1006.3333333333334,1070.3333333333333","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "platform4baudio">>
       <messageboxlarge>Now I’m going to give you time to colour it in with colouring pencils
       Teacher, click <button>[[Next|platform5]]</button> when you are ready to move
       on</messageboxlarge>
 
-:: platform4baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/now-im-going-to-give-you-time-to-colour.mp3" autoplay ></audio>                
+
+:: platform4baudio {"position":"2192.6666666666665,1573.3333333333335","size":"100,100"}
+<audio id="player"
+      src="https://uca-coney-dev.netlify.app/assets/audio/now-im-going-to-give-you-time-to-colour.mp3" autoplay ></audio>
 
 
-:: platform5 [green -t8n-typewriter-4] {"position":"753,1252","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "platform5baudio">>
+:: platform5 [green -t8n-typewriter-4] {"position":"1018.0000000000001,1210.3333333333333","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "platform5baudio">>
       <messageboxlarge>Now I’m going to give you time to make it even more colourful – with pens – even if it
       makes it super colourful!
       Teacher, click <button>[[Next|platform6]]</button> when you are ready to move
       on</messageboxlarge>
 
-:: platform5baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/now-im-going-to-give-you-time-make-it-even-more-colourful.mp3" autoplay ></audio>            
 
-:: platform6 [green -t8n-typewriter-4] {"position":"896,1312","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "platform6audio">>
+:: platform5baudio {"position":"2192.6666666666665,1456.6666666666667","size":"100,100"}
+<audio id="player"
+      src="https://uca-coney-dev.netlify.app/assets/audio/now-im-going-to-give-you-time-make-it-even-more-colourful.mp3" autoplay
+      ></audio>
+
+
+:: platform6 [green -t8n-typewriter-4] {"position":"1015.9999999999999,1335.3333333333335","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "platform6audio">>
       <messageboxlarge>Now we connect our Root and our Memory.
 
       Teacher, please hand out the Agent Cards to the UCA Agents
 
       When all the agents have their cards click <button>[[Next|platform7]]</button></messageboxlarge>
 
-:: platform6audio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/now-we-connect-our-root-and-our-memory.mp3" autoplay ></audio>       
 
-:: platform7 [green -t8n-typewriter-4] {"position":"839,1436","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "platform7audio">>
+:: platform6audio {"position":"2194.3333333333335,1325","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/now-we-connect-our-root-and-our-memory.mp3" autoplay
+      ></audio>
+
+
+:: platform7 [green -t8n-typewriter-4] {"position":"1019.0000000000001,1463.3333333333335","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><<include
+      "platform7audio">>
       <messageboxlarge>[img[http://remote.co.com/UCA/images/hand.png]]
       I want you to hold your button in your hand and whisper UCA UCA UCA - squeeze it in your hand – think about that
       memory you have just drawn.
       <button>[[NEXT|platform7b]]</button>
       </messageboxlarge>
 
-:: platform7audio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/i-want-you-to-hold-your-button.mp3" autoplay ></audio>     
+
+:: platform7audio {"position":"2194.3333333333335,1195","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/i-want-you-to-hold-your-button.mp3" autoplay ></audio>
+
 
 :: choiceyes [green -t8n-typewriter-4] {"position":"807,1691","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "choiceyesaudio">>
+<<include "back">><<include "typewriter">><<include
+      "choiceyesaudio">>
       <messageboxlarge>Ewwwww ok! <button>[[Next|platform8]]</button></messageboxlarge>
 
 
-:: choiceyesaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/yes-ewwwww-ok.mp3" autoplay ></audio>     
+:: choiceyesaudio {"position":"776,350","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/yes-ewwwww-ok.mp3" autoplay ></audio>
 
-:: choiceno [green -t8n-typewriter-4] {"position":"911,1691","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "choicenoaudio">>
+
+:: choiceno [green -t8n-typewriter-4] {"position":"966,1702.6666666666667","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "choicenoaudio">>
       <messageboxlarge>Phew! <button>[[Next|platform8]]</button></messageboxlarge>
 
 
-:: choicenoaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/no-phew.mp3" autoplay ></audio>    
+:: choicenoaudio {"position":"656,350","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/no-phew.mp3" autoplay ></audio>
 
 
 :: platform8 [green -t8n-typewriter-4] {"position":"863,1833","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "platforom8audio">>
+<<include "back">><<include "typewriter">><<include
+      "platforom8audio">>
       <messageboxlarge>[img[http://remote.co.com/UCA/images/hand.png]]
       Now, I want you to hold your button in your hand again, whisper UCA UCA UCA, squeeze it in your hand and think
       about that memory you have just drawn.
 
       <button>[[NEXT|platform8b]]</button></messageboxlarge>
 
-:: platforom8audio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/now-i-want-you-to-hold-your-button-in-your-hand-again.mp3" autoplay ></audio>    
+
+:: platforom8audio {"position":"2179.3333333333335,693.3333333333335","size":"100,100"}
+<audio id="player"
+      src="https://uca-coney-dev.netlify.app/assets/audio/now-i-want-you-to-hold-your-button-in-your-hand-again.mp3" autoplay ></audio>
 
 
 :: FISHY SPAGHETTI [green -t8n-typewriter-4] {"position":"812,1990","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "FISHY SPAGHETTIaudio">>
+<<include "back">><<include "typewriter">><<include "FISHY
+      SPAGHETTIaudio">>
       <messageboxlarge>Sounds yummy! <button>[[Next|platform9]]</button></messageboxlarge>
 
 
-:: FISHY SPAGHETTIaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/fishy-spaghetti-sounds-yummy.mp3" autoplay ></audio>    
+:: FISHY SPAGHETTIaudio {"position":"2046.0000000000002,31.666666666666742","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/fishy-spaghetti-sounds-yummy.mp3"
+      autoplay ></audio>
 
 
 :: COLD CUSTARD [green -t8n-typewriter-4] {"position":"938,1990","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "COLD CUSTARDaudio">>
+<<include "back">><<include "typewriter">><<include "COLD
+      CUSTARDaudio">>
       <messageboxlarge>Sounds yummy! <button>[[Next|platform9]]</button></messageboxlarge>
 
 
-:: COLD CUSTARDaudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/cold-custard-sounds-yummy.mp3" autoplay ></audio>         
+:: COLD CUSTARDaudio {"position":"2157.666666666667,33.333333333333336","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/cold-custard-sounds-yummy.mp3" autoplay
+      ></audio>
 
 
-:: platform9 [green -t8n-typewriter-4] {"position":"859,2140","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "platform9audio">>
+:: platform9 [green -t8n-typewriter-4] {"position":"1034,2158.3333333333335","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "platform9audio">>
       <messageboxlarge>[img[http://remote.co.com/UCA/images/hand.png]]
       Now, last time, I want you to hold your button in your hand again, whisper UCA UCA UCA, squeeze it in your hand
       and think about that memory you have just drawn.
@@ -1693,80 +1904,95 @@ Thank you for your help from the Undercover CareTaker Agency.
       <button>[[NEXT|platform9b]]</button>
       </messageboxlarge>
 
-:: platform9audio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/now-last-time-i-want-you-to-hold.mp3" autoplay ></audio>   
 
-:: EMERGENCY [static] {"position":"546,3895","size":"100,100"}
+:: platform9audio {"position":"2189.3333333333335,946.6666666666667","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/now-last-time-i-want-you-to-hold.mp3"
+      autoplay ></audio>
+
+
+:: EMERGENCY [static] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
 /<audio
       src="audio/static.mp3" autoplay></audio>
-      <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox><<timed 5s>><<goto
+      <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox><<timed
+      5s>><<goto
       "mappingdoneb">><</timed>>
 
 
 :: intro [green] {"position":"537,506","size":"100,100"}
 <messagebox><div
-      class="animated rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
+      class="animated
+      rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
       <messagebox>
-      <div class="animated fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div class="animated
-      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div class="animated
+      <div class="animated
+      fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div
+      class="animated
+      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div
+      class="animated
       fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox>
-       <<timed 3s>>STATIC<</timed>>
+      <<timed 3s>>STATIC<</timed>>
       <<timed 5s>><<goto
       "Introvideo1">><</timed>>
 
 
-:: beenbefore [purple2] {"position":"393,617","size":"100,100"}
+:: beenbefore [purple2] {"position":"1016.3333333333334,103.66666666666663","size":"100,100"}
 <messagebox2>
       [img[http://remote.co.com/UCA/images/intercom.png]]
       Is this your first time here?
       <button>[[YES|welcome1]]</button> <button>[[NO|contents]]</button></messagebox2>
 
-:: contents [purple] {"position":"720,320","size":"100,100"}
+
+:: contents [purple] {"position":"836.6666666666666,205","size":"100,100"}
 <<include
       "back">><<include "typewriter">>
       <messageboxlarge>
-       <name><b>CONTENTS PAGE</b></name>
-       /* TODO CONTENTS PAGE */
-       Where would you like to go?
+      <name><b>CONTENTS PAGE</b></name>
+      /* TODO CONTENTS PAGE */
+      Where would you like to go?
 
-     PART 1
-[[FROM THE START|welcome1]]
-[[MOVE (UCA TOK)|READY]]
-[[CONNECT|video4]]
-[[DISCOVER|clubnamediscover]]
-[[WONDER|clubnamewonder]]
-[[GIVE|clubnamegive]]
+      PART 1
+      [[FROM THE START|welcome1]]
+      [[MOVE (UCA TOK)|READY]]
+      [[CONNECT|video4]]
+      [[DISCOVER|clubnamediscover]]
+      [[WONDER|clubnamewonder]]
+      [[GIVE|clubnamegive]]
 
-     PART 2
- [[FROM THE START|welcome2]]
+      PART 2
+      [[FROM THE START|welcome2]]
       </messageboxlarge>
 
 
-:: clubnamediscover  [green -t8n-typewriter-4] {"position":"687,2117","size":"100,100"}
-<<include "back">><<include "typewriter">><messageboxlarge>
+:: clubnamediscover [green -t8n-typewriter-4] {"position":"175.33333333333326,2197","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><messageboxlarge>
 
- Enter your secret club name here
+      Enter your secret club name here
       <<textbox "$clubname" "">>
       <<button [[Enter|enterclubname]]>><</button>>
       </messageboxlarge>
 
-:: clubnamewonder  [green -t8n-typewriter-4] {"position":"687,2117","size":"100,100"}
-<<include "back">><<include "typewriter">><messageboxlarge>
 
- Enter your secret club name here
+:: clubnamewonder [green -t8n-typewriter-4] {"position":"171.99999999999997,2072","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><messageboxlarge>
+
+      Enter your secret club name here
       <<textbox "$clubname" "">>
       <<button [[Enter|Video6]]>><</button>>
       </messageboxlarge>
 
-:: clubnamegive  [green -t8n-typewriter-4] {"position":"687,2117","size":"100,100"}
-<<include "back">><<include "typewriter">><messageboxlarge>
 
- Enter your secret club name here
+:: clubnamegive [green -t8n-typewriter-4] {"position":"158.66666666666666,1930.3333333333333","size":"100,100"}
+<<include
+      "back">><<include "typewriter">><messageboxlarge>
+
+      Enter your secret club name here
       <<textbox "$clubname" "">>
       <<button [[Enter|Video7]]>><</button>>
       </messageboxlarge>
 
-:: welcome2 [purple] {"position":"720,320","size":"100,100"}
+
+:: welcome2 [purple] {"position":"1113.3333333333335,330","size":"100,100"}
 <<include
       "back">><<include "typewriter">>
       <messageboxlarge>
@@ -1777,13 +2003,18 @@ Thank you for your help from the Undercover CareTaker Agency.
       </messageboxlarge>
 
 
-:: intro2 [green] {"position":"727,510","size":"100,100"}
+:: intro2 [green] {"position":"695.3333333333334,506.6666666666667","size":"100,100"}
 <messagebox><div
-      class="animated rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
+      class="animated
+      rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
       <messagebox>
-      <div class="animated fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div class="animated
-      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div class="animated
-      fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox><<timed 4s>><<goto
+      <div class="animated
+      fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div
+      class="animated
+      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div
+      class="animated
+      fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox><<timed
+      4s>><<goto
       "Part2">><</timed>>
 
 
@@ -1791,38 +2022,44 @@ Thank you for your help from the Undercover CareTaker Agency.
 <div
       id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png" class="center"></div>
+      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      class="center"></div>
       \ <div>
-      \ <messageboxstat>[img[http://remote.co.com/UCA/images/static.gif]]</messageboxstat><messageboxstat><div
-      class="animated fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></messageboxstat>
+      \
+      <messageboxstat>[img[http://remote.co.com/UCA/images/static.gif]]</messageboxstat><messageboxstat><div
+      class="animated
+      fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></messageboxstat>
       </div>
       </div>
       </div>
 
 
-:: staticanimation [static] {"position":"558,4132","size":"100,100"}
+:: staticanimation [static] {"position":"543,3468.6666666666665","size":"100,100"}
 /<audio
       src="audio/static.mp3" autoplay></audio>
-      <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox><<timed 5s>><<goto
+      <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox><<timed
+      5s>><<goto
       "missionplanning">><</timed>>
 
 
-:: reeltoreel {"position":"512,164","size":"100,100"}
+:: reeltoreel {"position":"470.3333333333333,50.66666666666666","size":"100,100"}
 <reeltoreel>[img[http://remote.co.com/UCA/images/reeltoreel2.gif]]</reeltoreel>
 
 
-:: these maps [green] {"position":"440,3484","size":"100,100"}
+:: these maps [green] {"position":"926.6666666666666,3009","size":"100,100"}
 <<include
       "back">><dance>
-      <div class="animated rotateInDownLeft">[img[http://remote.co.com/UCA/images/schoolplan3.jpg]]</div>
+      <div class="animated
+      rotateInDownLeft">[img[http://remote.co.com/UCA/images/schoolplan3.jpg]]</div>
       <button>[[back|video6b]]</button>
 
       <button>[[We've drawn a map|mapdrawn]]</button>
       </dance>
 
 
-:: platform9b [green -t8n-typewriter-4] {"position":"875,2265","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "platform9baudio">>
+:: platform9b [green -t8n-typewriter-4] {"position":"1050,2283.3333333333335","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "platform9baudio">>
       <messageboxlarge>
       Your UCA Root is planted.
       Whenever you want to go back to that memory
@@ -1833,11 +2070,15 @@ Thank you for your help from the Undercover CareTaker Agency.
       <button>[[NEXT|platform9c]]</button>
       </messageboxlarge>
 
-:: platform9baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/your-UCA-Root-is-planted.mp3" autoplay ></audio>   
 
-:: platform9c [green -t8n-typewriter-4] {"position":"877,2385","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "platform9caudio">>
+:: platform9baudio {"position":"2077.666666666667,823.3333333333334","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/your-UCA-Root-is-planted.mp3" autoplay
+      ></audio>
+
+
+:: platform9c [green -t8n-typewriter-4] {"position":"1052,2403.3333333333335","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "platform9caudio">>
       <messageboxlarge>
       This UCA Root is for you, always.
       You are now UCA Agents.
@@ -1847,24 +2088,32 @@ Thank you for your help from the Undercover CareTaker Agency.
       <button>[[NEXT|outro]]</button>
       </messageboxlarge>
 
-:: platform9caudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/this-UCA-Root-is-for-you-always.mp3" autoplay ></audio>   
 
-:: outro [green] {"position":"894,2515","size":"100,100"}
+:: platform9caudio {"position":"2186.0000000000005,825","size":"100,100"}
+<audio
+      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/this-UCA-Root-is-for-you-always.mp3" autoplay ></audio>
+
+
+:: outro [green] {"position":"1069,2533.3333333333335","size":"100,100"}
 <messagebox><div
-      class="animated rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
+      class="animated
+      rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
       <messagebox>
-      <div class="animated fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div class="animated
-      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div class="animated
+      <div class="animated
+      fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div
+      class="animated
+      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div
+      class="animated
       fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox>
 
 
-:: back {"position":"74,257","size":"100,100"}
+:: back {"position":"89,37","size":"100,100"}
 <backbutton><<return[img[http://remote.co.com/UCA/images/back.png]]>></backbutton>
 
 
-:: platform7b [green -t8n-typewriter-4] {"position":"967,1530","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "platform7baudio">>
+:: platform7b [green -t8n-typewriter-4] {"position":"1032,1583.3333333333335","size":"100,100"}
+<<include "back">><<include
+      "typewriter">><<include "platform7baudio">>
       <messageboxlarge>
       Now we test if the planting has worked?
       I’m going to ask you a question
@@ -1876,8 +2125,10 @@ Thank you for your help from the Undercover CareTaker Agency.
       </messageboxlarge>
 
 
-:: platform7baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/now-we-test-if-the-planting-has-worked.mp3" autoplay ></audio>   
+:: platform7baudio {"position":"2086.0000000000005,1188.3333333333335","size":"100,100"}
+<audio id="player"
+      src="https://uca-coney-dev.netlify.app/assets/audio/now-we-test-if-the-planting-has-worked.mp3" autoplay ></audio>
+
 
 :: platform8b [green -t8n-typewriter-4] {"position":"1039,1843","size":"100,100"}
 <<include "back">><<include "typewriter">>
@@ -1892,7 +2143,20 @@ Thank you for your help from the Undercover CareTaker Agency.
       </messageboxlarge>
 
 
-:: platform8baudio {"position":"536,350","size":"100,100"}
-<audio id="player" src="assets/audio/now-another-test.mp3" autoplay ></audio>  
+:: platform8baudio {"position":"2197.6666666666674,1066.6666666666665","size":"100,100"}
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/now-another-test.mp3" autoplay
+      ></audio>
 
 
+:: beacon1 [green] {"position":"537,506","size":"100,100"}
+<messagebox><div
+      class="animated
+      rotateIn">[img["./assets/img/UCA-51"]]</div></messagebox>
+      /* <messagebox>
+      <div class="animated
+      fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div
+      class="animated
+      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div
+      class="animated
+      fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox> */
+     
