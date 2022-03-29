@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 3
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "beacon1",
+	"start": "beacon2",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -371,9 +371,18 @@ name {
 }
 
 .beacon {
- width:30vw
+ width:30vw;
+  position: fixed; 
+    top: 3vh; 
+    right: 10vw; 
 }
 
+.level{
+      width:30vw;
+      position: fixed; 
+    top: 1vh; 
+    left: 10vw; 
+}
 
 
 
@@ -561,6 +570,15 @@ name {
 .fadeIn {
 	-webkit-animation-duration: 8s;
 	animation-duration: 8s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+}
+
+.fadeFast {
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 	-webkit-animation-timing-function: ease-in;
@@ -1925,17 +1943,19 @@ $(document.head).find('#style-ui-bar').remove();
 :: intro [green] {"position":"537,506","size":"100,100"}
 <messagebox><div
       class="animated
-      rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
-      <messagebox>
+      rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div>
+</messagebox>
+<messagebox>
       <div class="animated
       fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div
       class="animated
       fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div
       class="animated
-      fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox>
-      <<timed 3s>>STATIC<</timed>>
-      <<timed 5s>><<goto
-      "Introvideo1">><</timed>>
+      fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div>
+</messagebox>
+
+      /* <<timed 5s>><<goto
+      "Introvideo1">><</timed>> */
 
 
 :: beenbefore [purple2] {"position":"1016.3333333333334,103.66666666666663","size":"100,100"}
@@ -2152,21 +2172,32 @@ $(document.head).find('#style-ui-bar').remove();
       ></audio>
 
 
-:: beacon1 [green] {"position":"537,506","size":"100,100"}
+:: beacon1 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-  <div id="beacon" class="animated
-      zoomIn">
-      <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png">
-      <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/UCA-51.png">
-      </div>
+  <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move.png"></div>
       </messagebox>
+<messagebox>
+<div class="animated fadeInRightBig">   
+<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/UCA-56.png"></div></messagebox>
 
-       /* <<next 2s>><<replace "#message">>Uploading<</replace>>\ */
-      /* <messagebox>
-      <div class="animated
-      fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div
-      class="animated
-      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div
-      class="animated
-      fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox> */
-     
+
+:: beacon2 [purple] {"position":"537,506","size":"100,100"}
+<messagebox>
+
+  <div class="animated fadeInLeftBig level" id="levelctr">    <img class="level" id="level" src="https://uca-coney-dev.netlify.app/assets/img/move.png"></div>
+      </messagebox>
+<messagebox>
+<div class="animated fadeInRightBig" id="beacon">   
+<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/UCA-56.png"></div>
+
+
+</messagebox>
+<<timed 3s>><<replace "#levelctr">>
+<div class="animated fadeInFast level" ><img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div>
+<</replace>>
+<<replace "#beacon">>
+      <div class="animated fadeInFast" >   
+       <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/UCA-57.png">
+      </div>
+<</replace>>
+<</timed>>
