@@ -398,7 +398,69 @@ name {
     left: 10vw; 
 }
 
+.flexbox-center{
+display: flex;
+justify-content: center;
+align-items: center;
+}
 
+
+.codeword-container{
+display:flex;
+justify-content: space-between;
+align-items: center;
+text-align: right;
+}
+
+.codeword-item{
+      height: 60vh;
+      max-width: 50%;
+}
+
+.codeword-item > p {
+      margin-top:0;
+      color:#fff
+}
+
+.padlock {
+       width: 20vw
+}
+
+.codeword-placeholder {
+ width:20vw;
+  position: fixed; 
+    top: 3vh; 
+    right: 10vw; 
+}
+
+@-webkit-keyframes wobble {
+   0% {
+      opacity: 0.8;
+      transform: skew(3deg);
+    }
+    100% {
+      opacity: 0.9;
+    transform: skew(-1deg);
+    }
+}
+
+@keyframes wobble {
+    0% {
+      opacity: 0.8;
+      transform: skew(5deg);
+    }
+    100% {
+      opacity: 0.9;
+    transform: skew(-1deg);
+    }
+}
+.wobble {
+   -webkit-animation-name: wobble;
+    animation-name: wobble;
+    animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 
 .animated {
 	-webkit-animation-duration: 0.5s;
@@ -684,16 +746,16 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: welcome1 [purple -t8n-typewriter-4] {"position":"986,325","size":"100,100"}
-<<include "back">><<include "typewriter">><<include
-      "welcome1audio">>
-      <messageboxlarge>
-      Hello there,
-      To gain entry a codeword is needed.
-      The codeword is one word, it is somewhere on the box you will have received.
-      Type it in here to gain entry.
-
+<<include"welcome1audio">><messagebox
+><div class="codeword-container"><div class="codeword-item"><img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble"></div>
+   <div class="codeword-item"><p> Hello there,
+                  To gain entry a codeword is needed.
+                  The codeword is one word, it is somewhere on the box you will have received. 
+                  Type it in here to gain entry</p>
       <<include "password1">>
-      </messageboxlarge>
+       </div>
+      </div>
+      </messagebox>
 
 
 :: welcome1audio {"position":"2062.666666666667,558.3333333333334","size":"100,100"}
@@ -714,13 +776,12 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<<timed
-      60s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video1b]]</nextbutton><</timed>>
+      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video1b]]</nextbutton><</timed>>
 
 
 :: video1b [green -t8n-typewriter-4] {"position":"585.3333333333334,666.6666666666667","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "video1baudio">><messageboxlarge>Your choice
-      is needed.
+      "typewriter">><<include "video1baudio">><messageboxlarge>Your choice is needed.
       Click YES, WE ARE IN to answer Anne’s call or choose CLOSE to go back to schoolwork?
 
       <button>[[CLOSE]]</button> or <button>[[YES, WE ARE IN]]</button></messageboxlarge>
@@ -744,8 +805,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: YES, WE ARE IN [green -t8n-typewriter-4] {"position":"573.6666666666666,869.3333333333333","size":"100,100"}
 <<include
-      "back">><<include "typewriter">><<include "YES, WE ARE
-      INaudio">>
+      "back">><<include "typewriter">><<include "YES, WE ARE INaudio">>
       <messageboxlarge>
       FANTASTIC!
       CareTakers are not just those you see in school.
@@ -762,14 +822,15 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: pretokinfo1 [green -t8n-typewriter-4] {"position":"732,839.3333333333334","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "pretokinfo1">>
+      "typewriter">><<include "pretokinfo1audio">>
       <messageboxlarge>
-      I’m Nigel, Anne’s friend. I also work for UCA, but not as high up as Anne. She asked me to help set all of this
-      up, but then we lost contact.
-      Anne noticed things were getting worse with the Static so she pre-recorded some videos and told me to send out the
-      UCA Beacon. I’ll explain all.
+      I’m Nigel, Anne’s friend. 
+      I also work for UCA, but not as high up as Anne. She asked me to help set all of this up, but then we lost contact.
+      Anne noticed things were getting worse with the Static so she pre-recorded some videos and told me to send out the UCA Beacon. 
+      I’ll explain all.
 
-      But I need you to help us. The static is making things all foggy and we need you to light the Beacon.
+      But I need you to help us. 
+      The static is making things all foggy and we need you to light the Beacon.
 
       <button>[[NEXT|pretokinfo2]]</button>
       </messageboxlarge>
@@ -815,7 +876,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<<timed
-      60s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][ucatokmoves]]</nextbutton><</timed>>
+      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][ucatokmoves]]</nextbutton><</timed>>
 
 
 :: NOT TODAY [green -t8n-typewriter-4] {"position":"379.66666666666663,919.6666666666666","size":"100,100"}
@@ -852,8 +913,7 @@ $(document.head).find('#style-ui-bar').remove();
       <div class="animated
       rotateInDownLeft">[img[http://remote.co.com/UCA/images/dancemoves5.jpg]]</div>
       <<timed 3s>>Want to watch Anne do the UCA TOK slowly? Click <button>[[HERE]]</button>
-      When you have learnt the UCA TOK and are ready to run it with Anne, click <button>[[READY|UCA
-      TOK]]</button><</timed>>
+      When you have learnt the UCA TOK and are ready to run it with Anne, click <button>[[READY|UCA TOK]]</button><</timed>>
       /* </dance> */
 
 
@@ -890,7 +950,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<<timed
-      30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video3b]]</nextbutton><</timed>>
+      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video3b]]</nextbutton><</timed>>
 
 
 :: video3b [green -t8n-typewriter-4] {"position":"676,1671","size":"100,100"}
@@ -941,7 +1001,7 @@ $(document.head).find('#style-ui-bar').remove();
       \
       <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-1.png]]</beaconicon>
       <<timed
-      30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video4b]]</nextbutton><</timed>>
+      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video4b]]</nextbutton><</timed>>
 
 
 :: video4b [green -t8n-typewriter-4] {"position":"687,1966","size":"100,100"}
@@ -1038,7 +1098,7 @@ $(document.head).find('#style-ui-bar').remove();
       \
       <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-3.png]]</beaconicon>
       <<timed
-      30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video5b]]</nextbutton><</timed>>
+      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video5b]]</nextbutton><</timed>>
 
 
 :: video5b [green -t8n-typewriter-4] {"position":"758,2661","size":"100,100"}
@@ -1096,7 +1156,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><<timed
-      30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video6c]]</nextbutton><</timed>>
+      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video6c]]</nextbutton><</timed>>
 
 
 :: video6a [green -t8n-typewriter-4] {"position":"753.6666666666667,2816","size":"100,100"}
@@ -1241,7 +1301,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><<timed
-      30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticanimation]]</nextbutton><</timed>>
+      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticanimation]]</nextbutton><</timed>>
 
 
 :: missionplanning [planning] {"position":"690.3333333333334,3426","size":"100,100"}
@@ -1384,7 +1444,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<<timed
-      30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video8b]]</nextbutton><</timed>>
+      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video8b]]</nextbutton><</timed>>
 
 
 :: video8b [green -t8n-typewriter-4] {"position":"400.3333333333333,3787.666666666667","size":"100,100"}
@@ -1487,7 +1547,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: password1 {"position":"140,423","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
-      \<span id="code1result">WHAT'S THE CODEWORD?</span>
+      \<span id="code1result"></span>
       \<span id="resultbutton">
       \/% PASSWORD INPUT %/
       \<div class="css-input">\
@@ -1976,28 +2036,27 @@ $(document.head).find('#style-ui-bar').remove();
       class="animated
       fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div>
 </messagebox>
-
-      /* <<timed 5s>><<goto
-      "Introvideo1">><</timed>> */
+<<timed 5s>><<goto
+      "Introvideo1">><</timed>>
 
 
 :: beenbefore [purple2] {"position":"1016.3333333333334,103.66666666666663","size":"100,100"}
-<messagebox2>
-      [img[http://remote.co.com/UCA/images/intercom.png]]
-      Is this your first time here?
-      <button>[[YES|welcome1]]</button> <button>[[NO|contents]]</button></messagebox2>
+<messagebox2> <span>[img[http://remote.co.com/UCA/images/intercom.png]]
+            Is this your first time here?
+            <button>[[YES|welcome1]]</button> 
+            <button>[[NO|contents]]</button>
+     </span>
+      </messagebox2> 
 
 
 :: contents [purple] {"position":"836.6666666666666,205","size":"100,100"}
 <<include
       "back">><<include "typewriter">>
       <messageboxlarge>
-      <name><b>CONTENTS PAGE</b></name>
-      /* TODO CONTENTS PAGE */
       Where would you like to go?
 
       PART 1
-      [[FROM THE START|welcome1]]
+      [[THE START|welcome1]]
       [[MOVE (UCA TOK)|READY]]
       [[CONNECT|video4]]
       [[DISCOVER|clubnamediscover]]
@@ -2005,7 +2064,8 @@ $(document.head).find('#style-ui-bar').remove();
       [[GIVE|clubnamegive]]
 
       PART 2
-      [[FROM THE START|welcome2]]
+      [[THE START|welcome2]]
+
       </messageboxlarge>
 
 
@@ -2242,3 +2302,16 @@ $(document.head).find('#style-ui-bar').remove();
 <<timed 6s>>
 <<goto [[Video7]]>><</timed>>
 </messagebox>
+
+:: codewordentry [purple] 
+<messagebox2><<include "back">><div class="codeword-container">
+  <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+  <<include "password1">>
+  /* <span id="code3result">WHAT'S THE CODEWORD?</span>
+  \<span id="resultbutton">
+      \/% PASSWORD INPUT %/
+      \<div class="css-input">\
+ <<textbox "$password3" "">></div>
+      <<button "Enter">><</button>></span> */
+</div>
+</messagebox2>
