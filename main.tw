@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 3
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "contents",
+	"start": "home",
 	"tag-colors": {
 		"green": "green"
 	},
