@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 3
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "HERE",
+	"start": "home",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -393,21 +393,77 @@ name {
       text-align:right
 } */
 
+/* POPUP */
 .popup-container{
  width:20vw;
   position: fixed; 
-    top: 5vh; 
-    right: 2vw; 
+    top: 6vh; 
+    right: 3vw; 
   background-image: url("http://remote.co.com/UCA/images/purplebackground.jpg");
-  padding: 20px;
+  padding: 25px;
   border-radius: 4px;
-  transform: skew(-2deg)
+  transform: skew(-2deg);
+box-shadow: -5px -10px 8px black;
  
 }
 
 .popup-container > p {
-      color: #fff
+      color:#fff
 }
+
+
+/* CODE INPUT */
+
+.code-title{
+      color:#fff;
+      font-size: 1.5rem;
+      margin-bottom:10px
+}
+
+.code-input > input[type=text]{
+      min-width: 10vw;
+background-color: rgba(191, 191, 182, 0.58);
+font-size: large
+}
+
+.code-input > input[type=text]:hover{
+background-color: #333
+}
+
+.codeword-entry-container{
+display:flex;
+justify-content: space-between;
+align-items: center;
+text-align: right;
+}
+
+.codeword-entry-item{
+      height: 60vh;
+      max-width: 50%;
+}
+
+.codeword-entry-item > p {
+      margin-top:0;
+      color:#fff
+}
+
+.padlock {
+       width: 20vw
+}
+
+.popup-container > .padlock {
+ width: 15vw
+}
+
+.codeword-container {
+ width:20vw;
+  position: fixed; 
+    top: 3vh; 
+    right: 3vw; 
+    background: pink;
+    padding: 15px
+}
+
 
 .dancecard{
 width: 65vw;
@@ -434,40 +490,7 @@ justify-content: center;
 align-items: center;
 }
 
-
-.codeword-entry-container{
-display:flex;
-justify-content: space-between;
-align-items: center;
-text-align: right;
-}
-
-.codeword-entry-item{
-      height: 60vh;
-      max-width: 50%;
-}
-
-.codeword-entry-item > p {
-      margin-top:0;
-      color:#fff
-}
-
-.padlock {
-       width: 20vw
-}
-
-.codeword-container {
- width:20vw;
-  position: fixed; 
-    top: 3vh; 
-    right: 3vw; 
-    background: pink;
-    padding: 15px
-}
-
-.popup-container > .padlock {
-      width: 15vw
-}
+/* ANIMATIONS  */
 
 @-webkit-keyframes wobble {
    0% {
@@ -1010,19 +1033,16 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video3c [green -t8n-typewriter-4] {"position":"512.6666666666666,1671","size":"100,100"}
-<<include "back">><<include
-      "typewriter">><<include "video3caudio">><messageboxlarge>
+<<include "back">><<include"typewriter">><<include "video3caudio">><messageboxlarge>
       You can text her.
       Teacher, text the word ‘UCA TOK’ when you are ready.
       She may call you back (do put your phone on loudspeaker if so)!
-      And she has locked the next page, so hopefully she’ll give you the codeword too
-      <<include "password2">>
-      </messageboxlarge>
+      And she has locked the next page, so hopefully she’ll give you the codeword too.</messageboxlarge>
+            <<include "password2">>
 
 
 :: video3caudio {"position":"2074.3333333333335,1701.6666666666667","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/you-can-text-her.mp3" autoplay
-      ></audio>
+<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/you-can-text-her.mp3" autoplay></audio>
 
 
 :: video4 [green] {"position":"687,1816","size":"100,100"}
@@ -1039,13 +1059,13 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \
-      <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-1.png]]</beaconicon>
+      <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon>
       <<timed
       5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video4b]]</nextbutton><</timed>>
 
 
 :: video4b [green -t8n-typewriter-4] {"position":"687,1966","size":"100,100"}
-<<include "back">><<include "typewriter">>  <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-1.png]]</beaconicon><<include
+<<include "back">><<include "typewriter">>  <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon><<include
       "video4baudio">><messageboxlarge>
       Teacher, can you make sure everyone understands what the static is please?
       It is very important we know what we are facing together.
@@ -1062,7 +1082,7 @@ $(document.head).find('#style-ui-bar').remove();
 :: Everyone understands [green -t8n-typewriter-4] {"position":"687,2117","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "Everyone understandsaudio">>
-      <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-1.png]]</beaconicon>
+      <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon>
       <messageboxlarge>
       Now, time for a game to find out your Secret Club Name.
       This game will connect you all together.
@@ -1086,11 +1106,12 @@ $(document.head).find('#style-ui-bar').remove();
 :: enterclubname [green -t8n-typewriter-4] {"position":"161.9999999999999,2333.6666666666665","size":"100,100"}
 <<include
       "back">><<include "typewriter">>
-       <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-1.png]]</beaconicon>
+       <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon>
        <messageboxlarge>
-
       Enter your secret club name here
+
       <<textbox "$clubname" "">>
+
       <<button [[Enter|clubname]]>><</button>>
        
       </messageboxlarge>
@@ -1109,7 +1130,6 @@ $(document.head).find('#style-ui-bar').remove();
 
       <<timed 11s>><div class="animated fadeInDownBig">
       <name><b>WELCOME $clubname</b></name>
-      /* TODO INSERT STATIC */
       <button>[[Next|beacon3]]</button></div><</timed>></messageboxreel>
       <<include "reeltoreel">>
       <messagescreen><span id="message">Thank you</span>
@@ -1145,15 +1165,12 @@ $(document.head).find('#style-ui-bar').remove();
 <<include "back">><<include "typewriter">><<include
       "video5baudio">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-3.png]]</beaconicon>
       <messageboxlarge>
-      /* <dance> */
       It seems Anne is worried about Anne too.
-      In a moment I need you to text her – She might be facing the static alone.
-      You may need to do the UCA Breath with her to help keep her calm. I put some instructions on how to do it in the
-      next compartment.
+      In a moment I need you to text her – she might be facing the static alone.
+      You may need to do the UCA Breath with her to help keep her calm. 
+      I put some instructions on how to do it in the next compartment.
       In there you’ll find another button too!
       <<button [[NEXT|video5c]]>><</button>>
-
-      /* </dance> */
       </messageboxlarge>
 
 
@@ -1623,13 +1640,16 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: password2 {"position":"136,570","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
-      \<div class="popup-container"><img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
-      <span id="code2result">WHAT'S THE CODEWORD?</span>
-      \<span id="resultbutton">
+      \<div class="popup-container">
+         <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+          <div id="code2result" class="code-title">WHAT'S THE CODEWORD?</div>
+      \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
-      \<div class="css-input">\
-      <<textbox "$password2" "">></div>
-      <<button "Enter">></span></div>
+      \      <div class="css-input code-input">\
+              <<textbox "$password2" "">></div>
+              <<button "Enter">>
+           </span>
+      </div>
       \
       \/% PASSWORD CODE %/
       \ <<set $password2 to $password2.toUpperCase()>>
@@ -2019,8 +2039,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: FISHY SPAGHETTI [green -t8n-typewriter-4] {"position":"812,1990","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "FISHY
-      SPAGHETTIaudio">>
+<<include "back">><<include "typewriter">><<include "FISHYSPAGHETTIaudio">>
       <messageboxlarge>Sounds yummy! <button>[[Next|platform9]]</button></messageboxlarge>
 
 
@@ -2030,8 +2049,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: COLD CUSTARD [green -t8n-typewriter-4] {"position":"938,1990","size":"100,100"}
-<<include "back">><<include "typewriter">><<include "COLD
-      CUSTARDaudio">>
+<<include "back">><<include "typewriter">><<include "COLDCUSTARDaudio">>
       <messageboxlarge>Sounds yummy! <button>[[Next|platform9]]</button></messageboxlarge>
 
 
@@ -2301,7 +2319,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: beacon2 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-  <div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div>
+<div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" id="beacon">   
