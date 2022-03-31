@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 3
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "home",
+	"start": "HERE",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -376,12 +376,42 @@ dance {
    width: 80vw;
   position: fixed; 
     top: 5vh; 
-    left: 10vw; 
+    right: 10vw; 
    font-size: large;
 }
 
 name {
   font-size: 4vw;
+}
+
+
+
+/* .dancecard-container{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align:right
+} */
+
+.popup-container{
+ width:20vw;
+  position: fixed; 
+    top: 5vh; 
+    right: 2vw; 
+  background-image: url("http://remote.co.com/UCA/images/purplebackground.jpg");
+  padding: 20px;
+  border-radius: 4px;
+  transform: skew(-2deg)
+ 
+}
+
+.popup-container > p {
+      color: #fff
+}
+
+.dancecard{
+width: 65vw;
+margin:auto
 }
 
 .beacon {
@@ -405,19 +435,19 @@ align-items: center;
 }
 
 
-.codeword-container{
+.codeword-entry-container{
 display:flex;
 justify-content: space-between;
 align-items: center;
 text-align: right;
 }
 
-.codeword-item{
+.codeword-entry-item{
       height: 60vh;
       max-width: 50%;
 }
 
-.codeword-item > p {
+.codeword-entry-item > p {
       margin-top:0;
       color:#fff
 }
@@ -426,11 +456,17 @@ text-align: right;
        width: 20vw
 }
 
-.codeword-placeholder {
+.codeword-container {
  width:20vw;
   position: fixed; 
     top: 3vh; 
-    right: 10vw; 
+    right: 3vw; 
+    background: pink;
+    padding: 15px
+}
+
+.popup-container > .padlock {
+      width: 15vw
 }
 
 @-webkit-keyframes wobble {
@@ -747,8 +783,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: welcome1 [purple -t8n-typewriter-4] {"position":"986,325","size":"100,100"}
 <<include"welcome1audio">><messagebox
-><div class="codeword-container"><div class="codeword-item"><img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble"></div>
-   <div class="codeword-item"><p> Hello there,
+><div class="codeword-entry-container"><div class="codeword-entry-item"><img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble"></div>
+   <div class="codeword-entry-item"><p> Hello there,
                   To gain entry a codeword is needed.
                   The codeword is one word, it is somewhere on the box you will have received. 
                   Type it in here to gain entry</p>
@@ -905,16 +941,20 @@ $(document.head).find('#style-ui-bar').remove();
       autoplay ></audio>
 
 
-:: ucatokmoves [-t8n-typewriter-4 green] {"position":"571.6666666666666,1062.3333333333335","size":"100,100"}
+:: ucatokmoves [green] {"position":"571.6666666666666,1062.3333333333335","size":"100,100"}
 <<include
       "back">><<include "ucatokmovesaudio">>
-      /* <dance> */
+      <dance>
       <name><b>UCA TOK MOVES</b></name>
-      <div class="animated
-      rotateInDownLeft">[img[http://remote.co.com/UCA/images/dancemoves5.jpg]]</div>
-      <<timed 3s>>Want to watch Anne do the UCA TOK slowly? Click <button>[[HERE]]</button>
-      When you have learnt the UCA TOK and are ready to run it with Anne, click <button>[[READY|UCA TOK]]</button><</timed>>
-      /* </dance> */
+          <div class="animated fadeInDownBig dancecard"><img src="http://remote.co.com/UCA/images/dancemoves5.jpg" class="dancecard"></div>
+           
+            <<timed 3s>>
+            <div class="popup-container"><p>Want to watch Anne do the UCA TOK slowly? Click <button>[[HERE]]</button>
+
+                  When you have learnt the UCA TOK and are ready to run it with Anne, click <button>[[READY|UCA TOK]]</button> </p></div>
+                  <</timed>>
+      
+      </dance>
 
 
 :: ucatokmovesaudio {"position":"1702.6666666666667,1031.6666666666667","size":"100,100"}
@@ -1583,12 +1623,13 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: password2 {"position":"136,570","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
-      \<span id="code2result">WHAT'S THE CODEWORD?</span>
+      \<div class="popup-container"><img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+      <span id="code2result">WHAT'S THE CODEWORD?</span>
       \<span id="resultbutton">
       \/% PASSWORD INPUT %/
       \<div class="css-input">\
       <<textbox "$password2" "">></div>
-      <<button "Enter">></span>
+      <<button "Enter">></span></div>
       \
       \/% PASSWORD CODE %/
       \ <<set $password2 to $password2.toUpperCase()>>
@@ -2304,7 +2345,7 @@ $(document.head).find('#style-ui-bar').remove();
 </messagebox>
 
 :: codewordentry [purple] 
-<messagebox2><<include "back">><div class="codeword-container">
+<messagebox2><<include "back">><div class="codeword-entry-container">
   <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
   <<include "password1">>
   /* <span id="code3result">WHAT'S THE CODEWORD?</span>

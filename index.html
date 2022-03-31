@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://B3F5AA2C-F49A-4324-9C59-27731F7EA557// --><tw-storydata name="Undercover CareTaker Agency WIP 3" startnode="1" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="B3F5AA2C-F49A-4324-9C59-27731F7EA557" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+	<!-- UUID://B3F5AA2C-F49A-4324-9C59-27731F7EA557// --><tw-storydata name="Undercover CareTaker Agency WIP 3" startnode="22" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="B3F5AA2C-F49A-4324-9C59-27731F7EA557" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
@@ -460,12 +460,42 @@ dance {
    width: 80vw;
   position: fixed; 
     top: 5vh; 
-    left: 10vw; 
+    right: 10vw; 
    font-size: large;
 }
 
 name {
   font-size: 4vw;
+}
+
+
+
+/* .dancecard-container{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align:right
+} */
+
+.popup-container{
+ width:20vw;
+  position: fixed; 
+    top: 5vh; 
+    right: 2vw; 
+  background-image: url("http://remote.co.com/UCA/images/purplebackground.jpg");
+  padding: 20px;
+  border-radius: 4px;
+  transform: skew(-2deg)
+ 
+}
+
+.popup-container > p {
+      color: #fff
+}
+
+.dancecard{
+width: 65vw;
+margin:auto
 }
 
 .beacon {
@@ -489,19 +519,19 @@ align-items: center;
 }
 
 
-.codeword-container{
+.codeword-entry-container{
 display:flex;
 justify-content: space-between;
 align-items: center;
 text-align: right;
 }
 
-.codeword-item{
+.codeword-entry-item{
       height: 60vh;
       max-width: 50%;
 }
 
-.codeword-item > p {
+.codeword-entry-item > p {
       margin-top:0;
       color:#fff
 }
@@ -510,11 +540,17 @@ text-align: right;
        width: 20vw
 }
 
-.codeword-placeholder {
+.codeword-container {
  width:20vw;
   position: fixed; 
     top: 3vh; 
-    right: 10vw; 
+    right: 3vw; 
+    background: pink;
+    padding: 15px
+}
+
+.popup-container > .padlock {
+      width: 15vw
 }
 
 @-webkit-keyframes wobble {
@@ -819,8 +855,8 @@ $(document.head).find('#style-ui-bar').remove();
         ,t);
     };
 }();</script><tw-tag name="green" color="green"></tw-tag><tw-passagedata pid="1" name="home" tags="purple" position="401.3333333333333,205" size="100,100">&lt;messagebox2&gt;[img[http://remote.co.com/UCA/images/intercom2.png][beenbefore]]&lt;/messagebox2&gt;</tw-passagedata><tw-passagedata pid="2" name="welcome1" tags="purple -t8n-typewriter-4" position="986,325" size="100,100">&lt;&lt;include&quot;welcome1audio&quot;&gt;&gt;&lt;messagebox
-&gt;&lt;div class=&quot;codeword-container&quot;&gt;&lt;div class=&quot;codeword-item&quot;&gt;&lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/lock.png&quot; class=&quot;padlock animated wobble&quot;&gt;&lt;/div&gt;
-   &lt;div class=&quot;codeword-item&quot;&gt;&lt;p&gt; Hello there,
+&gt;&lt;div class=&quot;codeword-entry-container&quot;&gt;&lt;div class=&quot;codeword-entry-item&quot;&gt;&lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/lock.png&quot; class=&quot;padlock animated wobble&quot;&gt;&lt;/div&gt;
+   &lt;div class=&quot;codeword-entry-item&quot;&gt;&lt;p&gt; Hello there,
                   To gain entry a codeword is needed.
                   The codeword is one word, it is somewhere on the box you will have received. 
                   Type it in here to gain entry&lt;/p&gt;
@@ -906,15 +942,19 @@ $(document.head).find('#style-ui-bar').remove();
       There should be a copy of the moves in the Beacon – you can open Compartment 1 to find them.
       And, also in that compartment, you’ll find the first button you need to light the Beacon.
       &lt;button&gt;[[NEXT|ucatokmoves]]&lt;/button&gt;&lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="19" name="ucatokmovesintroaudio" tags="" position="1594.3333333333335,1026.6666666666665" size="100,100">&lt;audio id=&quot;player&quot; src=&quot;https://uca-coney-dev.netlify.app/assets/audio/it-seems-you-need-to-learn-the-UCA-TOK&quot;
-      autoplay &gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="20" name="ucatokmoves" tags="-t8n-typewriter-4 green" position="571.6666666666666,1062.3333333333335" size="100,100">&lt;&lt;include
+      autoplay &gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="20" name="ucatokmoves" tags="green" position="571.6666666666666,1062.3333333333335" size="100,100">&lt;&lt;include
       &quot;back&quot;&gt;&gt;&lt;&lt;include &quot;ucatokmovesaudio&quot;&gt;&gt;
-      /* &lt;dance&gt; */
+      &lt;dance&gt;
       &lt;name&gt;&lt;b&gt;UCA TOK MOVES&lt;/b&gt;&lt;/name&gt;
-      &lt;div class=&quot;animated
-      rotateInDownLeft&quot;&gt;[img[http://remote.co.com/UCA/images/dancemoves5.jpg]]&lt;/div&gt;
-      &lt;&lt;timed 3s&gt;&gt;Want to watch Anne do the UCA TOK slowly? Click &lt;button&gt;[[HERE]]&lt;/button&gt;
-      When you have learnt the UCA TOK and are ready to run it with Anne, click &lt;button&gt;[[READY|UCA TOK]]&lt;/button&gt;&lt;&lt;/timed&gt;&gt;
-      /* &lt;/dance&gt; */</tw-passagedata><tw-passagedata pid="21" name="ucatokmovesaudio" tags="" position="1702.6666666666667,1031.6666666666667" size="100,100">&lt;audio id=&quot;player&quot; src=&quot;https://uca-coney-dev.netlify.app/assets/audio/want-to-watch-Anne-do-the-UCA-TOK.mp3&quot;
+          &lt;div class=&quot;animated fadeInDownBig dancecard&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/dancemoves5.jpg&quot; class=&quot;dancecard&quot;&gt;&lt;/div&gt;
+           
+            &lt;&lt;timed 3s&gt;&gt;
+            &lt;div class=&quot;popup-container&quot;&gt;&lt;p&gt;Want to watch Anne do the UCA TOK slowly? Click &lt;button&gt;[[HERE]]&lt;/button&gt;
+
+                  When you have learnt the UCA TOK and are ready to run it with Anne, click &lt;button&gt;[[READY|UCA TOK]]&lt;/button&gt; &lt;/p&gt;&lt;/div&gt;
+                  &lt;&lt;/timed&gt;&gt;
+      
+      &lt;/dance&gt;</tw-passagedata><tw-passagedata pid="21" name="ucatokmovesaudio" tags="" position="1702.6666666666667,1031.6666666666667" size="100,100">&lt;audio id=&quot;player&quot; src=&quot;https://uca-coney-dev.netlify.app/assets/audio/want-to-watch-Anne-do-the-UCA-TOK.mp3&quot;
       autoplay &gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="22" name="HERE" tags="green -t8n-typewriter-4" position="385.99999999999994,1062.6666666666667" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;div id=&quot;wrap_video&quot;&gt;
       &lt;div id=&quot;video_box&quot;&gt;
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
@@ -1343,12 +1383,13 @@ $(document.head).find('#style-ui-bar').remove();
       &quot;hope&quot;&gt;&gt;
       &lt;&lt;replace &quot;#code1result&quot;&gt;&gt;Thats not right.&lt;&lt;/replace&gt;&gt;
       &lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="password2" tags="" position="136,570" size="100,100">\/% PASSWORD FEEDBACK %/
-      \&lt;span id=&quot;code2result&quot;&gt;WHAT&#39;S THE CODEWORD?&lt;/span&gt;
+      \&lt;div class=&quot;popup-container&quot;&gt;&lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/lock.png&quot; class=&quot;padlock animated wobble&quot;&gt;
+      &lt;span id=&quot;code2result&quot;&gt;WHAT&#39;S THE CODEWORD?&lt;/span&gt;
       \&lt;span id=&quot;resultbutton&quot;&gt;
       \/% PASSWORD INPUT %/
       \&lt;div class=&quot;css-input&quot;&gt;\
       &lt;&lt;textbox &quot;$password2&quot; &quot;&quot;&gt;&gt;&lt;/div&gt;
-      &lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;/span&gt;
+      &lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;/span&gt;&lt;/div&gt;
       \
       \/% PASSWORD CODE %/
       \ &lt;&lt;set $password2 to $password2.toUpperCase()&gt;&gt;
@@ -1808,7 +1849,7 @@ $(document.head).find('#style-ui-bar').remove();
 &lt;img class=&quot;beacon&quot; src=&quot;https://uca-coney-dev.netlify.app/assets/img/beacon4-5.gif&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 6s&gt;&gt;
 &lt;&lt;goto [[Video7]]&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;/messagebox&gt;</tw-passagedata><tw-passagedata pid="144" name="codewordentry" tags="purple" position="475,1850" size="100,100">&lt;messagebox2&gt;&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;div class=&quot;codeword-container&quot;&gt;
+&lt;/messagebox&gt;</tw-passagedata><tw-passagedata pid="144" name="codewordentry" tags="purple" position="475,1850" size="100,100">&lt;messagebox2&gt;&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;div class=&quot;codeword-entry-container&quot;&gt;
   &lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/lock.png&quot; class=&quot;padlock animated wobble&quot;&gt;
   &lt;&lt;include &quot;password1&quot;&gt;&gt;
   /* &lt;span id=&quot;code3result&quot;&gt;WHAT&#39;S THE CODEWORD?&lt;/span&gt;
