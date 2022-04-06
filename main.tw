@@ -1,5 +1,5 @@
 :: StoryTitle
-Undercover CareTaker Agency WIP 3
+Undercover CareTaker Agency WIP 4.6
 
 
 :: StoryData
@@ -1619,21 +1619,21 @@ $(document.head).find('#style-ui-bar').remove();
       \<</if>>
       \
       \/% PASSWORD CORRECT %/
-      <<if $password1 isnot "" and $password1 is "HOPE" or $password1 is
-      "hope">>
+      <<if $password1 isnot "" and $password1 is "STATIC" or $password1 is
+      "static">>
       <<replace "#code1result">>
       <</replace>><<replace "#resultbutton">><</replace>>
       <<goto [[intro]]>>
       <</if>>
       <<if $password1 isnot "" and $password1 is "ROOT" or $password1 is
-      "hope">>
+      "root">>
       <<replace "#code1result">>
       <</replace>><<replace "#resultbutton">><</replace>>
       <<goto [[intro2]]>>
       <</if>>
       \/% PASSWORD INCORRECT %/
-      <<if $password1 isnot "" and $password1 is not "HOPE" or $password1 is not
-      "hope">>
+      <<if $password1 isnot "" and $password1 is not "STATIC" or $password1 is not
+      "static">>
       <<replace "#code1result">>Thats not right.<</replace>>
       <</if>><</button>>
 
