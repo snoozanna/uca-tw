@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "home",
+	"start": "staticbuzzleft",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -57,6 +57,7 @@ color: #2d3261;
     left: 0vw; 
 }
 
+
  backbutton {
    background: none;
   background-image: none;
@@ -103,6 +104,11 @@ font-family: 'Didact Gothic', sans-serif;
 .static img {
   width: 90vw;
   height: 90vh;
+}
+
+.staticgif{
+ box-shadow:-150px #fff;
+  filter: url("#displacementFilter");
 }
 
   .green {
@@ -238,17 +244,18 @@ messageboxreel {
   box-shadow: -5px -10px 8px black;
 }
 
-messagescreen {
+ messagescreen {
   background-color: #090a14;
-  height: 90px;
-  width: 180px;
+  height: fit-content;
+  width: 40vw;
 	color: white;
   font-size: x-large;
   padding: 1vw 1vh;
   position: fixed; 
-    top: 18vh; 
-    left: 41.5vw; 
-}
+    top: 50vh; 
+    left:29.5vw; 
+} 
+
 
 messageboxplanning {
   width: 70vw;
@@ -912,7 +919,7 @@ $(document.head).find('#style-ui-bar').remove();
 
       We should get started!
 
-      When ready to learn the UCA TOK with Anne click <button>[[READY]]</button>
+      When ready to learn the UCA TOK with Anne click <button>[[HERE|beacon1]]</button>
 
       </messageboxlarge>
 
@@ -1127,14 +1134,12 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 
-
       <<timed 11s>><div class="animated fadeInDownBig">
       <name><b>WELCOME $clubname</b></name>
       <button>[[Next|beacon3]]</button></div><</timed>></messageboxreel>
       <<include "reeltoreel">>
       <messagescreen><span id="message">Thank you</span>
-      <<timed 2s>><<replace "#message">>Sending Secret Club
-      Name<</replace>>\
+      <<timed 2s>><<replace "#message">>Sending Secret Club Name<</replace>>\
       <<next 2s>><<replace "#message">>Uploading<</replace>>\
       <<next 2s>><<replace "#message">>Sending to UCA HQ<</replace>>\
       <<next 2s>><<replace "#message">>Receiving<</replace>>\
@@ -1258,10 +1263,11 @@ $(document.head).find('#style-ui-bar').remove();
       /* <name><b>WONDER</b></name> */
       You are doing extremely well, $clubname!
       We are on our way to lighting the Beacon and helping Anne.
-      This next exercise will need you to map your school. To wonder about it.
+      This next exercise will need you to map your school. 
+      To wonder about it.
       You started to notice yourself by writing the Agent Cards, now we need you to be aware of the world around you,
-      the sounds, smells and textures. It helps us to reflect and appreciate what matters to us, and potentially to
-      others.
+      the sounds, smells and textures. 
+      It helps us to reflect and appreciate what matters to us, and potentially to others.
 
       <button>[[NEXT|video6d]]</button>
 
@@ -1280,7 +1286,7 @@ $(document.head).find('#style-ui-bar').remove();
       Teacher, in a moment we recommend splitting the group into 4-6 groups and giving out 1 big piece of paper to these
       groups.
 
-      You may want to start by drawing a map like Anne did – a birdseye view
+      You may want to start by drawing a map like Anne did – a birdseye view like <button>[[these maps]]</button>
 
       When done, click <button>[[next|mapdrawn]]</button>
 
@@ -1298,8 +1304,7 @@ $(document.head).find('#style-ui-bar').remove();
       "typewriter">><<include "mapdrawnaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       There are also Mapping Cards in Compartment 4 – hand out 1 pack per group.
       Answer the questions and draw them on your maps.
-      Take as much time as you need – I think this is going to be very important to Anne for the final part of our
-      mission together.
+      Take as much time as you need – I think this is going to be very important to Anne for the final part of our mission together.
       When done, click <button>[[next|mappingdone]]</button>
 
       </messageboxlarge>
@@ -1357,21 +1362,20 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       </div>
-      \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><<timed
+      \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon><<timed
       5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticanimation]]</nextbutton><</timed>>
 
 
-:: missionplanning [planning] {"position":"690.3333333333334,3426","size":"100,100"}
+:: missionplanning [green -t8n-typewriter-4] {"position":"690.3333333333334,3426","size":"100,100"}
 <<include
       "back">><<include "missionplanningaudio">>
-      <messageboxplanning>
-      <div class="animated rotateInDownLeft">
+      <<include "typewriter">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon>
+     <messageboxlarge>
       This is it – the final compartment.
       We’ve connected to each other, moved our bodies through the UKA TOK, wondered about ourselves and the space around us, learnt new skills and now is the final way we can counter the Static… Giving.
 
       <button>[[NEXT|missionplanningb]]</button>
-      </div>
-      </messageboxplanning>
+      </messageboxlarge>
 
 
 :: missionplanningaudio {"position":"2171,310","size":"100,100"}
@@ -1380,11 +1384,10 @@ $(document.head).find('#style-ui-bar').remove();
       ></audio>
 
 
-:: missionplanningb [planning] {"position":"903.6666666666667,3611","size":"100,100"}
+:: missionplanningb [green -t8n-typewriter-4] {"position":"903.6666666666667,3611","size":"100,100"}
 <<include
-      "back">><<include "missionplanningbaudio">>
-      <messageboxplanning>
-      <div class="animated rotateInDownLeft">
+      "back">><<include "typewriter">><<include "missionplanningbaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon>
+      <messageboxlarge>
 
       There are three stages to the Giving Mission
 
@@ -1393,8 +1396,8 @@ $(document.head).find('#style-ui-bar').remove();
       Delivery
 
       <button>[[NEXT|missionplanningc]]</button>
-      </div>
-      </messageboxplanning>
+
+      </messageboxlarge>
 
 
 :: missionplanningbaudio {"position":"1677.6666666666667,195","size":"100,100"}
@@ -1402,11 +1405,10 @@ $(document.head).find('#style-ui-bar').remove();
       ></audio>
 
 
-:: missionplanningc [planning] {"position":"790.3333333333334,3272.6666666666665","size":"100,100"}
+:: missionplanningc [green -t8n-typewriter-4] {"position":"790.3333333333334,3272.6666666666665","size":"100,100"}
 <<include
-      "back">><<include "missionplanningcaudio">>
-      <messageboxplanning>
-      <div class="animated rotateInDownLeft">
+      "back">><<include "typewriter">><<include "missionplanningcaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon>
+      <messageboxlarge>
 
       In the Compartment is the fifth button, but it seems there is one missing. A 6th button.
       Anne must have hidden it.
@@ -1414,8 +1416,7 @@ $(document.head).find('#style-ui-bar').remove();
       We need it to light the beacon
 
       <button>[[NEXT|missionplanningd]]</button>
-      </div>
-      </messageboxplanning>
+      </messageboxlarge>
 
 
 :: missionplanningcaudio {"position":"1781,183.33333333333326","size":"100,100"}
@@ -1423,20 +1424,17 @@ $(document.head).find('#style-ui-bar').remove();
       ></audio>
 
 
-:: missionplanningd [planning] {"position":"953.6666666666667,3414.333333333333","size":"100,100"}
+:: missionplanningd [green -t8n-typewriter-4] {"position":"953.6666666666667,3414.333333333333","size":"100,100"}
 <<include
-      "back">><<include "missionplanningdaudio">>
-      <messageboxplanning>
-      <div class="animated rotateInDownLeft">
-
+      "back">><<include "typewriter">><<include "missionplanningdaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon>
+      <messageboxlarge>
       Lighting the Beacon will clear the fog and counter the Static.
       And shine out Anne’s final codeword.
       Open Compartment 5 and start with the Planning Card.
 
       Good luck $clubname !
       <<include "password6">>
-      </div>
-      </messageboxplanning>
+      </messageboxlarge>
 
 
 :: missionplanningdaudio {"position":"1907.6666666666667,181.66666666666663","size":"100,100"}
@@ -1573,7 +1571,7 @@ $(document.head).find('#style-ui-bar').remove();
       <messageboxlarge>
       Your work today has been exceptional and I think UCA HQ will be very impressed.
       I think Anne is very impressed.
-      Maybe….just maybe…they will be in touch with you soon.
+      Maybe... just maybe... they will be in touch with you soon.
 
       I’m going to reach out to Anne right now as well.
 
@@ -1599,7 +1597,8 @@ $(document.head).find('#style-ui-bar').remove();
       fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div
       class="animated
       fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox>
-      <button>[[NEXT|Part2]]</button>
+      <<timed 7s>><<goto "home">><</timed>>
+
 
 
 :: password1 {"position":"140,423","size":"100,100"}
@@ -1648,7 +1647,6 @@ $(document.head).find('#style-ui-bar').remove();
       \      <div class="css-input code-input">\
               <<textbox "$password2" "">></div>
               <<button "Enter">>
-           </span>
       </div>
       \
       \/% PASSWORD CODE %/
@@ -1671,13 +1669,16 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: password3 {"position":"138,694","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
-      \<span id="code3result">WHAT'S THE CODEWORD?</span>
-      \<span id="resultbutton">
+ \<div class="popup-container">
+         <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+          <div id="code3result" class="code-title">WHAT'S THE CODEWORD?</div>
+      \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
-      \<div class="css-input">\
+      \<div class="css-input code-input">\
       <<textbox "$password3" "">></div>
-      <<button "Enter">></span>
-      \
+      <<button "Enter">>
+      </div>
+      
       \/% PASSWORD CODE %/
       \ <<set $password3 to $password3.toUpperCase()>>
       \ <<if $password3 is "">>
@@ -1697,14 +1698,16 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: password4 {"position":"137.66666666666666,860","size":"100,100"}
-\/% PASSWORD
-      FEEDBACK %/
-      \<span id="code4result">WHAT'S THE CODEWORD?</span>
-      \<span id="resultbutton">
+\/% PASSWORD FEEDBACK %/
+       \<div class="popup-container">
+         <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+          <div id="code4result" class="code-title">WHAT'S THE CODEWORD?</div>
+      \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
-      \<div class="css-input">\
-      <<textbox "$password4" "">></div>
-      <<button "Enter">></span>
+      \      <div class="css-input code-input">\
+              <<textbox "$password4" "">></div>
+              <<button "Enter">>
+      </div>
       \
       \/% PASSWORD CODE %/
       \ <<set $password4 to $password4.toUpperCase()>>
@@ -1724,43 +1727,20 @@ $(document.head).find('#style-ui-bar').remove();
       <</if>><</button>>
 
 
-:: password5 {"position":"144,995","size":"100,100"}
-\/% PASSWORD FEEDBACK %/
-      \<span id="code5result">WHAT'S THE CODEWORD?</span>
-      \<span id="resultbutton">
-      \/% PASSWORD INPUT %/
-      \<div class="css-input">\
-      <<textbox "$password5" "">></div><<button
-      "Enter">></span>
-      \
-      \/% PASSWORD CODE %/
-      \ <<set $password5 to $password5.toUpperCase()>>
-      \ <<if $password5 is "">>
-      \<<replace "#code5result">>CODEWORD<</replace>>
-      \<</if>>
-      \
-      \/% PASSWORD CORRECT %/
-      <<if $password5 isnot "" and $password5 is "SCANNER">>
-      <<replace "#code5result">>
-      <</replace>><<replace "#resultbutton">><</replace>>
-      <<goto [[static]]>>
-      <</if>>
-      \/% PASSWORD INCORRECT %/
-      <<if $password5 isnot "" and $password5 is not "SCANNER">>
-      <<replace "#code5result">>Thats not right.<</replace>>
-      <</if>><</button>>
-
 
 :: password6 {"position":"144,1141.6666666666667","size":"100,100"}
-\/% PASSWORD
-      FEEDBACK %/
-      \<span id="code6result">WHAT'S THE CODEWORD?</span>
-      \<span id="resultbutton">
+\/% PASSWORD FEEDBACK %/
+
+       \<div class="popup-container">
+         <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+          <div id="code6result" class="code-title">WHAT'S THE CODEWORD?</div>
+      \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
-      \<div class="css-input">\
-      <<textbox "$password6" "">></div><<button
-      "Enter">></span>
-      \
+      \      <div class="css-input code-input">\
+              <<textbox "$password6" "">></div>
+              <<button "Enter">>
+      </div>
+
       \/% PASSWORD CODE %/
       \ <<set $password6 to $password6.toUpperCase()>>
       \ <<if $password6 is "">>
@@ -1780,14 +1760,16 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: password7 {"position":"144,1283.3333333333335","size":"100,100"}
-\/% PASSWORD
-      FEEDBACK %/
-      \<span id="code7result">WHAT'S THE CODEWORD?</span>
-      \<span id="resultbutton">
+\/% PASSWORD FEEDBACK %/
+       \<div class="popup-container">
+         <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+          <div id="code7result" class="code-title">WHAT'S THE CODEWORD?</div>
+      \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
-      \<div class="css-input">\
-      <<textbox "$password7" "">></div><<button
-      "Enter">></span>
+      \<div class="css-input code-input">\
+      <<textbox "$password7" "">></div>
+ <<button "Enter">>
+      </div>
       \
       \/% PASSWORD CODE %/
       \ <<set $password7 to $password7.toUpperCase()>>
@@ -1809,13 +1791,15 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: password8 {"position":"147.33333333333334,1438.3333333333335","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
-      \<span id="code8result">WHAT'S THE CODEWORD?</span>
-      \<span id="resultbutton">
+       \<div class="popup-container">
+         <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+          <div id="code8result" class="code-title">WHAT'S THE CODEWORD?</div>
+      \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
-      \<div class="css-input">\
-      <<textbox "$password8" "">></div><<button
-      "Enter">></span>
-      \
+      \      <div class="css-input code-input">\
+              <<textbox "$password8" "">></div>
+              <<button "Enter">>
+      </div>
       \/% PASSWORD CODE %/
       \ <<set $password8 to $password8.toUpperCase()>>
       \ <<if $password8 is "">>
@@ -1830,7 +1814,7 @@ $(document.head).find('#style-ui-bar').remove();
       <</if>>
       \/% PASSWORD INCORRECT %/
       <<if $password8 isnot "" and $password8 is not "HOPE">>
-      <<replace "#code7result">>Thats not right.<</replace>>
+      <<replace "#code8result">>Thats not right.<</replace>>
       <</if>><</button>>
 
 
@@ -2207,6 +2191,16 @@ $(document.head).find('#style-ui-bar').remove();
       5s>><<goto
       "missionplanning">><</timed>>
 
+:: staticbuzzleft [static] {"position":"543,3468.6666666666665","size":"100,100"}
+/<audio
+      src="audio/static.mp3" autoplay></audio>
+<staticbox>
+      <img src="http://remote.co.com/UCA/images/static.gif" class="staticgif">
+      </staticbox>
+
+
+
+
 
 :: reeltoreel {"position":"470.3333333333333,50.66666666666666","size":"100,100"}
 <reeltoreel>[img[http://remote.co.com/UCA/images/reeltoreel2.gif]]</reeltoreel>
@@ -2217,7 +2211,7 @@ $(document.head).find('#style-ui-bar').remove();
       "back">><dance>
       <div class="animated
       rotateInDownLeft">[img[http://remote.co.com/UCA/images/schoolplan3.jpg]]</div>
-      <button>[[back|video6b]]</button>
+      <button>[[back|video6d]]</button>
 
       <button>[[We've drawn a map|mapdrawn]]</button>
       </dance>
@@ -2314,12 +2308,22 @@ $(document.head).find('#style-ui-bar').remove();
 <audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/now-another-test.mp3" autoplay
       ></audio>
 
+:: beacon1 [purple] {"position":"537,506","size":"100,100"}
+<messagebox>
+<<timed 1s>><div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move.png"></div><</timed>>
+      </messagebox>
+<messagebox>
+<div class="animated fadeInRightBig" id="beacon">   
+<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon0-1.gif"></div>
+<<timed 7s>>
+<<goto [[READY]]>><</timed>>
+</messagebox>
 
 
 
 :: beacon2 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-<div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div>
+<<timed 0.5s>><div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div><</timed>>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" id="beacon">   
@@ -2353,12 +2357,12 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: beacon5 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-  <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/give.png"></div>
+  <<timed 1s>><div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/give.png"></div><</timed>>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" >   
 <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon4-5.gif"></div>
-<<timed 6s>>
+<<timed 7s>>
 <<goto [[Video7]]>><</timed>>
 </messagebox>
 
