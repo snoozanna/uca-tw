@@ -185,14 +185,23 @@ width: 8vw
 font-family: 'Didact Gothic', sans-serif;
 }
 
-.static img {
+/* .static img {
   width: 90vw;
   height: 90vh;
-}
+} */
 
 .staticgif{
  box-shadow:-150px #fff;
   filter: url("#displacementFilter");
+  width: 300px;
+  padding: 10px
+}
+
+.staticgif.left{
+   width: 300px;
+   position:fixed;
+   right:3vw;
+   top:3vw;   
 }
 
   .green {
@@ -1764,9 +1773,18 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;staticbox&gt;[img[http://remote.co.com/UCA/images/static.gif]]&lt;/staticbox&gt;&lt;&lt;timed
       5s&gt;&gt;&lt;&lt;goto
       &quot;missionplanning&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="staticbuzzleft" tags="static" position="543,3468.6666666666665" size="100,100">/&lt;audio
-      src=&quot;audio/static.mp3&quot; autoplay&gt;&lt;/audio&gt;
+      src=&quot;http://remote.co.com/UCA/audio/static.mp3&quot; autoplay&gt;&lt;/audio&gt;
 &lt;staticbox&gt;
-      &lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/static1.gif&quot; class=&quot;staticgif&quot;&gt;
+      &lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/static2.gif&quot; class=&quot;staticgif left&quot;&gt;
+
+     &lt;svg&gt;
+             &lt;filter id=&quot;displacementFilter&quot;&gt;
+          &lt;feTurbulence type=&quot;turbulence&quot; baseFrequency=&quot;0.05&quot;
+              numOctaves=&quot;10&quot; result=&quot;turbulence&quot;/&gt;
+          &lt;feDisplacementMap in2=&quot;turbulence&quot; in=&quot;SourceGraphic&quot;
+              scale=&quot;30&quot; xChannelSelector=&quot;Z&quot; yChannelSelector=&quot;G&quot;/&gt;
+        &lt;/filter&gt;
+     &lt;/svg&gt;
       &lt;/staticbox&gt;</tw-passagedata><tw-passagedata pid="128" name="reeltoreel" tags="" position="470.3333333333333,50.66666666666666" size="100,100">&lt;reeltoreel&gt;[img[http://remote.co.com/UCA/images/reeltoreel2.gif]]&lt;/reeltoreel&gt;</tw-passagedata><tw-passagedata pid="129" name="these maps" tags="green" position="926.6666666666666,3009" size="100,100">&lt;&lt;include
       &quot;back&quot;&gt;&gt;&lt;dance&gt;
       &lt;div class=&quot;animated
