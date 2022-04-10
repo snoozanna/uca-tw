@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "home",
+	"start": "staticbuzzleft",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -877,13 +877,14 @@ $(document.head).find('#style-ui-bar').remove();
 }();
 
 
+
 :: home [purple] {"position":"401.3333333333333,205","size":"100,100"}
 <messagebox2>[img[http://remote.co.com/UCA/images/intercom2.png][beenbefore]]</messagebox2>
 
 
 :: welcome1 [purple -t8n-typewriter-4] {"position":"986,325","size":"100,100"}
-<<include"welcome1audio">><messagebox
-><div class="codeword-entry-container"><div class="codeword-entry-item"><img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble"></div>
+<<include"welcome1audio">>
+<messagebox><div class="codeword-entry-container"><div class="codeword-entry-item"><img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble"></div>
    <div class="codeword-entry-item"><p> Hello there,
                   To gain entry a codeword is needed.
                   The codeword is one word, it is somewhere on the box you will have received. 
@@ -895,8 +896,9 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: welcome1audio {"position":"2062.666666666667,558.3333333333334","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/hello-there-to-gain-entry.mp3" autoplay
-      ></audio>
+
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/hello-there-to-gain-entry.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>  
+
 
 
 :: Introvideo1 [green] {"position":"864.3333333333334,510.66666666666663","size":"100,100"}
@@ -906,7 +908,7 @@ $(document.head).find('#style-ui-bar').remove();
       <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
       class="center"></div>
       <div>
-      <iframe allow=autoplay width='800px' height='450px'
+      <iframe allow="autoplay" width='800px' height='450px'
       src='https://player.vimeo.com/video/531960916?autoplay=1&byline=0&portrait=0'></iframe>
       </div>
       </div>
@@ -917,15 +919,18 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: video1b [green -t8n-typewriter-4] {"position":"585.3333333333334,666.6666666666667","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "video1baudio">><messageboxlarge>Your choice is needed.
+      "typewriter">>
+      <<include "video1baudio">>
+
+      <messageboxlarge>Your choice is needed.
       Click YES, WE ARE IN to answer Anne’s call or choose CLOSE to go back to schoolwork?
 
       <button>[[CLOSE]]</button> or <button>[[YES, WE ARE IN]]</button></messageboxlarge>
 
 
 :: video1baudio {"position":"2187.6666666666665,1928.3333333333335","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/your-choice-is-needed-click-yes.mp3" autoplay
-      ></audio>
+
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/your-choice-is-needed-click-yes.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>  
 
 
 :: CLOSE [green -t8n-typewriter-4] {"position":"379.66666666666663,767.6666666666666","size":"100,100"}
@@ -936,7 +941,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: CLOSEaudio {"position":"1954.3333333333335,566.6666666666666","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/oh-really.mp3" autoplay ></audio>
+
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/oh-really.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>  
 
 
 :: YES, WE ARE IN [green -t8n-typewriter-4] {"position":"573.6666666666666,869.3333333333333","size":"100,100"}
@@ -952,8 +958,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: YES, WE ARE INaudio {"position":"1700.0000000000002,33.33333333333334","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/fantastic-caretakers-are-not-just.mp3"
-      autoplay ></audio>
+
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/fantastic-caretakers-are-not-just.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>  
 
 
 :: pretokinfo1 [green -t8n-typewriter-4] {"position":"732,839.3333333333334","size":"100,100"}
@@ -973,8 +979,9 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: pretokinfo1audio {"position":"1577.6666666666667,919.9999999999999","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/Im-Nigel-Annes-friend.mp3" autoplay
-      ></audio>
+
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/Im-Nigel-Annes-friend.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
+      
 
 
 :: pretokinfo2 [green -t8n-typewriter-4] {"position":"890.3333333333333,834.3333333333334","size":"100,100"}
@@ -995,8 +1002,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: pretokinfo2audio {"position":"1689.3333333333335,911.6666666666665","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/but-you-need-to-show-you-can-light.mp3"
-      autoplay ></audio>
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/but-you-need-to-show-you-can-light.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
 
 
 :: READY [green] {"position":"768.6666666666666,646","size":"100,100"}
@@ -1022,8 +1028,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: NOT TODAYaudio {"position":"1814.3333333333335,31.666666666666686","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/ok-thank-you-anyway.mp3" autoplay
-      ></audio>
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/ok-thank-you-anyway.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
 
 
 :: ucatokmovesintro [-t8n-typewriter-4 green] {"position":"718.3333333333334,1064","size":"100,100"}
@@ -1037,8 +1042,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: ucatokmovesintroaudio {"position":"1594.3333333333335,1026.6666666666665","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/it-seems-you-need-to-learn-the-UCA-TOK"
-      autoplay ></audio>
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/it-seems-you-need-to-learn-the-UCA-TOK" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
 
 
 :: ucatokmoves [green] {"position":"571.6666666666666,1062.3333333333335","size":"100,100"}
@@ -1058,8 +1062,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: ucatokmovesaudio {"position":"1702.6666666666667,1031.6666666666667","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/want-to-watch-Anne-do-the-UCA-TOK.mp3"
-      autoplay ></audio>
+
+      <iframe src="https://uca-coney-dev.netlify.app/assets/audio/want-to-watch-Anne-do-the-UCA-TOK.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
 
 
 :: HERE [green -t8n-typewriter-4] {"position":"385.99999999999994,1062.6666666666667","size":"100,100"}
@@ -1105,8 +1109,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video3baudio {"position":"1952.6666666666667,1703.3333333333335","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/it-seems-she-wants-you-to-text-her.mp3"
-      autoplay ></audio>
+ <iframe src="https://uca-coney-dev.netlify.app/assets/audio/it-seems-she-wants-you-to-text-her.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
 
 
 :: video3c [green -t8n-typewriter-4] {"position":"512.6666666666666,1671","size":"100,100"}
@@ -1119,7 +1122,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video3caudio {"position":"2074.3333333333335,1701.6666666666667","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/you-can-text-her.mp3" autoplay></audio>
+ <iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-can-text-her.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
 
 
 :: video4 [green] {"position":"687,1816","size":"100,100"}
@@ -1151,9 +1154,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video4baudio {"position":"2074.3333333333335,1580","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-can-you-make-sure-everyone-understands.mp3" autoplay
-      ></audio>
+ <iframe src="https://uca-coney-dev.netlify.app/assets/audio/teacher-can-you-make-sure-everyone-understands.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
 
 
 :: Everyone understands [green -t8n-typewriter-4] {"position":"687,2117","size":"100,100"}
@@ -1176,8 +1177,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: Everyone understandsaudio {"position":"1921,35","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/now-time-for-a-game-to-find.mp3" autoplay ></audio>
+
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/now-time-for-a-game-to-find.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>       
 
 
 :: enterclubname [green -t8n-typewriter-4] {"position":"161.9999999999999,2333.6666666666665","size":"100,100"}
@@ -1195,8 +1196,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: clubname [green] {"position":"688,2304.3333333333335","size":"100,100"}
-/<audio
-      src="audio/radio.mp3" autoplay></audio>
+/<iframe
+      src="audio/radio.mp3" autoplay></iframe>
       <<include "back">><messageboxreel>
 
 
@@ -1250,10 +1251,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video5baudio {"position":"1944.3333333333335,1460","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/seems-Anne-is-worried-about-Anne.mp3" autoplay
-      ></audio>
-
+  <iframe src="https://uca-coney-dev.netlify.app/assets/audio/seems-Anne-is-worried-about-Anne.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>    
 
 :: video5c [green -t8n-typewriter-4] {"position":"919.6666666666667,2664.333333333333","size":"100,100"}
 <<include
@@ -1271,8 +1269,9 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video5caudio {"position":"2079.3333333333335,1460","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/you-are-learning-a-new-skill.mp3" autoplay ></audio>
+
+
+      <iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-are-learning-a-new-skill.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>   
 
 
 :: Video6 [green] {"position":"582,2821","size":"100,100"}
@@ -1303,10 +1302,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video6aaudio {"position":"1749.3333333333335,1335","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/ok-it-seems-Anne-wants-you-to-open.mp3" autoplay
-      ></audio>
 
+ <iframe src="https://uca-coney-dev.netlify.app/assets/audio/ok-it-seems-Anne-wants-you-to-open.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>   
 
 :: video6b [green -t8n-typewriter-4] {"position":"918.6666666666666,2821","size":"100,100"}
 <<include "back">><<include
@@ -1322,8 +1319,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video6baudio {"position":"1866.0000000000002,1335","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/if-we-can-reflect-on-ourselves.mp3" autoplay ></audio>
+
+ <iframe src="https://uca-coney-dev.netlify.app/assets/audio/if-we-can-reflect-on-ourselves.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>   
 
 
 :: video6c [green -t8n-typewriter-4] {"position":"1085.3333333333333,2817.6666666666665","size":"100,100"}
@@ -1345,8 +1342,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video6caudio {"position":"1974.3333333333335,1338.3333333333335","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/you-are-doing-extremely-well.mp3"
-      autoplay ></audio>
+
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-are-doing-extremely-well.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>   
 
 
 :: video6d [green -t8n-typewriter-4] {"position":"1210.3333333333333,2814.3333333333335","size":"100,100"}
@@ -1364,10 +1361,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video6daudio {"position":"2091,1328.3333333333333","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-in-a-moment-we-recommend.mp3" autoplay
-      ></audio>
 
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/teacher-in-a-moment-we-recommend.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
 
 :: mapdrawn [green -t8n-typewriter-4] {"position":"1102,3007.666666666667","size":"100,100"}
 <<include "back">><<include
@@ -1381,8 +1376,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: mapdrawnaudio {"position":"1759.3333333333335,306.66666666666663","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/there-are-also-mapping-cards.mp3"
-      autoplay ></audio>
+
+      <iframe src="https://uca-coney-dev.netlify.app/assets/audio/there-are-also-mapping-cards.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
 
 
 :: mappingdone [green -t8n-typewriter-4] {"position":"1237,3004.333333333333","size":"100,100"}
@@ -1396,8 +1391,10 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: mappingdoneaudio {"position":"1912.6666666666667,308.33333333333326","size":"100,100"}
-<audio id="player"
-      src="https://uca-coney-dev.netlify.app/assets/audio/great-work-if-you-have-time-you-can.mp3" autoplay ></audio>
+<iframe id="iframeAudio"
+      src="https://uca-coney-dev.netlify.app/assets/audio/great-work-if-you-have-time-you-can.mp3" allow="autoplay" style="display:none" ></iframe>
+
+      
 
 
 :: mappingdoneb [green -t8n-typewriter-4] {"position":"1367.0000000000002,3002.666666666667","size":"100,100"}
@@ -1416,8 +1413,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: mappingdonebaudio {"position":"2044.3333333333335,308.33333333333326","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/ok-great-work-mapping-complete.mp3"
-      autoplay ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/ok-great-work-mapping-complete.mp3" style="display:none" allow="autoplay" ></iframe>
 
 
 :: Video7 [green] {"position":"577,3172.6666666666665","size":"100,100"}
@@ -1449,9 +1445,9 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: missionplanningaudio {"position":"2171,310","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/this-is-it-the-final compartment.mp3" autoplay
-      ></audio>
+<iframe
+      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/this-is-it-the-final compartment.mp3" style="display:none" autoplay
+      ></iframe>
 
 
 :: missionplanningb [green -t8n-typewriter-4] {"position":"903.6666666666667,3611","size":"100,100"}
@@ -1471,8 +1467,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: missionplanningbaudio {"position":"1677.6666666666667,195","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/there-are-three-stages-to-this-giving.mp3" autoplay
-      ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/there-are-three-stages-to-this-giving.mp3" style="display:none" autoplay
+      ></iframe>
 
 
 :: missionplanningc [green -t8n-typewriter-4] {"position":"790.3333333333334,3272.6666666666665","size":"100,100"}
@@ -1490,8 +1486,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: missionplanningcaudio {"position":"1781,183.33333333333326","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/in-the-compartment-is-the-fifth.mp3" autoplay
-      ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/in-the-compartment-is-the-fifth.mp3" style="display:none" autoplay
+      ></iframe>
 
 
 :: missionplanningd [green -t8n-typewriter-4] {"position":"953.6666666666667,3414.333333333333","size":"100,100"}
@@ -1508,8 +1504,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: missionplanningdaudio {"position":"1907.6666666666667,181.66666666666663","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/lighting-the-beacon-will-clear-the.mp3"
-      autoplay ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/lighting-the-beacon-will-clear-the.mp3"
+      allow="autoplay" style="display:none" ></iframe>
 
 
 :: premaking [green -t8n-typewriter-4] {"position":"713.6666666666667,3819.3333333333335","size":"100,100"}
@@ -1525,8 +1521,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: premakingaudio {"position":"2159.3333333333335,169.99999999999994","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/oh-great-youve-planned-your.mp3"
-      autoplay ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/oh-great-youve-planned-your.mp3"
+      allow="autoplay" style="display:none" ></iframe>
 
 
 :: predelivery [green -t8n-typewriter-4] {"position":"928.6666666666667,3841.0000000000005","size":"100,100"}
@@ -1542,13 +1538,12 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: predeliveryaudio {"position":"2032.666666666667,178.33333333333331","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/ok-final-part-delivery.mp3" autoplay
-      ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/ok-final-part-delivery.mp3" autoplay style="display:none"></iframe>
 
 
 :: static [static] {"position":"400.3333333333333,3487.666666666667","size":"100,100"}
-/<audio
-      src="audio/finalstatic.mp3" autoplay></audio>
+/<iframe
+      src="audio/finalstatic.mp3" autoplay></iframe>
       <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox>
       <<timed 4s>><staticbox><div class="animated
       fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></staticbox><</timed>>
@@ -1587,8 +1582,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video8baudio {"position":"1724.3333333333335,703.3333333333334","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/i-cant-believe-you-did-it.mp3" autoplay
-      ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/i-cant-believe-you-did-it.mp3" autoplay style="display:none"></iframe>
 
 
 :: video8c [green -t8n-typewriter-4] {"position":"290.3333333333333,3787.666666666667","size":"100,100"}
@@ -1613,8 +1607,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video8caudio {"position":"1839.3333333333333,695","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/this-is-the-end-of-the-mission.mp3" autoplay ></audio>
+<iframe
+      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/this-is-the-end-of-the-mission.mp3" allow="autoplay" style="display:none" ></iframe>
 
 
 :: video8d [green -t8n-typewriter-4] {"position":"526.3333333333333,3779.666666666667","size":"100,100"}
@@ -1629,9 +1623,9 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video8daudio {"position":"1956,698.3333333333334","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-when-you-are-ready-collect.mp3" autoplay
-      ></audio>
+<iframe
+      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-when-you-are-ready-collect.mp3" autoplay
+      style="display:none"></iframe>
 
 
 :: video8e [green -t8n-typewriter-4] {"position":"176.33333333333331,3803.666666666667","size":"100,100"}
@@ -1651,8 +1645,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video8eaudio {"position":"2066,696.6666666666667","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/your-work-today-has-been.mp3" autoplay ></audio>
+<iframe
+      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/your-work-today-has-been.mp3" allow="autoplay" style="display:none"></iframe>
 
 
 :: endpart1 [green -t8n-typewriter-4] {"position":"400.3333333333333,3937.666666666667","size":"100,100"}
@@ -1950,8 +1944,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video9baudio {"position":"2069.3333333333335,946.6666666666667","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-please-hold-onto-the-UCA-Roots.mp3" autoplay
-      ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-please-hold-onto-the-UCA-Roots.mp3" autoplay style="display:none"
+      ></iframe>
 
 
 :: platform2 [green -t8n-typewriter-4] {"position":"1006.3333333333334,770.3333333333334","size":"100,100"}
@@ -1970,8 +1964,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: platform2baudio {"position":"2189.333333333334,1816.6666666666667","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/the-UCA-Root-is-like-a-bookmark.mp3"
-      autoplay ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/the-UCA-Root-is-like-a-bookmark.mp3"
+      allow="autoplay" style="display:none" ></iframe>
 
 
 :: platform3 [green -t8n-typewriter-4] {"position":"1006.3333333333334,920.3333333333334","size":"100,100"}
@@ -1988,8 +1982,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: platform3baudio {"position":"2189.3333333333335,1700","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/on-your-piece-of-paper.mp3" autoplay ></audio>
+<iframe
+      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/on-your-piece-of-paper.mp3" allow="autoplay" style="display:none"></iframe>
 
 
 :: platform4 [green -t8n-typewriter-4] {"position":"1006.3333333333334,1070.3333333333333","size":"100,100"}
@@ -2002,8 +1996,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: platform4baudio {"position":"2192.6666666666665,1573.3333333333335","size":"100,100"}
-<audio id="player"
-      src="https://uca-coney-dev.netlify.app/assets/audio/now-im-going-to-give-you-time-to-colour.mp3" autoplay ></audio>
+<iframe id="iframeAudio"
+      src="https://uca-coney-dev.netlify.app/assets/audio/now-im-going-to-give-you-time-to-colour.mp3" allow="autoplay" style="display:none"></iframe>
 
 
 :: platform5 [green -t8n-typewriter-4] {"position":"1018.0000000000001,1210.3333333333333","size":"100,100"}
@@ -2017,9 +2011,9 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: platform5baudio {"position":"2192.6666666666665,1456.6666666666667","size":"100,100"}
-<audio id="player"
+<iframe id="iframeAudio"
       src="https://uca-coney-dev.netlify.app/assets/audio/now-im-going-to-give-you-time-make-it-even-more-colourful.mp3" autoplay
-      ></audio>
+     style="display:none" ></iframe>
 
 
 :: platform6 [green -t8n-typewriter-4] {"position":"1015.9999999999999,1335.3333333333335","size":"100,100"}
@@ -2034,9 +2028,9 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: platform6audio {"position":"2194.3333333333335,1325","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/now-we-connect-our-root-and-our-memory.mp3" autoplay
-      ></audio>
+<iframe
+      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/now-we-connect-our-root-and-our-memory.mp3" style="display:none" autoplay
+      ></iframe>
 
 
 :: platform7 [green -t8n-typewriter-4] {"position":"1019.0000000000001,1463.3333333333335","size":"100,100"}
@@ -2051,8 +2045,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: platform7audio {"position":"2194.3333333333335,1195","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/i-want-you-to-hold-your-button.mp3" autoplay ></audio>
+<iframe
+      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/i-want-you-to-hold-your-button.mp3" allow="autoplay" style="display:none" ></iframe>
 
 
 :: choiceyes [green -t8n-typewriter-4] {"position":"807,1691","size":"100,100"}
@@ -2062,8 +2056,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: choiceyesaudio {"position":"776,350","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/yes-ewwwww-ok.mp3" autoplay ></audio>
+<iframe
+      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/yes-ewwwww-ok.mp3" allow="autoplay" style="display:none"></iframe>
 
 
 :: choiceno [green -t8n-typewriter-4] {"position":"966,1702.6666666666667","size":"100,100"}
@@ -2073,8 +2067,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: choicenoaudio {"position":"656,350","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/no-phew.mp3" autoplay ></audio>
+<iframe
+      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/no-phew.mp3" allow="autoplay"style="display:none" ></iframe>
 
 
 :: platform8 [green -t8n-typewriter-4] {"position":"863,1833","size":"100,100"}
@@ -2088,8 +2082,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: platforom8audio {"position":"2179.3333333333335,693.3333333333335","size":"100,100"}
-<audio id="player"
-      src="https://uca-coney-dev.netlify.app/assets/audio/now-i-want-you-to-hold-your-button-in-your-hand-again.mp3" autoplay ></audio>
+<iframe id="iframeAudio"
+      src="https://uca-coney-dev.netlify.app/assets/audio/now-i-want-you-to-hold-your-button-in-your-hand-again.mp3" allow="autoplay" style="display:none"></iframe>
 
 
 :: FISHY SPAGHETTI [green -t8n-typewriter-4] {"position":"812,1990","size":"100,100"}
@@ -2098,8 +2092,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: FISHY SPAGHETTIaudio {"position":"2046.0000000000002,31.666666666666742","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/fishy-spaghetti-sounds-yummy.mp3"
-      autoplay ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/fishy-spaghetti-sounds-yummy.mp3"
+      allow="autoplay" style="display:none"></iframe>
 
 
 :: COLD CUSTARD [green -t8n-typewriter-4] {"position":"938,1990","size":"100,100"}
@@ -2108,8 +2102,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: COLD CUSTARDaudio {"position":"2157.666666666667,33.333333333333336","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/cold-custard-sounds-yummy.mp3" autoplay
-      ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/cold-custard-sounds-yummy.mp3" allow="autoplay" style="display:none"></iframe>
 
 
 :: platform9 [green -t8n-typewriter-4] {"position":"1034,2158.3333333333335","size":"100,100"}
@@ -2124,13 +2117,13 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: platform9audio {"position":"2189.3333333333335,946.6666666666667","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/now-last-time-i-want-you-to-hold.mp3"
-      autoplay ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/now-last-time-i-want-you-to-hold.mp3"
+style="display:none" allow="autoplay" ></iframe>
 
 
 :: EMERGENCY [static] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
-/<audio
-      src="audio/static.mp3" autoplay></audio>
+/<iframe
+      src="audio/static.mp3" autoplay style="display:none" allow="autoplay" ></iframe>
       <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox><<timed
       5s>><<goto
       "mappingdoneb">><</timed>>
@@ -2252,17 +2245,17 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: staticanimation [static] {"position":"543,3468.6666666666665","size":"100,100"}
-/<audio
-      src="audio/static.mp3" autoplay></audio>
+/<iframe
+      src="audio/static.mp3" autoplay style="display:none" allow="autoplay" ></iframe>
       <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox><<timed
       5s>><<goto
       "missionplanning">><</timed>>
 
 :: staticbuzzleft [static] {"position":"543,3468.6666666666665","size":"100,100"}
-/<audio
-      src="http://remote.co.com/UCA/audio/static.mp3" autoplay></audio>
+/<iframe
+      src="http://remote.co.com/UCA/audio/static.mp3" autoplay style="display:none" allow="autoplay" ></iframe>
 <staticbox>
-      <img src="http://remote.co.com/UCA/images/static.gif" class="staticgif left fadeIn">
+      <img src="http://remote.co.com/UCA/images/static5.gif" class="staticgif left fadeIn">
 
      /* <svg>
              <filter id="displacementFilter">
@@ -2308,8 +2301,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: platform9baudio {"position":"2077.666666666667,823.3333333333334","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/your-UCA-Root-is-planted.mp3" autoplay
-      ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/your-UCA-Root-is-planted.mp3" allow="autoplay" style="display:none" ></iframe>
 
 
 :: platform9c [green -t8n-typewriter-4] {"position":"1052,2403.3333333333335","size":"100,100"}
@@ -2326,8 +2318,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: platform9caudio {"position":"2186.0000000000005,825","size":"100,100"}
-<audio
-      id="player" src="https://uca-coney-dev.netlify.app/assets/audio/this-UCA-Root-is-for-you-always.mp3" autoplay ></audio>
+<iframe
+      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/this-UCA-Root-is-for-you-always.mp3" allow="autoplay" style="display:none" ></iframe>
 
 
 :: outro [green] {"position":"1069,2533.3333333333335","size":"100,100"}
@@ -2363,8 +2355,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: platform7baudio {"position":"2086.0000000000005,1188.3333333333335","size":"100,100"}
-<audio id="player"
-      src="https://uca-coney-dev.netlify.app/assets/audio/now-we-test-if-the-planting-has-worked.mp3" autoplay ></audio>
+<iframe id="iframeAudio"
+      src="https://uca-coney-dev.netlify.app/assets/audio/now-we-test-if-the-planting-has-worked.mp3" allow="autoplay" style="display:none"></iframe>
 
 
 :: platform8b [green -t8n-typewriter-4] {"position":"1039,1843","size":"100,100"}
@@ -2381,8 +2373,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: platform8baudio {"position":"2197.6666666666674,1066.6666666666665","size":"100,100"}
-<audio id="player" src="https://uca-coney-dev.netlify.app/assets/audio/now-another-test.mp3" autoplay
-      ></audio>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/now-another-test.mp3" allow="autoplay" style="display:none" ></iframe>
 
 :: beacon1 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
