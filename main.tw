@@ -20,6 +20,17 @@ Undercover CareTaker Agency WIP 4.6
 
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
+/* @import url("https://uca-coney-dev.netlify.app/assets/fonts/CASpyRoyalShadow.otf") */
+
+@font-face {
+    font-family: 'CASpyRoyalShadow';
+    src: url("https://uca-coney-dev.netlify.app/assets/fonts/CASpyRoyalShadow.otf") format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 button{
 color: #d66280;
   background: #2d3261;
@@ -204,7 +215,19 @@ color: #2d3261;
   text-decoration: none;
 }
 
+contentscontainer{
+display:flex;
+justify-content: space-around;
+align-items:center
+}
 
+.building {
+      max-height:100vh;
+}
+
+.contents{
+      font-family: "CASpyRoyalShadow";
+}
 
 messagebox {
    background: none;
@@ -2112,20 +2135,23 @@ $(document.head).find('#style-ui-bar').remove();
 :: contents [purple] {"position":"836.6666666666666,205","size":"100,100"}
 <<include
       "back">>
-   
-      Where would you like to go?
+    <h2> Where would you like to go?</h2>
+     <contentscontainer>
+     <img src="https://uca-coney-dev.netlify.app/assets/img/building.png" class="building"/>
+          <div class="contents">
+                  PART 1
+                  [[THE START|welcome1]]
+                  [[MOVE (UCA TOK)|READY]]
+                  [[CONNECT|video4]]
+                  [[DISCOVER|clubnamediscover]]
+                  [[WONDER|clubnamewonder]]
+                  [[GIVE|clubnamegive]]
+            
+                  PART 2
+                  [[THE START|welcome2]]
+     </div>
 
-      PART 1
-      [[THE START|welcome1]]
-      [[MOVE (UCA TOK)|READY]]
-      [[CONNECT|video4]]
-      [[DISCOVER|clubnamediscover]]
-      [[WONDER|clubnamewonder]]
-      [[GIVE|clubnamegive]]
-
-      PART 2
-      [[THE START|welcome2]]
-
+     </contentscontainer>   
 
 
 

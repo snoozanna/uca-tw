@@ -104,6 +104,17 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
+/* @import url("https://uca-coney-dev.netlify.app/assets/fonts/CASpyRoyalShadow.otf") */
+
+@font-face {
+    font-family: 'CASpyRoyalShadow';
+    src: url("https://uca-coney-dev.netlify.app/assets/fonts/CASpyRoyalShadow.otf") format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 button{
 color: #d66280;
   background: #2d3261;
@@ -288,7 +299,19 @@ color: #2d3261;
   text-decoration: none;
 }
 
+contentscontainer{
+display:flex;
+justify-content: space-around;
+align-items:center
+}
 
+.building {
+      max-height:100vh;
+}
+
+.contents{
+      font-family: "CASpyRoyalShadow";
+}
 
 messagebox {
    background: none;
@@ -1714,19 +1737,23 @@ $(document.head).find('#style-ui-bar').remove();
      &lt;/span&gt;
       &lt;/messagebox2&gt;</tw-passagedata><tw-passagedata pid="119" name="contents" tags="purple" position="836.6666666666666,205" size="100,100">&lt;&lt;include
       &quot;back&quot;&gt;&gt;
-   
-      Where would you like to go?
+    &lt;h2&gt; Where would you like to go?&lt;/h2&gt;
+     &lt;contentscontainer&gt;
+     &lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/building.png&quot; class=&quot;building&quot;/&gt;
+          &lt;div class=&quot;contents&quot;&gt;
+                  PART 1
+                  [[THE START|welcome1]]
+                  [[MOVE (UCA TOK)|READY]]
+                  [[CONNECT|video4]]
+                  [[DISCOVER|clubnamediscover]]
+                  [[WONDER|clubnamewonder]]
+                  [[GIVE|clubnamegive]]
+            
+                  PART 2
+                  [[THE START|welcome2]]
+     &lt;/div&gt;
 
-      PART 1
-      [[THE START|welcome1]]
-      [[MOVE (UCA TOK)|READY]]
-      [[CONNECT|video4]]
-      [[DISCOVER|clubnamediscover]]
-      [[WONDER|clubnamewonder]]
-      [[GIVE|clubnamegive]]
-
-      PART 2
-      [[THE START|welcome2]]</tw-passagedata><tw-passagedata pid="120" name="clubnamediscover" tags="green -t8n-typewriter-4" position="175.33333333333326,2197" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include
+     &lt;/contentscontainer&gt;</tw-passagedata><tw-passagedata pid="120" name="clubnamediscover" tags="green -t8n-typewriter-4" position="175.33333333333326,2197" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include
       &quot;typewriter&quot;&gt;&gt; &lt;beaconicon&gt;[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]&lt;/beaconicon&gt;&lt;messageboxlarge&gt;
 
       Enter your secret club name here
