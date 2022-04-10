@@ -120,6 +120,14 @@ font-family: 'Didact Gothic', sans-serif;
    top:3vw;   
 }
 
+
+.staticgif.right{
+   width: 300px;
+   position:fixed;
+   left:3vw;
+   bottom:3vw;   
+}
+
   .green {
     color: black;
     background-image: url("http://remote.co.com/UCA/images/greenbackground.jpg");
@@ -2204,7 +2212,7 @@ $(document.head).find('#style-ui-bar').remove();
 /<audio
       src="http://remote.co.com/UCA/audio/static.mp3" autoplay></audio>
 <staticbox>
-      <img src="https://uca-coney-dev.netlify.app/assets/img/static2.gif" class="staticgif left">
+      /* <img src="https://uca-coney-dev.netlify.app/assets/img/static3.gif" class="staticgif left"> */
 
      <svg>
              <filter id="displacementFilter">
