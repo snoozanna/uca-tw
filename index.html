@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://B3F5AA2C-F49A-4324-9C59-27731F7EA557// --><tw-storydata name="Undercover CareTaker Agency WIP 4.6" startnode="119" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="B3F5AA2C-F49A-4324-9C59-27731F7EA557" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+	<!-- UUID://B3F5AA2C-F49A-4324-9C59-27731F7EA557// --><tw-storydata name="Undercover CareTaker Agency WIP 4.6" startnode="1" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="B3F5AA2C-F49A-4324-9C59-27731F7EA557" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
@@ -303,13 +303,16 @@ contentscontainer{
 display:flex;
 justify-content: center;
 align-items: center;
-   background-image: url("http://remote.co.com/UCA/images/purplebackground.jpg");
-
+   background-image: url("http://remote.co.com/UCA/images/paperbackground.jpg");
+padding: 40px;
+  border-radius: 4px;
+  transform: skew(-2deg);
+box-shadow: -5px -10px 8px black;
 
 }
 
 .building {
-      max-height:80vh;
+      max-height:70vh;
       margin-inline-end: 100px
 }
 
@@ -317,7 +320,7 @@ align-items: center;
       font-family: "CASpyRoyalShadow";
       font-size: 3vw;
       color: black;
-  
+  width: 48%;
       /* max-height:80vh; */
 }
 
@@ -336,6 +339,7 @@ h2.title {
     padding:20px;
     max-width: 30vw;
 text-align: end;
+z-index: 1;
 }
 
 messagebox {
@@ -554,7 +558,7 @@ name {
  width:20vw;
   position: fixed; 
     top: 6vh; 
-    right: 3vw; 
+    right: 2vw; 
   background-image: url("http://remote.co.com/UCA/images/purplebackground.jpg");
   padding: 25px;
   border-radius: 4px;
@@ -564,7 +568,8 @@ box-shadow: -5px -10px 8px black;
 }
 
 .popup-container > p {
-      color:#fff
+      color:#fff;
+      font-size: 1.2rem
 }
 
 
@@ -623,7 +628,7 @@ text-align: right;
 
 .dancecard{
 width: 65vw;
-margin:auto
+/* margin:auto */
 }
 
 .beacon {
@@ -965,7 +970,7 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
       class=&quot;center&quot;&gt;&lt;/div&gt;
       &lt;div&gt;
-      &lt;iframe width=&#39;800px&#39; height=&#39;450px&#39;
+      &lt;iframe allow=autoplay width=&#39;800px&#39; height=&#39;450px&#39;
       src=&#39;https://player.vimeo.com/video/531960916?autoplay=1&amp;byline=0&amp;portrait=0&#39;&gt;&lt;/iframe&gt;
       &lt;/div&gt;
       &lt;/div&gt;
@@ -1021,7 +1026,7 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
       class=&quot;center&quot;&gt;&lt;/div&gt;
       &lt;div&gt;
-      &lt;iframe width=&#39;800px&#39; height=&#39;450px&#39;
+      &lt;iframe allow=autoplay  width=&#39;800px&#39; height=&#39;450px&#39;
       src=&#39;https://player.vimeo.com/video/531954959?autoplay=1&amp;byline=0&amp;portrait=0&#39;&gt;&lt;/iframe&gt;
       &lt;/div&gt;
       &lt;/div&gt;
@@ -1055,7 +1060,7 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
       class=&quot;center&quot;&gt;&lt;/div&gt;
       &lt;div&gt;
-      &lt;iframe width=&#39;800px&#39; height=&#39;450px&#39;
+      &lt;iframe allow=autoplay  width=&#39;800px&#39; height=&#39;450px&#39;
       src=&#39;https://player.vimeo.com/video/532135608?autoplay=1&amp;byline=0&amp;portrait=0&#39;&gt;&lt;/iframe&gt;
       &lt;/div&gt;
       &lt;/div&gt;
@@ -1067,7 +1072,7 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
       class=&quot;center&quot;&gt;&lt;/div&gt;
       &lt;div&gt;
-      &lt;iframe width=&#39;800px&#39; height=&#39;450px&#39;
+      &lt;iframe allow=autoplay  width=&#39;800px&#39; height=&#39;450px&#39;
       src=&#39;https://player.vimeo.com/video/532153509?autoplay=1&amp;byline=0&amp;portrait=0&#39;&gt;&lt;/iframe&gt;
       &lt;/div&gt;
       &lt;/div&gt;
@@ -1093,7 +1098,7 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
       class=&quot;center&quot;&gt;&lt;/div&gt;
       &lt;div&gt;
-      &lt;iframe width=&#39;800px&#39; height=&#39;450px&#39;
+      &lt;iframe allow=autoplay  width=&#39;800px&#39; height=&#39;450px&#39;
       src=&#39;https://player.vimeo.com/video/532148883?autoplay=1&amp;byline=0&amp;portrait=0&#39;&gt;&lt;/iframe&gt;
       &lt;/div&gt;
       &lt;/div&gt;
@@ -1160,7 +1165,7 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
       class=&quot;center&quot;&gt;&lt;/div&gt;
       &lt;div&gt;
-      &lt;iframe width=&#39;800px&#39; height=&#39;450px&#39;
+      &lt;iframe allow=autoplay  width=&#39;800px&#39; height=&#39;450px&#39;
       src=&#39;https://player.vimeo.com/video/532136949?autoplay=1&amp;byline=0&amp;portrait=0&#39;&gt;&lt;/iframe&gt;
       &lt;/div&gt;
       &lt;/div&gt;
@@ -1197,7 +1202,7 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
       class=&quot;center&quot;&gt;&lt;/div&gt;
       &lt;div&gt;
-      &lt;iframe width=&#39;800px&#39; height=&#39;450px&#39;
+      &lt;iframe allow=autoplay  width=&#39;800px&#39; height=&#39;450px&#39;
       src=&#39;https://player.vimeo.com/video/532118800?autoplay=1&amp;byline=0&amp;portrait=0&#39;&gt;&lt;/iframe&gt;
       &lt;/div&gt;
       &lt;/div&gt;
@@ -1282,7 +1287,7 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
       class=&quot;center&quot;&gt;&lt;/div&gt;
       &lt;div&gt;
-      &lt;iframe width=&#39;800px&#39; height=&#39;450px&#39;
+      &lt;iframe allow=autoplay  width=&#39;800px&#39; height=&#39;450px&#39;
       src=&#39;https://player.vimeo.com/video/531963515?autoplay=1&amp;byline=0&amp;portrait=0&#39;&gt;&lt;/iframe&gt;
       &lt;/div&gt;
       &lt;/div&gt;
@@ -1362,7 +1367,7 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
       class=&quot;center&quot;&gt;&lt;/div&gt;
       &lt;div&gt;
-      &lt;iframe width=&#39;800px&#39; height=&#39;450px&#39;
+      &lt;iframe allow=autoplay  width=&#39;800px&#39; height=&#39;450px&#39;
       src=&#39;https://player.vimeo.com/video/532167217?autoplay=1&amp;byline=0&amp;portrait=0&#39;&gt;&lt;/iframe&gt;
       &lt;/div&gt;
       &lt;/div&gt;
@@ -1647,7 +1652,7 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
       class=&quot;center&quot;&gt;&lt;/div&gt;
       &lt;div&gt;
-      &lt;iframe width=&#39;800px&#39; height=&#39;450px&#39;
+      &lt;iframe allow=autoplay  width=&#39;800px&#39; height=&#39;450px&#39;
       src=&#39;https://player.vimeo.com/video/532121247?autoplay=1&amp;byline=0&amp;portrait=0&#39;&gt;&lt;/iframe&gt;
       &lt;/div&gt;
       &lt;/div&gt;
@@ -1760,7 +1765,7 @@ $(document.head).find('#style-ui-bar').remove();
             &lt;button&gt;[[YES|welcome1]]&lt;/button&gt; 
             &lt;button&gt;[[NO|contents]]&lt;/button&gt;
      &lt;/span&gt;
-      &lt;/messagebox2&gt;</tw-passagedata><tw-passagedata pid="119" name="contents" tags="" position="836.6666666666666,205" size="100,100">&lt;&lt;include
+      &lt;/messagebox2&gt;</tw-passagedata><tw-passagedata pid="119" name="contents" tags="purple" position="836.6666666666666,205" size="100,100">&lt;&lt;include
       &quot;back&quot;&gt;&gt;
     &lt;&lt;timed 1s&gt;&gt;&lt;h2 class=&quot;title fadeInRightBig animated&quot;&gt; Where would you like to go?&lt;/h2&gt;&lt;&lt;/timed&gt;&gt;
 
