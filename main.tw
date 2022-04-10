@@ -2195,7 +2195,7 @@ $(document.head).find('#style-ui-bar').remove();
 /<audio
       src="audio/static.mp3" autoplay></audio>
 <staticbox>
-      <img src="http://remote.co.com/UCA/images/static.gif" class="staticgif">
+      <img src="https://uca-coney-dev.netlify.app/assets/img/static1.gif" class="staticgif">
       </staticbox>
 
 
