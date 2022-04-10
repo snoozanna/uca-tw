@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "staticbuzzleft",
+	"start": "contents",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -108,7 +108,7 @@ font-family: 'Didact Gothic', sans-serif;
 
 .staticgif{
  box-shadow:-150px #fff;
-  filter: url("#displacementFilter");
+  /* filter: url("#displacementFilter"); */
   width: 300px;
   padding: 10px
 }
@@ -2111,8 +2111,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: contents [purple] {"position":"836.6666666666666,205","size":"100,100"}
 <<include
-      "back">><<include "typewriter">>
-      <messageboxlarge>
+      "back">>
+   
       Where would you like to go?
 
       PART 1
@@ -2126,7 +2126,7 @@ $(document.head).find('#style-ui-bar').remove();
       PART 2
       [[THE START|welcome2]]
 
-      </messageboxlarge>
+
 
 
 :: clubnamediscover [green -t8n-typewriter-4] {"position":"175.33333333333326,2197","size":"100,100"}
@@ -2212,16 +2212,16 @@ $(document.head).find('#style-ui-bar').remove();
 /<audio
       src="http://remote.co.com/UCA/audio/static.mp3" autoplay></audio>
 <staticbox>
-      /* <img src="https://uca-coney-dev.netlify.app/assets/img/static3.gif" class="staticgif left"> */
+      <img src="http://remote.co.com/UCA/images/static.gif" class="staticgif left fadeIn">
 
-     <svg>
+     /* <svg>
              <filter id="displacementFilter">
           <feTurbulence type="turbulence" baseFrequency="0.05"
               numOctaves="10" result="turbulence"/>
           <feDisplacementMap in2="turbulence" in="SourceGraphic"
               scale="30" xChannelSelector="Z" yChannelSelector="G"/>
         </filter>
-     </svg>
+     </svg> */
       </staticbox>
 
 

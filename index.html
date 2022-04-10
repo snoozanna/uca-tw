@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://B3F5AA2C-F49A-4324-9C59-27731F7EA557// --><tw-storydata name="Undercover CareTaker Agency WIP 4.6" startnode="127" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="B3F5AA2C-F49A-4324-9C59-27731F7EA557" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+	<!-- UUID://B3F5AA2C-F49A-4324-9C59-27731F7EA557// --><tw-storydata name="Undercover CareTaker Agency WIP 4.6" startnode="119" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="B3F5AA2C-F49A-4324-9C59-27731F7EA557" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
@@ -192,7 +192,7 @@ font-family: 'Didact Gothic', sans-serif;
 
 .staticgif{
  box-shadow:-150px #fff;
-  filter: url("#displacementFilter");
+  /* filter: url("#displacementFilter"); */
   width: 300px;
   padding: 10px
 }
@@ -1713,8 +1713,8 @@ $(document.head).find('#style-ui-bar').remove();
             &lt;button&gt;[[NO|contents]]&lt;/button&gt;
      &lt;/span&gt;
       &lt;/messagebox2&gt;</tw-passagedata><tw-passagedata pid="119" name="contents" tags="purple" position="836.6666666666666,205" size="100,100">&lt;&lt;include
-      &quot;back&quot;&gt;&gt;&lt;&lt;include &quot;typewriter&quot;&gt;&gt;
-      &lt;messageboxlarge&gt;
+      &quot;back&quot;&gt;&gt;
+   
       Where would you like to go?
 
       PART 1
@@ -1726,9 +1726,7 @@ $(document.head).find('#style-ui-bar').remove();
       [[GIVE|clubnamegive]]
 
       PART 2
-      [[THE START|welcome2]]
-
-      &lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="120" name="clubnamediscover" tags="green -t8n-typewriter-4" position="175.33333333333326,2197" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include
+      [[THE START|welcome2]]</tw-passagedata><tw-passagedata pid="120" name="clubnamediscover" tags="green -t8n-typewriter-4" position="175.33333333333326,2197" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include
       &quot;typewriter&quot;&gt;&gt; &lt;beaconicon&gt;[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]&lt;/beaconicon&gt;&lt;messageboxlarge&gt;
 
       Enter your secret club name here
@@ -1783,16 +1781,16 @@ $(document.head).find('#style-ui-bar').remove();
       &quot;missionplanning&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="staticbuzzleft" tags="static" position="543,3468.6666666666665" size="100,100">/&lt;audio
       src=&quot;http://remote.co.com/UCA/audio/static.mp3&quot; autoplay&gt;&lt;/audio&gt;
 &lt;staticbox&gt;
-      /* &lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/static3.gif&quot; class=&quot;staticgif left&quot;&gt; */
+      &lt;img src=&quot;http://remote.co.com/UCA/images/static.gif&quot; class=&quot;staticgif left fadeIn&quot;&gt;
 
-     &lt;svg&gt;
+     /* &lt;svg&gt;
              &lt;filter id=&quot;displacementFilter&quot;&gt;
           &lt;feTurbulence type=&quot;turbulence&quot; baseFrequency=&quot;0.05&quot;
               numOctaves=&quot;10&quot; result=&quot;turbulence&quot;/&gt;
           &lt;feDisplacementMap in2=&quot;turbulence&quot; in=&quot;SourceGraphic&quot;
               scale=&quot;30&quot; xChannelSelector=&quot;Z&quot; yChannelSelector=&quot;G&quot;/&gt;
         &lt;/filter&gt;
-     &lt;/svg&gt;
+     &lt;/svg&gt; */
       &lt;/staticbox&gt;</tw-passagedata><tw-passagedata pid="128" name="reeltoreel" tags="" position="470.3333333333333,50.66666666666666" size="100,100">&lt;reeltoreel&gt;[img[http://remote.co.com/UCA/images/reeltoreel2.gif]]&lt;/reeltoreel&gt;</tw-passagedata><tw-passagedata pid="129" name="these maps" tags="green" position="926.6666666666666,3009" size="100,100">&lt;&lt;include
       &quot;back&quot;&gt;&gt;&lt;dance&gt;
       &lt;div class=&quot;animated
