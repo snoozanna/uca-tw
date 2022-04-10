@@ -24,7 +24,7 @@ Undercover CareTaker Agency WIP 4.6
 
 @font-face {
     font-family: 'CASpyRoyalShadow';
-    src: url("https://uca-coney-dev.netlify.app/assets/fonts/CASpyRoyalShadow.otf") format('otf');
+    src: url("https://uca-coney-dev.netlify.app/assets/fonts/CASpyRoyalShadow.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -217,16 +217,41 @@ color: #2d3261;
 
 contentscontainer{
 display:flex;
-justify-content: space-around;
-align-items:center
+justify-content: center;
+align-items: center;
+   background-image: url("http://remote.co.com/UCA/images/purplebackground.jpg");
+
+
 }
 
 .building {
-      max-height:100vh;
+      max-height:80vh;
+      margin-inline-end: 100px
 }
 
 .contents{
       font-family: "CASpyRoyalShadow";
+      font-size: 3vw;
+      color: black;
+  
+      /* max-height:80vh; */
+}
+
+.contents > a:hover{
+   color: #d66280;
+   font-size: 3.2vw   
+}
+
+h2.title {
+    font-family: "CASpyRoyalShadow";  
+    color: #d66280;
+    font-size:4vw;
+    position:fixed;
+    top:0.5vw;
+    right:3vw;
+    padding:20px;
+    max-width: 30vw;
+text-align: end;
 }
 
 messagebox {
@@ -2132,26 +2157,20 @@ $(document.head).find('#style-ui-bar').remove();
       </messagebox2> 
 
 
-:: contents [purple] {"position":"836.6666666666666,205","size":"100,100"}
+:: contents [] {"position":"836.6666666666666,205","size":"100,100"}
 <<include
       "back">>
-    <h2> Where would you like to go?</h2>
-     <contentscontainer>
-     <img src="https://uca-coney-dev.netlify.app/assets/img/building.png" class="building"/>
-          <div class="contents">
-                  PART 1
-                  [[THE START|welcome1]]
+    <<timed 1s>><h2 class="title fadeInRightBig animated"> Where would you like to go?</h2><</timed>>
+
+     <contentscontainer><img src="https://uca-coney-dev.netlify.app/assets/img/building.png" class="building"/>
+          <div class="contents">[[THE START|welcome1]]
                   [[MOVE (UCA TOK)|READY]]
                   [[CONNECT|video4]]
                   [[DISCOVER|clubnamediscover]]
                   [[WONDER|clubnamewonder]]
                   [[GIVE|clubnamegive]]
-            
-                  PART 2
-                  [[THE START|welcome2]]
-     </div>
-
-     </contentscontainer>   
+                  [[UCA ROOT|welcome2]]
+     </div></contentscontainer>   
 
 
 

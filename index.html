@@ -108,7 +108,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 @font-face {
     font-family: 'CASpyRoyalShadow';
-    src: url("https://uca-coney-dev.netlify.app/assets/fonts/CASpyRoyalShadow.otf") format('otf');
+    src: url("https://uca-coney-dev.netlify.app/assets/fonts/CASpyRoyalShadow.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -301,16 +301,41 @@ color: #2d3261;
 
 contentscontainer{
 display:flex;
-justify-content: space-around;
-align-items:center
+justify-content: center;
+align-items: center;
+   background-image: url("http://remote.co.com/UCA/images/purplebackground.jpg");
+
+
 }
 
 .building {
-      max-height:100vh;
+      max-height:80vh;
+      margin-inline-end: 100px
 }
 
 .contents{
       font-family: "CASpyRoyalShadow";
+      font-size: 3vw;
+      color: black;
+  
+      /* max-height:80vh; */
+}
+
+.contents > a:hover{
+   color: #d66280;
+   font-size: 3.2vw   
+}
+
+h2.title {
+    font-family: "CASpyRoyalShadow";  
+    color: #d66280;
+    font-size:4vw;
+    position:fixed;
+    top:0.5vw;
+    right:3vw;
+    padding:20px;
+    max-width: 30vw;
+text-align: end;
 }
 
 messagebox {
@@ -1735,25 +1760,19 @@ $(document.head).find('#style-ui-bar').remove();
             &lt;button&gt;[[YES|welcome1]]&lt;/button&gt; 
             &lt;button&gt;[[NO|contents]]&lt;/button&gt;
      &lt;/span&gt;
-      &lt;/messagebox2&gt;</tw-passagedata><tw-passagedata pid="119" name="contents" tags="purple" position="836.6666666666666,205" size="100,100">&lt;&lt;include
+      &lt;/messagebox2&gt;</tw-passagedata><tw-passagedata pid="119" name="contents" tags="" position="836.6666666666666,205" size="100,100">&lt;&lt;include
       &quot;back&quot;&gt;&gt;
-    &lt;h2&gt; Where would you like to go?&lt;/h2&gt;
-     &lt;contentscontainer&gt;
-     &lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/building.png&quot; class=&quot;building&quot;/&gt;
-          &lt;div class=&quot;contents&quot;&gt;
-                  PART 1
-                  [[THE START|welcome1]]
+    &lt;&lt;timed 1s&gt;&gt;&lt;h2 class=&quot;title fadeInRightBig animated&quot;&gt; Where would you like to go?&lt;/h2&gt;&lt;&lt;/timed&gt;&gt;
+
+     &lt;contentscontainer&gt;&lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/building.png&quot; class=&quot;building&quot;/&gt;
+          &lt;div class=&quot;contents&quot;&gt;[[THE START|welcome1]]
                   [[MOVE (UCA TOK)|READY]]
                   [[CONNECT|video4]]
                   [[DISCOVER|clubnamediscover]]
                   [[WONDER|clubnamewonder]]
                   [[GIVE|clubnamegive]]
-            
-                  PART 2
-                  [[THE START|welcome2]]
-     &lt;/div&gt;
-
-     &lt;/contentscontainer&gt;</tw-passagedata><tw-passagedata pid="120" name="clubnamediscover" tags="green -t8n-typewriter-4" position="175.33333333333326,2197" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include
+                  [[UCA ROOT|welcome2]]
+     &lt;/div&gt;&lt;/contentscontainer&gt;</tw-passagedata><tw-passagedata pid="120" name="clubnamediscover" tags="green -t8n-typewriter-4" position="175.33333333333326,2197" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include
       &quot;typewriter&quot;&gt;&gt; &lt;beaconicon&gt;[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]&lt;/beaconicon&gt;&lt;messageboxlarge&gt;
 
       Enter your secret club name here
