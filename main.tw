@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "staticbuzzleft",
+	"start": "staticbuzz",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -133,7 +133,7 @@ font-family: 'Didact Gothic', sans-serif;
 
 
 .staticgif.right{
-   width: 300px;
+   width: 1000px;
    position:fixed;
    left:3vw;
    bottom:3vw;   
@@ -788,7 +788,7 @@ align-items: center;
 	animation-timing-function: ease-in;
 }
 
-.fadeFast {
+.fadeSlow {
 	-webkit-animation-duration: 8s;
 	animation-duration: 8s;
 	-webkit-animation-fill-mode: both;
@@ -1429,7 +1429,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon><<timed
-      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticanimation]]</nextbutton><</timed>>
+      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticbuzzleft]]</nextbutton><</timed>>
 
 
 :: missionplanning [green -t8n-typewriter-4] {"position":"690.3333333333334,3426","size":"100,100"}
@@ -2251,11 +2251,14 @@ style="display:none" allow="autoplay" ></iframe>
       5s>><<goto
       "missionplanning">><</timed>>
 
-:: staticbuzzleft [static] {"position":"543,3468.6666666666665","size":"100,100"}
+:: staticbuzz [static] {"position":"543,3468.6666666666665","size":"100,100"}
 /<iframe
       src="http://remote.co.com/UCA/audio/static.mp3" autoplay style="display:none" allow="autoplay" ></iframe>
 <staticbox>
-      <img src="http://remote.co.com/UCA/images/static5.gif" class="staticgif left fadeIn">
+     <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left fadeFast"><</timed>>
+       <<timed 3s>><img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif right fadeFast"><</timed>>
+      /* <<timed
+      5s>><<goto"missionplanning">><</timed>> */
 
      /* <svg>
              <filter id="displacementFilter">

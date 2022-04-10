@@ -217,7 +217,7 @@ font-family: 'Didact Gothic', sans-serif;
 
 
 .staticgif.right{
-   width: 300px;
+   width: 1000px;
    position:fixed;
    left:3vw;
    bottom:3vw;   
@@ -872,7 +872,7 @@ align-items: center;
 	animation-timing-function: ease-in;
 }
 
-.fadeFast {
+.fadeSlow {
 	-webkit-animation-duration: 8s;
 	animation-duration: 8s;
 	-webkit-animation-fill-mode: both;
@@ -1273,7 +1273,7 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;/div&gt;
       &lt;/div&gt;
       \&lt;beaconicon&gt;[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]&lt;/beaconicon&gt;&lt;&lt;timed
-      5s&gt;&gt;&lt;nextbutton&gt;[img[http://remote.co.com/UCA/images/nextbutton.png][staticanimation]]&lt;/nextbutton&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="missionplanning" tags="green -t8n-typewriter-4" position="690.3333333333334,3426" size="100,100">&lt;&lt;include
+      5s&gt;&gt;&lt;nextbutton&gt;[img[http://remote.co.com/UCA/images/nextbutton.png][staticbuzzleft]]&lt;/nextbutton&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="missionplanning" tags="green -t8n-typewriter-4" position="690.3333333333334,3426" size="100,100">&lt;&lt;include
       &quot;back&quot;&gt;&gt;&lt;&lt;include &quot;missionplanningaudio&quot;&gt;&gt;
       &lt;&lt;include &quot;typewriter&quot;&gt;&gt;&lt;beaconicon&gt;[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]&lt;/beaconicon&gt;
      &lt;messageboxlarge&gt;
@@ -1806,10 +1806,13 @@ style=&quot;display:none&quot; allow=&quot;autoplay&quot; &gt;&lt;/iframe&gt;</t
       src=&quot;audio/static.mp3&quot; autoplay style=&quot;display:none&quot; allow=&quot;autoplay&quot; &gt;&lt;/iframe&gt;
       &lt;staticbox&gt;[img[http://remote.co.com/UCA/images/static.gif]]&lt;/staticbox&gt;&lt;&lt;timed
       5s&gt;&gt;&lt;&lt;goto
-      &quot;missionplanning&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="staticbuzzleft" tags="static" position="543,3468.6666666666665" size="100,100">/&lt;iframe
+      &quot;missionplanning&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="staticbuzz" tags="static" position="543,3468.6666666666665" size="100,100">/&lt;iframe
       src=&quot;http://remote.co.com/UCA/audio/static.mp3&quot; autoplay style=&quot;display:none&quot; allow=&quot;autoplay&quot; &gt;&lt;/iframe&gt;
 &lt;staticbox&gt;
-      &lt;img src=&quot;http://remote.co.com/UCA/images/static5.gif&quot; class=&quot;staticgif left fadeIn&quot;&gt;
+     &lt;&lt;timed 0.5s&gt;&gt; &lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/static5.gif&quot; class=&quot;staticgif left fadeFast&quot;&gt;&lt;&lt;/timed&gt;&gt;
+       &lt;&lt;timed 3s&gt;&gt;&lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/static5.gif&quot; class=&quot;staticgif right fadeFast&quot;&gt;&lt;&lt;/timed&gt;&gt;
+      /* &lt;&lt;timed
+      5s&gt;&gt;&lt;&lt;goto&quot;missionplanning&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt; */
 
      /* &lt;svg&gt;
              &lt;filter id=&quot;displacementFilter&quot;&gt;
