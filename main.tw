@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "staticbuzz",
+	"start": "textanne",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -112,10 +112,10 @@ width: 8vw
 font-family: 'Didact Gothic', sans-serif;
 }
 
-/* .static img {
+.static img {
   width: 90vw;
   height: 90vh;
-} */
+}
 
 .staticgif{
  box-shadow:-150px #fff;
@@ -127,15 +127,15 @@ font-family: 'Didact Gothic', sans-serif;
 .staticgif.left{
    width: 300px;
    position:fixed;
-   right:3vw;
-   top:3vw;   
+   left:-5vw;
+   top:-3vw;   
 }
 
 
 .staticgif.right{
    width: 1000px;
    position:fixed;
-   left:3vw;
+   right:-3vw;
    bottom:3vw;   
 }
 
@@ -488,6 +488,9 @@ box-shadow: -5px -10px 8px black;
       font-size: 1.2rem
 }
 
+.popup-container.left{
+      left: 2vw; 
+}
 
 /* CODE INPUT */
 
@@ -741,6 +744,49 @@ align-items: center;
 }
 
 
+@-webkit-keyframes growRightBig { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateX(200px); 
+    } 
+    15% { 
+        opacity: 1; 
+        transform: scale(0.3); 
+    } 
+
+     70% { 
+        opacity: 1; 
+        transform: scale(0.9); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateX(0); 
+    } 
+} 
+@keyframes growRightBig { 
+    0% { 
+        opacity: 0; 
+        transform: scale(0); 
+    } 
+  15% { 
+        opacity: 1; 
+        transform: scale(0.3); 
+    } 
+     70% { 
+        opacity: 1; 
+        transform: scale(0.9); 
+    } 
+
+    100% { 
+        opacity: 1; 
+        transform: scale(2); 
+    } 
+} 
+
+.growRightBig { 
+    -webkit-animation-name: growRightBig; 
+    animation-name: growRightBig; 
+}
 
 .animated {
 	-webkit-animation-duration: 2s;
@@ -1386,7 +1432,9 @@ $(document.head).find('#style-ui-bar').remove();
       GREAT work.
       If you have time, you can share back some of the information you have found out about your school to the rest of
       your Secret Club. It will help you work out your Gift.
-      When done, click<button>[[next|EMERGENCY]]</button>
+      When done, click
+      /* <button>[[next|EMERGENCY]]</button> */
+      <<button "Next" >><<goto [[EMERGENCY]]>><</button>>
       </messageboxlarge>
 
 
@@ -1400,13 +1448,15 @@ $(document.head).find('#style-ui-bar').remove();
 :: mappingdoneb [green -t8n-typewriter-4] {"position":"1367.0000000000002,3002.666666666667","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
-      "mappingdoneaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
+      "mappingdonebaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       Ok - great work. Mapping Complete.
 
       The next video is locked though – can you text Anne the word MAPPING COMPLETE and hopefully, she will call you
       with the codeword to move on.
 
       We are so close to lighting the beacon.
+
+      Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne]]>><</button>>
 
       <<include "password4">>
       </messageboxlarge>
@@ -1429,7 +1479,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon><<timed
-      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticbuzzleft]]</nextbutton><</timed>>
+      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticbuzz]]</nextbutton><</timed>>
 
 
 :: missionplanning [green -t8n-typewriter-4] {"position":"690.3333333333334,3426","size":"100,100"}
@@ -1543,7 +1593,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: static [static] {"position":"400.3333333333333,3487.666666666667","size":"100,100"}
 /<iframe
-      src="audio/finalstatic.mp3" autoplay></iframe>
+      src="http://remote.co.com/UCA/audio/finalstatic.mp3" autoplay></iframe>
       <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox>
       <<timed 4s>><staticbox><div class="animated
       fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></staticbox><</timed>>
@@ -2121,12 +2171,23 @@ $(document.head).find('#style-ui-bar').remove();
 style="display:none" allow="autoplay" ></iframe>
 
 
-:: EMERGENCY [static] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
+/* :: EMERGENCY [static] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
 /<iframe
       src="audio/static.mp3" autoplay style="display:none" allow="autoplay" ></iframe>
       <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox><<timed
       5s>><<goto
-      "mappingdoneb">><</timed>>
+      "mappingdoneb">><</timed>> */
+
+:: EMERGENCY [static] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
+<iframe
+      src="https://uca-coney-dev.netlify.app/assets/audio/beeps3.mp3" autoplay style="display:none" allow="autoplay" ></iframe>
+<staticbox>
+     <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left fadeSlow animated"><</timed>>
+<<timed
+      5s>><<goto"mappingdoneb">><</timed>>
+      </staticbox>
+
+
 
 
 :: intro [green] {"position":"537,506","size":"100,100"}
@@ -2228,7 +2289,7 @@ style="display:none" allow="autoplay" ></iframe>
       "Part2">><</timed>>
 
 
-:: statpatternanimation [green] {"position":"1180,544","size":"100,100"}
+/* :: statpatternanimation [green] {"position":"1180,544","size":"100,100"}
 <div
       id="wrap_video">
       <div id="video_box">
@@ -2241,33 +2302,24 @@ style="display:none" allow="autoplay" ></iframe>
       fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></messageboxstat>
       </div>
       </div>
-      </div>
+      </div> */
 
 
-:: staticanimation [static] {"position":"543,3468.6666666666665","size":"100,100"}
+/* :: staticanimation [static] {"position":"543,3468.6666666666665","size":"100,100"}
 /<iframe
       src="audio/static.mp3" autoplay style="display:none" allow="autoplay" ></iframe>
       <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox><<timed
       5s>><<goto
-      "missionplanning">><</timed>>
+      "missionplanning">><</timed>> */
 
 :: staticbuzz [static] {"position":"543,3468.6666666666665","size":"100,100"}
 /<iframe
-      src="http://remote.co.com/UCA/audio/static.mp3" autoplay style="display:none" allow="autoplay" ></iframe>
+      src="https://uca-coney-dev.netlify.app/assets/audio/beeps3.mp3" autoplay style="display:none" allow="autoplay" ></iframe>
 <staticbox>
-     <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left fadeFast"><</timed>>
-       <<timed 3s>><img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif right fadeFast"><</timed>>
-      /* <<timed
-      5s>><<goto"missionplanning">><</timed>> */
-
-     /* <svg>
-             <filter id="displacementFilter">
-          <feTurbulence type="turbulence" baseFrequency="0.05"
-              numOctaves="10" result="turbulence"/>
-          <feDisplacementMap in2="turbulence" in="SourceGraphic"
-              scale="30" xChannelSelector="Z" yChannelSelector="G"/>
-        </filter>
-     </svg> */
+     /* <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left fadeSlow animated"><</timed>> */
+       <<timed 0.5s>><img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif right growRightBig animated"><</timed>>
+      <<timed
+      5s>><<goto"missionplanning">><</timed>>
       </staticbox>
 
 
@@ -2448,3 +2500,14 @@ style="display:none" allow="autoplay" ></iframe>
       <<button "Enter">><</button>></span> */
 </div>
 </messagebox2>
+
+
+
+
+:: textanne [purple -t8n-typewriter-4]
+<<include "back">>
+<messagebox><img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="building"/>
+          <div class="contents">Captions of what anne says
+     </div>
+     <<include "password4">>
+     </messagebox>   
