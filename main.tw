@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "textanne",
+	"start": "home",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -220,21 +220,42 @@ display:flex;
 justify-content: center;
 align-items: center;
    background-image: url("http://remote.co.com/UCA/images/paperbackground.jpg");
+padding: 20px;
+  border-radius: 4px;
+  transform: skew(-2deg);
+box-shadow: -5px -10px 8px black;
+max-width: 60%;
+margin:auto;
+
+}
+
+phonecontainer {
+display:flex;
+justify-content: center;
+align-items: center;
+   background-image: url("http://remote.co.com/UCA/images/paperbackground.jpg");
 padding: 40px;
   border-radius: 4px;
   transform: skew(-2deg);
 box-shadow: -5px -10px 8px black;
+max-width: 60%
 
 }
+
 
 .building {
       max-height:70vh;
       margin-inline-end: 100px
 }
 
+.phone {
+      max-width: 30vw;
+      justify-self:flex-start;
+}
+
 .contents{
-      font-family: "CASpyRoyalShadow";
-      font-size: 3vw;
+      /* font-family: "CASpyRoyalShadow"; */
+      font-size: 2vw;
       color: black;
   width: 48%;
       /* max-height:80vh; */
@@ -246,15 +267,15 @@ box-shadow: -5px -10px 8px black;
 }
 
 h2.title {
-    font-family: "CASpyRoyalShadow";  
+    /* font-family: "CASpyRoyalShadow";   */
     color: #d66280;
-    font-size:4vw;
-    position:fixed;
-    top:0.5vw;
-    right:3vw;
-    padding:20px;
-    max-width: 30vw;
-text-align: end;
+    font-size:3vw;
+    /* position:fixed; */
+    /* top:0.5vw; */
+    /* right:3vw; */
+    /* padding:20px; */
+    /* max-width: 30vw; */
+/* text-align: end; */
 z-index: 1;
 }
 
@@ -1163,7 +1184,9 @@ $(document.head).find('#style-ui-bar').remove();
       You can text her.
       Teacher, text the word ‘UCA TOK’ when you are ready.
       She may call you back (do put your phone on loudspeaker if so)!
-      And she has locked the next page, so hopefully she’ll give you the codeword too.</messageboxlarge>
+      And she has locked the next page, so hopefully she’ll give you the codeword too.
+      Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne]]>><</button>>
+      </messageboxlarge>
             <<include "password2">>
 
 
@@ -1309,6 +1332,8 @@ $(document.head).find('#style-ui-bar').remove();
       distraction too. Let’s distract Anne and remind her of the UCA Breath.
 
       Teacher, when you have learnt the UCA Breath, text Anne the word BREATH and hopefully she’ll call you back
+
+      Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne2]]>><</button>>
 
       <<include "password3">>
       </messageboxlarge>
@@ -1456,7 +1481,7 @@ $(document.head).find('#style-ui-bar').remove();
 
       We are so close to lighting the beacon.
 
-      Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne]]>><</button>>
+      Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne3]]>><</button>>
 
       <<include "password4">>
       </messageboxlarge>
@@ -2178,7 +2203,7 @@ style="display:none" allow="autoplay" ></iframe>
       5s>><<goto
       "mappingdoneb">><</timed>> */
 
-:: EMERGENCY [static] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
+:: EMERGENCY [] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
 <iframe
       src="https://uca-coney-dev.netlify.app/assets/audio/beeps3.mp3" autoplay style="display:none" allow="autoplay" ></iframe>
 <staticbox>
@@ -2218,11 +2243,8 @@ style="display:none" allow="autoplay" ></iframe>
 
 :: contents [purple] {"position":"836.6666666666666,205","size":"100,100"}
 <<include
-      "back">>
-    <<timed 1s>><h2 class="title fadeInRightBig animated"> Where would you like to go?</h2><</timed>>
-
-     <contentscontainer><img src="https://uca-coney-dev.netlify.app/assets/img/building.png" class="building"/>
-          <div class="contents">[[THE START|welcome1]]
+      "back">><contentscontainer><img src="https://uca-coney-dev.netlify.app/assets/img/building.png" class="building"/>
+          <div class="contents"><h2 class="title "> Where would you like to go?</h2>[[THE START|welcome1]]
                   [[MOVE (UCA TOK)|READY]]
                   [[CONNECT|video4]]
                   [[DISCOVER|clubnamediscover]]
@@ -2506,8 +2528,26 @@ style="display:none" allow="autoplay" ></iframe>
 
 :: textanne [purple -t8n-typewriter-4]
 <<include "back">>
-<messagebox><img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="building"/>
-          <div class="contents">Captions of what anne says
-     </div>
-     <<include "password4">>
-     </messagebox>   
+<phonecontainer><img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="phone"/>
+          <p>Captions of what anne says</p>
+
+     </phonecontainer>   
+          <<include "password2">>
+
+
+:: textanne2 [purple -t8n-typewriter-4]
+<<include "back">>
+<phonecontainer><img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="phone"/>
+          <p>Captions of what anne says</p>
+
+     </phonecontainer>   
+          <<include "password3">>
+
+
+:: textanne3 [purple -t8n-typewriter-4]
+<<include "back">>
+<phonecontainer><img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="phone"/>
+          <p>Captions of what anne says</p>
+
+     </phonecontainer>   
+          <<include "password4">>          
