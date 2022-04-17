@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "textanne4",
+	"start": "video5c",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -1447,7 +1447,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: video6a [green -t8n-typewriter-4] {"position":"753.6666666666667,2816","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "video6aaudio">><messageboxlarge>
+      "typewriter">><<include "video6aaudio">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       Ok, it seems Anne wants you to open the next compartment and get the next button.
       You can open Compartment 4 now .
       Inside are Agent Cards for you to fill out.
@@ -1462,7 +1462,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: video6b [green -t8n-typewriter-4] {"position":"918.6666666666666,2821","size":"100,100"}
 <<include "back">><<include
-      "typewriter">> <<include "video6baudio">><messageboxlarge>
+      "typewriter">> <<include "video6baudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       If we can reflect on ourselves, notice and be curious, we can be more aware of what we have to offer the world.
       And see the superpowers we have to spark change.
       When you have finished filling the cards out enter the words AGENTS READY to move on
