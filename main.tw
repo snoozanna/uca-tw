@@ -319,12 +319,12 @@ phoneright {
 }
 
 phoneleft {
-  width: 25vw;
+  width: 60vw;
   font-size: x-large;
   position: fixed; 
-    top: 3vw; 
-    left: 0; 
-    z-index:1
+    top: -3vw; 
+    left: -10vw; 
+    z-index:0
 }
 
 phoneright > img {
@@ -334,7 +334,18 @@ phoneleft > img {
       width:100%
 }
 
-
+.text-container {
+   width:20vw;
+  position: fixed; 
+    top: 10vh; 
+    right: 2vw; 
+  background-image: url("http://remote.co.com/UCA/images/greenbackground.jpg");
+  padding: 25px;
+  border-radius: 4px;
+  transform: skew(-2deg);
+box-shadow: -5px -10px 8px black;   
+color: black 
+}
 
 h2.title {
 font-family: 'Contrail One', cursive;
@@ -2078,8 +2089,8 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 :: text2 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
-  \<div class="popup-container">
-          <div id="text2result" class="code-title">TEXT ANNE</div>
+  \<div class="text-container">
+          <div id="text2result" >TEXT ANNE</div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
      <div class="css-input code-input">\
@@ -2112,6 +2123,32 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <<if $text2 isnot "" and $text2 is not "UCA TOK">>
       <<replace "#text2result">>Thats not right.<</replace>>
       <</if>><</button>>
+
+:: text3 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
+\/% PASSWORD FEEDBACK %/
+<div id="text1result" >Text Anne the words BREATH</div>
+      \   <div id="resultbutton">
+      \/% PASSWORD INPUT %/
+  <div class="css-input code-input">\
+      <<textbox "$text1" "">></div>
+      <<button "Enter">></span>
+      </div>
+      \/% PASSWORD CODE %/
+      \ <<set $text1 to $text1.toUpperCase()>>
+      \ <<if $text1 is "">>
+      \<<replace "#text1result">>CODEWORD<</replace>>
+      \<</if>>
+      \
+      \/% PASSWORD CORRECT %/
+      <<if $text1 isnot "" and $text1 is "BREATH">>
+      <<replace "#text1result">>
+      <</replace>><<replace "#resultbutton">><</replace>>
+      <<goto [[textannea]]>>
+      <</if>>
+      \/% PASSWORD INCORRECT %/
+      <<if $text1 isnot "" and $text1 is not "BREATH">>
+      <<replace "#text1result">>Thats not right.<</replace>>
+      <</if>><</button>>      
 
 :: title {"position":"340,40","size":"100,100"}
 <maintitle>[img[http://remote.co.com/UCA/images/logotitle.png]]</maintitle>
@@ -2669,38 +2706,38 @@ you can text here from here.</p><<include "text1">>
         
 
 :: textannea [purple -t8n-typewriter-4]
-<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/hello-you-must-have-opened-the-beacon.mp3" allow="autoplay" style="display:none" ></iframe>
+<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/hello-you-must-have.mp3" allow="autoplay" style="display:none" ></iframe>
 
 <phonecontainer><p>Hello, you must have opened The Beacon of Hope from the Undercover CareTaker Agency and be trying to light it. Thank you for trying to complete the challenges, light the beacon, clear the fog and counter the Static. Nigel must have sent out the Beacons and be trying to help me. 
-<button>[[Next|textanneb]]</button>
-</p>
-
-     </phonecontainer>   
+<button>[[Next|textanneb]]</button></p></phonecontainer>   
 
 
 :: textanneb [purple -t8n-typewriter-4]
-<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/hello-you-must-have-opened-the-beacon.mp3" allow="autoplay" style="display:none" ></iframe>
+<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/you-must-have2.mp3" allow="autoplay" style="display:none" ></iframe><phonecontainer><p>You must have done the UCA TOK - special stuff! Right, if I remember correctly, you need a codeword to move on…the codeword is…. what did I pick…oh I know it was the topping I had on my Weetabix that day…! It was a special topping…Ice Cream, Pine Nuts or Baked beans? I can’t remember! The static is making everything all foggy. 
 
-<phonecontainer><p>
-You must have done the UCA TOK - special stuff! Right, if I remember correctly, you need a codeword to move on…the codeword is…. what did I pick…oh I know it was the topping I had on my Weetabix that day…! It was a special topping…Ice Cream, Pine Nuts or Baked beans? I can’t remember! The static is making everything all foggy. 
+Oh, that’s the Static – I can’t hear you. Text me! </p></phonecontainer>  
+ <<include "text2">>      
 
-Oh, that’s the Static – I can’t hear you. Text me! 
-</p>
-
-     </phonecontainer>   
-          <<include "text2">>     
 
 :: textannec [purple -t8n-typewriter-4]
-<<include "back">> 
-<p>Oh, that does sound lovely but I don't think it was that. I think it was Baked Beans - text me Baked Beans if you think so too.</p>
+<<include "back">> <<include "phoneleft">>
+<phonecontainer><p>Oh, that does sound lovely but I don't think it was that. 
+I think it was Baked Beans - text me Baked Beans if you think so too.</p></phonecontainer>
  <<include "text2">>    
 
 :: textanned [purple -t8n-typewriter-4]
-<<include "back">> 
-<p>-	Yes that was it - I love Baked Beans on my Weetabix. The codeword to move onto the next section on the website is Baked Beans!</p>
- <<include "password2">>    
+<<include "back">> <<include "phoneleft">>
+<phonecontainer><p>Yes that was it - I love Baked Beans on my Weetabix. 
+The codeword to move onto the next section on the website is Baked Beans!</p></phonecontainer>
+ <<include "password2">>
 
 :: textanne2 [purple -t8n-typewriter-4]
+<<include "back">><<include "phoneright">>
+<phonecontainer><p>If you don't have access to a phone, 
+you can text here from here.</p><<include "text3">>
+     </phonecontainer>       
+
+:: textanne2a [purple -t8n-typewriter-4]
 <<include "back">>
 <phonecontainer><img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="phone"/>
           <p>Captions of what anne says</p>
