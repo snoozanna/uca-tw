@@ -297,7 +297,7 @@ padding: 40px;
   border-radius: 4px;
   transform: skew(-2deg);
 box-shadow: -5px -10px 8px black;
-max-width: 60%;
+max-width: 50%;
 margin:auto;
 
 
@@ -309,17 +309,28 @@ margin:auto;
       margin-inline-end: 100px
 }
 
-phone {
-  width: 50vw;
+phoneright {
+  width: 30vw;
   font-size: x-large;
   position: fixed; 
     top: 0; 
     right: 0; 
     z-index:1
-
 }
 
-phone > img {
+phoneleft {
+  width: 25vw;
+  font-size: x-large;
+  position: fixed; 
+    top: 3vw; 
+    left: 0; 
+    z-index:1
+}
+
+phoneright > img {
+      width:100%
+}
+phoneleft > img {
       width:100%
 }
 
@@ -2068,7 +2079,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 :: text2 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
   \<div class="popup-container">
-          <div id="text2result" class="code-title">WHAT'S THE CODEWORD?</div>
+          <div id="text2result" class="code-title">TEXT ANNE</div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
      <div class="css-input code-input">\
@@ -2085,17 +2096,17 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <<if $text2 isnot "" and $text2 is "BAKED BEANS">>
       <<replace "#text2result">>
       <</replace>><<replace "#resultbutton">><</replace>>
-      <<goto [[textannec]]>>
+      <<goto [[textanned]]>>
       <</if>>
        <<if $text2 isnot "" and $text2 is "ICE CREAM">>
       <<replace "#text2result">>
       <</replace>><<replace "#resultbutton">><</replace>>
-      <<goto [[textanneb]]>>
+      <<goto [[textannec]]>>
       <</if>>
        <<if $text2 isnot "" and $text2 is "PINE NUTS">>
       <<replace "#text2result">>
       <</replace>><<replace "#resultbutton">><</replace>>
-      <<goto [[textanneb]]>>
+      <<goto [[textannec]]>>
       <</if>>
       \/% PASSWORD INCORRECT %/
       <<if $text2 isnot "" and $text2 is not "UCA TOK">>
@@ -2644,34 +2655,47 @@ style="display:none" allow="autoplay" ></iframe>
 </messagebox2>
 
 
-:: phone {"position":"470.3333333333333,50.66666666666666","size":"100,100"}
-<phone>[img[https://uca-coney-dev.netlify.app/assets/img/phone.png]]</phone>
+:: phoneright {"position":"470.3333333333333,50.66666666666666","size":"100,100"}
+<phoneright>[img[https://uca-coney-dev.netlify.app/assets/img/phone.png]]</phoneright>
+
+:: phoneleft {"position":"470.3333333333333,50.66666666666666","size":"100,100"}
+<phoneleft >[img[https://uca-coney-dev.netlify.app/assets/img/phone.png]]</phoneleft>
 
 :: textanne [purple -t8n-typewriter-4]
-<<include "back">><<include "phone">>
-<phonecontainer><p>If you don't have access to a phone, you can text here from here.</p><<include "text1">>
+<<include "back">><<include "phoneright">>
+<phonecontainer><p>If you don't have access to a phone, 
+you can text here from here.</p><<include "text1">>
      </phonecontainer>   
         
 
 :: textannea [purple -t8n-typewriter-4]
-<<include "back">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/hello-you-must-have-opened-the-beacon.mp3" allow="autoplay" style="display:none" ></iframe>
-<img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="phone"/>
-<phonecontainer><p>Hello, you must have opened The Beacon of Hope from the Undercover CareTaker Agency and be trying to light it. Thank you for trying to complete the challenges, light the beacon, clear the fog and counter the Static. Nigel must have sent out the Beacons and be trying to help me. 
+<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/hello-you-must-have-opened-the-beacon.mp3" allow="autoplay" style="display:none" ></iframe>
 
+<phonecontainer><p>Hello, you must have opened The Beacon of Hope from the Undercover CareTaker Agency and be trying to light it. Thank you for trying to complete the challenges, light the beacon, clear the fog and counter the Static. Nigel must have sent out the Beacons and be trying to help me. 
+<button>[[Next|textanneb]]</button>
+</p>
+
+     </phonecontainer>   
+
+
+:: textanneb [purple -t8n-typewriter-4]
+<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/hello-you-must-have-opened-the-beacon.mp3" allow="autoplay" style="display:none" ></iframe>
+
+<phonecontainer><p>
 You must have done the UCA TOK - special stuff! Right, if I remember correctly, you need a codeword to move on…the codeword is…. what did I pick…oh I know it was the topping I had on my Weetabix that day…! It was a special topping…Ice Cream, Pine Nuts or Baked beans? I can’t remember! The static is making everything all foggy. 
 
 Oh, that’s the Static – I can’t hear you. Text me! 
 </p>
 
      </phonecontainer>   
-          <<include "text2">>          
+          <<include "text2">>     
 
-:: textanneb [purple -t8n-typewriter-4]
+:: textannec [purple -t8n-typewriter-4]
 <<include "back">> 
 <p>Oh, that does sound lovely but I don't think it was that. I think it was Baked Beans - text me Baked Beans if you think so too.</p>
  <<include "text2">>    
 
-:: textannec [purple -t8n-typewriter-4]
+:: textanned [purple -t8n-typewriter-4]
 <<include "back">> 
 <p>-	Yes that was it - I love Baked Beans on my Weetabix. The codeword to move onto the next section on the website is Baked Beans!</p>
  <<include "password2">>    

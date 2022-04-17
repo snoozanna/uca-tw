@@ -381,7 +381,7 @@ padding: 40px;
   border-radius: 4px;
   transform: skew(-2deg);
 box-shadow: -5px -10px 8px black;
-max-width: 60%;
+max-width: 50%;
 margin:auto;
 
 
@@ -393,17 +393,28 @@ margin:auto;
       margin-inline-end: 100px
 }
 
-phone {
-  width: 50vw;
+phoneright {
+  width: 30vw;
   font-size: x-large;
   position: fixed; 
     top: 0; 
     right: 0; 
     z-index:1
-
 }
 
-phone > img {
+phoneleft {
+  width: 25vw;
+  font-size: x-large;
+  position: fixed; 
+    top: 3vw; 
+    left: 0; 
+    z-index:1
+}
+
+phoneright > img {
+      width:100%
+}
+phoneleft > img {
       width:100%
 }
 
@@ -1780,7 +1791,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       &lt;&lt;replace &quot;#text1result&quot;&gt;&gt;Thats not right.&lt;&lt;/replace&gt;&gt;
       &lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="text2" tags="" position="147.66666666666666,1553.3333333333335" size="100,100">\/% PASSWORD FEEDBACK %/
   \&lt;div class=&quot;popup-container&quot;&gt;
-          &lt;div id=&quot;text2result&quot; class=&quot;code-title&quot;&gt;WHAT&#39;S THE CODEWORD?&lt;/div&gt;
+          &lt;div id=&quot;text2result&quot; class=&quot;code-title&quot;&gt;TEXT ANNE&lt;/div&gt;
       \   &lt;div id=&quot;resultbutton&quot;&gt;
       \/% PASSWORD INPUT %/
      &lt;div class=&quot;css-input code-input&quot;&gt;\
@@ -1797,17 +1808,17 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       &lt;&lt;if $text2 isnot &quot;&quot; and $text2 is &quot;BAKED BEANS&quot;&gt;&gt;
       &lt;&lt;replace &quot;#text2result&quot;&gt;&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;replace &quot;#resultbutton&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
-      &lt;&lt;goto [[textannec]]&gt;&gt;
+      &lt;&lt;goto [[textanned]]&gt;&gt;
       &lt;&lt;/if&gt;&gt;
        &lt;&lt;if $text2 isnot &quot;&quot; and $text2 is &quot;ICE CREAM&quot;&gt;&gt;
       &lt;&lt;replace &quot;#text2result&quot;&gt;&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;replace &quot;#resultbutton&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
-      &lt;&lt;goto [[textanneb]]&gt;&gt;
+      &lt;&lt;goto [[textannec]]&gt;&gt;
       &lt;&lt;/if&gt;&gt;
        &lt;&lt;if $text2 isnot &quot;&quot; and $text2 is &quot;PINE NUTS&quot;&gt;&gt;
       &lt;&lt;replace &quot;#text2result&quot;&gt;&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;replace &quot;#resultbutton&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
-      &lt;&lt;goto [[textanneb]]&gt;&gt;
+      &lt;&lt;goto [[textannec]]&gt;&gt;
       &lt;&lt;/if&gt;&gt;
       \/% PASSWORD INCORRECT %/
       &lt;&lt;if $text2 isnot &quot;&quot; and $text2 is not &quot;UCA TOK&quot;&gt;&gt;
@@ -2124,28 +2135,34 @@ style=&quot;display:none&quot; allow=&quot;autoplay&quot; &gt;&lt;/iframe&gt;
  &lt;&lt;textbox &quot;$password3&quot; &quot;&quot;&gt;&gt;&lt;/div&gt;
       &lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt; */
 &lt;/div&gt;
-&lt;/messagebox2&gt;</tw-passagedata><tw-passagedata pid="146" name="phone" tags="" position="470.3333333333333,50.66666666666666" size="100,100">&lt;phone&gt;[img[https://uca-coney-dev.netlify.app/assets/img/phone.png]]&lt;/phone&gt;</tw-passagedata><tw-passagedata pid="147" name="textanne" tags="purple -t8n-typewriter-4" position="850,1850" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include &quot;phone&quot;&gt;&gt;
-&lt;phonecontainer&gt;&lt;p&gt;If you don&#39;t have access to a phone, you can text here from here.&lt;/p&gt;&lt;&lt;include &quot;text1&quot;&gt;&gt;
-     &lt;/phonecontainer&gt;</tw-passagedata><tw-passagedata pid="148" name="textannea" tags="purple -t8n-typewriter-4" position="975,1850" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt; &lt;iframe id=&quot;iframeAudio&quot; src=&quot;https://uca-coney-dev.netlify.app/assets/audio/hello-you-must-have-opened-the-beacon.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; &gt;&lt;/iframe&gt;
-&lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/phone.png&quot; class=&quot;phone&quot;/&gt;
-&lt;phonecontainer&gt;&lt;p&gt;Hello, you must have opened The Beacon of Hope from the Undercover CareTaker Agency and be trying to light it. Thank you for trying to complete the challenges, light the beacon, clear the fog and counter the Static. Nigel must have sent out the Beacons and be trying to help me. 
+&lt;/messagebox2&gt;</tw-passagedata><tw-passagedata pid="146" name="phoneright" tags="" position="470.3333333333333,50.66666666666666" size="100,100">&lt;phoneright&gt;[img[https://uca-coney-dev.netlify.app/assets/img/phone.png]]&lt;/phoneright&gt;</tw-passagedata><tw-passagedata pid="147" name="phoneleft" tags="" position="470.3333333333333,50.66666666666666" size="100,100">&lt;phoneleft &gt;[img[https://uca-coney-dev.netlify.app/assets/img/phone.png]]&lt;/phoneleft&gt;</tw-passagedata><tw-passagedata pid="148" name="textanne" tags="purple -t8n-typewriter-4" position="975,1850" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include &quot;phoneright&quot;&gt;&gt;
+&lt;phonecontainer&gt;&lt;p&gt;If you don&#39;t have access to a phone, 
+you can text here from here.&lt;/p&gt;&lt;&lt;include &quot;text1&quot;&gt;&gt;
+     &lt;/phonecontainer&gt;</tw-passagedata><tw-passagedata pid="149" name="textannea" tags="purple -t8n-typewriter-4" position="1100,1850" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt; &lt;&lt;include &quot;phoneleft&quot;&gt;&gt; &lt;iframe id=&quot;iframeAudio&quot; src=&quot;https://uca-coney-dev.netlify.app/assets/audio/hello-you-must-have-opened-the-beacon.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; &gt;&lt;/iframe&gt;
 
+&lt;phonecontainer&gt;&lt;p&gt;Hello, you must have opened The Beacon of Hope from the Undercover CareTaker Agency and be trying to light it. Thank you for trying to complete the challenges, light the beacon, clear the fog and counter the Static. Nigel must have sent out the Beacons and be trying to help me. 
+&lt;button&gt;[[Next|textanneb]]&lt;/button&gt;
+&lt;/p&gt;
+
+     &lt;/phonecontainer&gt;</tw-passagedata><tw-passagedata pid="150" name="textanneb" tags="purple -t8n-typewriter-4" position="1225,1850" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt; &lt;&lt;include &quot;phoneleft&quot;&gt;&gt; &lt;iframe id=&quot;iframeAudio&quot; src=&quot;https://uca-coney-dev.netlify.app/assets/audio/hello-you-must-have-opened-the-beacon.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; &gt;&lt;/iframe&gt;
+
+&lt;phonecontainer&gt;&lt;p&gt;
 You must have done the UCA TOK - special stuff! Right, if I remember correctly, you need a codeword to move on…the codeword is…. what did I pick…oh I know it was the topping I had on my Weetabix that day…! It was a special topping…Ice Cream, Pine Nuts or Baked beans? I can’t remember! The static is making everything all foggy. 
 
 Oh, that’s the Static – I can’t hear you. Text me! 
 &lt;/p&gt;
 
      &lt;/phonecontainer&gt;   
-          &lt;&lt;include &quot;text2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="textanneb" tags="purple -t8n-typewriter-4" position="1100,1850" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt; 
+          &lt;&lt;include &quot;text2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="textannec" tags="purple -t8n-typewriter-4" position="100,1975" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt; 
 &lt;p&gt;Oh, that does sound lovely but I don&#39;t think it was that. I think it was Baked Beans - text me Baked Beans if you think so too.&lt;/p&gt;
- &lt;&lt;include &quot;text2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="150" name="textannec" tags="purple -t8n-typewriter-4" position="1225,1850" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt; 
+ &lt;&lt;include &quot;text2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="textanned" tags="purple -t8n-typewriter-4" position="225,1975" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt; 
 &lt;p&gt;-	Yes that was it - I love Baked Beans on my Weetabix. The codeword to move onto the next section on the website is Baked Beans!&lt;/p&gt;
- &lt;&lt;include &quot;password2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="textanne2" tags="purple -t8n-typewriter-4" position="100,1975" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;
+ &lt;&lt;include &quot;password2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="153" name="textanne2" tags="purple -t8n-typewriter-4" position="350,1975" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;
 &lt;phonecontainer&gt;&lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/phone.png&quot; class=&quot;phone&quot;/&gt;
           &lt;p&gt;Captions of what anne says&lt;/p&gt;
 
      &lt;/phonecontainer&gt;   
-          &lt;&lt;include &quot;password3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="textanne3" tags="purple -t8n-typewriter-4" position="225,1975" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;
+          &lt;&lt;include &quot;password3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="154" name="textanne3" tags="purple -t8n-typewriter-4" position="475,1975" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;
 &lt;phonecontainer&gt;&lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/phone.png&quot; class=&quot;phone&quot;/&gt;
           &lt;p&gt;Captions of what anne says&lt;/p&gt;
 
