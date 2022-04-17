@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "home",
+	"start": "clubname",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -20,14 +20,9 @@ Undercover CareTaker Agency WIP 4.6
 
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
-/* @import url("https://uca-coney-dev.netlify.app/assets/fonts/CASpyRoyalShadow.otf") */
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
 
-@font-face {
-    font-family: 'CASpyRoyalShadow';
-    src: url("https://uca-coney-dev.netlify.app/assets/fonts/CASpyRoyalShadow.otf") format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 
 
@@ -254,7 +249,7 @@ max-width: 60%
 }
 
 .contents{
-      /* font-family: "CASpyRoyalShadow"; */
+      font-family: 'Contrail One', cursive;
       font-size: 2vw;
       color: black;
   width: 48%;
@@ -267,7 +262,7 @@ max-width: 60%
 }
 
 h2.title {
-    /* font-family: "CASpyRoyalShadow";   */
+font-family: 'Contrail One', cursive;
     color: #d66280;
     font-size:3vw;
     /* position:fixed; */
@@ -371,7 +366,7 @@ reeltoreel {
   width: 70vw;
   font-size: x-large;
   position: fixed; 
-    top: -30vh; 
+    top: -40vh; 
     left: 15vw; 
 }
 
@@ -1231,7 +1226,7 @@ $(document.head).find('#style-ui-bar').remove();
       "typewriter">><<include "Everyone understandsaudio">>
       <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon>
       <messageboxlarge>
-      Now, time for a game to find out your Secret Club Name.
+      Now, time for a game to find out our Secret Club Name.
       This game will connect you all together.
       Having friends and family is key to countering the Static.
       It’s why we need to help Anne. I can’t get through to her.
@@ -1255,7 +1250,7 @@ $(document.head).find('#style-ui-bar').remove();
       "back">><<include "typewriter">>
        <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon>
        <messageboxlarge>
-      Enter your secret club name here
+      Enter our Secret Club Name here
 
       <<textbox "$clubname" "">>
 
@@ -1266,7 +1261,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: clubname [green] {"position":"688,2304.3333333333335","size":"100,100"}
 /<iframe
-      src="audio/radio.mp3" autoplay></iframe>
+      src="audio/tape-recorder.wav" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
       <<include "back">><messageboxreel>
 
 
@@ -2259,7 +2254,7 @@ style="display:none" allow="autoplay" ></iframe>
 <<include "back">><<include
       "typewriter">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon><messageboxlarge>
 
-      Enter your secret club name here
+      Enter our Secret Club Name here
       <<textbox "$clubname" "">>
       <<button [[Enter|clubname]]>><</button>>
       </messageboxlarge>
@@ -2269,7 +2264,7 @@ style="display:none" allow="autoplay" ></iframe>
 <<include "back">><<include
       "typewriter">><messageboxlarge>
 
-      Enter your secret club name here
+      Enter our Secret Club Name here
       <<textbox "$clubname" "">>
       <<button [[Enter|Video6]]>><</button>>
       </messageboxlarge>
@@ -2279,7 +2274,7 @@ style="display:none" allow="autoplay" ></iframe>
 <<include
       "back">><<include "typewriter">><messageboxlarge>
 
-      Enter your secret club name here
+      Enter our Secret Club Name here
       <<textbox "$clubname" "">>
       <<button [[Enter|Video7]]>><</button>>
       </messageboxlarge>
