@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "contents",
+	"start": "video3c",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -221,7 +221,6 @@ color: #2d3261;
 
 /* CONTENTS  */
 
-
 .contents-container{
  background-color: yellow;
 padding: 0 20px;
@@ -265,8 +264,6 @@ font-size:3rem
   font-size: 2.5rem
 }
 
-
-
 .contents-item > .floor {
   border-bottom: 2px solid black;
   width: 70%;
@@ -275,6 +272,7 @@ font-size:3rem
   display: flex;
     justify-content: flex-end;
     align-items: center;
+    font-size:2rem
 
 }
 
@@ -291,6 +289,7 @@ font-size:3rem
 
 phonecontainer {
 display:flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
    background-image: url("http://remote.co.com/UCA/images/paperbackground.jpg");
@@ -298,7 +297,9 @@ padding: 40px;
   border-radius: 4px;
   transform: skew(-2deg);
 box-shadow: -5px -10px 8px black;
-max-width: 60%
+max-width: 60%;
+margin:auto;
+
 
 }
 
@@ -308,11 +309,19 @@ max-width: 60%
       margin-inline-end: 100px
 }
 
-.phone {
-      max-width: 30vw;
-      justify-self:flex-start;
+phone {
+  width: 50vw;
+  font-size: x-large;
+  position: fixed; 
+    top: 0; 
+    right: 0; 
+    z-index:1
+
 }
 
+phone > img {
+      width:100%
+}
 
 
 
@@ -2030,6 +2039,68 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <<replace "#code9result">>Thats not right.<</replace>>
       <</if>><</button>>
 
+:: text1 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
+\/% PASSWORD FEEDBACK %/
+<div id="text1result" >Text Anne the words UCA TOK</div>
+      \   <div id="resultbutton">
+      \/% PASSWORD INPUT %/
+  <div class="css-input code-input">\
+      <<textbox "$text1" "">></div>
+      <<button "Enter">></span>
+      </div>
+      \/% PASSWORD CODE %/
+      \ <<set $text1 to $text1.toUpperCase()>>
+      \ <<if $text1 is "">>
+      \<<replace "#text1result">>CODEWORD<</replace>>
+      \<</if>>
+      \
+      \/% PASSWORD CORRECT %/
+      <<if $text1 isnot "" and $text1 is "UCA TOK">>
+      <<replace "#text1result">>
+      <</replace>><<replace "#resultbutton">><</replace>>
+      <<goto [[textannea]]>>
+      <</if>>
+      \/% PASSWORD INCORRECT %/
+      <<if $text1 isnot "" and $text1 is not "UCA TOK">>
+      <<replace "#text1result">>Thats not right.<</replace>>
+      <</if>><</button>>
+
+:: text2 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
+\/% PASSWORD FEEDBACK %/
+  \<div class="popup-container">
+          <div id="text2result" class="code-title">WHAT'S THE CODEWORD?</div>
+      \   <div id="resultbutton">
+      \/% PASSWORD INPUT %/
+     <div class="css-input code-input">\
+      <<textbox "$text2" "">></div>
+      <<button "Enter">></span>
+      </div>
+      \/% PASSWORD CODE %/
+      \ <<set $text2 to $text2.toUpperCase()>>
+      \ <<if $text2 is "">>
+      \<<replace "#text2result">>CODEWORD<</replace>>
+      \<</if>>
+      \
+      \/% PASSWORD CORRECT %/
+      <<if $text2 isnot "" and $text2 is "BAKED BEANS">>
+      <<replace "#text2result">>
+      <</replace>><<replace "#resultbutton">><</replace>>
+      <<goto [[textannec]]>>
+      <</if>>
+       <<if $text2 isnot "" and $text2 is "ICE CREAM">>
+      <<replace "#text2result">>
+      <</replace>><<replace "#resultbutton">><</replace>>
+      <<goto [[textanneb]]>>
+      <</if>>
+       <<if $text2 isnot "" and $text2 is "PINE NUTS">>
+      <<replace "#text2result">>
+      <</replace>><<replace "#resultbutton">><</replace>>
+      <<goto [[textanneb]]>>
+      <</if>>
+      \/% PASSWORD INCORRECT %/
+      <<if $text2 isnot "" and $text2 is not "UCA TOK">>
+      <<replace "#text2result">>Thats not right.<</replace>>
+      <</if>><</button>>
 
 :: title {"position":"340,40","size":"100,100"}
 <maintitle>[img[http://remote.co.com/UCA/images/logotitle.png]]</maintitle>
@@ -2290,16 +2361,6 @@ style="display:none" allow="autoplay" ></iframe>
 
 :: contents [purple] {"position":"836.6666666666666,205","size":"100,100"}
 <<include "back">>
-/* <contentscontainer><img src="https://uca-coney-dev.netlify.app/assets/img/building.png" class="building"/>
-          <div class="contents"><h2 class="title "> Where would you like to go?</h2>[[THE START|welcome1]]
-                  [[MOVE (UCA TOK)|READY]]
-                  [[CONNECT|video4]]
-                  [[DISCOVER|clubnamediscover]]
-                  [[WONDER|clubnamewonder]]
-                  [[GIVE|clubnamegive]]
-                  [[UCA ROOT|welcome2]]
-     </div></contentscontainer>    */
-
  <div class="contents-question"><h2>Where would you like to go?
  </h2></div><div class="contents-container">
  <h3 class="contents-title">UCA</h3><ul class="contents">
@@ -2583,16 +2644,37 @@ style="display:none" allow="autoplay" ></iframe>
 </messagebox2>
 
 
-
+:: phone {"position":"470.3333333333333,50.66666666666666","size":"100,100"}
+<phone>[img[https://uca-coney-dev.netlify.app/assets/img/phone.png]]</phone>
 
 :: textanne [purple -t8n-typewriter-4]
-<<include "back">>
-<phonecontainer><img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="phone"/>
-          <p>Captions of what anne says</p>
+<<include "back">><<include "phone">>
+<phonecontainer><p>If you don't have access to a phone, you can text here from here.</p><<include "text1">>
+     </phonecontainer>   
+        
+
+:: textannea [purple -t8n-typewriter-4]
+<<include "back">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/hello-you-must-have-opened-the-beacon.mp3" allow="autoplay" style="display:none" ></iframe>
+<img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="phone"/>
+<phonecontainer><p>Hello, you must have opened The Beacon of Hope from the Undercover CareTaker Agency and be trying to light it. Thank you for trying to complete the challenges, light the beacon, clear the fog and counter the Static. Nigel must have sent out the Beacons and be trying to help me. 
+
+You must have done the UCA TOK - special stuff! Right, if I remember correctly, you need a codeword to move on…the codeword is…. what did I pick…oh I know it was the topping I had on my Weetabix that day…! It was a special topping…Ice Cream, Pine Nuts or Baked beans? I can’t remember! The static is making everything all foggy. 
+
+Oh, that’s the Static – I can’t hear you. Text me! 
+</p>
 
      </phonecontainer>   
-          <<include "password2">>
+          <<include "text2">>          
 
+:: textanneb [purple -t8n-typewriter-4]
+<<include "back">> 
+<p>Oh, that does sound lovely but I don't think it was that. I think it was Baked Beans - text me Baked Beans if you think so too.</p>
+ <<include "text2">>    
+
+:: textannec [purple -t8n-typewriter-4]
+<<include "back">> 
+<p>-	Yes that was it - I love Baked Beans on my Weetabix. The codeword to move onto the next section on the website is Baked Beans!</p>
+ <<include "password2">>    
 
 :: textanne2 [purple -t8n-typewriter-4]
 <<include "back">>
