@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "video5c",
+	"start": "static",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -1348,7 +1348,7 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
 
 
-:: clubname [green] {"position":"688,2304.3333333333335","size":"100,100"}
+:: clubname [green ] {"position":"688,2304.3333333333335","size":"100,100"}
 /<iframe
       src="https://uca-coney-dev.netlify.app/assets/audio/tape-recorder.wav" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
       <<include "back">><messageboxreel>
@@ -1368,7 +1368,6 @@ $(document.head).find('#style-ui-bar').remove();
       <<next 2s>><<replace "#message">>Sending to UCA HQ<</replace>>\
       <<next 2s>><<replace "#message">>Receiving<</replace>>\
       <<next 2s>><<replace "#message">>Sending Complete<</replace>>\
-      <<next 2s>><<replace "#message">>Welcome<</replace>>\
       <</timed>></messagescreen>
 
 
@@ -1696,8 +1695,8 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 :: static [static] {"position":"400.3333333333333,3487.666666666667","size":"100,100"}
 /<iframe
-      src="http://remote.co.com/UCA/audio/finalstatic.mp3" autoplay></iframe>
-      <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox>
+      src="http://remote.co.com/UCA/audio/finalstatic.mp3" allow="autoplay"  style="display:none"></iframe>
+      <staticbox>[img[https://uca-coney-dev.netlify.app/assets/img/static5.gif]]</staticbox>
       <<timed 4s>><staticbox><div class="animated
       fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></staticbox><</timed>>
       <<timed 9s>><staticboxcolour><div class="animated
