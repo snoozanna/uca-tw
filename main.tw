@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "video3c",
+	"start": "textanne4",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -1557,7 +1557,7 @@ $(document.head).find('#style-ui-bar').remove();
       "mappingdonebaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       Ok - great work. Mapping Complete.
 
-      The next video is locked though – can you text Anne the word MAPPING COMPLETE and hopefully, she will call you
+      The next video is locked though – can you text Anne the word MAPPING and hopefully, she will call you
       with the codeword to move on.
 
       We are so close to lighting the beacon.
@@ -2068,7 +2068,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       \/% PASSWORD INPUT %/
   <div class="css-input code-input">\
       <<textbox "$text1" "">></div>
-      <<button "Enter">></span>
+      <<button "Send">></span>
       </div>
       \/% PASSWORD CODE %/
       \ <<set $text1 to $text1.toUpperCase()>>
@@ -2095,7 +2095,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       \/% PASSWORD INPUT %/
      <div class="css-input code-input">\
       <<textbox "$text2" "">></div>
-      <<button "Enter">></span>
+      <<button "Send">></span>
       </div>
       \/% PASSWORD CODE %/
       \ <<set $text2 to $text2.toUpperCase()>>
@@ -2126,29 +2126,81 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 :: text3 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
-<div id="text1result" >Text Anne the words BREATH</div>
+<div id="text3result" >Text Anne the words BREATH</div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
   <div class="css-input code-input">\
-      <<textbox "$text1" "">></div>
-      <<button "Enter">></span>
+      <<textbox "$text3" "">></div>
+      <<button "Send">></span>
       </div>
       \/% PASSWORD CODE %/
-      \ <<set $text1 to $text1.toUpperCase()>>
-      \ <<if $text1 is "">>
-      \<<replace "#text1result">>CODEWORD<</replace>>
+      \ <<set $text3 to $text3.toUpperCase()>>
+      \ <<if $text3 is "">>
+      \<<replace "#text3result">>CODEWORD<</replace>>
       \<</if>>
       \
       \/% PASSWORD CORRECT %/
-      <<if $text1 isnot "" and $text1 is "BREATH">>
-      <<replace "#text1result">>
+      <<if $text3 isnot "" and $text3 is "BREATH">>
+      <<replace "#text3result">>
       <</replace>><<replace "#resultbutton">><</replace>>
-      <<goto [[textannea]]>>
+      <<goto [[textanne2a]]>>
       <</if>>
       \/% PASSWORD INCORRECT %/
-      <<if $text1 isnot "" and $text1 is not "BREATH">>
-      <<replace "#text1result">>Thats not right.<</replace>>
+      <<if $text3 isnot "" and $text3 is not "BREATH">>
+      <<replace "#text3result">>Thats not right.<</replace>>
       <</if>><</button>>      
+
+:: text4 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
+\/% PASSWORD FEEDBACK %/
+<div id="text4result" >Text Anne the words MAPPING</div>
+      \   <div id="resultbutton">
+      \/% PASSWORD INPUT %/
+  <div class="css-input code-input">\
+      <<textbox "$text4" "">></div>
+      <<button "Send">></span>
+      </div>
+      \/% PASSWORD CODE %/
+      \ <<set $text4 to $text4.toUpperCase()>>
+      \ <<if $text4 is "">>
+      \<<replace "#text4result">>CODEWORD<</replace>>
+      \<</if>>
+      \
+      \/% PASSWORD CORRECT %/
+      <<if $text4 isnot "" and $text4 is "MAPPING">>
+      <<replace "#text4result">>
+      <</replace>><<replace "#resultbutton">><</replace>>
+      <<goto [[textanne3a]]>>
+      <</if>>
+      \/% PASSWORD INCORRECT %/
+      <<if $text4 isnot "" and $text4 is not "MAPPING">>
+      <<replace "#text4result">>Thats not right.<</replace>>
+      <</if>><</button>> 
+
+:: text5 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
+\/% PASSWORD FEEDBACK %/
+<div id="text5result" >Text Anne the words COMPLETE</div>
+      \   <div id="resultbutton">
+      \/% PASSWORD INPUT %/
+  <div class="css-input code-input">\
+      <<textbox "$text5" "">></div>
+      <<button "Send">></span>
+      </div>
+      \/% PASSWORD CODE %/
+      \ <<set $text5 to $text5.toUpperCase()>>
+      \ <<if $text5 is "">>
+      \<<replace "#text5result">>CODEWORD<</replace>>
+      \<</if>>
+      \
+      \/% PASSWORD CORRECT %/
+      <<if $text5 isnot "" and $text5 is "COMPLETE">>
+      <<replace "#text5result">>
+      <</replace>><<replace "#resultbutton">><</replace>>
+      <<goto [[textanne4a]]>>
+      <</if>>
+      \/% PASSWORD INCORRECT %/
+      <<if $text5 isnot "" and $text5 is not "COMPLETE">>
+      <<replace "#text4result">>Thats not right.<</replace>>
+      <</if>><</button>>            
 
 :: title {"position":"340,40","size":"100,100"}
 <maintitle>[img[http://remote.co.com/UCA/images/logotitle.png]]</maintitle>
@@ -2622,7 +2674,7 @@ style="display:none" allow="autoplay" ></iframe>
 
 :: beacon1 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-<<timed 1s>><div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move.png"></div><</timed>>
+<div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move.png"></div>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" id="beacon">   
@@ -2635,7 +2687,7 @@ style="display:none" allow="autoplay" ></iframe>
 
 :: beacon2 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-<<timed 0.5s>><div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div><</timed>>
+<div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" id="beacon">   
@@ -2669,7 +2721,7 @@ style="display:none" allow="autoplay" ></iframe>
 
 :: beacon5 [purple] {"position":"537,506","size":"100,100"}
 <messagebox>
-  <<timed 1s>><div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/give.png"></div><</timed>>
+<div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/give.png"></div>
       </messagebox>
 <messagebox>
 <div class="animated fadeInRightBig" >   
@@ -2734,22 +2786,69 @@ The codeword to move onto the next section on the website is Baked Beans!</p></p
 :: textanne2 [purple -t8n-typewriter-4]
 <<include "back">><<include "phoneright">>
 <phonecontainer><p>If you don't have access to a phone, 
-you can text here from here.</p><<include "text3">>
+you can text Anne from here.</p><<include "text3">>
      </phonecontainer>       
 
 :: textanne2a [purple -t8n-typewriter-4]
-<<include "back">>
-<phonecontainer><img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="phone"/>
-          <p>Captions of what anne says</p>
+<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/yes-the-uca.mp3" allow="autoplay" style="display:none" ></iframe>
 
-     </phonecontainer>   
-          <<include "password3">>
+<phonecontainer><p>Yes the UCA Breath – that’s a good idea. Nigel must have told you to remind me of the UCA Breathe – thanks Nigel
+Hello, the Static is very strong now – let’s do the UCA Breath all together 
+3 – 2 – 1.. 
+Open Hand – focus on your hand
+Up the mountain,breathe in
+Down the mountain, breathe out through the mouth
+Up the mountain breathe in
+Down the waterfall - shhhhhhh
+Whisper UCA UCA UCA
+<button>[[Next|textanne2b]]</button></p></phonecontainer>   
+          
+
+:: textanne2b [purple -t8n-typewriter-4]
+<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/thank-you-for.mp3" allow="autoplay" style="display:none" ></iframe><phonecontainer><p>Thank you for reminding me about the UCA Breath. It’s so important when the world is so loud to keep learning and taking time to breathe. If you are feeling stressed by the Static, you can always do the UCA Breath. It helps. 
+
+Right, I think I need you to start thinking about yourself as UCA Agents – in fact, we have a gift for you! In the Beacon, we put some Agent Cards for you. Nigel, I’m feeling all foggy, you’ll tell them won’t you. Nigel? Nigel? I can’t hear you, are you there? 
+
+You need to enter the word WONDER to move on
+ </p></phonecontainer>  
+<<include "password3">>  
 
 
 :: textanne3 [purple -t8n-typewriter-4]
-<<include "back">>
-<phonecontainer><img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="phone"/>
-          <p>Captions of what anne says</p>
+<<include "back">><<include "phoneright">>
+<phonecontainer><p>If you don't have access to a phone, 
+you can text Anne from here.</p><<include "text4">>
+     </phonecontainer>    
 
-     </phonecontainer>   
-          <<include "password4">>          
+
+:: textanne3a [purple -t8n-typewriter-4]
+<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/we-are-nearly-there-now.mp3" allow="autoplay" style="display:none" ></iframe>
+
+<phonecontainer><p>We are nearly there now. This is the last push. You and Nigel are doing fantastic work. You are so close to lighting the Beacon. Just one more challenge to complete and you will be ready to be UCA Agents who can face the Static and light the Beacon. And just in time... as I don’t think I’ve got much time... but I’ll send you the codeword. I made a video to help you. It’s the UCA emergency codeword. I may have eaten too many Weetabix when I made this video! 
+
+The codeword is NIGEL. Good lu…..</p></phonecontainer>   
+  <<include "password4">>   
+
+:: textanne4 [purple -t8n-typewriter-4]
+<<include "back">><<include "phoneright">>
+<phonecontainer><p>If you don't have access to a phone, 
+you can text Anne from here.</p><<include "text5">>
+     </phonecontainer>  
+
+:: textanne4a [purple -t8n-typewriter-4]
+<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/hello-something-has-changed.mp3" allow="autoplay" style="display:none" ></iframe>
+
+<phonecontainer><p>Hello, something has changed. Can you feel that too? I think you can now light the Beacon! 
+To find the final button you need to look inside the cylinder, under the Beacon 
+This is the final button,
+And prove you have what it takes to be an UCA Agent. 
+Clear the fog and counter the Static! 
+<button>[[Next|textanne4b]]</button>
+</p></phonecontainer>   
+
+
+:: textanne4b [purple -t8n-typewriter-4]
+<<include "back">> <<include "phoneleft">> 
+<phonecontainer><p>You’ll find the final button inside the cover for the Beacon – the cylinder! 
+Light up the Beacon and enter the codeword into the online platform.</p></phonecontainer>   
+  <<include "password4">>       
