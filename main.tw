@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "static",
+	"start": "home",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -116,7 +116,12 @@ width: 8vw
 font-family: 'Didact Gothic', sans-serif;
 }
 
-.static img {
+staticbox img {
+  width: 90vw;
+  height: 90vh;
+}
+
+staticboxcolour img {
   width: 90vw;
   height: 90vh;
 }
@@ -137,7 +142,7 @@ font-family: 'Didact Gothic', sans-serif;
 
 
 .staticgif.right{
-   width: 1000px;
+   width: 1200px;
    position:fixed;
    right:-3vw;
    bottom:3vw;   
@@ -585,6 +590,7 @@ name {
   border-radius: 4px;
   transform: skew(-2deg);
 box-shadow: -5px -10px 8px black;
+z-index:1;
  
 }
 
@@ -961,6 +967,35 @@ align-items: center;
     animation-name: fadeIn; 
 }
 
+/* @-webkit-keyframes fadeInOut { 
+    0% {opacity: 0;} 
+    30% {opacity: 1;}
+    100% {opacity: 0;} 
+}  */
+@keyframes fadeInOut { 
+    /* 0% {opacity: 0;} 
+    30% {opacity: 1;}
+    100% {opacity: 0;}  */
+     0%, 100% {
+               opacity: 0;
+            }
+             75% {
+               opacity: 1;
+            }
+} 
+.fadeInOut { 
+    -webkit-animation-name: fadeInOut; 
+    animation-name: fadeInOut; 
+    -webkit-animation-duration: 6s;
+animation-duration: 6s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+/* -webkit-animation-timing-function: ease-in;
+animation-timing-function: ease-in; */
+animation-timing-function: linear
+
+}
+
 
 :: Story JavaScript [script]
 $('#ui-bar').remove();
@@ -1163,7 +1198,7 @@ $(document.head).find('#style-ui-bar').remove();
       <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
       class="center"></div>
       <div>
-      <iframe allow=autoplay  width='800px' height='450px'
+      <iframe allow="autoplay"   width='800px' height='450px'
       src='https://player.vimeo.com/video/531954959?autoplay=1&byline=0&portrait=0'></iframe>
       </div>
       </div>
@@ -1223,7 +1258,7 @@ $(document.head).find('#style-ui-bar').remove();
       <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
       class="center"></div>
       <div>
-      <iframe allow=autoplay  width='800px' height='450px'
+      <iframe allow="autoplay"   width='800px' height='450px'
       src='https://player.vimeo.com/video/532135608?autoplay=1&byline=0&portrait=0'></iframe>
       </div>
       </div>
@@ -1239,7 +1274,7 @@ $(document.head).find('#style-ui-bar').remove();
       <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
       class="center"></div>
       <div>
-      <iframe allow=autoplay  width='800px' height='450px'
+      <iframe allow="autoplay"   width='800px' height='450px'
       src='https://player.vimeo.com/video/532153509?autoplay=1&byline=0&portrait=0'></iframe>
       </div>
       </div>
@@ -1286,7 +1321,7 @@ $(document.head).find('#style-ui-bar').remove();
       <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
       class="center"></div>
       <div>
-      <iframe allow=autoplay  width='800px' height='450px'
+      <iframe allow="autoplay"   width='800px' height='450px'
       src='https://player.vimeo.com/video/532148883?autoplay=1&byline=0&portrait=0'></iframe>
       </div>
       </div>
@@ -1378,7 +1413,7 @@ $(document.head).find('#style-ui-bar').remove();
       <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
       class="center"></div>
       <div>
-      <iframe allow=autoplay  width='800px' height='450px'
+      <iframe allow="autoplay"   width='800px' height='450px'
       src='https://player.vimeo.com/video/532136949?autoplay=1&byline=0&portrait=0'></iframe>
       </div>
       </div>
@@ -1394,7 +1429,7 @@ $(document.head).find('#style-ui-bar').remove();
       "video5baudio">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-3.png]]</beaconicon>
       <messageboxlarge>
       It seems Anne is worried about Anne too.
-      In there I think you should text her – she might be facing the static alone.
+      In a moment I think you should text her – she might be facing the static alone.
       You may need to do the UCA Breath with her to help keep her calm. 
       I put some instructions on how to do it in the next compartment.
       In there you’ll find another button too!
@@ -1423,9 +1458,7 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video5caudio {"position":"2079.3333333333335,1460","size":"100,100"}
-
-
-      <iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-are-learning-a-new-skill.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>   
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-are-learning-a-new-skill.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>   
 
 
 :: Video6 [green] {"position":"582,2821","size":"100,100"}
@@ -1538,8 +1571,8 @@ $(document.head).find('#style-ui-bar').remove();
       If you have time, you can share back some of the information you have found out about your school to the rest of
       your Secret Club. It will help you work out your Gift.
       When done, click
-      /* <button>[[next|EMERGENCY]]</button> */
-      <<button "Next" >><<goto [[EMERGENCY]]>><</button>>
+      <button>[[next|mappingdoneb]]</button>
+       <<timed 20s>><<include "EMERGENCY">><</timed>>
       </messageboxlarge>
 
 
@@ -1683,9 +1716,9 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       "typewriter">><<include "predeliveryaudio">><messageboxlarge>
       Great work, $clubname !
       Ok, final part - Delivery.
-      Your gift is ready to be deilvered.
+      Your gift is ready to be delivered.
       Move onto the Delivery Card
-
+<<timed 20s>><<goto "static">><</timed>>
       <<include "password8">></messageboxlarge>
 
 
@@ -1694,14 +1727,15 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: static [static] {"position":"400.3333333333333,3487.666666666667","size":"100,100"}
-/<iframe
+<iframe
       src="http://remote.co.com/UCA/audio/finalstatic.mp3" allow="autoplay"  style="display:none"></iframe>
-      <staticbox>[img[https://uca-coney-dev.netlify.app/assets/img/static5.gif]]</staticbox>
+      <staticbox>[img[https://uca-coney-dev.netlify.app/assets/img/squarestatic.gif]]</staticbox>
       <<timed 4s>><staticbox><div class="animated
       fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></staticbox><</timed>>
       <<timed 9s>><staticboxcolour><div class="animated
       fadeIn">[img[http://remote.co.com/UCA/images/colours.gif]]</div></staticboxcolour><</timed>>
-      <<timed 25s>><<goto "video8">><</timed>>
+      <<include "password8">>
+      /* <<timed 25s>><<goto "video8">><</timed>> */
 
 
 :: video8 [green] {"position":"400.3333333333333,3637.666666666667","size":"100,100"}
@@ -2026,7 +2060,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <<if $password8 isnot "" and $password8 is "HOPE">>
       <<replace "#code8result">>
       <</replace>><<replace "#resultbutton">><</replace>>
-      <<goto [[static]]>>
+      <<goto [[video8]]>>
       <</if>>
       \/% PASSWORD INCORRECT %/
       <<if $password8 isnot "" and $password8 is not "HOPE">>
@@ -2216,7 +2250,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
       class="center"></div>
       <div>
-      <iframe allow=autoplay  width='800px' height='450px'
+      <iframe allow="autoplay"   width='800px' height='450px'
       src='https://player.vimeo.com/video/532121247?autoplay=1&byline=0&portrait=0'></iframe>
       </div>
       </div>
@@ -2421,12 +2455,13 @@ style="display:none" allow="autoplay" ></iframe>
       "mappingdoneb">><</timed>> */
 
 :: EMERGENCY [] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
-<iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/beeps3.mp3"  style="display:none" allow="autoplay" ></iframe>
+<<timed 0.5s>><iframe
+      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
 <staticbox>
-     <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left fadeSlow animated"><</timed>>
-<<timed
-      5s>><<goto"mappingdoneb">><</timed>>
+ <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left fadeInOut" id="staticgif">
+     /* <<timed 5s>><<replace "staticgif">><</replace>><</timed>> */
+/* <<timed
+      5s>><<goto"mappingdoneb">><</timed>> */
       </staticbox>
 
 
@@ -2553,15 +2588,15 @@ style="display:none" allow="autoplay" ></iframe>
       5s>><<goto
       "missionplanning">><</timed>> */
 
-:: staticbuzz [static] {"position":"543,3468.6666666666665","size":"100,100"}
-/<iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/beeps3.mp3" style="display:none" allow="autoplay" ></iframe>
-<staticbox>
+:: staticbuzz [] {"position":"543,3468.6666666666665","size":"100,100"}
+/<<timed 0.5s>><iframe
+      src="https://uca-coney-dev.netlify.app/assets/audio/beeps3.mp3" style="display:none" allow="autoplay" ></iframe><</timed>>
+<static>
      /* <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left fadeSlow animated"><</timed>> */
-       <<timed 0.5s>><img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif right growRightBig animated"><</timed>>
+      <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif right growRightBig animated"><</timed>>
       <<timed
-      5s>><<goto"missionplanning">><</timed>>
-      </staticbox>
+      7s>><<goto"missionplanning">><</timed>>
+      </static>
 
 
 
@@ -2791,8 +2826,8 @@ you can text Anne from here.</p><<include "text3">>
 :: textanne2a [purple -t8n-typewriter-4]
 <<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/yes-the-uca.mp3" allow="autoplay" style="display:none" ></iframe>
 
-<phonecontainer><p>Yes the UCA Breath – that’s a good idea. Nigel must have told you to remind me of the UCA Breathe – thanks Nigel
-Hello, the Static is very strong now – let’s do the UCA Breath all together 
+<phonecontainer><p>Yes the UCA Breath – that’s a good idea. Nigel must have told you to remind me of the UCA Breath – thanks Nigel
+The Static is very strong now – let’s do the UCA Breath all together 
 3 – 2 – 1.. 
 Open Hand – focus on your hand
 Up the mountain,breathe in
