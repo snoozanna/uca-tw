@@ -128,7 +128,6 @@ staticboxcolour img {
 
 .staticgif{
  box-shadow:-150px #fff;
-  /* filter: url("#displacementFilter"); */
   width: 300px;
   padding: 10px
 }
@@ -226,15 +225,17 @@ color: #2d3261;
 
 /* CONTENTS  */
 
+.contents-wrapper{
+      display:flex;
+      justify-content: space-around;
+      align-items:center
+}
 .contents-container{
- background-color: yellow;
+   background-image: url("http://remote.co.com/UCA/images/paperbackground.jpg");
 padding: 0 20px;
 font-family: 'Contrail One', cursive;
   width: 30%;
   transform: skewY(8deg);
-  position: fixed;
-    top: 3rem;
-    right: 10rem;
 }
 
 .contents-question {
@@ -261,12 +262,11 @@ font-size:3rem
 .contents-item {
   display: flex;
   justify-content: space-between;
-  /* align-items: baseline; */
   width: 100%
 }
 
 .number{
-  font-size: 2.5rem
+  font-size: 2.2rem
 }
 
 .contents-item > .floor {
@@ -277,19 +277,13 @@ font-size:3rem
   display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size:2rem
+    font-size:1.8rem
 
 }
 
 .contents-item:last-child > .floor{
     border-bottom: none;
 }
-
-.contents > a:hover{
-   color: #d66280;
-   font-size: 3.2vw   
-}
-
 
 
 phonecontainer {
@@ -934,17 +928,6 @@ align-items: center;
 }
 
 
-
-
-.fadeIn {
-	-webkit-animation-duration: 8s;
-	animation-duration: 8s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-	-webkit-animation-timing-function: ease-in;
-	animation-timing-function: ease-in;
-}
-
 .fadeSlow {
 	-webkit-animation-duration: 8s;
 	animation-duration: 8s;
@@ -965,23 +948,31 @@ align-items: center;
 .fadeIn { 
     -webkit-animation-name: fadeIn; 
     animation-name: fadeIn; 
+    	-webkit-animation-duration: 8s;
+	animation-duration: 8s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
 }
 
-/* @-webkit-keyframes fadeInOut { 
-    0% {opacity: 0;} 
-    30% {opacity: 1;}
-    100% {opacity: 0;} 
-}  */
+@-webkit-keyframes fadeInOut { 
+0%, 100% {
+ opacity: 0;
+}
+95% {
+opacity: 1;
+ }
+} 
+
 @keyframes fadeInOut { 
-    /* 0% {opacity: 0;} 
-    30% {opacity: 1;}
-    100% {opacity: 0;}  */
-     0%, 100% {
-               opacity: 0;
-            }
-             75% {
-               opacity: 1;
-            }
+
+0%, 100% {
+ opacity: 0;
+}
+95% {
+opacity: 1;
+ }
 } 
 .fadeInOut { 
     -webkit-animation-name: fadeInOut; 
@@ -990,8 +981,6 @@ align-items: center;
 animation-duration: 6s;
 -webkit-animation-fill-mode: both;
 animation-fill-mode: both;
-/* -webkit-animation-timing-function: ease-in;
-animation-timing-function: ease-in; */
 animation-timing-function: linear
 
 }
@@ -1566,14 +1555,13 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: mappingdone [green -t8n-typewriter-4] {"position":"1237,3004.333333333333","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "mappingdoneaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
+      "typewriter">><<include "mappingdoneaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon> <<timed 18s>><<include "EMERGENCY">><</timed>>
+      <messageboxlarge>
       GREAT work.
       If you have time, you can share back some of the information you have found out about your school to the rest of
       your Secret Club. It will help you work out your Gift.
       When done, click
-      <button>[[next|mappingdoneb]]</button>
-       <<timed 20s>><<include "EMERGENCY">><</timed>>
-      </messageboxlarge>
+      <button>[[next|mappingdoneb]]</button></messageboxlarge>
 
 
 :: mappingdoneaudio {"position":"1912.6666666666667,308.33333333333326","size":"100,100"}
@@ -2447,22 +2435,13 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 style="display:none" allow="autoplay" ></iframe>
 
 
-/* :: EMERGENCY [static] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
-/<iframe
-      src="audio/static.mp3" autoplay style="display:none" allow="autoplay" ></iframe>
-      <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox><<timed
-      5s>><<goto
-      "mappingdoneb">><</timed>> */
 
 :: EMERGENCY [] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
-<<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
-<staticbox>
+<static>
  <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left fadeInOut" id="staticgif">
-     /* <<timed 5s>><<replace "staticgif">><</replace>><</timed>> */
-/* <<timed
-      5s>><<goto"mappingdoneb">><</timed>> */
-      </staticbox>
+      </static>
+      <<timed 0.5s>><iframe
+      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
 
 
 
@@ -2494,18 +2473,19 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: contents [purple] {"position":"836.6666666666666,205","size":"100,100"}
-<<include "back">>
- <div class="contents-question"><h2>Where would you like to go?
- </h2></div><div class="contents-container">
- <h3 class="contents-title">UCA</h3><ul class="contents">
-          <li class="contents-item"><span class="number">1</span><span class="floor">[[The Start|welcome1]]</span></li>
-          <li class="contents-item"><span class="number">2</span><span class="floor">[[Move (UCA Tok)|READY]]</span></li>
-          <li class="contents-item"><span class="number">3</span><span class="floor">[[Connect|video4]]</span></li>
-          <li class="contents-item"><span class="number">4</span><span class="floor">[[Discover|clubnamediscover]]</span></li>
-          <li class="contents-item"><span class="number">5</span><span class="floor">[[Wonder|clubnamewonder]]</span></li>
-          <li class="contents-item"><span class="number">6</span><span class="floor">[[Give|clubnamegive]]</span></li>
-          <li class="contents-item"><span class="number">7</span><span class="floor">[[UCA Root|welcome2]]</span></li>
-        </ul></div>
+<<include "back">><div class="contents-wrapper">
+       <div class="contents-question"><h2>Where would you like to go?
+       </h2></div><div class="contents-container">
+       <h3 class="contents-title">UCA</h3><ul class="contents">
+                <li class="contents-item"><span class="number">1</span><span class="floor">[[The Start|welcome1]]</span></li>
+                <li class="contents-item"><span class="number">2</span><span class="floor">[[Move (UCA Tok)|READY]]</span></li>
+                <li class="contents-item"><span class="number">3</span><span class="floor">[[Connect|video4]]</span></li>
+                <li class="contents-item"><span class="number">4</span><span class="floor">[[Discover|clubnamediscover]]</span></li>
+                <li class="contents-item"><span class="number">5</span><span class="floor">[[Wonder|clubnamewonder]]</span></li>
+                <li class="contents-item"><span class="number">6</span><span class="floor">[[Give|clubnamegive]]</span></li>
+                <li class="contents-item"><span class="number">7</span><span class="floor">[[UCA Root|welcome2]]</span></li>
+              </ul></div>
+</div>
 
 
 
