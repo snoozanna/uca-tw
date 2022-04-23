@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://B3F5AA2C-F49A-4324-9C59-27731F7EA557// --><tw-storydata name="Undercover CareTaker Agency WIP 4.6" startnode="1" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="B3F5AA2C-F49A-4324-9C59-27731F7EA557" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+	<!-- UUID://B3F5AA2C-F49A-4324-9C59-27731F7EA557// --><tw-storydata name="Undercover CareTaker Agency WIP 4.6" startnode="141" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="B3F5AA2C-F49A-4324-9C59-27731F7EA557" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
@@ -369,6 +369,7 @@ font-size:3rem
     border-bottom: none;
 }
 
+/* PHONE / TEXT  */
 
 phonecontainer {
 display:flex;
@@ -647,6 +648,7 @@ name {
 
 .title-accent {
   font-family: 'Contrail One', cursive;
+      font-size: 2rem;
 }
 
 
@@ -659,7 +661,7 @@ name {
 
 /* POPUP */
 .popup-container{
- width:20vw;
+ width:17vw;
   position: fixed; 
     top: 6vh; 
     right: 2vw; 
@@ -672,6 +674,12 @@ z-index:1;
  
 }
 
+.popup-container.left{
+ width:17vw;
+    top: 6vh; 
+    left: 2vw;
+}
+
 .popup-container > p {
       color:#fff;
       font-size: 1.2rem
@@ -679,6 +687,17 @@ z-index:1;
 
 .popup-container.left{
       left: 2vw; 
+}
+
+.popup-container.button >img{
+      width: 20vw
+}
+
+.popup-title{
+     font-family: 'Contrail One', cursive;   
+     color: #fff;
+     font-size: 2.5rem;
+     margin:0
 }
 
 /* CODE INPUT */
@@ -689,13 +708,14 @@ z-index:1;
       margin-bottom:10px
 }
 
-.code-input > input[type=text]{
+.css-input > input[type=text]{
       min-width: 10vw;
 background-color: rgba(191, 191, 182, 0.58);
+    border: 1px solid #fff;
 font-size: large
 }
 
-.code-input > input[type=text]:hover{
+.css-input > input[type=text]:hover{
 background-color: #333
 }
 
@@ -1134,8 +1154,7 @@ $(document.head).find('#style-ui-bar').remove();
    &lt;div class=&quot;codeword-entry-item&quot;&gt;&lt;p&gt; Hello there,
                   To gain entry a codeword is needed.
                   The codeword is one word, it is somewhere on the box you will have received. 
-                  Type it in here to gain entry&lt;/p&gt;
-      &lt;&lt;include &quot;password1&quot;&gt;&gt;
+                  Type it in here to gain entry&lt;/p&gt;&lt;&lt;include &quot;password1&quot;&gt;&gt;
        &lt;/div&gt;
       &lt;/div&gt;
       &lt;/messagebox&gt;</tw-passagedata><tw-passagedata pid="3" name="welcome1audio" tags="" position="2062.666666666667,558.3333333333334" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/hello-there-to-gain-entry.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="4" name="Introvideo1" tags="green" position="864.3333333333334,510.66666666666663" size="100,100">&lt;div
@@ -1157,7 +1176,7 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;messageboxlarge&gt;Your choice is needed.
       Click YES, WE ARE IN to answer Anne’s call or choose CLOSE to go back to schoolwork?
 
-      &lt;button&gt;[[CLOSE]]&lt;/button&gt; or &lt;button&gt;[[YES, WE ARE IN]]&lt;/button&gt;&lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="6" name="video1baudio" tags="" position="2187.6666666666665,1928.3333333333335" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/your-choice-is-needed-click-yes.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="7" name="CLOSE" tags="green -t8n-typewriter-4" position="379.66666666666663,767.6666666666666" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include
+      &lt;button&gt;[[YES, WE ARE IN]]&lt;/button&gt; or  &lt;button&gt;[[CLOSE]]&lt;/button&gt;&lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="6" name="video1baudio" tags="" position="2187.6666666666665,1928.3333333333335" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/your-choice-is-needed-click-yes.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="7" name="CLOSE" tags="green -t8n-typewriter-4" position="379.66666666666663,767.6666666666666" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include
       &quot;CLOSEaudio&quot;&gt;&gt;&lt;messagebox&gt;Oh really?
 
       &lt;button&gt;[[YES, WE ARE IN]]&lt;/button&gt; or &lt;button&gt;[[NOT TODAY]]&lt;/button&gt;&lt;/messagebox&gt;</tw-passagedata><tw-passagedata pid="8" name="CLOSEaudio" tags="" position="1954.3333333333335,566.6666666666666" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/oh-really.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="9" name="YES, WE ARE IN" tags="green -t8n-typewriter-4" position="573.6666666666666,869.3333333333333" size="100,100">&lt;&lt;include
@@ -1186,12 +1205,13 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;messageboxlarge&gt;
       But you need to show you can light the Beacon, before it can be lit.
       You’ll find how to light the Beacon through completing challenges and getting buttons.
+      &lt;div class=&quot;popup-container button fadeInRightBig&quot;&gt;[img[http://remote.co.com/UCA/images/logobutton.png]]&lt;h3 class=&quot;popup-title&quot;&gt;BUTTON&lt;/h3&gt;&lt;/div&gt;
       Lighting the Beacon will show you have stopped the Static.
       And show that you have what it takes to be an UCA Agent yourself.
 
       We should get started!
 
-      When ready to learn the UCA TOK with Anne click &lt;button&gt;[[HERE|beacon1]]&lt;/button&gt;
+      When ready to learn the UCA TOK with Anne click &lt;button&gt;[[READY|beacon1]]&lt;/button&gt;
 
       &lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="14" name="pretokinfo2audio" tags="" position="1689.3333333333335,911.6666666666665" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/but-you-need-to-show-you-can-light.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="15" name="READY" tags="green" position="768.6666666666666,646" size="100,100">&lt;&lt;include
       &quot;back&quot;&gt;&gt;&lt;div id=&quot;wrap_video&quot;&gt;
@@ -1216,13 +1236,13 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;button&gt;[[NEXT|ucatokmoves]]&lt;/button&gt;&lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="19" name="ucatokmovesintroaudio" tags="" position="1594.3333333333335,1026.6666666666665" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/it-seems-you-need-to-learn-the-UCA-TOK&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="20" name="ucatokmoves" tags="green" position="571.6666666666666,1062.3333333333335" size="100,100">&lt;&lt;include
       &quot;back&quot;&gt;&gt;&lt;&lt;include &quot;ucatokmovesaudio&quot;&gt;&gt;
       &lt;dance&gt;
-      &lt;name&gt;&lt;b&gt;UCA TOK MOVES&lt;/b&gt;&lt;/name&gt;
+      &lt;name&gt;&lt;b&gt;Learn the UCA TOK&lt;/b&gt;&lt;/name&gt;
           &lt;div class=&quot;animated fadeInDownBig dancecard&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/dancemoves5.jpg&quot; class=&quot;dancecard&quot;&gt;&lt;/div&gt;
            
             &lt;&lt;timed 3s&gt;&gt;
             &lt;div class=&quot;popup-container&quot;&gt;&lt;p&gt;Want to watch Anne do the UCA TOK slowly? Click &lt;button&gt;[[HERE]]&lt;/button&gt;
 
-                  When you have learnt the UCA TOK and are ready to run it with Anne, click &lt;button&gt;[[READY|UCA TOK]]&lt;/button&gt; &lt;/p&gt;&lt;/div&gt;
+                  When you have learnt the UCA TOK and are ready to run it with Anne, click &lt;button&gt;[[UCATOK|UCA TOK]]&lt;/button&gt; &lt;/p&gt;&lt;/div&gt;
                   &lt;&lt;/timed&gt;&gt;
       
       &lt;/dance&gt;</tw-passagedata><tw-passagedata pid="21" name="ucatokmovesaudio" tags="" position="1702.6666666666667,1031.6666666666667" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/want-to-watch-Anne-do-the-UCA-TOK.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="22" name="HERE" tags="green -t8n-typewriter-4" position="385.99999999999994,1062.6666666666667" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;div id=&quot;wrap_video&quot;&gt;
@@ -1257,12 +1277,12 @@ $(document.head).find('#style-ui-bar').remove();
       &lt;&lt;button [[NEXT|video3c]]&gt;&gt;&lt;&lt;/button&gt;&gt;
       &lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="25" name="video3baudio" tags="" position="1952.6666666666667,1703.3333333333335" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/it-seems-she-wants-you-to-text-her.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="26" name="video3c" tags="green -t8n-typewriter-4" position="512.6666666666666,1671" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include&quot;typewriter&quot;&gt;&gt;&lt;&lt;include &quot;video3caudio&quot;&gt;&gt;&lt;messageboxlarge&gt;
       You can text her.
-      Teacher, text the word ‘UCA TOK’ when you are ready.
-      She may call you back (do put your phone on loudspeaker if so)!
+      Teacher, text the words &lt;span class=&quot;title-accent&quot;&gt;UCA TOK&lt;/span&gt; when you are ready.
+      She may call you back (do put your phone on loudspeaker if she does)!
       And she has locked the next page, so hopefully she’ll give you the codeword too.
-      Teacher, if you don&#39;t have access to a phone, click &lt;&lt;button &quot;here&quot; &gt;&gt;&lt;&lt;goto [[textanne]]&gt;&gt;&lt;&lt;/button&gt;&gt;
       &lt;/messageboxlarge&gt;
-            &lt;&lt;include &quot;password2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="video3caudio" tags="" position="2074.3333333333335,1701.6666666666667" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/you-can-text-her.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="28" name="video4" tags="green" position="687,1816" size="100,100">&lt;&lt;include
+            &lt;&lt;include &quot;password2&quot;&gt;&gt;
+            &lt;div class=&quot;popup-container left&quot;&gt; &lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/phone.png&quot; class=&quot;padlock&quot;&gt;&lt;p&gt;Teacher, if you don&#39;t have access to a phone, click &lt;&lt;button &quot;here&quot; &gt;&gt;&lt;&lt;goto [[textanne]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="video3caudio" tags="" position="2074.3333333333335,1701.6666666666667" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/you-can-text-her.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="28" name="video4" tags="green" position="687,1816" size="100,100">&lt;&lt;include
       &quot;back&quot;&gt;&gt;
       &lt;div id=&quot;wrap_video&quot;&gt;
       &lt;div id=&quot;video_box&quot;&gt;
@@ -1357,12 +1377,11 @@ $(document.head).find('#style-ui-bar').remove();
       Learning new skills can help us be more confident, as well as being quite fun, and it can be a really helpful
       distraction too. Let’s distract Anne and remind her of the UCA Breath.
 
-      Teacher, when you have learnt the UCA Breath, text Anne the word BREATH and hopefully she’ll call you back
-
-      Teacher, if you don&#39;t have access to a phone, click &lt;&lt;button &quot;here&quot; &gt;&gt;&lt;&lt;goto [[textanne2]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-
+      Teacher, when you have learnt the UCA Breath, text Anne the word &lt;span class=&quot;title-accent&quot;&gt;BREATH&lt;/span&gt; and hopefully she’ll call you back
       &lt;&lt;include &quot;password3&quot;&gt;&gt;
-      &lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="39" name="video5caudio" tags="" position="2079.3333333333335,1460" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/you-are-learning-a-new-skill.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="40" name="Video6" tags="green" position="582,2821" size="100,100">&lt;&lt;include
+      &lt;/messageboxlarge&gt;
+
+      &lt;div class=&quot;popup-container left&quot;&gt; &lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/phone.png&quot; class=&quot;padlock&quot;&gt;&lt;p&gt;Teacher, if you don&#39;t have access to a phone, click &lt;&lt;button &quot;here&quot; &gt;&gt;&lt;&lt;goto [[textanne2]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="video5caudio" tags="" position="2079.3333333333335,1460" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/you-are-learning-a-new-skill.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="40" name="Video6" tags="green" position="582,2821" size="100,100">&lt;&lt;include
       &quot;back&quot;&gt;&gt;&lt;div id=&quot;wrap_video&quot;&gt;
       &lt;div id=&quot;video_box&quot;&gt;
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
@@ -1409,7 +1428,7 @@ $(document.head).find('#style-ui-bar').remove();
 
       You may want to start by drawing a map like Anne did – a birdseye view like &lt;button&gt;[[these maps]]&lt;/button&gt;
 
-      When done, click &lt;button&gt;[[next|mapdrawn]]&lt;/button&gt;
+      When ready to move on, click &lt;button&gt;[[next|mapdrawn]]&lt;/button&gt;
 
       &lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="48" name="video6daudio" tags="" position="2091,1328.3333333333333" size="100,100">&lt;iframe src=&quot;https://uca-coney-dev.netlify.app/assets/audio/teacher-in-a-moment-we-recommend.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot; id=&quot;iframeAudio&quot;&gt; &lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="49" name="mapdrawn" tags="green -t8n-typewriter-4" position="1102,3007.666666666667" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include
       &quot;typewriter&quot;&gt;&gt;&lt;&lt;include &quot;mapdrawnaudio&quot;&gt;&gt;&lt;beaconicon&gt;[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]&lt;/beaconicon&gt;&lt;messageboxlarge&gt;
@@ -1431,15 +1450,13 @@ $(document.head).find('#style-ui-bar').remove();
       &quot;mappingdonebaudio&quot;&gt;&gt;&lt;beaconicon&gt;[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]&lt;/beaconicon&gt;&lt;messageboxlarge&gt;
       Ok - great work. Mapping Complete.
 
-      The next video is locked though – can you text Anne the word MAPPING and hopefully, she will call you
+      The next video is locked though – can you text Anne the word &lt;span class=&quot;title-accent&quot;&gt;MAPPING&lt;/span&gt; and hopefully, she will call you
       with the codeword to move on.
 
       We are so close to lighting the beacon.
-
-      Teacher, if you don&#39;t have access to a phone, click &lt;&lt;button &quot;here&quot; &gt;&gt;&lt;&lt;goto [[textanne3]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-
       &lt;&lt;include &quot;password4&quot;&gt;&gt;
-      &lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="54" name="mappingdonebaudio" tags="" position="2044.3333333333335,308.33333333333326" size="100,100">&lt;iframe id=&quot;iframeAudio&quot; src=&quot;https://uca-coney-dev.netlify.app/assets/audio/ok-great-work-mapping-complete.mp3&quot; style=&quot;display:none&quot; allow=&quot;autoplay&quot; &gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="55" name="Video7" tags="green" position="577,3172.6666666666665" size="100,100">&lt;&lt;include
+      &lt;/messageboxlarge&gt;
+      &lt;div class=&quot;popup-container left&quot;&gt; &lt;img src=&quot;https://uca-coney-dev.netlify.app/assets/img/phone.png&quot; class=&quot;padlock&quot;&gt;&lt;p&gt;Teacher, if you don&#39;t have access to a phone, click &lt;&lt;button &quot;here&quot; &gt;&gt;&lt;&lt;goto [[textanne3]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="mappingdonebaudio" tags="" position="2044.3333333333335,308.33333333333326" size="100,100">&lt;iframe id=&quot;iframeAudio&quot; src=&quot;https://uca-coney-dev.netlify.app/assets/audio/ok-great-work-mapping-complete.mp3&quot; style=&quot;display:none&quot; allow=&quot;autoplay&quot; &gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="55" name="Video7" tags="green" position="577,3172.6666666666665" size="100,100">&lt;&lt;include
       &quot;back&quot;&gt;&gt;&lt;div id=&quot;wrap_video&quot;&gt;
       &lt;div id=&quot;video_box&quot;&gt;
       &lt;div id=&quot;video_overlays&quot;&gt;&lt;img src=&quot;http://remote.co.com/UCA/images/tv8.png&quot;
@@ -1579,7 +1596,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
       &lt;button&gt;[[NEXT|endpart1]]&lt;/button&gt;&lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="77" name="video8eaudio" tags="" position="2066,696.6666666666667" size="100,100">&lt;iframe
       id=&quot;iframeAudio&quot; src=&quot;https://uca-coney-dev.netlify.app/assets/audio/your-work-today-has-been.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot;&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="78" name="endpart1" tags="green -t8n-typewriter-4" position="400.3333333333333,3937.666666666667" size="100,100">&lt;messagebox&gt;
-      TO BE CONTINUED...&lt;/messagebox&gt;
+      &lt;h3 class=&quot;title-accent&quot;&gt;TO BE CONTINUED...&lt;/h3&gt;&lt;/messagebox&gt;
       &lt;messagebox&gt;&lt;div class=&quot;animated
       rotateIn&quot;&gt;[img[http://remote.co.com/UCA/images/logobutton.png]]&lt;/div&gt;&lt;/messagebox&gt;
       &lt;messagebox&gt;
@@ -1801,7 +1818,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       &lt;&lt;if $password9 isnot &quot;&quot; and $password9 is not &quot;AGENTS READY&quot;&gt;&gt;
       &lt;&lt;replace &quot;#code9result&quot;&gt;&gt;Thats not right.&lt;&lt;/replace&gt;&gt;
       &lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="text1" tags="" position="147.66666666666666,1553.3333333333335" size="100,100">\/% PASSWORD FEEDBACK %/
-&lt;div id=&quot;text1result&quot; &gt;Text Anne the words UCA TOK&lt;/div&gt;
+&lt;div id=&quot;text1result&quot; &gt;Text Anne the words &lt;span class=&quot;title-accent&quot;&gt;UCA TOK&lt;/span class=&quot;&quot;&gt;&lt;/div&gt;
       \   &lt;div id=&quot;resultbutton&quot;&gt;
       \/% PASSWORD INPUT %/
   &lt;div class=&quot;css-input code-input&quot;&gt;\
@@ -1858,7 +1875,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       &lt;&lt;if $text2 isnot &quot;&quot; and $text2 is not &quot;UCA TOK&quot;&gt;&gt;
       &lt;&lt;replace &quot;#text2result&quot;&gt;&gt;Thats not right.&lt;&lt;/replace&gt;&gt;
       &lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="text3" tags="" position="147.66666666666666,1553.3333333333335" size="100,100">\/% PASSWORD FEEDBACK %/
-&lt;div id=&quot;text3result&quot; &gt;Text Anne the words BREATH&lt;/div&gt;
+&lt;div id=&quot;text3result&quot; &gt;Text Anne the words &lt;span class=&quot;title-accent&quot;&gt;BREATH&lt;/span&gt;&lt;/div&gt;
       \   &lt;div id=&quot;resultbutton&quot;&gt;
       \/% PASSWORD INPUT %/
   &lt;div class=&quot;css-input code-input&quot;&gt;\
@@ -1881,7 +1898,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       &lt;&lt;if $text3 isnot &quot;&quot; and $text3 is not &quot;BREATH&quot;&gt;&gt;
       &lt;&lt;replace &quot;#text3result&quot;&gt;&gt;Thats not right.&lt;&lt;/replace&gt;&gt;
       &lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="text4" tags="" position="147.66666666666666,1553.3333333333335" size="100,100">\/% PASSWORD FEEDBACK %/
-&lt;div id=&quot;text4result&quot; &gt;Text Anne the words MAPPING&lt;/div&gt;
+&lt;div id=&quot;text4result&quot; &gt;Text Anne the words &lt;span class=&quot;title-accent&quot;&gt;MAPPING&lt;/span&gt;&lt;/div&gt;
       \   &lt;div id=&quot;resultbutton&quot;&gt;
       \/% PASSWORD INPUT %/
   &lt;div class=&quot;css-input code-input&quot;&gt;\
@@ -1904,7 +1921,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       &lt;&lt;if $text4 isnot &quot;&quot; and $text4 is not &quot;MAPPING&quot;&gt;&gt;
       &lt;&lt;replace &quot;#text4result&quot;&gt;&gt;Thats not right.&lt;&lt;/replace&gt;&gt;
       &lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="text5" tags="" position="147.66666666666666,1553.3333333333335" size="100,100">\/% PASSWORD FEEDBACK %/
-&lt;div id=&quot;text5result&quot; &gt;Text Anne the words COMPLETE&lt;/div&gt;
+&lt;div id=&quot;text5result&quot; &gt;Text Anne the words &lt;span class=&quot;title-accent&quot; &gt;COMPLETE&lt;/span&gt;&lt;/div&gt;
       \   &lt;div id=&quot;resultbutton&quot;&gt;
       \/% PASSWORD INPUT %/
   &lt;div class=&quot;css-input code-input&quot;&gt;\
@@ -2170,7 +2187,7 @@ style=&quot;display:none&quot; allow=&quot;autoplay&quot; &gt;&lt;/iframe&gt;</t
       Would you eat a plate of worms for £100?
       &lt;button&gt;[[YES|choiceyes]]&lt;/button&gt;&lt;button&gt;[[NO|choiceno]]&lt;/button&gt;
       &lt;/messageboxlarge&gt;</tw-passagedata><tw-passagedata pid="140" name="platform7baudio" tags="" position="2086.0000000000005,1188.3333333333335" size="100,100">&lt;iframe id=&quot;iframeAudio&quot;
-      src=&quot;https://uca-coney-dev.netlify.app/assets/audio/now-we-test-if-the-planting-has-worked.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot;&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="141" name="platform8b" tags="green -t8n-typewriter-4" position="1039,1843" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include &quot;typewriter&quot;&gt;&gt;
+      src=&quot;https://uca-coney-dev.netlify.app/assets/audio/now-we-test-if-the-planting-has-worked.mp3&quot; allow=&quot;autoplay&quot; style=&quot;display:none&quot;&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="141" name="platform8b" tags="green -t8n-typewriter-4" position="1039,1843" size="100,100">&lt;&lt;include &quot;back&quot;&gt;&gt;&lt;&lt;include &quot;typewriter&quot;&gt;&gt;&lt;&lt;include &quot;platform8baudio&quot;&gt;&gt;
       &lt;messageboxlarge&gt;Now another test…
       I’m going to ask you another question
       It may be a strange question

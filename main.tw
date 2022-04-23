@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "home",
+	"start": "platform8b",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -285,6 +285,7 @@ font-size:3rem
     border-bottom: none;
 }
 
+/* PHONE / TEXT  */
 
 phonecontainer {
 display:flex;
@@ -563,6 +564,7 @@ name {
 
 .title-accent {
   font-family: 'Contrail One', cursive;
+      font-size: 2rem;
 }
 
 
@@ -575,7 +577,7 @@ name {
 
 /* POPUP */
 .popup-container{
- width:20vw;
+ width:17vw;
   position: fixed; 
     top: 6vh; 
     right: 2vw; 
@@ -588,6 +590,12 @@ z-index:1;
  
 }
 
+.popup-container.left{
+ width:17vw;
+    top: 6vh; 
+    left: 2vw;
+}
+
 .popup-container > p {
       color:#fff;
       font-size: 1.2rem
@@ -595,6 +603,17 @@ z-index:1;
 
 .popup-container.left{
       left: 2vw; 
+}
+
+.popup-container.button >img{
+      width: 20vw
+}
+
+.popup-title{
+     font-family: 'Contrail One', cursive;   
+     color: #fff;
+     font-size: 2.5rem;
+     margin:0
 }
 
 /* CODE INPUT */
@@ -605,13 +624,14 @@ z-index:1;
       margin-bottom:10px
 }
 
-.code-input > input[type=text]{
+.css-input > input[type=text]{
       min-width: 10vw;
 background-color: rgba(191, 191, 182, 0.58);
+    border: 1px solid #fff;
 font-size: large
 }
 
-.code-input > input[type=text]:hover{
+.css-input > input[type=text]:hover{
 background-color: #333
 }
 
@@ -1063,8 +1083,7 @@ $(document.head).find('#style-ui-bar').remove();
    <div class="codeword-entry-item"><p> Hello there,
                   To gain entry a codeword is needed.
                   The codeword is one word, it is somewhere on the box you will have received. 
-                  Type it in here to gain entry</p>
-      <<include "password1">>
+                  Type it in here to gain entry</p><<include "password1">>
        </div>
       </div>
       </messagebox>
@@ -1100,7 +1119,7 @@ $(document.head).find('#style-ui-bar').remove();
       <messageboxlarge>Your choice is needed.
       Click YES, WE ARE IN to answer Anne’s call or choose CLOSE to go back to schoolwork?
 
-      <button>[[CLOSE]]</button> or <button>[[YES, WE ARE IN]]</button></messageboxlarge>
+      <button>[[YES, WE ARE IN]]</button> or  <button>[[CLOSE]]</button></messageboxlarge>
 
 
 :: video1baudio {"position":"2187.6666666666665,1928.3333333333335","size":"100,100"}
@@ -1166,14 +1185,16 @@ $(document.head).find('#style-ui-bar').remove();
       <messageboxlarge>
       But you need to show you can light the Beacon, before it can be lit.
       You’ll find how to light the Beacon through completing challenges and getting buttons.
+      <div class="popup-container button fadeInRightBig">[img[http://remote.co.com/UCA/images/logobutton.png]]<h3 class="popup-title">BUTTON</h3></div>
       Lighting the Beacon will show you have stopped the Static.
       And show that you have what it takes to be an UCA Agent yourself.
 
       We should get started!
 
-      When ready to learn the UCA TOK with Anne click <button>[[HERE|beacon1]]</button>
+      When ready to learn the UCA TOK with Anne click <button>[[READY|beacon1]]</button>
 
       </messageboxlarge>
+      
 
 
 :: pretokinfo2audio {"position":"1689.3333333333335,911.6666666666665","size":"100,100"}
@@ -1224,13 +1245,13 @@ $(document.head).find('#style-ui-bar').remove();
 <<include
       "back">><<include "ucatokmovesaudio">>
       <dance>
-      <name><b>UCA TOK MOVES</b></name>
+      <name><b>Learn the UCA TOK</b></name>
           <div class="animated fadeInDownBig dancecard"><img src="http://remote.co.com/UCA/images/dancemoves5.jpg" class="dancecard"></div>
            
             <<timed 3s>>
             <div class="popup-container"><p>Want to watch Anne do the UCA TOK slowly? Click <button>[[HERE]]</button>
 
-                  When you have learnt the UCA TOK and are ready to run it with Anne, click <button>[[READY|UCA TOK]]</button> </p></div>
+                  When you have learnt the UCA TOK and are ready to run it with Anne, click <button>[[UCATOK|UCA TOK]]</button> </p></div>
                   <</timed>>
       
       </dance>
@@ -1290,12 +1311,12 @@ $(document.head).find('#style-ui-bar').remove();
 :: video3c [green -t8n-typewriter-4] {"position":"512.6666666666666,1671","size":"100,100"}
 <<include "back">><<include"typewriter">><<include "video3caudio">><messageboxlarge>
       You can text her.
-      Teacher, text the word ‘UCA TOK’ when you are ready.
-      She may call you back (do put your phone on loudspeaker if so)!
+      Teacher, text the words <span class="title-accent">UCA TOK</span> when you are ready.
+      She may call you back (do put your phone on loudspeaker if she does)!
       And she has locked the next page, so hopefully she’ll give you the codeword too.
-      Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne]]>><</button>>
       </messageboxlarge>
             <<include "password2">>
+            <div class="popup-container left"> <img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="padlock"><p>Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne]]>><</button>></p></div>
 
 
 :: video3caudio {"position":"2074.3333333333335,1701.6666666666667","size":"100,100"}
@@ -1438,12 +1459,11 @@ $(document.head).find('#style-ui-bar').remove();
       Learning new skills can help us be more confident, as well as being quite fun, and it can be a really helpful
       distraction too. Let’s distract Anne and remind her of the UCA Breath.
 
-      Teacher, when you have learnt the UCA Breath, text Anne the word BREATH and hopefully she’ll call you back
-
-      Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne2]]>><</button>>
-
+      Teacher, when you have learnt the UCA Breath, text Anne the word <span class="title-accent">BREATH</span> and hopefully she’ll call you back
       <<include "password3">>
       </messageboxlarge>
+
+      <div class="popup-container left"> <img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="padlock"><p>Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne2]]>><</button>></p></div>
 
 
 :: video5caudio {"position":"2079.3333333333335,1460","size":"100,100"}
@@ -1528,7 +1548,7 @@ $(document.head).find('#style-ui-bar').remove();
 
       You may want to start by drawing a map like Anne did – a birdseye view like <button>[[these maps]]</button>
 
-      When done, click <button>[[next|mapdrawn]]</button>
+      When ready to move on, click <button>[[next|mapdrawn]]</button>
 
       </messageboxlarge>
 
@@ -1577,15 +1597,15 @@ $(document.head).find('#style-ui-bar').remove();
       "mappingdonebaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       Ok - great work. Mapping Complete.
 
-      The next video is locked though – can you text Anne the word MAPPING and hopefully, she will call you
+      The next video is locked though – can you text Anne the word <span class="title-accent">MAPPING</span> and hopefully, she will call you
       with the codeword to move on.
 
       We are so close to lighting the beacon.
-
-      Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne3]]>><</button>>
-
       <<include "password4">>
       </messageboxlarge>
+      <div class="popup-container left"> <img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="padlock"><p>Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne3]]>><</button>></p></div>
+
+      
 
 
 :: mappingdonebaudio {"position":"2044.3333333333335,308.33333333333326","size":"100,100"}
@@ -1825,7 +1845,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 :: endpart1 [green -t8n-typewriter-4] {"position":"400.3333333333333,3937.666666666667","size":"100,100"}
 <messagebox>
-      TO BE CONTINUED...</messagebox>
+      <h3 class="title-accent">TO BE CONTINUED...</h3></messagebox>
       <messagebox><div class="animated
       rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
       <messagebox>
@@ -2084,7 +2104,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 :: text1 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
-<div id="text1result" >Text Anne the words UCA TOK</div>
+<div id="text1result" >Text Anne the words <span class="title-accent">UCA TOK</span class=""></div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
   <div class="css-input code-input">\
@@ -2147,7 +2167,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 :: text3 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
-<div id="text3result" >Text Anne the words BREATH</div>
+<div id="text3result" >Text Anne the words <span class="title-accent">BREATH</span></div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
   <div class="css-input code-input">\
@@ -2173,7 +2193,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 :: text4 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
-<div id="text4result" >Text Anne the words MAPPING</div>
+<div id="text4result" >Text Anne the words <span class="title-accent">MAPPING</span></div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
   <div class="css-input code-input">\
@@ -2199,7 +2219,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 :: text5 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
-<div id="text5result" >Text Anne the words COMPLETE</div>
+<div id="text5result" >Text Anne the words <span class="title-accent" >COMPLETE</span></div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
   <div class="css-input code-input">\
@@ -2671,7 +2691,7 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: platform8b [green -t8n-typewriter-4] {"position":"1039,1843","size":"100,100"}
-<<include "back">><<include "typewriter">>
+<<include "back">><<include "typewriter">><<include "platform8baudio">>
       <messageboxlarge>Now another test…
       I’m going to ask you another question
       It may be a strange question
