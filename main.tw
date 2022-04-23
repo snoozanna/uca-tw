@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "platform8b",
+	"start": "Video7",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -31,7 +31,7 @@ color: #d66280;
   background: #2d3261;
   border-radius: 25px;
   border-color: white;
-  padding: 5px 5px;
+  padding: 5px 10px;
   margin: 5px;
   text-align: center;
   font-weight: bold;
@@ -1113,13 +1113,15 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: video1b [green -t8n-typewriter-4] {"position":"585.3333333333334,666.6666666666667","size":"100,100"}
 <<include "back">><<include
-      "typewriter">>
-      <<include "video1baudio">>
+      "typewriter">><<include "video1baudio">><div id="staticplaceholder"></div>
 
       <messageboxlarge>Your choice is needed.
       Click YES, WE ARE IN to answer Anne’s call or choose CLOSE to go back to schoolwork?
 
-      <button>[[YES, WE ARE IN]]</button> or  <button>[[CLOSE]]</button></messageboxlarge>
+      <<button "YES WE ARE IN">><<replace "#staticplaceholder">><<include "staticbuzz1">><</replace>>
+      <<timed 5s>><<goto "YES, WE ARE IN">><</timed>><</button>></messageboxlarge>
+
+       
 
 
 :: video1baudio {"position":"2187.6666666666665,1928.3333333333335","size":"100,100"}
@@ -1344,10 +1346,11 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: video4b [green -t8n-typewriter-4] {"position":"687,1966","size":"100,100"}
 <<include "back">><<include "typewriter">>  <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon><<include
-      "video4baudio">><messageboxlarge>
+      "video4baudio">><div id="staticplaceholder"></div><messageboxlarge>
       Teacher, can you make sure everyone understands what the static is please?
       It is very important we know what we are facing together.
-      <button>[[Everyone understands]]</button>
+      <<button "Everyone understands">><<replace "#staticplaceholder">><<include "staticbuzz2">><</replace>>
+      <<timed 4.5s>><<goto "Everyone understands">><</timed>><</button>>
        </messageboxlarge>
 
 
@@ -1488,12 +1491,13 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: video6a [green -t8n-typewriter-4] {"position":"753.6666666666667,2816","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "video6aaudio">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
+      "typewriter">><<include "video6aaudio">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><div id="staticplaceholder"></div><messageboxlarge>
       Ok, it seems Anne wants you to open the next compartment and get the next button.
       You can open Compartment 4 now .
       Inside are Agent Cards for you to fill out.
       These cards will help you notice things in yourself, as UCA Agents.
-      <button>[[NEXT|video6b]]</button>
+         <<button "NEXT">><<replace "#staticplaceholder">><<include "staticbuzz3">><</replace>>
+      <<timed 4.5s>><<goto "video6b">><</timed>><</button>>
       </messageboxlarge>
 
 
@@ -1575,13 +1579,14 @@ $(document.head).find('#style-ui-bar').remove();
 
 :: mappingdone [green -t8n-typewriter-4] {"position":"1237,3004.333333333333","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "mappingdoneaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon> <<timed 18s>><<include "EMERGENCY">><</timed>>
+      "typewriter">><<include "mappingdoneaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><div id="staticplaceholder"></div>
       <messageboxlarge>
       GREAT work.
       If you have time, you can share back some of the information you have found out about your school to the rest of
       your Secret Club. It will help you work out your Gift.
       When done, click
-      <button>[[next|mappingdoneb]]</button></messageboxlarge>
+      <<button "NEXT">><<replace "#staticplaceholder">><<include "staticbuzz4">><</replace>>
+      <<timed 4s>><<goto "mappingdoneb">><</timed>><</button>></messageboxlarge>
 
 
 :: mappingdoneaudio {"position":"1912.6666666666667,308.33333333333326","size":"100,100"}
@@ -1625,7 +1630,9 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon><<timed
-      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticbuzz]]</nextbutton><</timed>>
+      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticbuzz5]]</nextbutton><</timed>>
+
+      
 
 
 :: missionplanning [green -t8n-typewriter-4] {"position":"690.3333333333334,3426","size":"100,100"}
@@ -1734,16 +1741,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/ok-final-part-delivery.mp3" allow="autoplay"  style="display:none"></iframe>
 
 
-:: static [static] {"position":"400.3333333333333,3487.666666666667","size":"100,100"}
-<iframe
-      src="http://remote.co.com/UCA/audio/finalstatic.mp3" allow="autoplay"  style="display:none"></iframe>
-      <staticbox>[img[https://uca-coney-dev.netlify.app/assets/img/squarestatic.gif]]</staticbox>
-      <<timed 4s>><staticbox><div class="animated
-      fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></staticbox><</timed>>
-      <<timed 9s>><staticboxcolour><div class="animated
-      fadeIn">[img[http://remote.co.com/UCA/images/colours.gif]]</div></staticboxcolour><</timed>>
-      <<include "password8">>
-      /* <<timed 25s>><<goto "video8">><</timed>> */
+
 
 
 :: video8 [green] {"position":"400.3333333333333,3637.666666666667","size":"100,100"}
@@ -2455,17 +2453,6 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 style="display:none" allow="autoplay" ></iframe>
 
 
-
-:: EMERGENCY [] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
-<static>
- <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left fadeInOut" id="staticgif">
-      </static>
-      <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
-
-
-
-
 :: intro [green] {"position":"537,506","size":"100,100"}
 <messagebox><div
       class="animated
@@ -2563,41 +2550,6 @@ style="display:none" allow="autoplay" ></iframe>
       fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox><<timed
       4s>><<goto
       "Part2">><</timed>>
-
-
-/* :: statpatternanimation [green] {"position":"1180,544","size":"100,100"}
-<div
-      id="wrap_video">
-      <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
-      class="center"></div>
-      \ <div>
-      \
-      <messageboxstat>[img[http://remote.co.com/UCA/images/static.gif]]</messageboxstat><messageboxstat><div
-      class="animated
-      fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></messageboxstat>
-      </div>
-      </div>
-      </div> */
-
-
-/* :: staticanimation [static] {"position":"543,3468.6666666666665","size":"100,100"}
-/<iframe
-      src="audio/static.mp3" autoplay style="display:none" allow="autoplay" ></iframe>
-      <staticbox>[img[http://remote.co.com/UCA/images/static.gif]]</staticbox><<timed
-      5s>><<goto
-      "missionplanning">><</timed>> */
-
-:: staticbuzz [] {"position":"543,3468.6666666666665","size":"100,100"}
-/<<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/beeps3.mp3" style="display:none" allow="autoplay" ></iframe><</timed>>
-<static>
-     /* <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left fadeSlow animated"><</timed>> */
-      <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif right growRightBig animated"><</timed>>
-      <<timed
-      7s>><<goto"missionplanning">><</timed>>
-      </static>
-
 
 
 
@@ -2768,12 +2720,6 @@ style="display:none" allow="autoplay" ></iframe>
 <messagebox2><<include "back">><div class="codeword-entry-container">
   <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
   <<include "password1">>
-  /* <span id="code3result">WHAT'S THE CODEWORD?</span>
-  \<span id="resultbutton">
-      \/% PASSWORD INPUT %/
-      \<div class="css-input">\
- <<textbox "$password3" "">></div>
-      <<button "Enter">><</button>></span> */
 </div>
 </messagebox2>
 
@@ -2886,3 +2832,55 @@ Clear the fog and counter the Static!
 <phonecontainer><p>You’ll find the final button inside the cover for the Beacon – the cylinder! 
 Light up the Beacon and enter the codeword into the online platform.</p></phonecontainer>   
   <<include "password4">>       
+
+
+:: staticbuzz1 [] {"position":"543,3468.6666666666665","size":"100,100"}
+<static>
+ <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left " id="staticgif">
+      </static>
+      <<timed 0.5s>><iframe
+      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+
+
+:: staticbuzz2 [] {"position":"543,3468.6666666666665","size":"100,100"}
+<static>
+ <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left " id="staticgif">
+      </static>
+      <<timed 0.5s>><iframe
+      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+
+
+:: staticbuzz3 [] {"position":"543,3468.6666666666665","size":"100,100"}
+<static>
+ <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left " id="staticgif">
+      </static>
+      <<timed 0.5s>><iframe
+      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+
+
+:: staticbuzz4 [] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
+<static>
+ <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left " id="staticgif">
+      </static>
+      <<timed 0.5s>><iframe
+      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+
+:: staticbuzz5 [] {"position":"543,3468.6666666666665","size":"100,100"}
+/<<timed 0.5s>><iframe
+      src="https://uca-coney-dev.netlify.app/assets/audio/beeps3.mp3" style="display:none" allow="autoplay" ></iframe><</timed>>
+<static>
+      <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif right growRightBig animated"><</timed>>
+      <<timed
+      7s>><<goto"video6b">><</timed>>
+      </static>
+
+:: static [static] {"position":"400.3333333333333,3487.666666666667","size":"100,100"}
+<iframe
+      src="http://remote.co.com/UCA/audio/finalstatic.mp3" allow="autoplay"  style="display:none"></iframe>
+      <staticbox>[img[https://uca-coney-dev.netlify.app/assets/img/squarestatic.gif]]</staticbox>
+      <<timed 4s>><staticbox><div class="animated
+      fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></staticbox><</timed>>
+      <<timed 9s>><staticboxcolour><div class="animated
+      fadeIn">[img[http://remote.co.com/UCA/images/colours.gif]]</div></staticboxcolour><</timed>>
+      <<include "password8">>
+      /* <<timed 25s>><<goto "video8">><</timed>> */
