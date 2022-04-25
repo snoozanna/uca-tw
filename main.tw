@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 9
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "prestatic",
+	"start": "beacon1",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -2665,61 +2665,76 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: beacon1 [purple] {"position":"257,495.99999999999994","size":"100,100"}
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe>
 <messagebox>
 <div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move.png"></div>
       </messagebox>
 <messagebox>
-<div class="animated fadeInRightBig" id="beacon">   
-<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon0-1.gif"></div>
-<<timed 7s>>
+<<timed 3s>>
+      <div class="animated fadeInRightBig" id="beacon">   
+      <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon0-1.gif"></div>
+<</timed>>
+<<timed 10s>>
 <<goto [[READY]]>><</timed>>
 </messagebox>
 
 
 :: beacon2 [purple] {"position":"258.6666666666667,612.6666666666666","size":"100,100"}
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe>
 <messagebox>
 <div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div>
       </messagebox>
 <messagebox>
+<<timed 3s>>
 <div class="animated fadeInRightBig" id="beacon">   
 <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon1-2.gif"></div>
-<<timed 6s>>
+<</timed>>
+<<timed 10s>>
 <<goto [[video4]]>><</timed>>
 </messagebox>
 
 
 :: beacon3 [purple] {"position":"258.66666666666663,731","size":"100,100"}
 <messagebox>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe>
   <div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/discover.png"></div>
       </messagebox>
 <messagebox>
+<<timed 3s>>
 <div class="animated fadeInRightBig" >   
 <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon2-3.gif"></div>
-<<timed 6s>>
+<</timed>>
+<<timed 10s>>
 <<goto [[video5]]>><</timed>>
 </messagebox>
 
 
 :: beacon4 [purple] {"position":"258.66666666666663,851","size":"100,100"}
 <messagebox>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe>
   <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/wonder.png"></div>
       </messagebox>
 <messagebox>
+<<timed 3s>>
 <div class="animated fadeInRightBig" >   
 <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon3-4.gif"></div>
-<<timed 6s>>
+<</timed>>
+<<timed 10s>>
 <<goto [[video6a]]>><</timed>>
 </messagebox>
 
 
 :: beacon5 [purple] {"position":"261.99999999999994,974.3333333333334","size":"100,100"}
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe>
 <messagebox>
 <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/give.png"></div>
       </messagebox>
 <messagebox>
+<<timed 3s>>
 <div class="animated fadeInRightBig" >   
 <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon4-5.gif"></div>
-<<timed 7s>>
+<</timed>>
+<<timed 10s>>
 <<goto [[Video7]]>><</timed>>
 </messagebox>
 
@@ -2854,7 +2869,7 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
  <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif center " id="staticgif">
       </static>
       <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+      src="https://uca-coney-dev.netlify.app/assets/audio/film-static-10.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
 
 
 :: staticbuzz2 {"position":"53.33333333333334,2262.9999999999995","size":"100,100"}
@@ -2862,7 +2877,7 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
  <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif ctrright " id="staticgif">
       </static>
       <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+      src="https://uca-coney-dev.netlify.app/assets/audio/film-static-10.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
 
 
 :: staticbuzz3 {"position":"51.333333333333286,2378","size":"100,100"}
@@ -2870,7 +2885,7 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
  <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left " id="staticgif">
       </static>
       <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+      src="https://uca-coney-dev.netlify.app/assets/audio/film-static-10.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
 
 
 :: staticbuzz4 {"position":"54,2488","size":"100,100"}
@@ -2878,12 +2893,12 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
  <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif leftbig " id="staticgif">
       </static>
       <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+      src="https://uca-coney-dev.netlify.app/assets/audio/film-static-10.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
 
 
 :: staticbuzz5 {"position":"51.33333333333331,2611.3333333333335","size":"100,100"}
 /<<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/beeps3.mp3" style="display:none" allow="autoplay" ></iframe><</timed>>
+      src="https://uca-coney-dev.netlify.app/assets/audio/film-static-10.mp3" style="display:none" allow="autoplay" ></iframe><</timed>>
 <static>
       <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif right growRightBig animated"><</timed>>
       <<timed
@@ -2892,19 +2907,19 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
 
 :: prestatic [static] {"position":"56.66666666666663,2758.6666666666665","size":"100,100"}
 <iframe
-      src="http://remote.co.com/UCA/audio/film-static-10.mp3" allow="autoplay"  style="display:none"></iframe>
+      src="https://uca-coney-dev.netlify.app/assets/audio/film-static-10.mp3" allow="autoplay"  style="display:none"></iframe>
       <staticbox>[img[https://uca-coney-dev.netlify.app/assets/img/squarestatic.gif]]</staticbox>
       <<include "password8">>
 
 
 :: static [static] {"position":"56.66666666666663,2758.6666666666665","size":"100,100"}
 <iframe
-      src="http://remote.co.com/UCA/audio/calm-film.mp3" allow="autoplay"  style="display:none"></iframe>
+      src="https://uca-coney-dev.netlify.app/assets/audio/calm-crispy.mp3" allow="autoplay"  style="display:none"></iframe>
       <staticbox>[img[https://uca-coney-dev.netlify.app/assets/img/squarestatic.gif]]</staticbox>
       <<timed 4s>><staticbox><div class="animated
       fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></staticbox><</timed>>
       <<timed 9s>><staticboxcolour><div class="animated
       fadeIn">[img[http://remote.co.com/UCA/images/colours.gif]]</div></staticboxcolour><</timed>>
-      /* <<timed 25s>><<goto "video8">><</timed>> */
+      <<timed 25s>><<goto "video8">><</timed>>
 
 
