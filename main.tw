@@ -1,5 +1,5 @@
 :: StoryTitle
-Undercover CareTaker Agency WIP 4.6
+Undercover CareTaker Agency WIP 9
 
 
 :: StoryData
@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 4.6
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "Video7",
+	"start": "prestatic",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -132,12 +132,38 @@ staticboxcolour img {
   padding: 10px
 }
 
+.staticgif.center{
+         width: 200px;
+   position:fixed;
+   left:15vw;
+   top:10vw; 
+   z-index:1;  
+}
+
+.staticgif.ctrright{
+   width: 250px;
+   position:fixed;
+   right:15vw;
+   top:10vw; 
+   z-index:1;      
+}
+
 .staticgif.left{
-   width: 300px;
+   width: 400px;
    position:fixed;
    left:-5vw;
-   top:-3vw;   
+   top:-3vw;    
+   z-index:1;   
 }
+
+.staticgif.leftbig{
+   width: 500px;
+   position:fixed;
+   left:-7vw;
+   top:-3vw;  
+      z-index:1;  
+}
+
 
 
 .staticgif.right{
@@ -1072,12 +1098,11 @@ $(document.head).find('#style-ui-bar').remove();
 }();
 
 
-
-:: home [purple] {"position":"401.3333333333333,205","size":"100,100"}
+:: home [purple] {"position":"401,205","size":"100,100"}
 <messagebox2>[img[http://remote.co.com/UCA/images/intercom2.png][beenbefore]]</messagebox2>
 
 
-:: welcome1 [purple -t8n-typewriter-4] {"position":"986,325","size":"100,100"}
+:: welcome1 [purple -t8n-typewriter-4] {"position":"529.3333333333334,204.99999999999994","size":"100,100"}
 <<include"welcome1audio">>
 <messagebox><div class="codeword-entry-container"><div class="codeword-entry-item"><img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble"></div>
    <div class="codeword-entry-item"><p> Hello there,
@@ -1089,13 +1114,11 @@ $(document.head).find('#style-ui-bar').remove();
       </messagebox>
 
 
-:: welcome1audio {"position":"2062.666666666667,558.3333333333334","size":"100,100"}
-
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/hello-there-to-gain-entry.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>  
-
+:: welcome1audio {"position":"2062,558","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/hello-there-to-gain-entry.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
 
-:: Introvideo1 [green] {"position":"864.3333333333334,510.66666666666663","size":"100,100"}
+:: Introvideo1 [green] {"position":"1075.6666666666665,605","size":"100,100"}
 <div
       id="wrap_video">
       <div id="video_box">
@@ -1111,7 +1134,7 @@ $(document.head).find('#style-ui-bar').remove();
       5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video1b]]</nextbutton><</timed>>
 
 
-:: video1b [green -t8n-typewriter-4] {"position":"585.3333333333334,666.6666666666667","size":"100,100"}
+:: video1b [green -t8n-typewriter-4] {"position":"796.6666666666667,761","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "video1baudio">><div id="staticplaceholder"></div>
 
@@ -1119,29 +1142,26 @@ $(document.head).find('#style-ui-bar').remove();
       Click YES, WE ARE IN to answer Anne’s call or choose CLOSE to go back to schoolwork?
 
       <<button "YES WE ARE IN">><<replace "#staticplaceholder">><<include "staticbuzz1">><</replace>>
-      <<timed 5s>><<goto "YES, WE ARE IN">><</timed>><</button>></messageboxlarge>
-
-       
-
-
-:: video1baudio {"position":"2187.6666666666665,1928.3333333333335","size":"100,100"}
-
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/your-choice-is-needed-click-yes.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>  
+      <<timed 5s>><<goto "YES, WE ARE IN">><</timed>><</button>>
+      <<button "CLOSE">><<goto "CLOSE">><</button>></messageboxlarge>
 
 
-:: CLOSE [green -t8n-typewriter-4] {"position":"379.66666666666663,767.6666666666666","size":"100,100"}
+:: video1baudio {"position":"2187,1928","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/your-choice-is-needed-click-yes.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+
+
+:: CLOSE [green -t8n-typewriter-4] {"position":"590.6666666666667,862","size":"100,100"}
 <<include "back">><<include
       "CLOSEaudio">><messagebox>Oh really?
 
       <button>[[YES, WE ARE IN]]</button> or <button>[[NOT TODAY]]</button></messagebox>
 
 
-:: CLOSEaudio {"position":"1954.3333333333335,566.6666666666666","size":"100,100"}
+:: CLOSEaudio {"position":"1954,566","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/oh-really.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/oh-really.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>  
 
-
-:: YES, WE ARE IN [green -t8n-typewriter-4] {"position":"573.6666666666666,869.3333333333333","size":"100,100"}
+:: YES, WE ARE IN [green -t8n-typewriter-4] {"position":"784.6666666666667,964","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include "YES, WE ARE INaudio">>
       <messageboxlarge>
@@ -1153,12 +1173,11 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
 
 
-:: YES, WE ARE INaudio {"position":"1700.0000000000002,33.33333333333334","size":"100,100"}
+:: YES, WE ARE INaudio {"position":"1700,33","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/fantastic-caretakers-are-not-just.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/fantastic-caretakers-are-not-just.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>  
 
-
-:: pretokinfo1 [green -t8n-typewriter-4] {"position":"732,839.3333333333334","size":"100,100"}
+:: pretokinfo1 [green -t8n-typewriter-4] {"position":"943.6666666666667,934","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "pretokinfo1audio">>
       <messageboxlarge>
@@ -1174,13 +1193,11 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
 
 
-:: pretokinfo1audio {"position":"1577.6666666666667,919.9999999999999","size":"100,100"}
-
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/Im-Nigel-Annes-friend.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
-      
+:: pretokinfo1audio {"position":"1790.3333333333333,812.3333333333334","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/Im-Nigel-Annes-friend.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
 
-:: pretokinfo2 [green -t8n-typewriter-4] {"position":"890.3333333333333,834.3333333333334","size":"100,100"}
+:: pretokinfo2 [green -t8n-typewriter-4] {"position":"1101.6666666666665,929","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "pretokinfo2audio">>
@@ -1196,14 +1213,13 @@ $(document.head).find('#style-ui-bar').remove();
       When ready to learn the UCA TOK with Anne click <button>[[READY|beacon1]]</button>
 
       </messageboxlarge>
-      
 
 
-:: pretokinfo2audio {"position":"1689.3333333333335,911.6666666666665","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/but-you-need-to-show-you-can-light.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
+:: pretokinfo2audio {"position":"1947.3333333333335,831","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/but-you-need-to-show-you-can-light.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
 
-:: READY [green] {"position":"768.6666666666666,646","size":"100,100"}
+:: READY [green] {"position":"936.3333333333335,761","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
@@ -1219,17 +1235,17 @@ $(document.head).find('#style-ui-bar').remove();
       5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][ucatokmoves]]</nextbutton><</timed>>
 
 
-:: NOT TODAY [green -t8n-typewriter-4] {"position":"379.66666666666663,919.6666666666666","size":"100,100"}
+:: NOT TODAY [green -t8n-typewriter-4] {"position":"592.3333333333334,965.6666666666666","size":"100,100"}
 <<include
       "back">><<include "NOT TODAYaudio">><messagebox>[[OK – thank you
       anyway!|home]]</messagebox>
 
 
-:: NOT TODAYaudio {"position":"1814.3333333333335,31.666666666666686","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/ok-thank-you-anyway.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
+:: NOT TODAYaudio {"position":"1814,31","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/ok-thank-you-anyway.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
 
-:: ucatokmovesintro [-t8n-typewriter-4 green] {"position":"718.3333333333334,1064","size":"100,100"}
+:: ucatokmovesintro [-t8n-typewriter-4 green] {"position":"931.3333333333334,1110.6666666666667","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "ucatokmovesintroaudio">><messageboxlarge>
       It seems you need to learn the UCA TOK all together.
@@ -1239,11 +1255,11 @@ $(document.head).find('#style-ui-bar').remove();
       <button>[[NEXT|ucatokmoves]]</button></messageboxlarge>
 
 
-:: ucatokmovesintroaudio {"position":"1594.3333333333335,1026.6666666666665","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/it-seems-you-need-to-learn-the-UCA-TOK" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
+:: ucatokmovesintroaudio {"position":"1837.3333333333333,979.3333333333334","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/it-seems-you-need-to-learn-the-UCA-TOK" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
 
-:: ucatokmoves [green] {"position":"571.6666666666666,1062.3333333333335","size":"100,100"}
+:: ucatokmoves [green] {"position":"784.3333333333334,1108.6666666666667","size":"100,100"}
 <<include
       "back">><<include "ucatokmovesaudio">>
       <dance>
@@ -1259,12 +1275,11 @@ $(document.head).find('#style-ui-bar').remove();
       </dance>
 
 
-:: ucatokmovesaudio {"position":"1702.6666666666667,1031.6666666666667","size":"100,100"}
+:: ucatokmovesaudio {"position":"1860.3333333333333,1116","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/want-to-watch-Anne-do-the-UCA-TOK.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
-      <iframe src="https://uca-coney-dev.netlify.app/assets/audio/want-to-watch-Anne-do-the-UCA-TOK.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
 
-
-:: HERE [green -t8n-typewriter-4] {"position":"385.99999999999994,1062.6666666666667","size":"100,100"}
+:: HERE [green -t8n-typewriter-4] {"position":"598.3333333333334,1108.6666666666667","size":"100,100"}
 <<include "back">><div id="wrap_video">
       <div id="video_box">
       <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
@@ -1279,7 +1294,7 @@ $(document.head).find('#style-ui-bar').remove();
       30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][ucatokmoves]]</nextbutton><</timed>>
 
 
-:: UCA TOK [green] {"position":"566.6666666666666,1191.3333333333333","size":"100,100"}
+:: UCA TOK [green] {"position":"779.3333333333334,1237.6666666666667","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
@@ -1295,7 +1310,7 @@ $(document.head).find('#style-ui-bar').remove();
       5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video3b]]</nextbutton><</timed>>
 
 
-:: video3b [green -t8n-typewriter-4] {"position":"676,1671","size":"100,100"}
+:: video3b [green -t8n-typewriter-4] {"position":"854.3333333333334,1696","size":"100,100"}
 <<include "back">><<include "typewriter">><<include
       "video3baudio">><messageboxlarge>
       It seems she wants you to text her – the present-day Anne.
@@ -1306,11 +1321,11 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
 
 
-:: video3baudio {"position":"1952.6666666666667,1703.3333333333335","size":"100,100"}
- <iframe src="https://uca-coney-dev.netlify.app/assets/audio/it-seems-she-wants-you-to-text-her.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
+:: video3baudio {"position":"1952,1703","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/it-seems-she-wants-you-to-text-her.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
 
-:: video3c [green -t8n-typewriter-4] {"position":"512.6666666666666,1671","size":"100,100"}
+:: video3c [green -t8n-typewriter-4] {"position":"690.3333333333334,1696","size":"100,100"}
 <<include "back">><<include"typewriter">><<include "video3caudio">><messageboxlarge>
       You can text her.
       Teacher, text the words <span class="title-accent">UCA TOK</span> when you are ready.
@@ -1321,11 +1336,11 @@ $(document.head).find('#style-ui-bar').remove();
             <div class="popup-container left"> <img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="padlock"><p>Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne]]>><</button>></p></div>
 
 
-:: video3caudio {"position":"2074.3333333333335,1701.6666666666667","size":"100,100"}
- <iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-can-text-her.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
+:: video3caudio {"position":"2074,1701","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-can-text-her.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
 
-:: video4 [green] {"position":"687,1816","size":"100,100"}
+:: video4 [green] {"position":"865.3333333333334,1841","size":"100,100"}
 <<include
       "back">>
       <div id="wrap_video">
@@ -1344,7 +1359,7 @@ $(document.head).find('#style-ui-bar').remove();
       5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video4b]]</nextbutton><</timed>>
 
 
-:: video4b [green -t8n-typewriter-4] {"position":"687,1966","size":"100,100"}
+:: video4b [green -t8n-typewriter-4] {"position":"865.3333333333334,1991","size":"100,100"}
 <<include "back">><<include "typewriter">>  <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon><<include
       "video4baudio">><div id="staticplaceholder"></div><messageboxlarge>
       Teacher, can you make sure everyone understands what the static is please?
@@ -1354,8 +1369,8 @@ $(document.head).find('#style-ui-bar').remove();
        </messageboxlarge>
 
 
-:: video4baudio {"position":"2074.3333333333335,1580","size":"100,100"}
- <iframe src="https://uca-coney-dev.netlify.app/assets/audio/teacher-can-you-make-sure-everyone-understands.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
+:: video4baudio {"position":"2074,1580","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/teacher-can-you-make-sure-everyone-understands.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
 
 :: Everyone understands [green -t8n-typewriter-4] {"position":"687,2117","size":"100,100"}
@@ -1378,11 +1393,10 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: Everyone understandsaudio {"position":"1921,35","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/now-time-for-a-game-to-find.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/now-time-for-a-game-to-find.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>       
 
-
-:: enterclubname [green -t8n-typewriter-4] {"position":"161.9999999999999,2333.6666666666665","size":"100,100"}
+:: enterclubname [green -t8n-typewriter-4] {"position":"915,397.6666666666668","size":"100,100"}
 <<include
       "back">><<include "typewriter">>
        <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon>
@@ -1396,7 +1410,7 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
 
 
-:: clubname [green ] {"position":"688,2304.3333333333335","size":"100,100"}
+:: clubname [green] {"position":"688,2304","size":"100,100"}
 /<iframe
       src="https://uca-coney-dev.netlify.app/assets/audio/tape-recorder.wav" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
       <<include "back">><messageboxreel>
@@ -1419,7 +1433,7 @@ $(document.head).find('#style-ui-bar').remove();
       <</timed>></messagescreen>
 
 
-:: video5 [green] {"position":"583.6666666666666,2657.6666666666665","size":"100,100"}
+:: video5 [green] {"position":"583,2657","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
@@ -1450,10 +1464,11 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
 
 
-:: video5baudio {"position":"1944.3333333333335,1460","size":"100,100"}
-  <iframe src="https://uca-coney-dev.netlify.app/assets/audio/seems-Anne-is-worried-about-Anne.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>    
+:: video5baudio {"position":"1944,1460","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/seems-Anne-is-worried-about-Anne.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
-:: video5c [green -t8n-typewriter-4] {"position":"919.6666666666667,2664.333333333333","size":"100,100"}
+
+:: video5c [green -t8n-typewriter-4] {"position":"919,2664","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "video5caudio">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-3.png]]</beaconicon><messageboxlarge>
@@ -1469,8 +1484,8 @@ $(document.head).find('#style-ui-bar').remove();
       <div class="popup-container left"> <img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="padlock"><p>Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne2]]>><</button>></p></div>
 
 
-:: video5caudio {"position":"2079.3333333333335,1460","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-are-learning-a-new-skill.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>   
+:: video5caudio {"position":"2079,1460","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-are-learning-a-new-skill.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
 
 :: Video6 [green] {"position":"582,2821","size":"100,100"}
@@ -1489,7 +1504,7 @@ $(document.head).find('#style-ui-bar').remove();
       5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video6c]]</nextbutton><</timed>>
 
 
-:: video6a [green -t8n-typewriter-4] {"position":"753.6666666666667,2816","size":"100,100"}
+:: video6a [green -t8n-typewriter-4] {"position":"753,2816","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "video6aaudio">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><div id="staticplaceholder"></div><messageboxlarge>
       Ok, it seems Anne wants you to open the next compartment and get the next button.
@@ -1501,11 +1516,11 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
 
 
-:: video6aaudio {"position":"1749.3333333333335,1335","size":"100,100"}
+:: video6aaudio {"position":"1749,1335","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/ok-it-seems-Anne-wants-you-to-open.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
- <iframe src="https://uca-coney-dev.netlify.app/assets/audio/ok-it-seems-Anne-wants-you-to-open.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>   
 
-:: video6b [green -t8n-typewriter-4] {"position":"918.6666666666666,2821","size":"100,100"}
+:: video6b [green -t8n-typewriter-4] {"position":"918,2821","size":"100,100"}
 <<include "back">><<include
       "typewriter">> <<include "video6baudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       If we can reflect on ourselves, notice and be curious, we can be more aware of what we have to offer the world.
@@ -1515,12 +1530,11 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
 
 
-:: video6baudio {"position":"1866.0000000000002,1335","size":"100,100"}
+:: video6baudio {"position":"1866,1335","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/if-we-can-reflect-on-ourselves.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
- <iframe src="https://uca-coney-dev.netlify.app/assets/audio/if-we-can-reflect-on-ourselves.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>   
 
-
-:: video6c [green -t8n-typewriter-4] {"position":"1085.3333333333333,2817.6666666666665","size":"100,100"}
+:: video6c [green -t8n-typewriter-4] {"position":"1085,2817","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "video6caudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
@@ -1538,12 +1552,11 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
 
 
-:: video6caudio {"position":"1974.3333333333335,1338.3333333333335","size":"100,100"}
+:: video6caudio {"position":"1974,1338","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-are-doing-extremely-well.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-are-doing-extremely-well.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>   
 
-
-:: video6d [green -t8n-typewriter-4] {"position":"1210.3333333333333,2814.3333333333335","size":"100,100"}
+:: video6d [green -t8n-typewriter-4] {"position":"1210,2814","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "video6daudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
@@ -1557,11 +1570,11 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
 
 
-:: video6daudio {"position":"2091,1328.3333333333333","size":"100,100"}
+:: video6daudio {"position":"2091,1328","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/teacher-in-a-moment-we-recommend.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/teacher-in-a-moment-we-recommend.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
 
-:: mapdrawn [green -t8n-typewriter-4] {"position":"1102,3007.666666666667","size":"100,100"}
+:: mapdrawn [green -t8n-typewriter-4] {"position":"1102,3007","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "mapdrawnaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       There are also Mapping Cards in Compartment 4 – hand out 1 pack per group.
@@ -1572,12 +1585,11 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
 
 
-:: mapdrawnaudio {"position":"1759.3333333333335,306.66666666666663","size":"100,100"}
+:: mapdrawnaudio {"position":"1759,306","size":"100,100"}
+<iframe src="https://uca-coney-dev.netlify.app/assets/audio/there-are-also-mapping-cards.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
 
-      <iframe src="https://uca-coney-dev.netlify.app/assets/audio/there-are-also-mapping-cards.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> 
 
-
-:: mappingdone [green -t8n-typewriter-4] {"position":"1237,3004.333333333333","size":"100,100"}
+:: mappingdone [green -t8n-typewriter-4] {"position":"1237,3004","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "mappingdoneaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><div id="staticplaceholder"></div>
       <messageboxlarge>
@@ -1589,14 +1601,12 @@ $(document.head).find('#style-ui-bar').remove();
       <<timed 4s>><<goto "mappingdoneb">><</timed>><</button>></messageboxlarge>
 
 
-:: mappingdoneaudio {"position":"1912.6666666666667,308.33333333333326","size":"100,100"}
+:: mappingdoneaudio {"position":"1912,308","size":"100,100"}
 <iframe id="iframeAudio"
       src="https://uca-coney-dev.netlify.app/assets/audio/great-work-if-you-have-time-you-can.mp3" allow="autoplay" style="display:none" ></iframe>
 
-      
 
-
-:: mappingdoneb [green -t8n-typewriter-4] {"position":"1367.0000000000002,3002.666666666667","size":"100,100"}
+:: mappingdoneb [green -t8n-typewriter-4] {"position":"1367,3002","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "mappingdonebaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
@@ -1610,14 +1620,12 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
       <div class="popup-container left"> <img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="padlock"><p>Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne3]]>><</button>></p></div>
 
-      
 
-
-:: mappingdonebaudio {"position":"2044.3333333333335,308.33333333333326","size":"100,100"}
+:: mappingdonebaudio {"position":"2044,308","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/ok-great-work-mapping-complete.mp3" style="display:none" allow="autoplay" ></iframe>
 
 
-:: Video7 [green] {"position":"577,3172.6666666666665","size":"100,100"}
+:: Video7 [green] {"position":"588.6666666666666,2967","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
@@ -1632,10 +1640,8 @@ $(document.head).find('#style-ui-bar').remove();
       \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon><<timed
       5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticbuzz5]]</nextbutton><</timed>>
 
-      
 
-
-:: missionplanning [green -t8n-typewriter-4] {"position":"690.3333333333334,3426","size":"100,100"}
+:: missionplanning [green -t8n-typewriter-4] {"position":"1374.9999999999998,2354.3333333333335","size":"100,100"}
 <<include
       "back">><<include "missionplanningaudio">>
       <<include "typewriter">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon>
@@ -1653,7 +1659,7 @@ $(document.head).find('#style-ui-bar').remove();
       ></iframe>
 
 
-:: missionplanningb [green -t8n-typewriter-4] {"position":"903.6666666666667,3611","size":"100,100"}
+:: missionplanningb [green -t8n-typewriter-4] {"position":"1501.3333333333333,2357.666666666667","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include "missionplanningbaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon>
       <messageboxlarge>
@@ -1668,11 +1674,11 @@ $(document.head).find('#style-ui-bar').remove();
       </messageboxlarge>
 
 
-:: missionplanningbaudio {"position":"1677.6666666666667,195","size":"100,100"}
+:: missionplanningbaudio {"position":"1677,195","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/there-are-three-stages-to-this-giving.mp3" style="display:none" allow="autoplay" ></iframe>
 
 
-:: missionplanningc [green -t8n-typewriter-4] {"position":"790.3333333333334,3272.6666666666665","size":"100,100"}
+:: missionplanningc [green -t8n-typewriter-4] {"position":"1621.3333333333333,2355.666666666667","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include "missionplanningcaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon>
       <messageboxlarge>
@@ -1685,12 +1691,12 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       </messageboxlarge>
 
 
-:: missionplanningcaudio {"position":"1781,183.33333333333326","size":"100,100"}
+:: missionplanningcaudio {"position":"1781,183","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/in-the-compartment-is-the-fifth.mp3" style="display:none" allow="autoplay" 
       ></iframe>
 
 
-:: missionplanningd [green -t8n-typewriter-4] {"position":"953.6666666666667,3414.333333333333","size":"100,100"}
+:: missionplanningd [green -t8n-typewriter-4] {"position":"1744.6666666666665,2359.0000000000005","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include "missionplanningdaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon>
       <messageboxlarge>
@@ -1703,12 +1709,12 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       </messageboxlarge>
 
 
-:: missionplanningdaudio {"position":"1907.6666666666667,181.66666666666663","size":"100,100"}
+:: missionplanningdaudio {"position":"1907,181","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/lighting-the-beacon-will-clear-the.mp3"
       allow="autoplay" style="display:none" ></iframe>
 
 
-:: premaking [green -t8n-typewriter-4] {"position":"713.6666666666667,3819.3333333333335","size":"100,100"}
+:: premaking [green -t8n-typewriter-4] {"position":"881.333333333333,2179.3333333333335","size":"100,100"}
 <<include
       "back">><<include"typewriter">><<include
       "premakingaudio">><messageboxlarge>
@@ -1720,12 +1726,12 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       </messageboxlarge>
 
 
-:: premakingaudio {"position":"2159.3333333333335,169.99999999999994","size":"100,100"}
+:: premakingaudio {"position":"2159,169","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/oh-great-youve-planned-your.mp3"
       allow="autoplay" style="display:none" ></iframe>
 
 
-:: predelivery [green -t8n-typewriter-4] {"position":"928.6666666666667,3841.0000000000005","size":"100,100"}
+:: predelivery [green -t8n-typewriter-4] {"position":"1866.3333333333333,2364.3333333333335","size":"100,100"}
 <<include
       "back">><<include
       "typewriter">><<include "predeliveryaudio">><messageboxlarge>
@@ -1737,14 +1743,11 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <<include "password8">></messageboxlarge>
 
 
-:: predeliveryaudio {"position":"2032.666666666667,178.33333333333331","size":"100,100"}
+:: predeliveryaudio {"position":"2032,178","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/ok-final-part-delivery.mp3" allow="autoplay"  style="display:none"></iframe>
 
 
-
-
-
-:: video8 [green] {"position":"400.3333333333333,3637.666666666667","size":"100,100"}
+:: video8 [green] {"position":"598.3333333333334,3125.3333333333335","size":"100,100"}
 <div id="wrap_video">
       <div id="video_box">
       <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
@@ -1759,7 +1762,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video8b]]</nextbutton><</timed>>
 
 
-:: video8b [green -t8n-typewriter-4] {"position":"400.3333333333333,3787.666666666667","size":"100,100"}
+:: video8b [green -t8n-typewriter-4] {"position":"598.3333333333334,3275.3333333333335","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "video8baudio">>
@@ -1773,11 +1776,11 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <button>[[NEXT|video8c]]</button></messageboxlarge>
 
 
-:: video8baudio {"position":"1724.3333333333335,703.3333333333334","size":"100,100"}
+:: video8baudio {"position":"1724,703","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/i-cant-believe-you-did-it.mp3" allow="autoplay"  style="display:none"></iframe>
 
 
-:: video8c [green -t8n-typewriter-4] {"position":"290.3333333333333,3787.666666666667","size":"100,100"}
+:: video8c [green -t8n-typewriter-4] {"position":"488.33333333333337,3275.3333333333335","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "video8caudio">>
@@ -1798,12 +1801,12 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <button>[[NEXT|video8d]]</button></messageboxlarge>
 
 
-:: video8caudio {"position":"1839.3333333333333,695","size":"100,100"}
+:: video8caudio {"position":"1839,695","size":"100,100"}
 <iframe
       id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/this-is-the-end-of-the-mission.mp3" allow="autoplay" style="display:none" ></iframe>
 
 
-:: video8d [green -t8n-typewriter-4] {"position":"526.3333333333333,3779.666666666667","size":"100,100"}
+:: video8d [green -t8n-typewriter-4] {"position":"724.3333333333334,3267.3333333333335","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "video8daudio">>
@@ -1814,13 +1817,13 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <button>[[NEXT|video8e]]</button></messageboxlarge>
 
 
-:: video8daudio {"position":"1956,698.3333333333334","size":"100,100"}
+:: video8daudio {"position":"1956,698","size":"100,100"}
 <iframe
       id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-when-you-are-ready-collect.mp3" allow="autoplay" 
       style="display:none"></iframe>
 
 
-:: video8e [green -t8n-typewriter-4] {"position":"176.33333333333331,3803.666666666667","size":"100,100"}
+:: video8e [green -t8n-typewriter-4] {"position":"374.33333333333337,3291.3333333333335","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "video8eaudio">>
@@ -1836,12 +1839,12 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <button>[[NEXT|endpart1]]</button></messageboxlarge>
 
 
-:: video8eaudio {"position":"2066,696.6666666666667","size":"100,100"}
+:: video8eaudio {"position":"2066,696","size":"100,100"}
 <iframe
       id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/your-work-today-has-been.mp3" allow="autoplay" style="display:none"></iframe>
 
 
-:: endpart1 [green -t8n-typewriter-4] {"position":"400.3333333333333,3937.666666666667","size":"100,100"}
+:: endpart1 [green -t8n-typewriter-4] {"position":"598.3333333333334,3425.3333333333335","size":"100,100"}
 <messagebox>
       <h3 class="title-accent">TO BE CONTINUED...</h3></messagebox>
       <messagebox><div class="animated
@@ -1856,8 +1859,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <<timed 7s>><<goto "home">><</timed>>
 
 
-
-:: password1 {"position":"140,423","size":"100,100"}
+:: password1 {"position":"48.33333333333333,449.6666666666667","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
       \<span id="code1result"></span>
       \<span id="resultbutton">
@@ -1893,7 +1895,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <</if>><</button>>
 
 
-:: password2 {"position":"136,570","size":"100,100"}
+:: password2 {"position":"51,563.3333333333334","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
       \<div class="popup-container">
          <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
@@ -1923,7 +1925,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <</if>><</button>>
 
 
-:: password3 {"position":"138,694","size":"100,100"}
+:: password3 {"position":"54.66666666666666,677.3333333333334","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
  \<div class="popup-container">
          <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
@@ -1953,7 +1955,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <</if>><</button>>
 
 
-:: password4 {"position":"137.66666666666666,860","size":"100,100"}
+:: password4 {"position":"52,788.3333333333334","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
        \<div class="popup-container">
          <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
@@ -1983,8 +1985,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <</if>><</button>>
 
 
-
-:: password6 {"position":"144,1141.6666666666667","size":"100,100"}
+:: password6 {"position":"54,922.6666666666666","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
 
        \<div class="popup-container">
@@ -2015,7 +2016,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <</if>><</button>>
 
 
-:: password7 {"position":"144,1283.3333333333335","size":"100,100"}
+:: password7 {"position":"50.66666666666666,1038","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
        \<div class="popup-container">
          <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
@@ -2045,7 +2046,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <</if>><</button>>
 
 
-:: password8 {"position":"147.33333333333334,1438.3333333333335","size":"100,100"}
+:: password8 {"position":"47,1163","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
        \<div class="popup-container">
          <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
@@ -2066,7 +2067,9 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <<if $password8 isnot "" and $password8 is "HOPE">>
       <<replace "#code8result">>
       <</replace>><<replace "#resultbutton">><</replace>>
-      <<goto [[video8]]>>
+      <<goto [[static]]>>
+      /* <<include [[static]]>> */
+      
       <</if>>
       \/% PASSWORD INCORRECT %/
       <<if $password8 isnot "" and $password8 is not "HOPE">>
@@ -2074,7 +2077,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <</if>><</button>>
 
 
-:: password9 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
+:: password9 {"position":"43.66666666666666,1264.6666666666665","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
       \<span id="code9result"></span>
       \<span id="resultbutton">
@@ -2100,9 +2103,10 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <<replace "#code9result">>Thats not right.<</replace>>
       <</if>><</button>>
 
-:: text1 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
+
+:: text1 {"position":"35.33333333333333,1473","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
-<div id="text1result" >Text Anne the words <span class="title-accent">UCA TOK</span class=""></div>
+<div id="text1result" >Text Anne the words <span class="title-accent">UCA TOK</span></div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
   <div class="css-input code-input">\
@@ -2126,7 +2130,8 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <<replace "#text1result">>Thats not right.<</replace>>
       <</if>><</button>>
 
-:: text2 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
+
+:: text2 {"position":"35.33333333333332,1593","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
   \<div class="text-container">
           <div id="text2result" >TEXT ANNE</div>
@@ -2163,7 +2168,8 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <<replace "#text2result">>Thats not right.<</replace>>
       <</if>><</button>>
 
-:: text3 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
+
+:: text3 {"position":"36.99999999999999,1712.9999999999998","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
 <div id="text3result" >Text Anne the words <span class="title-accent">BREATH</span></div>
       \   <div id="resultbutton">
@@ -2187,9 +2193,10 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       \/% PASSWORD INCORRECT %/
       <<if $text3 isnot "" and $text3 is not "BREATH">>
       <<replace "#text3result">>Thats not right.<</replace>>
-      <</if>><</button>>      
+      <</if>><</button>>
 
-:: text4 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
+
+:: text4 {"position":"35.33333333333332,1828","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
 <div id="text4result" >Text Anne the words <span class="title-accent">MAPPING</span></div>
       \   <div id="resultbutton">
@@ -2213,9 +2220,10 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       \/% PASSWORD INCORRECT %/
       <<if $text4 isnot "" and $text4 is not "MAPPING">>
       <<replace "#text4result">>Thats not right.<</replace>>
-      <</if>><</button>> 
+      <</if>><</button>>
 
-:: text5 {"position":"147.66666666666666,1553.3333333333335","size":"100,100"}
+
+:: text5 {"position":"38.333333333333336,1947.9999999999998","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
 <div id="text5result" >Text Anne the words <span class="title-accent" >COMPLETE</span></div>
       \   <div id="resultbutton">
@@ -2239,17 +2247,18 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       \/% PASSWORD INCORRECT %/
       <<if $text5 isnot "" and $text5 is not "COMPLETE">>
       <<replace "#text4result">>Thats not right.<</replace>>
-      <</if>><</button>>            
+      <</if>><</button>>
 
-:: title {"position":"340,40","size":"100,100"}
+
+:: title {"position":"271.66666666666663,31.666666666666664","size":"100,100"}
 <maintitle>[img[http://remote.co.com/UCA/images/logotitle.png]]</maintitle>
 
 
-:: typewriter {"position":"225,46","size":"100,100"}
+:: typewriter {"position":"160,34.33333333333333","size":"100,100"}
 <typewriter>[img[http://remote.co.com/UCA/images/typewriter1.png]]</typewriter>
 
 
-:: Part2 [green] {"position":"1180,757.6666666666669","size":"100,100"}
+:: Part2 [green] {"position":"1398.3333333333335,111.99999999999996","size":"100,100"}
 <div
       id="wrap_video">
       <div id="video_box">
@@ -2265,7 +2274,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       60s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video9b]]</nextbutton><</timed>>
 
 
-:: video9b [green -t8n-typewriter-4] {"position":"1019.6666666666667,647","size":"100,100"}
+:: video9b [green -t8n-typewriter-4] {"position":"1410.6666666666665,236.99999999999991","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "video9baudio">>
       <messageboxlarge>Teacher, please hold onto the UCA Roots for the time being and hand out a piece of paper to
@@ -2275,12 +2284,12 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <button>[[click here|platform2]]</button></messageboxlarge>
 
 
-:: video9baudio {"position":"2069.3333333333335,946.6666666666667","size":"100,100"}
+:: video9baudio {"position":"2069,946","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-please-hold-onto-the-UCA-Roots.mp3" allow="autoplay"  style="display:none"
       ></iframe>
 
 
-:: platform2 [green -t8n-typewriter-4] {"position":"1006.3333333333334,770.3333333333334","size":"100,100"}
+:: platform2 [green -t8n-typewriter-4] {"position":"1409.3333333333333,369.99999999999994","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "platform2baudio">>
@@ -2295,12 +2304,12 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <button>[[Next|platform3]]</button></messageboxlarge>
 
 
-:: platform2baudio {"position":"2189.333333333334,1816.6666666666667","size":"100,100"}
+:: platform2baudio {"position":"2189,1816","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/the-UCA-Root-is-like-a-bookmark.mp3"
       allow="autoplay" style="display:none" ></iframe>
 
 
-:: platform3 [green -t8n-typewriter-4] {"position":"1006.3333333333334,920.3333333333334","size":"100,100"}
+:: platform3 [green -t8n-typewriter-4] {"position":"1409.3333333333333,498.3333333333333","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "platform3baudio">>
@@ -2313,12 +2322,12 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       on</messageboxlarge>
 
 
-:: platform3baudio {"position":"2189.3333333333335,1700","size":"100,100"}
+:: platform3baudio {"position":"2189,1700","size":"100,100"}
 <iframe
       id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/on-your-piece-of-paper.mp3" allow="autoplay" style="display:none"></iframe>
 
 
-:: platform4 [green -t8n-typewriter-4] {"position":"1006.3333333333334,1070.3333333333333","size":"100,100"}
+:: platform4 [green -t8n-typewriter-4] {"position":"1414.3333333333333,625.0000000000001","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "platform4baudio">>
@@ -2327,12 +2336,12 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       on</messageboxlarge>
 
 
-:: platform4baudio {"position":"2192.6666666666665,1573.3333333333335","size":"100,100"}
+:: platform4baudio {"position":"2192,1573","size":"100,100"}
 <iframe id="iframeAudio"
       src="https://uca-coney-dev.netlify.app/assets/audio/now-im-going-to-give-you-time-to-colour.mp3" allow="autoplay" style="display:none"></iframe>
 
 
-:: platform5 [green -t8n-typewriter-4] {"position":"1018.0000000000001,1210.3333333333333","size":"100,100"}
+:: platform5 [green -t8n-typewriter-4] {"position":"1402.9999999999998,751.6666666666667","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "platform5baudio">>
@@ -2342,13 +2351,13 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       on</messageboxlarge>
 
 
-:: platform5baudio {"position":"2192.6666666666665,1456.6666666666667","size":"100,100"}
+:: platform5baudio {"position":"2192,1456","size":"100,100"}
 <iframe id="iframeAudio"
       src="https://uca-coney-dev.netlify.app/assets/audio/now-im-going-to-give-you-time-make-it-even-more-colourful.mp3" allow="autoplay" 
      style="display:none" ></iframe>
 
 
-:: platform6 [green -t8n-typewriter-4] {"position":"1015.9999999999999,1335.3333333333335","size":"100,100"}
+:: platform6 [green -t8n-typewriter-4] {"position":"1403.3333333333335,886.6666666666666","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "platform6audio">>
@@ -2359,13 +2368,13 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       When all the agents have their cards click <button>[[Next|platform7]]</button></messageboxlarge>
 
 
-:: platform6audio {"position":"2194.3333333333335,1325","size":"100,100"}
+:: platform6audio {"position":"2194,1325","size":"100,100"}
 <iframe
       id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/now-we-connect-our-root-and-our-memory.mp3" style="display:none" allow="autoplay" 
       ></iframe>
 
 
-:: platform7 [green -t8n-typewriter-4] {"position":"1019.0000000000001,1463.3333333333335","size":"100,100"}
+:: platform7 [green -t8n-typewriter-4] {"position":"1407.3333333333335,1014.6666666666666","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "platform7audio">>
@@ -2376,34 +2385,34 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       </messageboxlarge>
 
 
-:: platform7audio {"position":"2194.3333333333335,1195","size":"100,100"}
+:: platform7audio {"position":"2194,1195","size":"100,100"}
 <iframe
       id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/i-want-you-to-hold-your-button.mp3" allow="autoplay" style="display:none" ></iframe>
 
 
-:: choiceyes [green -t8n-typewriter-4] {"position":"807,1691","size":"100,100"}
+:: choiceyes [green -t8n-typewriter-4] {"position":"1300.3333333333335,1281","size":"100,100"}
 <<include "back">><<include "typewriter">><<include
       "choiceyesaudio">>
       <messageboxlarge>Ewwwww ok! <button>[[Next|platform8]]</button></messageboxlarge>
 
 
-:: choiceyesaudio {"position":"776,350","size":"100,100"}
+:: choiceyesaudio {"position":"774.3333333333334,398.3333333333333","size":"100,100"}
 <iframe
       id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/yes-ewwwww-ok.mp3" allow="autoplay" style="display:none"></iframe>
 
 
-:: choiceno [green -t8n-typewriter-4] {"position":"966,1702.6666666666667","size":"100,100"}
+:: choiceno [green -t8n-typewriter-4] {"position":"1459.3333333333333,1292","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "choicenoaudio">>
       <messageboxlarge>Phew! <button>[[Next|platform8]]</button></messageboxlarge>
 
 
-:: choicenoaudio {"position":"656,350","size":"100,100"}
+:: choicenoaudio {"position":"654.3333333333334,398.3333333333333","size":"100,100"}
 <iframe
       id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/no-phew.mp3" allow="autoplay"style="display:none" ></iframe>
 
 
-:: platform8 [green -t8n-typewriter-4] {"position":"863,1833","size":"100,100"}
+:: platform8 [green -t8n-typewriter-4] {"position":"1356.3333333333333,1423","size":"100,100"}
 <<include "back">><<include "typewriter">><<include
       "platforom8audio">>
       <messageboxlarge>[img[http://remote.co.com/UCA/images/hand.png]]
@@ -2413,31 +2422,31 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       <button>[[NEXT|platform8b]]</button></messageboxlarge>
 
 
-:: platforom8audio {"position":"2179.3333333333335,693.3333333333335","size":"100,100"}
+:: platforom8audio {"position":"2179,693","size":"100,100"}
 <iframe id="iframeAudio"
       src="https://uca-coney-dev.netlify.app/assets/audio/now-i-want-you-to-hold-your-button-in-your-hand-again.mp3" allow="autoplay" style="display:none"></iframe>
 
 
-:: FISHY SPAGHETTI [green -t8n-typewriter-4] {"position":"812,1990","size":"100,100"}
+:: FISHY SPAGHETTI [green -t8n-typewriter-4] {"position":"1367,1548.3333333333333","size":"100,100"}
 <<include "back">><<include "typewriter">><<include "FISHY SPAGHETTIaudio">>
       <messageboxlarge>Sounds yummy! <button>[[Next|platform9]]</button></messageboxlarge>
 
 
-:: FISHY SPAGHETTIaudio {"position":"2046.0000000000002,31.666666666666742","size":"100,100"}
+:: FISHY SPAGHETTIaudio {"position":"2046,31","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/fishy-spaghetti-sounds-yummy.mp3"
       allow="autoplay" style="display:none"></iframe>
 
 
-:: COLD CUSTARD [green -t8n-typewriter-4] {"position":"938,1990","size":"100,100"}
+:: COLD CUSTARD [green -t8n-typewriter-4] {"position":"1493,1548.3333333333333","size":"100,100"}
 <<include "back">><<include "typewriter">><<include "COLD CUSTARDaudio">>
       <messageboxlarge>Sounds yummy! <button>[[Next|platform9]]</button></messageboxlarge>
 
 
-:: COLD CUSTARDaudio {"position":"2157.666666666667,33.333333333333336","size":"100,100"}
+:: COLD CUSTARDaudio {"position":"2157,33","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/cold-custard-sounds-yummy.mp3" allow="autoplay" style="display:none"></iframe>
 
 
-:: platform9 [green -t8n-typewriter-4] {"position":"1034,2158.3333333333335","size":"100,100"}
+:: platform9 [green -t8n-typewriter-4] {"position":"1410.6666666666667,1694.6666666666667","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "platform9audio">>
       <messageboxlarge>[img[http://remote.co.com/UCA/images/hand.png]]
@@ -2448,12 +2457,12 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       </messageboxlarge>
 
 
-:: platform9audio {"position":"2189.3333333333335,946.6666666666667","size":"100,100"}
+:: platform9audio {"position":"2189,946","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/now-last-time-i-want-you-to-hold.mp3"
 style="display:none" allow="autoplay" ></iframe>
 
 
-:: intro [green] {"position":"537,506","size":"100,100"}
+:: intro [green] {"position":"748.6666666666667,601","size":"100,100"}
 <messagebox><div
       class="animated
       rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div>
@@ -2470,16 +2479,16 @@ style="display:none" allow="autoplay" ></iframe>
       "Introvideo1">><</timed>>
 
 
-:: beenbefore [purple2] {"position":"1016.3333333333334,103.66666666666663","size":"100,100"}
+:: beenbefore [purple2] {"position":"779.3333333333334,199.6666666666667","size":"100,100"}
 <messagebox2> <span>[img[http://remote.co.com/UCA/images/intercom.png]]
             Is this your first time here?
             <button>[[YES|welcome1]]</button> 
             <button>[[NO|contents]]</button>
      </span>
-      </messagebox2> 
+      </messagebox2>
 
 
-:: contents [purple] {"position":"836.6666666666666,205","size":"100,100"}
+:: contents [purple] {"position":"845.9999999999999,34.999999999999986","size":"100,100"}
 <<include "back">><div class="contents-wrapper">
        <div class="contents-question"><h2>Where would you like to go?
        </h2></div><div class="contents-container">
@@ -2495,8 +2504,7 @@ style="display:none" allow="autoplay" ></iframe>
 </div>
 
 
-
-:: clubnamediscover [green -t8n-typewriter-4] {"position":"175.33333333333326,2197","size":"100,100"}
+:: clubnamediscover [green -t8n-typewriter-4] {"position":"1243.3333333333333,29.99999999999999","size":"100,100"}
 <<include "back">><<include
       "typewriter">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon><messageboxlarge>
 
@@ -2506,7 +2514,7 @@ style="display:none" allow="autoplay" ></iframe>
       </messageboxlarge>
 
 
-:: clubnamewonder [green -t8n-typewriter-4] {"position":"171.99999999999997,2072","size":"100,100"}
+:: clubnamewonder [green -t8n-typewriter-4] {"position":"1114.3333333333333,29.999999999999883","size":"100,100"}
 <<include "back">><<include
       "typewriter">><messageboxlarge>
 
@@ -2516,7 +2524,7 @@ style="display:none" allow="autoplay" ></iframe>
       </messageboxlarge>
 
 
-:: clubnamegive [green -t8n-typewriter-4] {"position":"158.66666666666666,1930.3333333333333","size":"100,100"}
+:: clubnamegive [green -t8n-typewriter-4] {"position":"986,30","size":"100,100"}
 <<include
       "back">><<include "typewriter">><messageboxlarge>
 
@@ -2526,7 +2534,7 @@ style="display:none" allow="autoplay" ></iframe>
       </messageboxlarge>
 
 
-:: welcome2 [purple] {"position":"1113.3333333333335,330","size":"100,100"}
+:: welcome2 [purple] {"position":"657.9999999999999,204.99999999999997","size":"100,100"}
 <<include
       "back">><<include "typewriter">>
       <messageboxlarge>
@@ -2537,7 +2545,7 @@ style="display:none" allow="autoplay" ></iframe>
       </messageboxlarge>
 
 
-:: intro2 [green] {"position":"695.3333333333334,506.6666666666667","size":"100,100"}
+:: intro2 [green] {"position":"906.6666666666667,601","size":"100,100"}
 <messagebox><div
       class="animated
       rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
@@ -2552,13 +2560,11 @@ style="display:none" allow="autoplay" ></iframe>
       "Part2">><</timed>>
 
 
-
-
-:: reeltoreel {"position":"470.3333333333333,50.66666666666666","size":"100,100"}
+:: reeltoreel {"position":"385,35","size":"100,100"}
 <reeltoreel>[img[http://remote.co.com/UCA/images/reeltoreel2.gif]]</reeltoreel>
 
 
-:: these maps [green] {"position":"926.6666666666666,3009","size":"100,100"}
+:: these maps [green] {"position":"926,3009","size":"100,100"}
 <<include
       "back">><dance>
       <div class="animated
@@ -2569,7 +2575,7 @@ style="display:none" allow="autoplay" ></iframe>
       </dance>
 
 
-:: platform9b [green -t8n-typewriter-4] {"position":"1050,2283.3333333333335","size":"100,100"}
+:: platform9b [green -t8n-typewriter-4] {"position":"1426.6666666666667,1819.6666666666667","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "platform9baudio">>
       <messageboxlarge>
@@ -2583,11 +2589,11 @@ style="display:none" allow="autoplay" ></iframe>
       </messageboxlarge>
 
 
-:: platform9baudio {"position":"2077.666666666667,823.3333333333334","size":"100,100"}
+:: platform9baudio {"position":"2077,823","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/your-UCA-Root-is-planted.mp3" allow="autoplay" style="display:none" ></iframe>
 
 
-:: platform9c [green -t8n-typewriter-4] {"position":"1052,2403.3333333333335","size":"100,100"}
+:: platform9c [green -t8n-typewriter-4] {"position":"1428.6666666666667,1939.6666666666667","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "platform9caudio">>
       <messageboxlarge>
@@ -2600,12 +2606,12 @@ style="display:none" allow="autoplay" ></iframe>
       </messageboxlarge>
 
 
-:: platform9caudio {"position":"2186.0000000000005,825","size":"100,100"}
+:: platform9caudio {"position":"2186,825","size":"100,100"}
 <iframe
       id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/this-UCA-Root-is-for-you-always.mp3" allow="autoplay" style="display:none" ></iframe>
 
 
-:: outro [green] {"position":"1069,2533.3333333333335","size":"100,100"}
+:: outro [green] {"position":"1445.6666666666667,2069.6666666666665","size":"100,100"}
 <messagebox><div
       class="animated
       rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
@@ -2618,12 +2624,11 @@ style="display:none" allow="autoplay" ></iframe>
       fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox>
 
 
-:: back {"position":"89,37","size":"100,100"}
+:: back {"position":"47.33333333333333,35.333333333333336","size":"100,100"}
 <backbutton><<return[img[http://remote.co.com/UCA/images/back.png]]>></backbutton>
 
 
-
-:: platform7b [green -t8n-typewriter-4] {"position":"1032,1583.3333333333335","size":"100,100"}
+:: platform7b [green -t8n-typewriter-4] {"position":"1410.3333333333333,1156.3333333333333","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "platform7baudio">>
       <messageboxlarge>
@@ -2637,12 +2642,12 @@ style="display:none" allow="autoplay" ></iframe>
       </messageboxlarge>
 
 
-:: platform7baudio {"position":"2086.0000000000005,1188.3333333333335","size":"100,100"}
+:: platform7baudio {"position":"2086,1188","size":"100,100"}
 <iframe id="iframeAudio"
       src="https://uca-coney-dev.netlify.app/assets/audio/now-we-test-if-the-planting-has-worked.mp3" allow="autoplay" style="display:none"></iframe>
 
 
-:: platform8b [green -t8n-typewriter-4] {"position":"1039,1843","size":"100,100"}
+:: platform8b [green -t8n-typewriter-4] {"position":"1492.3333333333333,1419.6666666666667","size":"100,100"}
 <<include "back">><<include "typewriter">><<include "platform8baudio">>
       <messageboxlarge>Now another test…
       I’m going to ask you another question
@@ -2655,10 +2660,11 @@ style="display:none" allow="autoplay" ></iframe>
       </messageboxlarge>
 
 
-:: platform8baudio {"position":"2197.6666666666674,1066.6666666666665","size":"100,100"}
+:: platform8baudio {"position":"2197,1066","size":"100,100"}
 <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/now-another-test.mp3" allow="autoplay" style="display:none" ></iframe>
 
-:: beacon1 [purple] {"position":"537,506","size":"100,100"}
+
+:: beacon1 [purple] {"position":"257,495.99999999999994","size":"100,100"}
 <messagebox>
 <div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move.png"></div>
       </messagebox>
@@ -2670,8 +2676,7 @@ style="display:none" allow="autoplay" ></iframe>
 </messagebox>
 
 
-
-:: beacon2 [purple] {"position":"537,506","size":"100,100"}
+:: beacon2 [purple] {"position":"258.6666666666667,612.6666666666666","size":"100,100"}
 <messagebox>
 <div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div>
       </messagebox>
@@ -2682,7 +2687,8 @@ style="display:none" allow="autoplay" ></iframe>
 <<goto [[video4]]>><</timed>>
 </messagebox>
 
-:: beacon3 [purple] {"position":"537,506","size":"100,100"}
+
+:: beacon3 [purple] {"position":"258.66666666666663,731","size":"100,100"}
 <messagebox>
   <div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/discover.png"></div>
       </messagebox>
@@ -2694,7 +2700,7 @@ style="display:none" allow="autoplay" ></iframe>
 </messagebox>
 
 
-:: beacon4 [purple] {"position":"537,506","size":"100,100"}
+:: beacon4 [purple] {"position":"258.66666666666663,851","size":"100,100"}
 <messagebox>
   <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/wonder.png"></div>
       </messagebox>
@@ -2705,7 +2711,8 @@ style="display:none" allow="autoplay" ></iframe>
 <<goto [[video6a]]>><</timed>>
 </messagebox>
 
-:: beacon5 [purple] {"position":"537,506","size":"100,100"}
+
+:: beacon5 [purple] {"position":"261.99999999999994,974.3333333333334","size":"100,100"}
 <messagebox>
 <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/give.png"></div>
       </messagebox>
@@ -2716,7 +2723,8 @@ style="display:none" allow="autoplay" ></iframe>
 <<goto [[Video7]]>><</timed>>
 </messagebox>
 
-:: codewordentry [purple] 
+
+:: codewordentry [purple] {"position":"725,1875","size":"100,100"}
 <messagebox2><<include "back">><div class="codeword-entry-container">
   <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
   <<include "password1">>
@@ -2724,52 +2732,57 @@ style="display:none" allow="autoplay" ></iframe>
 </messagebox2>
 
 
-:: phoneright {"position":"470.3333333333333,50.66666666666666","size":"100,100"}
+:: phoneright {"position":"495.00000000000006,36.666666666666664","size":"100,100"}
 <phoneright>[img[https://uca-coney-dev.netlify.app/assets/img/phone.png]]</phoneright>
 
-:: phoneleft {"position":"470.3333333333333,50.66666666666666","size":"100,100"}
+
+:: phoneleft {"position":"381,325","size":"100,100"}
 <phoneleft >[img[https://uca-coney-dev.netlify.app/assets/img/phone.png]]</phoneleft>
 
-:: textanne [purple -t8n-typewriter-4]
+
+:: textanne [purple -t8n-typewriter-4] {"position":"169.99999999999997,1478.3333333333333","size":"100,100"}
 <<include "back">><<include "phoneright">>
 <phonecontainer><p>If you don't have access to a phone, 
 you can text here from here.</p><<include "text1">>
-     </phonecontainer>   
-        
+     </phonecontainer>
 
-:: textannea [purple -t8n-typewriter-4]
+
+:: textannea [purple -t8n-typewriter-4] {"position":"303.3333333333333,1476.6666666666665","size":"100,100"}
 <<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/hello-you-must-have.mp3" allow="autoplay" style="display:none" ></iframe>
 
 <phonecontainer><p>Hello, you must have opened The Beacon of Hope from the Undercover CareTaker Agency and be trying to light it. Thank you for trying to complete the challenges, light the beacon, clear the fog and counter the Static. Nigel must have sent out the Beacons and be trying to help me. 
-<button>[[Next|textanneb]]</button></p></phonecontainer>   
+<button>[[Next|textanneb]]</button></p></phonecontainer>
 
 
-:: textanneb [purple -t8n-typewriter-4]
-<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/you-must-have2.mp3" allow="autoplay" style="display:none" ></iframe><phonecontainer><p>You must have done the UCA TOK - special stuff! Right, if I remember correctly, you need a codeword to move on…the codeword is…. what did I pick…oh I know it was the topping I had on my Weetabix that day…! It was a special topping…Ice Cream, Pine Nuts or Baked beans? I can’t remember! The static is making everything all foggy. 
+:: textanneb [purple -t8n-typewriter-4] {"position":"438.33333333333326,1458.3333333333333","size":"100,100"}
+<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/you-must-have2.mp3" allow="autoplay" style="display:none" ></iframe><phonecontainer><p>You must have done the UCA TOK - special stuff! Right, if I remember correctly, you need a codeword to move on…the codeword is... what did I pick…oh I know it was the topping I had on my Weetabix that day...! It was a special topping... Ice Cream, Pine Nuts or Baked beans? I can’t remember! The static is making everything all foggy. 
 
 Oh, that’s the Static – I can’t hear you. Text me! </p></phonecontainer>  
- <<include "text2">>      
+ <<include "text2">>
 
 
-:: textannec [purple -t8n-typewriter-4]
+:: textannec [purple -t8n-typewriter-4] {"position":"190,1588.3333333333333","size":"100,100"}
 <<include "back">> <<include "phoneleft">>
 <phonecontainer><p>Oh, that does sound lovely but I don't think it was that. 
 I think it was Baked Beans - text me Baked Beans if you think so too.</p></phonecontainer>
- <<include "text2">>    
+ <<include "text2">>
 
-:: textanned [purple -t8n-typewriter-4]
+
+:: textanned [purple -t8n-typewriter-4] {"position":"308.33333333333337,1590","size":"100,100"}
 <<include "back">> <<include "phoneleft">>
 <phonecontainer><p>Yes that was it - I love Baked Beans on my Weetabix. 
 The codeword to move onto the next section on the website is Baked Beans!</p></phonecontainer>
  <<include "password2">>
 
-:: textanne2 [purple -t8n-typewriter-4]
+
+:: textanne2 [purple -t8n-typewriter-4] {"position":"163.33333333333331,1710","size":"100,100"}
 <<include "back">><<include "phoneright">>
 <phonecontainer><p>If you don't have access to a phone, 
 you can text Anne from here.</p><<include "text3">>
-     </phonecontainer>       
+     </phonecontainer>
 
-:: textanne2a [purple -t8n-typewriter-4]
+
+:: textanne2a [purple -t8n-typewriter-4] {"position":"293.3333333333333,1701.6666666666665","size":"100,100"}
 <<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/yes-the-uca.mp3" allow="autoplay" style="display:none" ></iframe>
 
 <phonecontainer><p>Yes the UCA Breath – that’s a good idea. Nigel must have told you to remind me of the UCA Breath – thanks Nigel
@@ -2781,41 +2794,43 @@ Down the mountain, breathe out through the mouth
 Up the mountain breathe in
 Down the waterfall - shhhhhhh
 Whisper UCA UCA UCA
-<button>[[Next|textanne2b]]</button></p></phonecontainer>   
-          
+<button>[[Next|textanne2b]]</button></p></phonecontainer>
 
-:: textanne2b [purple -t8n-typewriter-4]
+
+:: textanne2b [purple -t8n-typewriter-4] {"position":"403.3333333333333,1705","size":"100,100"}
 <<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/thank-you-for.mp3" allow="autoplay" style="display:none" ></iframe><phonecontainer><p>Thank you for reminding me about the UCA Breath. It’s so important when the world is so loud to keep learning and taking time to breathe. If you are feeling stressed by the Static, you can always do the UCA Breath. It helps. 
 
 Right, I think I need you to start thinking about yourself as UCA Agents – in fact, we have a gift for you! In the Beacon, we put some Agent Cards for you. Nigel, I’m feeling all foggy, you’ll tell them won’t you. Nigel? Nigel? I can’t hear you, are you there? 
 
 You need to enter the word WONDER to move on
  </p></phonecontainer>  
-<<include "password3">>  
+<<include "password3">>
 
 
-:: textanne3 [purple -t8n-typewriter-4]
+:: textanne3 [purple -t8n-typewriter-4] {"position":"171.66666666666657,1823.3333333333333","size":"100,100"}
 <<include "back">><<include "phoneright">>
 <phonecontainer><p>If you don't have access to a phone, 
 you can text Anne from here.</p><<include "text4">>
-     </phonecontainer>    
+     </phonecontainer>
 
 
-:: textanne3a [purple -t8n-typewriter-4]
+:: textanne3a [purple -t8n-typewriter-4] {"position":"304.9999999999999,1823.333333333333","size":"100,100"}
 <<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/we-are-nearly-there-now.mp3" allow="autoplay" style="display:none" ></iframe>
 
 <phonecontainer><p>We are nearly there now. This is the last push. You and Nigel are doing fantastic work. You are so close to lighting the Beacon. Just one more challenge to complete and you will be ready to be UCA Agents who can face the Static and light the Beacon. And just in time... as I don’t think I’ve got much time... but I’ll send you the codeword. I made a video to help you. It’s the UCA emergency codeword. I may have eaten too many Weetabix when I made this video! 
 
 The codeword is NIGEL. Good lu…..</p></phonecontainer>   
-  <<include "password4">>   
+  <<include "password4">>
 
-:: textanne4 [purple -t8n-typewriter-4]
+
+:: textanne4 [purple -t8n-typewriter-4] {"position":"158.33333333333326,1948.3333333333333","size":"100,100"}
 <<include "back">><<include "phoneright">>
 <phonecontainer><p>If you don't have access to a phone, 
 you can text Anne from here.</p><<include "text5">>
-     </phonecontainer>  
+     </phonecontainer>
 
-:: textanne4a [purple -t8n-typewriter-4]
+
+:: textanne4a [purple -t8n-typewriter-4] {"position":"276.66666666666663,1948.3333333333333","size":"100,100"}
 <<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/hello-something-has-changed.mp3" allow="autoplay" style="display:none" ></iframe>
 
 <phonecontainer><p>Hello, something has changed. Can you feel that too? I think you can now light the Beacon! 
@@ -2824,17 +2839,33 @@ This is the final button,
 And prove you have what it takes to be an UCA Agent. 
 Clear the fog and counter the Static! 
 <button>[[Next|textanne4b]]</button>
-</p></phonecontainer>   
+</p></phonecontainer>
 
 
-:: textanne4b [purple -t8n-typewriter-4]
+:: textanne4b [purple -t8n-typewriter-4] {"position":"396.66666666666663,1946.6666666666667","size":"100,100"}
 <<include "back">> <<include "phoneleft">> 
 <phonecontainer><p>You’ll find the final button inside the cover for the Beacon – the cylinder! 
 Light up the Beacon and enter the codeword into the online platform.</p></phonecontainer>   
-  <<include "password4">>       
+  <<include "password4">>
 
 
-:: staticbuzz1 [] {"position":"543,3468.6666666666665","size":"100,100"}
+:: staticbuzz1 {"position":"47.999999999999964,2141.333333333333","size":"100,100"}
+<static>
+ <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif center " id="staticgif">
+      </static>
+      <<timed 0.5s>><iframe
+      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+
+
+:: staticbuzz2 {"position":"53.33333333333334,2262.9999999999995","size":"100,100"}
+<static>
+ <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif ctrright " id="staticgif">
+      </static>
+      <<timed 0.5s>><iframe
+      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+
+
+:: staticbuzz3 {"position":"51.333333333333286,2378","size":"100,100"}
 <static>
  <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left " id="staticgif">
       </static>
@@ -2842,30 +2873,15 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
       src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
 
 
-:: staticbuzz2 [] {"position":"543,3468.6666666666665","size":"100,100"}
+:: staticbuzz4 {"position":"54,2488","size":"100,100"}
 <static>
- <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left " id="staticgif">
+ <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif leftbig " id="staticgif">
       </static>
       <<timed 0.5s>><iframe
       src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
 
 
-:: staticbuzz3 [] {"position":"543,3468.6666666666665","size":"100,100"}
-<static>
- <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left " id="staticgif">
-      </static>
-      <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
-
-
-:: staticbuzz4 [] {"position":"1374.3333333333335,3158.3333333333335","size":"100,100"}
-<static>
- <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left " id="staticgif">
-      </static>
-      <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/beeps2.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
-
-:: staticbuzz5 [] {"position":"543,3468.6666666666665","size":"100,100"}
+:: staticbuzz5 {"position":"51.33333333333331,2611.3333333333335","size":"100,100"}
 /<<timed 0.5s>><iframe
       src="https://uca-coney-dev.netlify.app/assets/audio/beeps3.mp3" style="display:none" allow="autoplay" ></iframe><</timed>>
 <static>
@@ -2874,13 +2890,21 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
       7s>><<goto"video6b">><</timed>>
       </static>
 
-:: static [static] {"position":"400.3333333333333,3487.666666666667","size":"100,100"}
+:: prestatic [static] {"position":"56.66666666666663,2758.6666666666665","size":"100,100"}
 <iframe
-      src="http://remote.co.com/UCA/audio/finalstatic.mp3" allow="autoplay"  style="display:none"></iframe>
+      src="http://remote.co.com/UCA/audio/film-static-10.mp3" allow="autoplay"  style="display:none"></iframe>
+      <staticbox>[img[https://uca-coney-dev.netlify.app/assets/img/squarestatic.gif]]</staticbox>
+      <<include "password8">>
+
+
+:: static [static] {"position":"56.66666666666663,2758.6666666666665","size":"100,100"}
+<iframe
+      src="http://remote.co.com/UCA/audio/calm-film.mp3" allow="autoplay"  style="display:none"></iframe>
       <staticbox>[img[https://uca-coney-dev.netlify.app/assets/img/squarestatic.gif]]</staticbox>
       <<timed 4s>><staticbox><div class="animated
       fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></staticbox><</timed>>
       <<timed 9s>><staticboxcolour><div class="animated
       fadeIn">[img[http://remote.co.com/UCA/images/colours.gif]]</div></staticboxcolour><</timed>>
-      <<include "password8">>
       /* <<timed 25s>><<goto "video8">><</timed>> */
+
+
