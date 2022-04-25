@@ -2869,7 +2869,7 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
  <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif center " id="staticgif">
       </static>
       <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/film-static-10.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+      src="https://uca-coney-dev.netlify.app/assets/audio/crispy-static.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
 
 
 :: staticbuzz2 {"position":"53.33333333333334,2262.9999999999995","size":"100,100"}
@@ -2877,7 +2877,7 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
  <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif ctrright " id="staticgif">
       </static>
       <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/film-static-10.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+      src="https://uca-coney-dev.netlify.app/assets/audio/crispy-static.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
 
 
 :: staticbuzz3 {"position":"51.333333333333286,2378","size":"100,100"}
@@ -2885,7 +2885,7 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
  <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left " id="staticgif">
       </static>
       <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/film-static-10.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+      src="https://uca-coney-dev.netlify.app/assets/audio/crispy-static.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
 
 
 :: staticbuzz4 {"position":"54,2488","size":"100,100"}
@@ -2893,12 +2893,12 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
  <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif leftbig " id="staticgif">
       </static>
       <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/film-static-10.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+      src="https://uca-coney-dev.netlify.app/assets/audio/crispy-static.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
 
 
 :: staticbuzz5 {"position":"51.33333333333331,2611.3333333333335","size":"100,100"}
 /<<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/film-static-10.mp3" style="display:none" allow="autoplay" ></iframe><</timed>>
+      src="https://uca-coney-dev.netlify.app/assets/audio/crispy-static.mp3" style="display:none" allow="autoplay" ></iframe><</timed>>
 <static>
       <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif right growRightBig animated"><</timed>>
       <<timed
@@ -2907,7 +2907,7 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
 
 :: prestatic [static] {"position":"56.66666666666663,2758.6666666666665","size":"100,100"}
 <iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/film-static-10.mp3" allow="autoplay"  style="display:none"></iframe>
+      src="https://uca-coney-dev.netlify.app/assets/audio/crispy-static.mp3" allow="autoplay"  style="display:none"></iframe>
       <staticbox>[img[https://uca-coney-dev.netlify.app/assets/img/squarestatic.gif]]</staticbox>
       <<include "password8">>
 
