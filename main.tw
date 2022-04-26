@@ -1,5 +1,5 @@
 :: StoryTitle
-Undercover CareTaker Agency WIP 9
+Undercover CareTaker Agency WIP 10.4
 
 
 :: StoryData
@@ -7,7 +7,7 @@ Undercover CareTaker Agency WIP 9
 	"ifid": "B3F5AA2C-F49A-4324-9C59-27731F7EA557",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "beacon1",
+	"start": "home",
 	"tag-colors": {
 		"green": "green"
 	},
@@ -632,7 +632,7 @@ z-index:1;
 }
 
 .popup-container.button >img{
-      width: 20vw
+      width: 17vw
 }
 
 .popup-title{
@@ -1131,7 +1131,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<<timed
-      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video1b]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video1b]]</nextbutton><</timed>>
 
 
 :: video1b [green -t8n-typewriter-4] {"position":"796.6666666666667,761","size":"100,100"}
@@ -1307,7 +1307,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<<timed
-      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video3b]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video3b]]</nextbutton><</timed>>
 
 
 :: video3b [green -t8n-typewriter-4] {"position":"854.3333333333334,1696","size":"100,100"}
@@ -1356,7 +1356,7 @@ $(document.head).find('#style-ui-bar').remove();
       \
       <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon>
       <<timed
-      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video4b]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video4b]]</nextbutton><</timed>>
 
 
 :: video4b [green -t8n-typewriter-4] {"position":"865.3333333333334,1991","size":"100,100"}
@@ -1448,7 +1448,7 @@ $(document.head).find('#style-ui-bar').remove();
       \
       <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-3.png]]</beaconicon>
       <<timed
-      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video5b]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video5b]]</nextbutton><</timed>>
 
 
 :: video5b [green -t8n-typewriter-4] {"position":"758,2661","size":"100,100"}
@@ -1501,7 +1501,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><<timed
-      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video6c]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video6c]]</nextbutton><</timed>>
 
 
 :: video6a [green -t8n-typewriter-4] {"position":"753,2816","size":"100,100"}
@@ -1638,7 +1638,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon><<timed
-      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticbuzz5]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticbuzz5]]</nextbutton><</timed>>
 
 
 :: missionplanning [green -t8n-typewriter-4] {"position":"1374.9999999999998,2354.3333333333335","size":"100,100"}
@@ -1739,7 +1739,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       Ok, final part - Delivery.
       Your gift is ready to be delivered.
       Move onto the Delivery Card
-<<timed 20s>><<goto "static">><</timed>>
+<<timed 20s>><<goto "prestatic">><</timed>>
       <<include "password8">></messageboxlarge>
 
 
@@ -1759,7 +1759,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       </div>
       </div>
       \<<timed
-      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video8b]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video8b]]</nextbutton><</timed>>
 
 
 :: video8b [green -t8n-typewriter-4] {"position":"598.3333333333334,3275.3333333333335","size":"100,100"}
@@ -2665,10 +2665,7 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: beacon1 [purple] {"position":"257,495.99999999999994","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe>
-<messagebox>
-<div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move.png"></div>
-      </messagebox>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><messagebox><div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move.png"></div></messagebox>
 <messagebox>
 <<timed 3s>>
       <div class="animated fadeInRightBig" id="beacon">   
@@ -2680,14 +2677,7 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: beacon2 [purple] {"position":"258.6666666666667,612.6666666666666","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe>
-<messagebox>
-<div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div>
-      </messagebox>
-<messagebox>
-<<timed 3s>>
-<div class="animated fadeInRightBig" id="beacon">   
-<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon1-2.gif"></div>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><messagebox><div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div></messagebox><messagebox><<timed 3s>><div class="animated fadeInRightBig" id="beacon"><img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon1-2.gif"></div>
 <</timed>>
 <<timed 10s>>
 <<goto [[video4]]>><</timed>>
@@ -2695,13 +2685,8 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: beacon3 [purple] {"position":"258.66666666666663,731","size":"100,100"}
-<messagebox>
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe>
-  <div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/discover.png"></div>
-      </messagebox>
-<messagebox>
-<<timed 3s>>
-<div class="animated fadeInRightBig" >   
+<messagebox><iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/discover.png"></div></messagebox><messagebox>
+<<timed 3s>><div class="animated fadeInRightBig" >   
 <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon2-3.gif"></div>
 <</timed>>
 <<timed 10s>>
@@ -2711,12 +2696,8 @@ style="display:none" allow="autoplay" ></iframe>
 
 :: beacon4 [purple] {"position":"258.66666666666663,851","size":"100,100"}
 <messagebox>
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe>
-  <div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/wonder.png"></div>
-      </messagebox>
-<messagebox>
-<<timed 3s>>
-<div class="animated fadeInRightBig" >   
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/wonder.png"></div></messagebox><messagebox>
+<<timed 3s>><div class="animated fadeInRightBig" >   
 <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon3-4.gif"></div>
 <</timed>>
 <<timed 10s>>
@@ -2725,14 +2706,8 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: beacon5 [purple] {"position":"261.99999999999994,974.3333333333334","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe>
-<messagebox>
-<div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/give.png"></div>
-      </messagebox>
-<messagebox>
-<<timed 3s>>
-<div class="animated fadeInRightBig" >   
-<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon4-5.gif"></div>
+<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><messagebox><div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/give.png"></div></messagebox><messagebox>
+<<timed 3s>><div class="animated fadeInRightBig" ><img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon4-5.gif"></div>
 <</timed>>
 <<timed 10s>>
 <<goto [[Video7]]>><</timed>>
@@ -2861,8 +2836,9 @@ Clear the fog and counter the Static!
 <<include "back">> <<include "phoneleft">> 
 <phonecontainer><p>You’ll find the final button inside the cover for the Beacon – the cylinder! 
 Light up the Beacon and enter the codeword into the online platform.</p></phonecontainer>   
-  <<include "password4">>
-
+  /* <<include "password4">> */
+  <button>[[Next|prestatic]]</button>
+/* HERE?? */
 
 :: staticbuzz1 {"position":"47.999999999999964,2141.333333333333","size":"100,100"}
 <static>
@@ -2902,7 +2878,7 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
 <static>
       <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif right growRightBig animated"><</timed>>
       <<timed
-      7s>><<goto"video6b">><</timed>>
+      7s>><<goto"missionplanning">><</timed>>
       </static>
 
 :: prestatic [static] {"position":"56.66666666666663,2758.6666666666665","size":"100,100"}
