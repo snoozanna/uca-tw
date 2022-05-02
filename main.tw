@@ -1,5 +1,5 @@
 :: StoryTitle
-Undercover CareTaker Agency WIP 10.4
+Undercover CareTaker Agency Version 2 audio
 
 
 :: StoryData
@@ -175,7 +175,7 @@ staticboxcolour img {
 
   .green {
     color: black;
-    background-image: url("http://remote.co.com/UCA/images/greenbackground.jpg");
+    background-image: url("https://remote.co.com/UCA/assets/img/greenbackground.jpg");
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -185,7 +185,7 @@ font-family: 'Didact Gothic', sans-serif;
 
   .purple {
     color: black;
-    background-image: url("http://remote.co.com/UCA/images/purplebackground.jpg");
+    background-image: url("https://remote.co.com/UCA/assets/img/purplebackground.jpg");
   text-align: center;
 	font-size: x-large;
   background-repeat: no-repeat;
@@ -196,7 +196,7 @@ font-family: 'Didact Gothic', sans-serif;
 
   .purple2 {
     color: white;
-    background-image: url("http://remote.co.com/UCA/images/purplebackground.jpg");
+    background-image: url("https://remote.co.com/UCA/assets/img/purplebackground.jpg");
   text-align: center;
 	font-size: x-large;
   background-repeat: no-repeat;
@@ -224,7 +224,7 @@ font-family: 'Didact Gothic', sans-serif;
 
   .planning {
     color: black;
-    background-image: url("http://remote.co.com/UCA/images/slidebackground2.png");
+    background-image: url("https://remote.co.com/UCA/assets/img/slidebackground2.png");
 	background-color: black;
   text-align: center;
   background-size: 80vw 85vh;
@@ -257,7 +257,7 @@ color: #2d3261;
       align-items:center
 }
 .contents-container{
-   background-image: url("http://remote.co.com/UCA/images/paperbackground.jpg");
+   background-image: url("https://remote.co.com/UCA/assets/img/paperbackground.jpg");
 padding: 0 20px;
 font-family: 'Contrail One', cursive;
   width: 30%;
@@ -318,7 +318,7 @@ display:flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-   background-image: url("http://remote.co.com/UCA/images/paperbackground.jpg");
+   background-image: url("https://remote.co.com/UCA/assets/img/paperbackground.jpg");
 padding: 40px;
   border-radius: 4px;
   transform: skew(-2deg);
@@ -365,7 +365,7 @@ phoneleft > img {
   position: fixed; 
     top: 10vh; 
     right: 2vw; 
-  background-image: url("http://remote.co.com/UCA/images/greenbackground.jpg");
+  background-image: url("https://remote.co.com/UCA/assets/img/greenbackground.jpg");
   padding: 25px;
   border-radius: 4px;
   transform: skew(-2deg);
@@ -420,7 +420,7 @@ messagebox2 {
     left: 15vw;
 }
 messageboxlarge {
-  background-image: url("http://remote.co.com/UCA/images/paperbackground.jpg");
+  background-image: url("https://remote.co.com/UCA/assets/img/paperbackground.jpg");
   width: 48vw;
   font-size: x-large;
   padding: 1vw 1vh;
@@ -431,7 +431,7 @@ messageboxlarge {
 }
 
 messageboxreel {
-  background-image: url("http://remote.co.com/UCA/images/paperbackground.jpg");
+  background-image: url("https://remote.co.com/UCA/assets/img/paperbackground.jpg");
   width: 48vw;
   font-size: x-large;
   padding: 1vw 1vh;
@@ -607,7 +607,7 @@ name {
   position: fixed; 
     top: 6vh; 
     right: 2vw; 
-  background-image: url("http://remote.co.com/UCA/images/purplebackground.jpg");
+  background-image: url("https://remote.co.com/UCA/assets/img/purplebackground.jpg");
   padding: 25px;
   border-radius: 4px;
   transform: skew(-2deg);
@@ -1099,12 +1099,12 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: home [purple] {"position":"401,205","size":"100,100"}
-<messagebox2>[img[http://remote.co.com/UCA/images/intercom2.png][beenbefore]]</messagebox2>
+<messagebox2>[img[https://remote.co.com/UCA/assets/img/intercom2.png][beenbefore]]</messagebox2>
 
 
 :: welcome1 [purple -t8n-typewriter-4] {"position":"529.3333333333334,204.99999999999994","size":"100,100"}
 <<include"welcome1audio">>
-<messagebox><div class="codeword-entry-container"><div class="codeword-entry-item"><img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble"></div>
+<messagebox><div class="codeword-entry-container"><div class="codeword-entry-item"><img src="https://remote.co.com/UCA/assets/img/lock.png" class="padlock animated wobble"></div>
    <div class="codeword-entry-item"><p> Hello there,
                   To gain entry a codeword is needed.
                   The codeword is one word, it is somewhere on the box you will have received. 
@@ -1115,14 +1115,15 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: welcome1audio {"position":"2062,558","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/hello-there-to-gain-entry.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/hello-there-to-gain-entry.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
 
+<audio src="https://remote.co.com/UCA/assets/audio/hello-there-to-gain-entry.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 :: Introvideo1 [green] {"position":"1075.6666666666665,605","size":"100,100"}
 <div
       id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      <div id="video_overlays"><img src="https://remote.co.com/UCA/assets/img/tv8.png"
       class="center"></div>
       <div>
       <iframe allow="autoplay" width='800px' height='450px'
@@ -1131,7 +1132,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<<timed
-      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video1b]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[https://remote.co.com/UCA/assets/img/nextbutton.png][video1b]]</nextbutton><</timed>>
 
 
 :: video1b [green -t8n-typewriter-4] {"position":"796.6666666666667,761","size":"100,100"}
@@ -1147,7 +1148,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video1baudio {"position":"2187,1928","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/your-choice-is-needed-click-yes.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/your-choice-is-needed-click-yes.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/your-choice-is-needed-click-yes.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: CLOSE [green -t8n-typewriter-4] {"position":"590.6666666666667,862","size":"100,100"}
@@ -1158,7 +1160,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: CLOSEaudio {"position":"1954,566","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/oh-really.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/oh-really.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/oh-really.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: YES, WE ARE IN [green -t8n-typewriter-4] {"position":"784.6666666666667,964","size":"100,100"}
@@ -1174,7 +1177,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: YES, WE ARE INaudio {"position":"1700,33","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/fantastic-caretakers-are-not-just.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/fantastic-caretakers-are-not-just.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/fantastic-caretakers-are-not-just.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: pretokinfo1 [green -t8n-typewriter-4] {"position":"943.6666666666667,934","size":"100,100"}
@@ -1194,8 +1198,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: pretokinfo1audio {"position":"1790.3333333333333,812.3333333333334","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/Im-Nigel-Annes-friend.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
-
+/* <iframe src="https://remote.co.com/UCA/assets/audio/Im-Nigel-Annes-friend.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/Im-Nigel-Annes-friend.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 :: pretokinfo2 [green -t8n-typewriter-4] {"position":"1101.6666666666665,929","size":"100,100"}
 <<include
@@ -1204,7 +1208,7 @@ $(document.head).find('#style-ui-bar').remove();
       <messageboxlarge>
       But you need to show you can light the Beacon, before it can be lit.
       You’ll find how to light the Beacon through completing challenges and getting buttons.
-      <div class="popup-container button fadeInRightBig">[img[http://remote.co.com/UCA/images/logobutton.png]]<h3 class="popup-title">BUTTON</h3></div>
+      <div class="popup-container button fadeInRightBig">[img[https://remote.co.com/UCA/assets/img/logobutton.png]]<h3 class="popup-title">BUTTON</h3></div>
       Lighting the Beacon will show you have stopped the Static.
       And show that you have what it takes to be an UCA Agent yourself.
 
@@ -1216,14 +1220,15 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: pretokinfo2audio {"position":"1947.3333333333335,831","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/but-you-need-to-show-you-can-light.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/but-you-need-to-show-you-can-light.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/but-you-need-to-show-you-can-light.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: READY [green] {"position":"936.3333333333335,761","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      <div id="video_overlays"><img src="https://remote.co.com/UCA/assets/img/tv8.png"
       class="center"></div>
       <div>
       <iframe allow="autoplay"   width='800px' height='450px'
@@ -1232,7 +1237,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<<timed
-      5s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][ucatokmoves]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[https://remote.co.com/UCA/assets/img/nextbutton.png][ucatokmoves]]</nextbutton><</timed>>
 
 
 :: NOT TODAY [green -t8n-typewriter-4] {"position":"592.3333333333334,965.6666666666666","size":"100,100"}
@@ -1242,7 +1247,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: NOT TODAYaudio {"position":"1814,31","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/ok-thank-you-anyway.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/ok-thank-you-anyway.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/ok-thank-you-anyway.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: ucatokmovesintro [-t8n-typewriter-4 green] {"position":"931.3333333333334,1110.6666666666667","size":"100,100"}
@@ -1256,7 +1262,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: ucatokmovesintroaudio {"position":"1837.3333333333333,979.3333333333334","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/it-seems-you-need-to-learn-the-UCA-TOK" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/it-seems-you-need-to-learn-the-UCA-TOK" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/it-seems-you-need-to-learn-the-UCA-TOK" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: ucatokmoves [green] {"position":"784.3333333333334,1108.6666666666667","size":"100,100"}
@@ -1264,7 +1271,7 @@ $(document.head).find('#style-ui-bar').remove();
       "back">><<include "ucatokmovesaudio">>
       <dance>
       <name><b>Learn the UCA TOK</b></name>
-          <div class="animated fadeInDownBig dancecard"><img src="http://remote.co.com/UCA/images/dancemoves5.jpg" class="dancecard"></div>
+          <div class="animated fadeInDownBig dancecard"><img src="https://remote.co.com/UCA/assets/img/dancemoves5.jpg" class="dancecard"></div>
            
             <<timed 3s>>
             <div class="popup-container"><p>Want to watch Anne do the UCA TOK slowly? Click <button>[[HERE]]</button>
@@ -1276,13 +1283,15 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: ucatokmovesaudio {"position":"1860.3333333333333,1116","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/want-to-watch-Anne-do-the-UCA-TOK.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/want-to-watch-Anne-do-the-UCA-TOK.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/want-to-watch-Anne-do-the-UCA-TOK.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
+
 
 
 :: HERE [green -t8n-typewriter-4] {"position":"598.3333333333334,1108.6666666666667","size":"100,100"}
 <<include "back">><div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      <div id="video_overlays"><img src="https://remote.co.com/UCA/assets/img/tv8.png"
       class="center"></div>
       <div>
       <iframe allow="autoplay"   width='800px' height='450px'
@@ -1291,14 +1300,14 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<<timed
-      30s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][ucatokmoves]]</nextbutton><</timed>>
+      30s>><nextbutton>[img[https://remote.co.com/UCA/assets/img/nextbutton.png][ucatokmoves]]</nextbutton><</timed>>
 
 
 :: UCA TOK [green] {"position":"779.3333333333334,1237.6666666666667","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      <div id="video_overlays"><img src="https://remote.co.com/UCA/assets/img/tv8.png"
       class="center"></div>
       <div>
       <iframe allow="autoplay"   width='800px' height='450px'
@@ -1307,7 +1316,7 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \<<timed
-      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video3b]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[https://remote.co.com/UCA/assets/img/nextbutton.png][video3b]]</nextbutton><</timed>>
 
 
 :: video3b [green -t8n-typewriter-4] {"position":"854.3333333333334,1696","size":"100,100"}
@@ -1322,8 +1331,8 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video3baudio {"position":"1952,1703","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/it-seems-she-wants-you-to-text-her.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
-
+/* <iframe src="https://remote.co.com/UCA/assets/audio/it-seems-she-wants-you-to-text-her.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/it-seems-she-wants-you-to-text-her.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 :: video3c [green -t8n-typewriter-4] {"position":"690.3333333333334,1696","size":"100,100"}
 <<include "back">><<include"typewriter">><<include "video3caudio">><messageboxlarge>
@@ -1333,11 +1342,12 @@ $(document.head).find('#style-ui-bar').remove();
       And she has locked the next page, so hopefully she’ll give you the codeword too.
       </messageboxlarge>
             <<include "password2">>
-            <div class="popup-container left"> <img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="padlock"><p>Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne]]>><</button>></p></div>
+            <div class="popup-container left"> <img src="https://remote.co.com/UCA/assets/img/phone.png" class="padlock"><p>Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne]]>><</button>></p></div>
 
 
 :: video3caudio {"position":"2074,1701","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-can-text-her.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/you-can-text-her.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/you-can-text-her.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: video4 [green] {"position":"865.3333333333334,1841","size":"100,100"}
@@ -1345,7 +1355,7 @@ $(document.head).find('#style-ui-bar').remove();
       "back">>
       <div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      <div id="video_overlays"><img src="https://remote.co.com/UCA/assets/img/tv8.png"
       class="center"></div>
       <div>
       <iframe allow="autoplay"   width='800px' height='450px'
@@ -1354,13 +1364,13 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \
-      <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon>
+      <beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-2.png]]</beaconicon>
       <<timed
-      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video4b]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[https://remote.co.com/UCA/assets/img/nextbutton.png][video4b]]</nextbutton><</timed>>
 
 
 :: video4b [green -t8n-typewriter-4] {"position":"865.3333333333334,1991","size":"100,100"}
-<<include "back">><<include "typewriter">>  <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon><<include
+<<include "back">><<include "typewriter">>  <beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-2.png]]</beaconicon><<include
       "video4baudio">><div id="staticplaceholder"></div><messageboxlarge>
       Teacher, can you make sure everyone understands what the static is please?
       It is very important we know what we are facing together.
@@ -1370,13 +1380,14 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video4baudio {"position":"2074,1580","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/teacher-can-you-make-sure-everyone-understands.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/teacher-can-you-make-sure-everyone-understands.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
 
+<audio src="https://remote.co.com/UCA/assets/audio/teacher-can-you-make-sure-everyone-understands.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 :: Everyone understands [green -t8n-typewriter-4] {"position":"687,2117","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "Everyone understandsaudio">>
-      <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon>
+      <beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-2.png]]</beaconicon>
       <messageboxlarge>
       Now, time for a game to find out our Secret Club Name.
       This game will connect you all together.
@@ -1393,13 +1404,14 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: Everyone understandsaudio {"position":"1921,35","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/now-time-for-a-game-to-find.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/now-time-for-a-game-to-find.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/now-time-for-a-game-to-find.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: enterclubname [green -t8n-typewriter-4] {"position":"915,397.6666666666668","size":"100,100"}
 <<include
       "back">><<include "typewriter">>
-       <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon>
+       <beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-2.png]]</beaconicon>
        <messageboxlarge>
       Enter our Secret Club Name here
 
@@ -1411,8 +1423,9 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: clubname [green] {"position":"688,2304","size":"100,100"}
-/<iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/tape-recorder.wav" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
+/* /<iframe
+      src="https://remote.co.com/UCA/assets/audio/taperecorder.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/taperecorder.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
       <<include "back">><messageboxreel>
 
 
@@ -1437,7 +1450,7 @@ $(document.head).find('#style-ui-bar').remove();
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      <div id="video_overlays"><img src="https://remote.co.com/UCA/assets/img/tv8.png"
       class="center"></div>
       <div>
       <iframe allow="autoplay"   width='800px' height='450px'
@@ -1446,14 +1459,14 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       \
-      <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-3.png]]</beaconicon>
+      <beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-3.png]]</beaconicon>
       <<timed
-      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video5b]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[https://remote.co.com/UCA/assets/img/nextbutton.png][video5b]]</nextbutton><</timed>>
 
 
 :: video5b [green -t8n-typewriter-4] {"position":"758,2661","size":"100,100"}
 <<include "back">><<include "typewriter">><<include
-      "video5baudio">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-3.png]]</beaconicon>
+      "video5baudio">> <beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-3.png]]</beaconicon>
       <messageboxlarge>
       It seems Anne is worried about Anne too.
       In a moment I think you should text her – she might be facing the static alone.
@@ -1465,34 +1478,36 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video5baudio {"position":"1944,1460","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/seems-Anne-is-worried-about-Anne.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/seems-Anne-is-worried-about-Anne.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/seems-Anne-is-worried-about-Anne.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: video5c [green -t8n-typewriter-4] {"position":"919,2664","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
-      "video5caudio">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-3.png]]</beaconicon><messageboxlarge>
+      "video5caudio">> <beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-3.png]]</beaconicon><messageboxlarge>
       You are learning a new skill.
       A new skill that helps counter the static.
       Learning new skills can help us be more confident, as well as being quite fun, and it can be a really helpful
       distraction too. Let’s distract Anne and remind her of the UCA Breath.
 
-      Teacher, when you have learnt the UCA Breath, text Anne the word <span class="title-accent">BREATH</span> and hopefully she’ll call you back
+      Teacher, when you have learnt the UCA Breath, text Anne the word <span class="title-accent">BREATH</span> and hopefully she’ll call you back.
       <<include "password3">>
       </messageboxlarge>
 
-      <div class="popup-container left"> <img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="padlock"><p>Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne2]]>><</button>></p></div>
+      <div class="popup-container left"> <img src="https://remote.co.com/UCA/assets/img/phone.png" class="padlock"><p>Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne2]]>><</button>></p></div>
 
 
 :: video5caudio {"position":"2079,1460","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-are-learning-a-new-skill.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/you-are-learning-a-new-skill.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/you-are-learning-a-new-skill.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: Video6 [green] {"position":"582,2821","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      <div id="video_overlays"><img src="https://remote.co.com/UCA/assets/img/tv8.png"
       class="center"></div>
       <div>
       <iframe allow=autoplay  width='800px' height='450px'
@@ -1500,13 +1515,13 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       </div>
-      \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><<timed
-      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video6c]]</nextbutton><</timed>>
+      \<beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-4.png]]</beaconicon><<timed
+      20s>><nextbutton>[img[https://remote.co.com/UCA/assets/img/nextbutton.png][video6c]]</nextbutton><</timed>>
 
 
 :: video6a [green -t8n-typewriter-4] {"position":"753,2816","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "video6aaudio">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><div id="staticplaceholder"></div><messageboxlarge>
+      "typewriter">><<include "video6aaudio">> <beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-4.png]]</beaconicon><div id="staticplaceholder"></div><messageboxlarge>
       Ok, it seems Anne wants you to open the next compartment and get the next button.
       You can open Compartment 4 now .
       Inside are Agent Cards for you to fill out.
@@ -1517,12 +1532,13 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video6aaudio {"position":"1749,1335","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/ok-it-seems-Anne-wants-you-to-open.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/ok-it-seems-Anne-wants-you-to-open.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/ok-it-seems-Anne-wants-you-to-open.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: video6b [green -t8n-typewriter-4] {"position":"918,2821","size":"100,100"}
 <<include "back">><<include
-      "typewriter">> <<include "video6baudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
+      "typewriter">> <<include "video6baudio">><beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       If we can reflect on ourselves, notice and be curious, we can be more aware of what we have to offer the world.
       And see the superpowers we have to spark change.
       When you have finished filling the cards out enter the words AGENTS READY to move on
@@ -1531,13 +1547,14 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video6baudio {"position":"1866,1335","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/if-we-can-reflect-on-ourselves.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/if-we-can-reflect-on-ourselves.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/if-we-can-reflect-on-ourselves.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: video6c [green -t8n-typewriter-4] {"position":"1085,2817","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
-      "video6caudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
+      "video6caudio">><beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       /* <name><b>WONDER</b></name> */
       You are doing extremely well, $clubname!
       We are on our way to lighting the Beacon and helping Anne.
@@ -1553,13 +1570,14 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video6caudio {"position":"1974,1338","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/you-are-doing-extremely-well.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/you-are-doing-extremely-well.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/you-are-doing-extremely-well.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: video6d [green -t8n-typewriter-4] {"position":"1210,2814","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
-      "video6daudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
+      "video6daudio">><beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       Teacher, in a moment we recommend splitting the group into 4-6 groups and giving out 1 big piece of paper to these
       groups.
 
@@ -1571,12 +1589,13 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: video6daudio {"position":"2091,1328","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/teacher-in-a-moment-we-recommend.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/teacher-in-a-moment-we-recommend.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/teacher-in-a-moment-we-recommend.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: mapdrawn [green -t8n-typewriter-4] {"position":"1102,3007","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "mapdrawnaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
+      "typewriter">><<include "mapdrawnaudio">><beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       There are also Mapping Cards in Compartment 4 – hand out 1 pack per group.
       Answer the questions and draw them on your maps.
       Take as much time as you need – I think this is going to be very important to Anne for the final part of our mission together.
@@ -1586,12 +1605,13 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: mapdrawnaudio {"position":"1759,306","size":"100,100"}
-<iframe src="https://uca-coney-dev.netlify.app/assets/audio/there-are-also-mapping-cards.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/there-are-also-mapping-cards.mp3" allow="autoplay" style="display:none" id="iframeAudio"> </iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/there-are-also-mapping-cards.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: mappingdone [green -t8n-typewriter-4] {"position":"1237,3004","size":"100,100"}
 <<include "back">><<include
-      "typewriter">><<include "mappingdoneaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><div id="staticplaceholder"></div>
+      "typewriter">><<include "mappingdoneaudio">><beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-4.png]]</beaconicon><div id="staticplaceholder"></div>
       <messageboxlarge>
       GREAT work.
       If you have time, you can share back some of the information you have found out about your school to the rest of
@@ -1602,14 +1622,15 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: mappingdoneaudio {"position":"1912,308","size":"100,100"}
-<iframe id="iframeAudio"
-      src="https://uca-coney-dev.netlify.app/assets/audio/great-work-if-you-have-time-you-can.mp3" allow="autoplay" style="display:none" ></iframe>
+/* <iframe id="iframeAudio"
+      src="https://remote.co.com/UCA/assets/audio/great-work-if-you-have-time-you-can.mp3" allow="autoplay" style="display:none" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/great-work-if-you-have-time-you-can.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: mappingdoneb [green -t8n-typewriter-4] {"position":"1367,3002","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
-      "mappingdonebaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
+      "mappingdonebaudio">><beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-4.png]]</beaconicon><messageboxlarge>
       Ok - great work. Mapping Complete.
 
       The next video is locked though – can you text Anne the word <span class="title-accent">MAPPING</span> and hopefully, she will call you
@@ -1618,18 +1639,18 @@ $(document.head).find('#style-ui-bar').remove();
       We are so close to lighting the beacon.
       <<include "password4">>
       </messageboxlarge>
-      <div class="popup-container left"> <img src="https://uca-coney-dev.netlify.app/assets/img/phone.png" class="padlock"><p>Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne3]]>><</button>></p></div>
+      <div class="popup-container left"> <img src="https://remote.co.com/UCA/assets/img/phone.png" class="padlock"><p>Teacher, if you don't have access to a phone, click <<button "here" >><<goto [[textanne3]]>><</button>></p></div>
 
 
 :: mappingdonebaudio {"position":"2044,308","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/ok-great-work-mapping-complete.mp3" style="display:none" allow="autoplay" ></iframe>
-
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/ok-great-work-mapping-complete.mp3" style="display:none" allow="autoplay" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/ok-great-work-mapping-complete.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 :: Video7 [green] {"position":"588.6666666666666,2967","size":"100,100"}
 <<include
       "back">><div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      <div id="video_overlays"><img src="https://remote.co.com/UCA/assets/img/tv8.png"
       class="center"></div>
       <div>
       <iframe allow=autoplay  width='800px' height='450px'
@@ -1637,31 +1658,31 @@ $(document.head).find('#style-ui-bar').remove();
       </div>
       </div>
       </div>
-      \<beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon><<timed
-      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][staticbuzz5]]</nextbutton><</timed>>
+      \<beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-5.png]]</beaconicon><<timed
+      20s>><nextbutton>[img[https://remote.co.com/UCA/assets/img/nextbutton.png][staticbuzz5]]</nextbutton><</timed>>
 
 
 :: missionplanning [green -t8n-typewriter-4] {"position":"1374.9999999999998,2354.3333333333335","size":"100,100"}
 <<include
       "back">><<include "missionplanningaudio">>
-      <<include "typewriter">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon>
+      <<include "typewriter">><beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-5.png]]</beaconicon>
      <messageboxlarge>
       This is it – the final compartment.
-      We’ve connected to each other, moved our bodies through the UKA TOK, wondered about ourselves and the space around us, learnt new skills and now is the final way we can counter the Static… Giving.
+      We’ve connected to each other, moved our bodies through the UCA TOK, wondered about ourselves and the space around us, learnt new skills and now is the final way we can counter the Static… Giving.
 
       <button>[[NEXT|missionplanningb]]</button>
       </messageboxlarge>
 
 
 :: missionplanningaudio {"position":"2171,310","size":"100,100"}
-<iframe
-      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/this-is-it-the-final compartment.mp3" style="display:none" allow="autoplay" 
-      ></iframe>
-
+/* <iframe
+      id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/this-is-it-the-final compartment.mp3" style="display:none" allow="autoplay" 
+      ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/this-is-it-the-final compartment.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 :: missionplanningb [green -t8n-typewriter-4] {"position":"1501.3333333333333,2357.666666666667","size":"100,100"}
 <<include
-      "back">><<include "typewriter">><<include "missionplanningbaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon>
+      "back">><<include "typewriter">><<include "missionplanningbaudio">><beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-5.png]]</beaconicon>
       <messageboxlarge>
       There are three stages to the Giving Mission
 
@@ -1675,12 +1696,13 @@ $(document.head).find('#style-ui-bar').remove();
 
 
 :: missionplanningbaudio {"position":"1677,195","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/there-are-three-stages-to-this-giving.mp3" style="display:none" allow="autoplay" ></iframe>
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/there-are-three-stages-to-this-giving.mp3" style="display:none" allow="autoplay" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/there-are-three-stages-to-this-giving.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: missionplanningc [green -t8n-typewriter-4] {"position":"1621.3333333333333,2355.666666666667","size":"100,100"}
 <<include
-      "back">><<include "typewriter">><<include "missionplanningcaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon>
+      "back">><<include "typewriter">><<include "missionplanningcaudio">><beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-5.png]]</beaconicon>
       <messageboxlarge>
 In the Compartment is the fifth button, but it seems there is one missing. A 6th button.
       Anne must have hidden it.
@@ -1692,13 +1714,14 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: missionplanningcaudio {"position":"1781,183","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/in-the-compartment-is-the-fifth.mp3" style="display:none" allow="autoplay" 
-      ></iframe>
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/in-the-compartment-is-the-fifth.mp3" style="display:none" allow="autoplay" 
+      ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/in-the-compartment-is-the-fifth.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: missionplanningd [green -t8n-typewriter-4] {"position":"1744.6666666666665,2359.0000000000005","size":"100,100"}
 <<include
-      "back">><<include "typewriter">><<include "missionplanningdaudio">><beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-5.png]]</beaconicon>
+      "back">><<include "typewriter">><<include "missionplanningdaudio">><beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-5.png]]</beaconicon>
       <messageboxlarge>
       Lighting the Beacon will clear the fog and counter the Static.
       And shine out Anne’s final codeword.
@@ -1710,8 +1733,9 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: missionplanningdaudio {"position":"1907,181","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/lighting-the-beacon-will-clear-the.mp3"
-      allow="autoplay" style="display:none" ></iframe>
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/lighting-the-beacon-will-clear-the.mp3"
+      allow="autoplay" style="display:none" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/lighting-the-beacon-will-clear-the.mp3" autoplay style="display:none">Audio is not supported on your device</audio>
 
 
 :: premaking [green -t8n-typewriter-4] {"position":"881.333333333333,2179.3333333333335","size":"100,100"}
@@ -1727,8 +1751,9 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: premakingaudio {"position":"2159,169","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/oh-great-youve-planned-your.mp3"
-      allow="autoplay" style="display:none" ></iframe>
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/oh-great-youve-planned-your.mp3"
+      allow="autoplay" style="display:none" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/oh-great-youve-planned-your.mp3" autoplay style="display:none">Audio is not supported on your device</audio>      
 
 
 :: predelivery [green -t8n-typewriter-4] {"position":"1866.3333333333333,2364.3333333333335","size":"100,100"}
@@ -1744,13 +1769,14 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: predeliveryaudio {"position":"2032,178","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/ok-final-part-delivery.mp3" allow="autoplay"  style="display:none"></iframe>
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/ok-final-part-delivery.mp3" allow="autoplay"  style="display:none"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/ok-final-part-delivery.mp3" autoplay style="display:none">Audio is not supported on your device</audio>      
 
 
 :: video8 [green] {"position":"598.3333333333334,3125.3333333333335","size":"100,100"}
 <div id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      <div id="video_overlays"><img src="https://remote.co.com/UCA/assets/img/tv8.png"
       class="center"></div>
       <div>
       <iframe allow="autoplay"   width='800px' height='450px'
@@ -1759,7 +1785,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       </div>
       </div>
       \<<timed
-      20s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video8b]]</nextbutton><</timed>>
+      20s>><nextbutton>[img[https://remote.co.com/UCA/assets/img/nextbutton.png][video8b]]</nextbutton><</timed>>
 
 
 :: video8b [green -t8n-typewriter-4] {"position":"598.3333333333334,3275.3333333333335","size":"100,100"}
@@ -1777,7 +1803,8 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: video8baudio {"position":"1724,703","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/i-cant-believe-you-did-it.mp3" allow="autoplay"  style="display:none"></iframe>
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/i-cant-believe-you-did-it.mp3" allow="autoplay"  style="display:none"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/i-cant-believe-you-did-it.mp3" autoplay style="display:none">Audio is not supported on your device</audio>   
 
 
 :: video8c [green -t8n-typewriter-4] {"position":"488.33333333333337,3275.3333333333335","size":"100,100"}
@@ -1802,9 +1829,9 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: video8caudio {"position":"1839,695","size":"100,100"}
-<iframe
-      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/this-is-the-end-of-the-mission.mp3" allow="autoplay" style="display:none" ></iframe>
-
+/* <iframe
+      id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/this-is-the-end-of-the-mission.mp3" allow="autoplay" style="display:none" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/this-is-the-end-of-the-mission.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: video8d [green -t8n-typewriter-4] {"position":"724.3333333333334,3267.3333333333335","size":"100,100"}
 <<include
@@ -1818,10 +1845,10 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: video8daudio {"position":"1956,698","size":"100,100"}
-<iframe
-      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-when-you-are-ready-collect.mp3" allow="autoplay" 
-      style="display:none"></iframe>
-
+/* <iframe
+      id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/teacher-when-you-are-ready-collect.mp3" allow="autoplay" 
+      style="display:none"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/teacher-when-you-are-ready-collect.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: video8e [green -t8n-typewriter-4] {"position":"374.33333333333337,3291.3333333333335","size":"100,100"}
 <<include
@@ -1840,22 +1867,22 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: video8eaudio {"position":"2066,696","size":"100,100"}
-<iframe
-      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/your-work-today-has-been.mp3" allow="autoplay" style="display:none"></iframe>
-
+/* <iframe
+      id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/your-work-today-has-been.mp3" allow="autoplay" style="display:none"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/your-work-today-has-been.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: endpart1 [green -t8n-typewriter-4] {"position":"598.3333333333334,3425.3333333333335","size":"100,100"}
 <messagebox>
       <h3 class="title-accent">TO BE CONTINUED...</h3></messagebox>
       <messagebox><div class="animated
-      rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
+      rotateIn">[img[https://remote.co.com/UCA/assets/img/logobutton.png]]</div></messagebox>
       <messagebox>
       <div class="animated
-      fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div
+      fadeInLeftBig">[img[https://remote.co.com/UCA/assets/img/undercover.png]]</div><div
       class="animated
-      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div
+      fadeInRightBig">[img[https://remote.co.com/UCA/assets/img/caretaker.png]]</div><div
       class="animated
-      fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox>
+      fadeInLeftBig">[img[https://remote.co.com/UCA/assets/img/agency.png]]</div></messagebox>
       <<timed 7s>><<goto "home">><</timed>>
 
 
@@ -1898,7 +1925,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 :: password2 {"position":"51,563.3333333333334","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
       \<div class="popup-container">
-         <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+         <img src="https://remote.co.com/UCA/assets/img/lock.png" class="padlock animated wobble">
           <div id="code2result" class="code-title">WHAT'S THE CODEWORD?</div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
@@ -1928,7 +1955,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 :: password3 {"position":"54.66666666666666,677.3333333333334","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
  \<div class="popup-container">
-         <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+         <img src="https://remote.co.com/UCA/assets/img/lock.png" class="padlock animated wobble">
           <div id="code3result" class="code-title">WHAT'S THE CODEWORD?</div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
@@ -1958,7 +1985,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 :: password4 {"position":"52,788.3333333333334","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
        \<div class="popup-container">
-         <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+         <img src="https://remote.co.com/UCA/assets/img/lock.png" class="padlock animated wobble">
           <div id="code4result" class="code-title">WHAT'S THE CODEWORD?</div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
@@ -1989,7 +2016,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 \/% PASSWORD FEEDBACK %/
 
        \<div class="popup-container">
-         <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+         <img src="https://remote.co.com/UCA/assets/img/lock.png" class="padlock animated wobble">
           <div id="code6result" class="code-title">WHAT'S THE CODEWORD?</div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
@@ -2019,7 +2046,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 :: password7 {"position":"50.66666666666666,1038","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
        \<div class="popup-container">
-         <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+         <img src="https://remote.co.com/UCA/assets/img/lock.png" class="padlock animated wobble">
           <div id="code7result" class="code-title">WHAT'S THE CODEWORD?</div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
@@ -2049,7 +2076,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 :: password8 {"position":"47,1163","size":"100,100"}
 \/% PASSWORD FEEDBACK %/
        \<div class="popup-container">
-         <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+         <img src="https://remote.co.com/UCA/assets/img/lock.png" class="padlock animated wobble">
           <div id="code8result" class="code-title">WHAT'S THE CODEWORD?</div>
       \   <div id="resultbutton">
       \/% PASSWORD INPUT %/
@@ -2251,18 +2278,18 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: title {"position":"271.66666666666663,31.666666666666664","size":"100,100"}
-<maintitle>[img[http://remote.co.com/UCA/images/logotitle.png]]</maintitle>
+<maintitle>[img[https://remote.co.com/UCA/assets/img/logotitle.png]]</maintitle>
 
 
 :: typewriter {"position":"160,34.33333333333333","size":"100,100"}
-<typewriter>[img[http://remote.co.com/UCA/images/typewriter1.png]]</typewriter>
+<typewriter>[img[https://remote.co.com/UCA/assets/img/typewriter1.png]]</typewriter>
 
 
 :: Part2 [green] {"position":"1398.3333333333335,111.99999999999996","size":"100,100"}
 <div
       id="wrap_video">
       <div id="video_box">
-      <div id="video_overlays"><img src="http://remote.co.com/UCA/images/tv8.png"
+      <div id="video_overlays"><img src="https://remote.co.com/UCA/assets/img/tv8.png"
       class="center"></div>
       <div>
       <iframe allow="autoplay"   width='800px' height='450px'
@@ -2271,7 +2298,7 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
       </div>
       </div>
       \<<timed
-      60s>><nextbutton>[img[http://remote.co.com/UCA/images/nextbutton.png][video9b]]</nextbutton><</timed>>
+      60s>><nextbutton>[img[https://remote.co.com/UCA/assets/img/nextbutton.png][video9b]]</nextbutton><</timed>>
 
 
 :: video9b [green -t8n-typewriter-4] {"position":"1410.6666666666665,236.99999999999991","size":"100,100"}
@@ -2285,15 +2312,16 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: video9baudio {"position":"2069,946","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/teacher-please-hold-onto-the-UCA-Roots.mp3" allow="autoplay"  style="display:none"
-      ></iframe>
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/teacher-please-hold-onto-the-UCA-Roots.mp3" allow="autoplay"  style="display:none"
+      ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/teacher-please-hold-onto-the-UCA-Roots.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 
 :: platform2 [green -t8n-typewriter-4] {"position":"1409.3333333333333,369.99999999999994","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "platform2baudio">>
-      <messageboxlarge>[img[http://remote.co.com/UCA/images/hand.png]]
+      <messageboxlarge>[img[https://remote.co.com/UCA/assets/img/hand.png]]
       The UCA Root is like a bookmark
 
       A bookmark to a time gone by
@@ -2305,9 +2333,9 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: platform2baudio {"position":"2189,1816","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/the-UCA-Root-is-like-a-bookmark.mp3"
-      allow="autoplay" style="display:none" ></iframe>
-
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/the-UCA-Root-is-like-a-bookmark.mp3"
+      allow="autoplay" style="display:none" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/the-UCA-Root-is-like-a-bookmark.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: platform3 [green -t8n-typewriter-4] {"position":"1409.3333333333333,498.3333333333333","size":"100,100"}
 <<include
@@ -2323,9 +2351,9 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: platform3baudio {"position":"2189,1700","size":"100,100"}
-<iframe
-      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/on-your-piece-of-paper.mp3" allow="autoplay" style="display:none"></iframe>
-
+/* <iframe
+      id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/on-your-piece-of-paper.mp3" allow="autoplay" style="display:none"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/on-your-piece-of-paper.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: platform4 [green -t8n-typewriter-4] {"position":"1414.3333333333333,625.0000000000001","size":"100,100"}
 <<include
@@ -2337,8 +2365,9 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: platform4baudio {"position":"2192,1573","size":"100,100"}
-<iframe id="iframeAudio"
-      src="https://uca-coney-dev.netlify.app/assets/audio/now-im-going-to-give-you-time-to-colour.mp3" allow="autoplay" style="display:none"></iframe>
+/* <iframe id="iframeAudio"
+      src="https://remote.co.com/UCA/assets/audio/now-im-going-to-give-you-time-to-colour.mp3" allow="autoplay" style="display:none"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/now-im-going-to-give-you-time-to-colour.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 
 :: platform5 [green -t8n-typewriter-4] {"position":"1402.9999999999998,751.6666666666667","size":"100,100"}
@@ -2352,10 +2381,10 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: platform5baudio {"position":"2192,1456","size":"100,100"}
-<iframe id="iframeAudio"
-      src="https://uca-coney-dev.netlify.app/assets/audio/now-im-going-to-give-you-time-make-it-even-more-colourful.mp3" allow="autoplay" 
-     style="display:none" ></iframe>
-
+/* <iframe id="iframeAudio"
+      src="https://remote.co.com/UCA/assets/audio/now-im-going-to-give-you-time-make-it-even-more-colourful.mp3" allow="autoplay" 
+     style="display:none" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/now-im-going-to-give-you-time-make-it-even-more-colourful.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: platform6 [green -t8n-typewriter-4] {"position":"1403.3333333333335,886.6666666666666","size":"100,100"}
 <<include
@@ -2369,16 +2398,16 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: platform6audio {"position":"2194,1325","size":"100,100"}
-<iframe
-      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/now-we-connect-our-root-and-our-memory.mp3" style="display:none" allow="autoplay" 
-      ></iframe>
-
+/* <iframe
+      id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/now-we-connect-our-root-and-our-memory.mp3" style="display:none" allow="autoplay" 
+      ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/now-we-connect-our-root-and-our-memory.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: platform7 [green -t8n-typewriter-4] {"position":"1407.3333333333335,1014.6666666666666","size":"100,100"}
 <<include
       "back">><<include "typewriter">><<include
       "platform7audio">>
-      <messageboxlarge>[img[http://remote.co.com/UCA/images/hand.png]]
+      <messageboxlarge>[img[https://remote.co.com/UCA/assets/img/hand.png]]
       I want you to hold your button in your hand and whisper UCA UCA UCA - squeeze it in your hand – think about that
       memory you have just drawn.
       <button>[[NEXT|platform7b]]</button>
@@ -2386,9 +2415,9 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: platform7audio {"position":"2194,1195","size":"100,100"}
-<iframe
-      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/i-want-you-to-hold-your-button.mp3" allow="autoplay" style="display:none" ></iframe>
-
+/* <iframe
+      id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/i-want-you-to-hold-your-button.mp3" allow="autoplay" style="display:none" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/i-want-you-to-hold-your-button.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: choiceyes [green -t8n-typewriter-4] {"position":"1300.3333333333335,1281","size":"100,100"}
 <<include "back">><<include "typewriter">><<include
@@ -2397,9 +2426,9 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: choiceyesaudio {"position":"774.3333333333334,398.3333333333333","size":"100,100"}
-<iframe
-      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/yes-ewwwww-ok.mp3" allow="autoplay" style="display:none"></iframe>
-
+/* <iframe
+      id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/yes-ewwwww-ok.mp3" allow="autoplay" style="display:none"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/yes-ewwwww-ok.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: choiceno [green -t8n-typewriter-4] {"position":"1459.3333333333333,1292","size":"100,100"}
 <<include "back">><<include
@@ -2408,14 +2437,14 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: choicenoaudio {"position":"654.3333333333334,398.3333333333333","size":"100,100"}
-<iframe
-      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/no-phew.mp3" allow="autoplay"style="display:none" ></iframe>
-
+/* <iframe
+      id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/no-phew.mp3" allow="autoplay"style="display:none" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/no-phew.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: platform8 [green -t8n-typewriter-4] {"position":"1356.3333333333333,1423","size":"100,100"}
 <<include "back">><<include "typewriter">><<include
       "platforom8audio">>
-      <messageboxlarge>[img[http://remote.co.com/UCA/images/hand.png]]
+      <messageboxlarge>[img[https://remote.co.com/UCA/assets/img/hand.png]]
       Now, I want you to hold your button in your hand again, whisper UCA UCA UCA, squeeze it in your hand and think
       about that memory you have just drawn.
 
@@ -2423,9 +2452,9 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: platforom8audio {"position":"2179,693","size":"100,100"}
-<iframe id="iframeAudio"
-      src="https://uca-coney-dev.netlify.app/assets/audio/now-i-want-you-to-hold-your-button-in-your-hand-again.mp3" allow="autoplay" style="display:none"></iframe>
-
+/* <iframe id="iframeAudio"
+      src="https://remote.co.com/UCA/assets/audio/now-i-want-you-to-hold-your-button-in-your-hand-again.mp3" allow="autoplay" style="display:none"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/now-i-want-you-to-hold-your-button-in-your-hand-again.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: FISHY SPAGHETTI [green -t8n-typewriter-4] {"position":"1367,1548.3333333333333","size":"100,100"}
 <<include "back">><<include "typewriter">><<include "FISHY SPAGHETTIaudio">>
@@ -2433,9 +2462,9 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: FISHY SPAGHETTIaudio {"position":"2046,31","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/fishy-spaghetti-sounds-yummy.mp3"
-      allow="autoplay" style="display:none"></iframe>
-
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/fishy-spaghetti-sounds-yummy.mp3"
+      allow="autoplay" style="display:none"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/fishy-spaghetti-sounds-yummy.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: COLD CUSTARD [green -t8n-typewriter-4] {"position":"1493,1548.3333333333333","size":"100,100"}
 <<include "back">><<include "typewriter">><<include "COLD CUSTARDaudio">>
@@ -2443,13 +2472,14 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: COLD CUSTARDaudio {"position":"2157,33","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/cold-custard-sounds-yummy.mp3" allow="autoplay" style="display:none"></iframe>
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/cold-custard-sounds-yummy.mp3" allow="autoplay" style="display:none"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/cold-custard-sounds-yummy.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 
 :: platform9 [green -t8n-typewriter-4] {"position":"1410.6666666666667,1694.6666666666667","size":"100,100"}
 <<include "back">><<include
       "typewriter">><<include "platform9audio">>
-      <messageboxlarge>[img[http://remote.co.com/UCA/images/hand.png]]
+      <messageboxlarge>[img[https://remote.co.com/UCA/assets/img/hand.png]]
       Now, last time, I want you to hold your button in your hand again, whisper UCA UCA UCA, squeeze it in your hand
       and think about that memory you have just drawn.
 
@@ -2458,29 +2488,30 @@ In the Compartment is the fifth button, but it seems there is one missing. A 6th
 
 
 :: platform9audio {"position":"2189,946","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/now-last-time-i-want-you-to-hold.mp3"
-style="display:none" allow="autoplay" ></iframe>
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/now-last-time-i-want-you-to-hold.mp3"
+style="display:none" allow="autoplay" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/now-last-time-i-want-you-to-hold.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 
 :: intro [green] {"position":"748.6666666666667,601","size":"100,100"}
 <messagebox><div
       class="animated
-      rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div>
+      rotateIn">[img[https://remote.co.com/UCA/assets/img/logobutton.png]]</div>
 </messagebox>
 <messagebox>
       <div class="animated
-      fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div
+      fadeInLeftBig">[img[https://remote.co.com/UCA/assets/img/undercover.png]]</div><div
       class="animated
-      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div
+      fadeInRightBig">[img[https://remote.co.com/UCA/assets/img/caretaker.png]]</div><div
       class="animated
-      fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div>
+      fadeInLeftBig">[img[https://remote.co.com/UCA/assets/img/agency.png]]</div>
 </messagebox>
 <<timed 5s>><<goto
       "Introvideo1">><</timed>>
 
 
 :: beenbefore [purple2] {"position":"779.3333333333334,199.6666666666667","size":"100,100"}
-<messagebox2> <span>[img[http://remote.co.com/UCA/images/intercom.png]]
+<messagebox2> <span>[img[https://remote.co.com/UCA/assets/img/intercom.png]]
             Is this your first time here?
             <button>[[YES|welcome1]]</button> 
             <button>[[NO|contents]]</button>
@@ -2506,7 +2537,7 @@ style="display:none" allow="autoplay" ></iframe>
 
 :: clubnamediscover [green -t8n-typewriter-4] {"position":"1243.3333333333333,29.99999999999999","size":"100,100"}
 <<include "back">><<include
-      "typewriter">> <beaconicon>[img[https://uca-coney-dev.netlify.app/assets/img/beacon-2.png]]</beaconicon><messageboxlarge>
+      "typewriter">> <beaconicon>[img[https://remote.co.com/UCA/assets/img/beacon-2.png]]</beaconicon><messageboxlarge>
 
       Enter our Secret Club Name here
       <<textbox "$clubname" "">>
@@ -2548,27 +2579,27 @@ style="display:none" allow="autoplay" ></iframe>
 :: intro2 [green] {"position":"906.6666666666667,601","size":"100,100"}
 <messagebox><div
       class="animated
-      rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
+      rotateIn">[img[https://remote.co.com/UCA/assets/img/logobutton.png]]</div></messagebox>
       <messagebox>
       <div class="animated
-      fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div
+      fadeInLeftBig">[img[https://remote.co.com/UCA/assets/img/undercover.png]]</div><div
       class="animated
-      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div
+      fadeInRightBig">[img[https://remote.co.com/UCA/assets/img/caretaker.png]]</div><div
       class="animated
-      fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox><<timed
+      fadeInLeftBig">[img[https://remote.co.com/UCA/assets/img/agency.png]]</div></messagebox><<timed
       4s>><<goto
       "Part2">><</timed>>
 
 
 :: reeltoreel {"position":"385,35","size":"100,100"}
-<reeltoreel>[img[http://remote.co.com/UCA/images/reeltoreel2.gif]]</reeltoreel>
+<reeltoreel>[img[https://remote.co.com/UCA/assets/img/reeltoreel2.gif]]</reeltoreel>
 
 
 :: these maps [green] {"position":"926,3009","size":"100,100"}
 <<include
       "back">><dance>
       <div class="animated
-      rotateInDownLeft">[img[http://remote.co.com/UCA/images/schoolplan3.jpg]]</div>
+      rotateInDownLeft">[img[https://remote.co.com/UCA/assets/img/schoolplan3.jpg]]</div>
       <button>[[back|video6d]]</button>
 
       <button>[[We've drawn a map|mapdrawn]]</button>
@@ -2590,7 +2621,8 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: platform9baudio {"position":"2077,823","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/your-UCA-Root-is-planted.mp3" allow="autoplay" style="display:none" ></iframe>
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/your-UCA-Root-is-planted.mp3" allow="autoplay" style="display:none" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/your-UCA-Root-is-planted.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 
 :: platform9c [green -t8n-typewriter-4] {"position":"1428.6666666666667,1939.6666666666667","size":"100,100"}
@@ -2607,25 +2639,25 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: platform9caudio {"position":"2186,825","size":"100,100"}
-<iframe
-      id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/this-UCA-Root-is-for-you-always.mp3" allow="autoplay" style="display:none" ></iframe>
-
+/* <iframe
+      id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/this-UCA-Root-is-for-you-always.mp3" allow="autoplay" style="display:none" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/this-UCA-Root-is-for-you-always.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: outro [green] {"position":"1445.6666666666667,2069.6666666666665","size":"100,100"}
 <messagebox><div
       class="animated
-      rotateIn">[img[http://remote.co.com/UCA/images/logobutton.png]]</div></messagebox>
+      rotateIn">[img[https://remote.co.com/UCA/assets/img/logobutton.png]]</div></messagebox>
       <messagebox>
       <div class="animated
-      fadeInLeftBig">[img[http://remote.co.com/UCA/images/undercover.png]]</div><div
+      fadeInLeftBig">[img[https://remote.co.com/UCA/assets/img/undercover.png]]</div><div
       class="animated
-      fadeInRightBig">[img[http://remote.co.com/UCA/images/caretaker.png]]</div><div
+      fadeInRightBig">[img[https://remote.co.com/UCA/assets/img/caretaker.png]]</div><div
       class="animated
-      fadeInLeftBig">[img[http://remote.co.com/UCA/images/agency.png]]</div></messagebox>
+      fadeInLeftBig">[img[https://remote.co.com/UCA/assets/img/agency.png]]</div></messagebox>
 
 
 :: back {"position":"47.33333333333333,35.333333333333336","size":"100,100"}
-<backbutton><<return[img[http://remote.co.com/UCA/images/back.png]]>></backbutton>
+<backbutton><<return[img[https://remote.co.com/UCA/assets/img/back.png]]>></backbutton>
 
 
 :: platform7b [green -t8n-typewriter-4] {"position":"1410.3333333333333,1156.3333333333333","size":"100,100"}
@@ -2643,9 +2675,9 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: platform7baudio {"position":"2086,1188","size":"100,100"}
-<iframe id="iframeAudio"
-      src="https://uca-coney-dev.netlify.app/assets/audio/now-we-test-if-the-planting-has-worked.mp3" allow="autoplay" style="display:none"></iframe>
-
+/* <iframe id="iframeAudio"
+      src="https://remote.co.com/UCA/assets/audio/now-we-test-if-the-planting-has-worked.mp3" allow="autoplay" style="display:none"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/now-we-test-if-the-planting-has-worked.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: platform8b [green -t8n-typewriter-4] {"position":"1492.3333333333333,1419.6666666666667","size":"100,100"}
 <<include "back">><<include "typewriter">><<include "platform8baudio">>
@@ -2661,15 +2693,15 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: platform8baudio {"position":"2197,1066","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/now-another-test.mp3" allow="autoplay" style="display:none" ></iframe>
-
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/now-another-test.mp3" allow="autoplay" style="display:none" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/now-another-test.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
 
 :: beacon1 [purple] {"position":"257,495.99999999999994","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><messagebox><div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/move.png"></div></messagebox>
+<iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><messagebox><div class=" animated fadeInLeftBig level">    <img class="level" src="https://remote.co.com/UCA/assets/img/move.png"></div></messagebox>
 <messagebox>
 <<timed 3s>>
       <div class="animated fadeInRightBig" id="beacon">   
-      <img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon0-1.gif"></div>
+      <img class="beacon" src="https://remote.co.com/UCA/assets/img/beacon0-1.gif"></div>
 <</timed>>
 <<timed 10s>>
 <<goto [[READY]]>><</timed>>
@@ -2677,7 +2709,7 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: beacon2 [purple] {"position":"258.6666666666667,612.6666666666666","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><messagebox><div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/connect.png"></div></messagebox><messagebox><<timed 3s>><div class="animated fadeInRightBig" id="beacon"><img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon1-2.gif"></div>
+<iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><messagebox><div class=" animated fadeInLeftBig level">    <img class="level" src="https://remote.co.com/UCA/assets/img/connect.png"></div></messagebox><messagebox><<timed 3s>><div class="animated fadeInRightBig" id="beacon"><img class="beacon" src="https://remote.co.com/UCA/assets/img/beacon1-2.gif"></div>
 <</timed>>
 <<timed 10s>>
 <<goto [[video4]]>><</timed>>
@@ -2685,9 +2717,9 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: beacon3 [purple] {"position":"258.66666666666663,731","size":"100,100"}
-<messagebox><iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><div class=" animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/discover.png"></div></messagebox><messagebox>
+<messagebox><iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><div class=" animated fadeInLeftBig level">    <img class="level" src="https://remote.co.com/UCA/assets/img/discover.png"></div></messagebox><messagebox>
 <<timed 3s>><div class="animated fadeInRightBig" >   
-<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon2-3.gif"></div>
+<img class="beacon" src="https://remote.co.com/UCA/assets/img/beacon2-3.gif"></div>
 <</timed>>
 <<timed 10s>>
 <<goto [[video5]]>><</timed>>
@@ -2696,9 +2728,9 @@ style="display:none" allow="autoplay" ></iframe>
 
 :: beacon4 [purple] {"position":"258.66666666666663,851","size":"100,100"}
 <messagebox>
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/wonder.png"></div></messagebox><messagebox>
+<iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><div class="animated fadeInLeftBig level">    <img class="level" src="https://remote.co.com/UCA/assets/img/wonder.png"></div></messagebox><messagebox>
 <<timed 3s>><div class="animated fadeInRightBig" >   
-<img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon3-4.gif"></div>
+<img class="beacon" src="https://remote.co.com/UCA/assets/img/beacon3-4.gif"></div>
 <</timed>>
 <<timed 10s>>
 <<goto [[video6a]]>><</timed>>
@@ -2706,8 +2738,8 @@ style="display:none" allow="autoplay" ></iframe>
 
 
 :: beacon5 [purple] {"position":"261.99999999999994,974.3333333333334","size":"100,100"}
-<iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><messagebox><div class="animated fadeInLeftBig level">    <img class="level" src="https://uca-coney-dev.netlify.app/assets/img/give.png"></div></messagebox><messagebox>
-<<timed 3s>><div class="animated fadeInRightBig" ><img class="beacon" src="https://uca-coney-dev.netlify.app/assets/img/beacon4-5.gif"></div>
+<iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/transition-crispy.mp3" allow="autoplay" style="display:none" ></iframe><messagebox><div class="animated fadeInLeftBig level">    <img class="level" src="https://remote.co.com/UCA/assets/img/give.png"></div></messagebox><messagebox>
+<<timed 3s>><div class="animated fadeInRightBig" ><img class="beacon" src="https://remote.co.com/UCA/assets/img/beacon4-5.gif"></div>
 <</timed>>
 <<timed 10s>>
 <<goto [[Video7]]>><</timed>>
@@ -2716,18 +2748,18 @@ style="display:none" allow="autoplay" ></iframe>
 
 :: codewordentry [purple] {"position":"725,1875","size":"100,100"}
 <messagebox2><<include "back">><div class="codeword-entry-container">
-  <img src="https://uca-coney-dev.netlify.app/assets/img/lock.png" class="padlock animated wobble">
+  <img src="https://remote.co.com/UCA/assets/img/lock.png" class="padlock animated wobble">
   <<include "password1">>
 </div>
 </messagebox2>
 
 
 :: phoneright {"position":"495.00000000000006,36.666666666666664","size":"100,100"}
-<phoneright>[img[https://uca-coney-dev.netlify.app/assets/img/phone.png]]</phoneright>
+<phoneright>[img[https://remote.co.com/UCA/assets/img/phone.png]]</phoneright>
 
 
 :: phoneleft {"position":"381,325","size":"100,100"}
-<phoneleft >[img[https://uca-coney-dev.netlify.app/assets/img/phone.png]]</phoneleft>
+<phoneleft >[img[https://remote.co.com/UCA/assets/img/phone.png]]</phoneleft>
 
 
 :: textanne [purple -t8n-typewriter-4] {"position":"169.99999999999997,1478.3333333333333","size":"100,100"}
@@ -2738,14 +2770,18 @@ you can text here from here.</p><<include "text1">>
 
 
 :: textannea [purple -t8n-typewriter-4] {"position":"303.3333333333333,1476.6666666666665","size":"100,100"}
-<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/hello-you-must-have.mp3" allow="autoplay" style="display:none" ></iframe>
+<<include "back">> <<include "phoneleft">> <audio src="https://remote.co.com/UCA/assets/audio/hello-you-must-have.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/hello-you-must-have.mp3" allow="autoplay" style="display:none" ></iframe> */
+
 
 <phonecontainer><p>Hello, you must have opened The Beacon of Hope from the Undercover CareTaker Agency and be trying to light it. Thank you for trying to complete the challenges, light the beacon, clear the fog and counter the Static. Nigel must have sent out the Beacons and be trying to help me. 
 <button>[[Next|textanneb]]</button></p></phonecontainer>
 
 
 :: textanneb [purple -t8n-typewriter-4] {"position":"438.33333333333326,1458.3333333333333","size":"100,100"}
-<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/you-must-have2.mp3" allow="autoplay" style="display:none" ></iframe><phonecontainer><p>You must have done the UCA TOK - special stuff! Right, if I remember correctly, you need a codeword to move on…the codeword is... what did I pick…oh I know it was the topping I had on my Weetabix that day...! It was a special topping... Ice Cream, Pine Nuts or Baked beans? I can’t remember! The static is making everything all foggy. 
+<<include "back">> <<include "phoneleft">> <audio src="https://remote.co.com/UCA/assets/audio/you-must-have2.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/you-must-have2.mp3" allow="autoplay" style="display:none" ></iframe> */
+<phonecontainer><p>You must have done the UCA TOK - special stuff! Right, if I remember correctly, you need a codeword to move on…the codeword is... what did I pick…oh I know it was the topping I had on my Weetabix that day...! It was a special topping... Ice Cream, Pine Nuts or Baked beans? I can’t remember! The static is making everything all foggy. 
 
 Oh, that’s the Static – I can’t hear you. Text me! </p></phonecontainer>  
  <<include "text2">>
@@ -2773,8 +2809,8 @@ you can text Anne from here.</p><<include "text3">>
 
 
 :: textanne2a [purple -t8n-typewriter-4] {"position":"293.3333333333333,1701.6666666666665","size":"100,100"}
-<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/yes-the-uca.mp3" allow="autoplay" style="display:none" ></iframe>
-
+<<include "back">> <<include "phoneleft">> <audio src="https://remote.co.com/UCA/assets/audio/yes-the-uca.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/yes-the-uca.mp3" allow="autoplay" style="display:none" ></iframe> */
 <phonecontainer><p>Yes the UCA Breath – that’s a good idea. Nigel must have told you to remind me of the UCA Breath – thanks Nigel
 The Static is very strong now – let’s do the UCA Breath all together 
 3 – 2 – 1.. 
@@ -2788,7 +2824,9 @@ Whisper UCA UCA UCA
 
 
 :: textanne2b [purple -t8n-typewriter-4] {"position":"403.3333333333333,1705","size":"100,100"}
-<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/thank-you-for.mp3" allow="autoplay" style="display:none" ></iframe><phonecontainer><p>Thank you for reminding me about the UCA Breath. It’s so important when the world is so loud to keep learning and taking time to breathe. If you are feeling stressed by the Static, you can always do the UCA Breath. It helps. 
+<<include "back">> <<include "phoneleft">> <audio src="https://remote.co.com/UCA/assets/audio/thank-you-for.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/thank-you-for.mp3" allow="autoplay" style="display:none" ></iframe> */
+<phonecontainer><p>Thank you for reminding me about the UCA Breath. It’s so important when the world is so loud to keep learning and taking time to breathe. If you are feeling stressed by the Static, you can always do the UCA Breath. It helps. 
 
 Right, I think I need you to start thinking about yourself as UCA Agents – in fact, we have a gift for you! In the Beacon, we put some Agent Cards for you. Nigel, I’m feeling all foggy, you’ll tell them won’t you. Nigel? Nigel? I can’t hear you, are you there? 
 
@@ -2805,8 +2843,8 @@ you can text Anne from here.</p><<include "text4">>
 
 
 :: textanne3a [purple -t8n-typewriter-4] {"position":"304.9999999999999,1823.333333333333","size":"100,100"}
-<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/we-are-nearly-there-now.mp3" allow="autoplay" style="display:none" ></iframe>
-
+<<include "back">> <<include "phoneleft">><audio src="https://remote.co.com/UCA/assets/audio/we-are-nearly-there-now.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/we-are-nearly-there-now.mp3" allow="autoplay" style="display:none" ></iframe> */
 <phonecontainer><p>We are nearly there now. This is the last push. You and Nigel are doing fantastic work. You are so close to lighting the Beacon. Just one more challenge to complete and you will be ready to be UCA Agents who can face the Static and light the Beacon. And just in time... as I don’t think I’ve got much time... but I’ll send you the codeword. I made a video to help you. It’s the UCA emergency codeword. I may have eaten too many Weetabix when I made this video! 
 
 The codeword is NIGEL. Good lu…..</p></phonecontainer>   
@@ -2821,8 +2859,8 @@ you can text Anne from here.</p><<include "text5">>
 
 
 :: textanne4a [purple -t8n-typewriter-4] {"position":"276.66666666666663,1948.3333333333333","size":"100,100"}
-<<include "back">> <<include "phoneleft">> <iframe id="iframeAudio" src="https://uca-coney-dev.netlify.app/assets/audio/hello-something-has-changed.mp3" allow="autoplay" style="display:none" ></iframe>
-
+<<include "back">> <<include "phoneleft">> <audio src="https://remote.co.com/UCA/assets/audio/hello-something-has-changed.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+/* <iframe id="iframeAudio" src="https://remote.co.com/UCA/assets/audio/hello-something-has-changed.mp3" allow="autoplay" style="display:none" ></iframe> */
 <phonecontainer><p>Hello, something has changed. Can you feel that too? I think you can now light the Beacon! 
 To find the final button you need to look inside the cylinder, under the Beacon 
 This is the final button,
@@ -2842,60 +2880,70 @@ Light up the Beacon and enter the codeword into the online platform.</p></phonec
 
 :: staticbuzz1 {"position":"47.999999999999964,2141.333333333333","size":"100,100"}
 <static>
- <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif center " id="staticgif">
+ <img src="https://remote.co.com/UCA/assets/img/static5.gif" class="staticgif center " id="staticgif">
       </static>
-      <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/crispy-static.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+      <<timed 0.5s>>
+      /* <iframe src="https://remote.co.com/UCA/assets/audio/crispy-static.mp3"  style="display:none" allow="autoplay" ></iframe> */
+      <audio src="https://remote.co.com/UCA/assets/audio/crispy-static.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+      <</timed>>
 
 
 :: staticbuzz2 {"position":"53.33333333333334,2262.9999999999995","size":"100,100"}
 <static>
- <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif ctrright " id="staticgif">
+ <img src="https://remote.co.com/UCA/assets/img/static5.gif" class="staticgif ctrright " id="staticgif">
       </static>
-      <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/crispy-static.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+      <<timed 0.5s>>
+      /* <iframe src="https://remote.co.com/UCA/assets/audio/crispy-static.mp3"  style="display:none" allow="autoplay" ></iframe> */
+      <audio src="https://remote.co.com/UCA/assets/audio/crispy-static.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+      <</timed>>
 
 
 :: staticbuzz3 {"position":"51.333333333333286,2378","size":"100,100"}
 <static>
- <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif left " id="staticgif">
+ <img src="https://remote.co.com/UCA/assets/img/static5.gif" class="staticgif left " id="staticgif">
       </static>
-      <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/crispy-static.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+      <<timed 0.5s>>
+      /* <iframe src="https://remote.co.com/UCA/assets/audio/crispy-static.mp3"  style="display:none" allow="autoplay" ></iframe> */
+      <audio src="https://remote.co.com/UCA/assets/audio/crispy-static.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+      <</timed>>
 
 
 :: staticbuzz4 {"position":"54,2488","size":"100,100"}
 <static>
- <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif leftbig " id="staticgif">
+ <img src="https://remote.co.com/UCA/assets/img/static5.gif" class="staticgif leftbig " id="staticgif">
       </static>
-      <<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/crispy-static.mp3"  style="display:none" allow="autoplay" ></iframe><</timed>>
+      <<timed 0.5s>>
+      /* <iframe src="https://remote.co.com/UCA/assets/audio/crispy-static.mp3"  style="display:none" allow="autoplay" ></iframe> */
+      <audio src="https://remote.co.com/UCA/assets/audio/crispy-static.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+      <</timed>>
 
 
 :: staticbuzz5 {"position":"51.33333333333331,2611.3333333333335","size":"100,100"}
-/<<timed 0.5s>><iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/crispy-static.mp3" style="display:none" allow="autoplay" ></iframe><</timed>>
+/<<timed 0.5s>>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/crispy-static.mp3" style="display:none" allow="autoplay" ></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/crispy-static.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+<</timed>>
 <static>
-      <<timed 0.5s>> <img src="https://uca-coney-dev.netlify.app/assets/img/static5.gif" class="staticgif right growRightBig animated"><</timed>>
+      <<timed 0.5s>> <img src="https://remote.co.com/UCA/assets/img/static5.gif" class="staticgif right growRightBig animated"><</timed>>
       <<timed
       7s>><<goto"missionplanning">><</timed>>
       </static>
 
 :: prestatic [static] {"position":"56.66666666666663,2758.6666666666665","size":"100,100"}
-<iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/crispy-static.mp3" allow="autoplay"  style="display:none"></iframe>
-      <staticbox>[img[https://uca-coney-dev.netlify.app/assets/img/squarestatic.gif]]</staticbox>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/crispy-static.mp3" allow="autoplay"  style="display:none"></iframe> */
+<audio src="https://remote.co.com/UCA/assets/audio/crispy-static.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+      <staticbox>[img[https://remote.co.com/UCA/assets/img/squarestatic.gif]]</staticbox>
       <<include "password8">>
 
 
 :: static [static] {"position":"56.66666666666663,2758.6666666666665","size":"100,100"}
-<iframe
-      src="https://uca-coney-dev.netlify.app/assets/audio/calm-crispy.mp3" allow="autoplay"  style="display:none"></iframe>
-      <staticbox>[img[https://uca-coney-dev.netlify.app/assets/img/squarestatic.gif]]</staticbox>
+/* <iframe src="https://remote.co.com/UCA/assets/audio/calm-crispy.mp3" allow="autoplay"  style="display:none"></iframe> */
+      <audio src="https://remote.co.com/UCA/assets/audio/calm-crispy.mp3" autoplay style="display:none">Audio is not supported on your device</audio> 
+      <staticbox>[img[https://remote.co.com/UCA/assets/img/squarestatic.gif]]</staticbox>
       <<timed 4s>><staticbox><div class="animated
-      fadeIn">[img[http://remote.co.com/UCA/images/pattern.gif]]</div></staticbox><</timed>>
+      fadeIn">[img[https://remote.co.com/UCA/assets/img/pattern.gif]]</div></staticbox><</timed>>
       <<timed 9s>><staticboxcolour><div class="animated
-      fadeIn">[img[http://remote.co.com/UCA/images/colours.gif]]</div></staticboxcolour><</timed>>
+      fadeIn">[img[https://remote.co.com/UCA/assets/img/colours.gif]]</div></staticboxcolour><</timed>>
       <<timed 25s>><<goto "video8">><</timed>>
 
 
